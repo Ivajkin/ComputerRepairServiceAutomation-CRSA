@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?><component name="dataSourceStorage">
+  <data-source source="LOCAL" name="Data Source" product="MySQL" version="5.0.24a-community-nt" jdbc-version="4.0" driver-name="MySQL-AB JDBC Driver" driver-version="mysql-connector-java-5.1.21 ( Revision: ${bzr.revision-id} )" uuid="4bb37cd6-b43a-4fce-866c-e06ccd4c15f9">
+    <extra-name-characters>#@</extra-name-characters>
+    <identifier-quote-string>`</identifier-quote-string>
+    <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+    <jdbc-url>jdbc:mysql://localhost:3306/core5429_tomcat?characterEncoding=UTF-8</jdbc-url>
+    <user-name>core5429_tomcat</user-name>
+    <user-password>dfc4dfe4dffedffedfd9dfdbdf92dffcdff0dfc4dffedfc4dfe6dfc2df93dfdb</user-password>
+    <schema-pattern>core5429_tomcat.*</schema-pattern>
+    <default-schemas>core5429_tomcat.*</default-schemas>
+    <libraries>
+      <library>
+        <url>jar://$MAVEN_REPOSITORY$/mysql/mysql-connector-java/5.1.21/mysql-connector-java-5.1.21.jar!/</url>
+      </library>
+    </libraries>
+    <schema name="" catalog="core5429_tomcat" />
+    <table name="dept" schema="" catalog="core5429_tomcat" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
+      <column name="head" sqlType="VARCHAR" length="100" precision="0" nullable="true" jdbcType="12" />
+      <column name="name" sqlType="VARCHAR" length="100" precision="0" nullable="true" jdbcType="12" />
+      <primary-key name="PRIMARY" columns="id" />
+      <index name="UQ__dept__000000000000000C" unique="true" columns="id" />
+      <index name="UQ__dept__0000000000000011" unique="true" columns="name" />
+    </table>
+    <table name="disc" schema="" catalog="core5429_tomcat" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
+      <column name="name" sqlType="VARCHAR" length="100" precision="0" nullable="true" jdbcType="12" />
+      <primary-key name="PRIMARY" columns="id" />
+      <index name="UQ__disc__000000000000004E" unique="true" columns="id" />
+    </table>
+    <table name="flow" schema="" catalog="core5429_tomcat" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
+      <column name="name" sqlType="VARCHAR" length="128" precision="0" nullable="true" jdbcType="12" />
+      <primary-key name="PRIMARY" columns="id" />
+      <index name="UQ__flow__000000000000001F" unique="true" columns="id" />
+      <index name="UQ__flow__0000000000000024" unique="true" columns="name" />
+    </table>
+    <table name="report" schema="" catalog="core5429_tomcat" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
+      <column name="flow_id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" def="" />
+      <column name="disc_id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" def="" />
+      <column name="sem_id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" def="" />
+      <column name="dept_id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" def="" />
+      <column name="teacher_id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" def="" />
+      <primary-key name="PRIMARY" columns="id" />
+      <index name="UQ__report__0000000000001040" unique="true" columns="id" />
+      <index name="flow_id" unique="false" columns="flow_id" />
+      <index name="disc_id" unique="false" columns="disc_id" />
+      <index name="sem_id" unique="false" columns="sem_id" />
+      <index name="dept_id" unique="false" columns="dept_id" />
+      <index name="teacher_id" unique="false" columns="teacher_id" />
+    </table>
+    <table name="report_entry" schema="" catalog="core5429_tomcat" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
+      <column name="report_id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" def="" />
+      <column name="stud_count_plan" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" def="" />
+      <column name="lection_count_plan" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" def="" />
+      <column name="stud_count_fact" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" def="" />
+      <column name="lection_count_fact" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" def="" />
+      <primary-key name="PRIMARY" columns="id" />
+      <index name="UQ__report_entry__0000000000002040" unique="true" columns="id" />
+      <index name="report_id" unique="false" columns="report_id" />
+    </table>
+    <table name="sem" schema="" catalog="core5429_tomcat" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
+      <column name="name" sqlType="VARCHAR" length="100" precision="0" nullable="true" jdbcType="12" />
+      <primary-key name="PRIMARY" columns="id" />
+      <index name="UQ__sem__0000000000000032" unique="true" columns="id" />
+    </table>
+    <table name="teacher" schema="" catalog="core5429_tomcat" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
+      <column name="name" sqlType="VARCHAR" length="100" precision="0" nullable="true" jdbcType="12" />
+      <primary-key name="PRIMARY" columns="id" />
+      <index name="UQ__teacher__0000000000000040" unique="true" columns="id" />
+    </table>
+  </data-source>
+</component>

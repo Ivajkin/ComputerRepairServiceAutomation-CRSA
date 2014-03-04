@@ -1,0 +1,302 @@
+--	Приложение к техническому заданию №2. Таблицы БД.
+
+--	Таблица заявок 
+--		Номер заявки	
+--		Наименование оборудования	
+--		Производитель	
+--		Модель	
+--		Серийный номер	
+--		Адрес	
+--		Телефон	
+--		Неисправность	
+--		инженер	
+--		Дата получения (приема)	
+--		Дата выдачи	
+--		Сумма	
+--		Способ оплаты	
+--		Внешний вид	
+--		Комплектность	
+--		Источник	
+--		Выполненные работы	
+--		Дата звонка	
+--		Примечание	
+--		Имя клиента	
+--		Статус заявки	
+--		Примерная стоимость	
+--		Предоплата	
+--		Установленные запчасти
+	
+--		
+--	Таблица оборудования
+--		Код оборудования	
+--		Экраны	
+--		Комплектующие	
+--		Жесткие диски	
+--		Зарядные устройства	
+--		Клавиатуры	
+--		Аккумуляторы	
+--		Роутеры	
+--		Софт	
+--		Прочее	
+--		
+--	Таблица производителей
+--		Код производителя	
+--		Наименование производителя	
+--		
+--	Таблица неисправностей
+--		Код неисправности	
+--		Наименование неисправности	
+--		
+--	Внешний вид
+--		Код внешнего вида	
+--		Наименование внешнего вида	
+--		
+--	Комплектность
+--		Код комплектности	
+--		Наименование комплектности	
+--		
+--	Источник
+--		Код источника	
+--		Наименование источника	
+--		
+--	Выполненные работы
+--		Код выполненной работы	
+--		Наименование выполненной работы	
+--		
+--	Склад 
+--		Номер накладной	
+--		Код товара	
+--		Дата оприходования	
+--		Количество штук	
+--		Гарантия	
+--		Своя цена	
+--		Ремонтная цена	
+--		Закупочная цена	
+--		Розничная цена	
+--		Нулевая цена	
+--		
+--	Товар
+--		Код товара	
+--		Название товара	
+--		Код категория	
+--		
+--	Категории
+--		Код категории	
+--		Название категории	
+--		
+--	Операции
+--		Номер накладной	
+--		Код поставщика	
+--		Дата операции	
+--		Комментарии	
+--		
+--	Серийный номер
+--		Код товара	
+--		Номер накладной	
+--		Номер серийника	
+--		
+--	Сотрудники
+--		Код сотрудника	
+--		ФИО	
+--		Логин	
+--		Пароль	
+--		Процент оплаты	
+--		Роль	
+--		
+--	Прейскурант работ
+--		Код работы	
+--		Вид работы	
+--		Цена работы	
+--		
+--	Касса
+--		Код кассы	
+--		Сумма	
+--		Сотрудник	
+--		Пояснение	
+--		Код статуса	
+--		Дата 	
+--		Наименование товара	
+--		Остаток	
+--		
+--	Справочники юридических лиц
+--		Код юр.лица	
+--		Клиент	
+--		Телефон	
+--		Примечание	
+--		
+--	Поставщик
+--		Код поставщика	
+--		Наименование поставщика	
+--		
+--	Талон
+--		Номер талона	
+--		Дата выдачи	
+--		Модель 	
+--		Серийный номер	
+--		Внешний вид и комплектация	
+--		Чек
+--		Номер чека	
+--		Дата выдачи	
+--		Товар 	
+--		Код гарантийного чека	
+--		Количество	
+--		Цена за штуку	
+--		Сумма	
+--		
+--	Выполненные работы
+--		Код выполненной работы	
+--		Наименование работы	
+--		Цена	
+--		Инженер	
+
+------------------- EN:
+
+--	Annex to the technical task number 2. DB tables.
+
+--	Request -> request
+--		request Number? (string or int??)
+--		name of equipment?
+--		manufacturer?
+--		model?
+--		serial number?
+--		address?
+--		phone?
+--		fault?
+--		engineer?
+--		Date of receipt ( receiving )?
+--		date of issue?
+--		amount?
+--		method of payment?
+--		appearance?
+--		completeness?
+--		source?
+--		Completed works?
+--		Date of call?
+--		note?
+--		customer Name?
+--		application Status?
+--		The approximate cost?
+--		prepayment?
+--		parts installed?
+--		
+--	Table Hardware?
+--		Machine Code?
+--		screens?
+--		Accessories?
+--		Hard Drives?
+--		Chargers?
+--		Keyboards?
+--		Batteries?
+--		Routers?
+--		Software?
+--		Others?
+--		
+--	Table manufacturers?
+--		manufacturer code?
+--		name of the manufacturer?
+--		
+--	fault Table?
+--		trouble Code?
+--		name of fault?
+--		
+--	appearance?
+--		Code appearance?
+--		Designation appearance?
+--		
+--	completeness?
+--		code completeness?
+--		name completeness?
+--		
+--	source?
+--		source code?
+--		name of source?
+--		
+--	Completed works?
+--		Code of the work performed?
+--		Name of the work performed?
+--		
+--	warehouse?
+--		invoice number?
+--		Product Code?
+--		Date of posting?
+--		Number of pieces?
+--		warranty?
+--		its price?
+--		repair price?
+--		purchase price?
+--		retail price?
+--		A zero price?
+--		
+--	goods?
+--		Product Code?
+--		Product Name?
+--		category code?
+--		
+--	categories?
+--		category code?
+--		category name?
+--		
+--	operations?
+--		invoice number?
+--		supplier code?
+--		Date of operation?
+--		Comments?
+--		
+--	serial number?
+--		Product Code?
+--		invoice number?
+--		Phone seriynika?
+--		
+--	staff?
+--		officer code?
+--		Name?
+--		login?
+--		password?
+--		percentage of payment?
+--		role?
+--		
+--	price list of works?
+--		work Code?
+--		Type of work?
+--		Price of?
+--		
+--	cash?
+--		code Case?
+--		amount?
+--		employee?
+--		clarification?
+--		status Code?
+--		date?
+--		description of goods?
+--		residue?
+--		
+--	Reference entities?
+--		code of legal entity?
+--		client?
+--		phone?
+--		note?
+--		
+--	supplier?
+--		supplier code?
+--		name of supplier?
+--		
+--	ticket?
+--		Phone coupon?
+--		date of issue?
+--		model?
+--		serial number?
+--		Appearance and equipment?
+--		check?
+--		check number?
+--		date of issue?
+--		goods?
+--		Code warranty check?
+--		number?
+--		Price per piece?
+--		amount?
+--		
+--	Completed works?
+--		Code of the work performed?
+--		name of work?
+--		price?
+--		engineer?
