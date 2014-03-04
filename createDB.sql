@@ -1,43 +1,143 @@
 --	Приложение к техническому заданию №2. Таблицы БД.
+-- Server version: 5.6.12-log
+-- PHP Version: 5.4.12
 
---	Таблица заявок 
---		Номер заявки	
---		Наименование оборудования	
---		Производитель	
---		Модель	
---		Серийный номер	
---		Адрес	
---		Телефон	
---		Неисправность	
---		инженер	
---		Дата получения (приема)	
---		Дата выдачи	
---		Сумма	
---		Способ оплаты	
---		Внешний вид	
---		Комплектность	
---		Источник	
---		Выполненные работы	
---		Дата звонка	
---		Примечание	
---		Имя клиента	
---		Статус заявки	
---		Примерная стоимость	
---		Предоплата	
+-- DB: core5429_repair
+-- User: core5429_repair
+-- Pass: nNTTsq8VZnTnLh9q
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+
+
+CREATE DATABASE IF NOT EXISTS `core5429_repair` DEFAULT CHARACTER SET utf8 COLLATE utf8_bin;
+USE `core5429_repair`;
+
+
+
+
+--	Категории -> Category -> category
+--		Код категории	-> category code -> id
+--		Название категории -> category name -> name
+
+create table if not exists `category` (
+  `id` int not null AUTO_INCREMENT unique primary key,
+  `name` varchar(100) CHARACTER SET utf8 not null unique
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=3;
+
+INSERT INTO `category` (`id`, `name`) VALUES
+(1, 'Видеокарты');
+
+--
+--	Таблица оборудования -> Hardware -> hardware
+--		Код оборудования -> id
+--		Экраны                    }
+--		Комплектующие             }
+--		Жесткие диски             }
+--		Зарядные устройства       } -> category_id
+--		Клавиатуры                }
+--		Аккумуляторы              }
+--		Роутеры                   }
+--		Софт                      }
+--		Прочее                    }
+--    Name -> name : string unique
+--    Description -> description : string default null
+
+create table if not exists `hardware` (
+  `id` int not null AUTO_INCREMENT unique primary key,
+  `name` varchar(100) CHARACTER SET utf8 not null unique,
+  `description` varchar(200) CHARACTER SET utf8 default null,
+  `category_id` integer not null references category(id) ON UPDATE CASCADE ON DELETE RESTRICT
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=3;
+
+INSERT INTO `hardware` (`name`, `description`, `category_id`) VALUES
+('NVIDIA GTX 520', 'Жизнь стремительна, таким должен быть и твой ПК. Мощь позволит тебе ускорить редактирование фотографий и HD видео.', 1);
+
+--	Склад -> Warehouse item -> warehouse_item
+--		x Номер накладной     -> Invoice number -> invoice_number : string, unique
+--		Код оборудования    -> Hardware code -> hardware_id : integer, not unique
+--		Дата оприходования  -> Date of posting -> posting_date : date
+--		Количество штук     -> Number of items -> item_count     CONSTRAINT item_count_value CHECK (item_count > 0)
+--		Гарантия            -> Warranty -> warranty : string, null, not unique
+--		Своя цена           -> its price?
+--		Ремонтная цена      -> repair price?
+--		Закупочная цена     -> purchase price?
+--		Розничная цена      -> retail price?
+--		Нулевая цена        -> A zero price?
+
+create table if not exists `warehouse_item` (
+  `invoice_number` varchar(100) CHARACTER SET utf8 not null unique primary key,
+  `hardware_id` integer not null references hardware(id) ON UPDATE CASCADE ON DELETE RESTRICT,
+  `posting_date` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  `item_count` integer not null, CONSTRAINT item_count_value CHECK (item_count >= 0),
+  `warranty` varchar(200) CHARACTER SET utf8 not null
+
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=3;
+
+INSERT INTO `warehouse_item` (`invoice_number`, `hardware_id`, `item_count`, `warranty`) VALUES
+('es0215', 1, 15, '5 лет, с 30 мая 2012');
+
+
+-- ------------------------------------------------------------------
+
+
+--	Таблица заявок
+--		Номер заявки
+--		Наименование оборудования
+--		Производитель
+--		Модель
+--		Серийный номер
+--		Адрес
+--		Телефон
+--		Неисправность
+--		инженер
+--		Дата получения (приема)
+--		Дата выдачи
+--		Сумма
+--		Способ оплаты
+--		Внешний вид
+--		Комплектность
+--		Источник
+--		Выполненные работы
+--		Дата звонка
+--		Примечание
+--		Имя клиента
+--		Статус заявки
+--		Примерная стоимость
+--		Предоплата
 --		Установленные запчасти
-	
---		
---	Таблица оборудования
---		Код оборудования	
---		Экраны	
---		Комплектующие	
---		Жесткие диски	
---		Зарядные устройства	
---		Клавиатуры	
---		Аккумуляторы	
---		Роутеры	
---		Софт	
---		Прочее	
+
+--	Request -> request
+--		request Number? (string or int??)
+--		name of equipment?
+--		manufacturer?
+--		model?
+--		serial number?
+--		address?
+--		phone?
+--		fault?
+--		engineer?
+--		Date of receipt ( receiving )?
+--		date of issue?
+--		amount?
+--		method of payment?
+--		appearance?
+--		completeness?
+--		source?
+--		Completed works?
+--		Date of call?
+--		note?
+--		customer Name?
+--		application Status?
+--		The approximate cost?
+--		prepayment?
+--		parts installed?
+
 --		
 --	Таблица производителей
 --		Код производителя	
@@ -62,27 +162,13 @@
 --	Выполненные работы
 --		Код выполненной работы	
 --		Наименование выполненной работы	
---		
---	Склад 
---		Номер накладной	
---		Код товара	
---		Дата оприходования	
---		Количество штук	
---		Гарантия	
---		Своя цена	
---		Ремонтная цена	
---		Закупочная цена	
---		Розничная цена	
---		Нулевая цена	
---		
+--
+
 --	Товар
 --		Код товара	
 --		Название товара	
 --		Код категория	
---		
---	Категории
---		Код категории	
---		Название категории	
+--
 --		
 --	Операции
 --		Номер накладной	
@@ -149,47 +235,9 @@
 --		Цена	
 --		Инженер	
 
-------------------- EN:
+-- ----------------- EN:
 
 --	Annex to the technical task number 2. DB tables.
-
---	Request -> request
---		request Number? (string or int??)
---		name of equipment?
---		manufacturer?
---		model?
---		serial number?
---		address?
---		phone?
---		fault?
---		engineer?
---		Date of receipt ( receiving )?
---		date of issue?
---		amount?
---		method of payment?
---		appearance?
---		completeness?
---		source?
---		Completed works?
---		Date of call?
---		note?
---		customer Name?
---		application Status?
---		The approximate cost?
---		prepayment?
---		parts installed?
---		
---	Table Hardware?
---		Machine Code?
---		screens?
---		Accessories?
---		Hard Drives?
---		Chargers?
---		Keyboards?
---		Batteries?
---		Routers?
---		Software?
---		Others?
 --		
 --	Table manufacturers?
 --		manufacturer code?
@@ -214,27 +262,12 @@
 --	Completed works?
 --		Code of the work performed?
 --		Name of the work performed?
---		
---	warehouse?
---		invoice number?
---		Product Code?
---		Date of posting?
---		Number of pieces?
---		warranty?
---		its price?
---		repair price?
---		purchase price?
---		retail price?
---		A zero price?
+--
 --		
 --	goods?
 --		Product Code?
 --		Product Name?
 --		category code?
---		
---	categories?
---		category code?
---		category name?
 --		
 --	operations?
 --		invoice number?

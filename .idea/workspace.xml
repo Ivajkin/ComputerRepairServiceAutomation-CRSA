@@ -7,7 +7,10 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="281f6575-6afb-495a-9579-c980b0ff741a" name="Default" comment="" />
+    <list default="true" id="281f6575-6afb-495a-9579-c980b0ff741a" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/createDB.sql" afterPath="$PROJECT_DIR$/createDB.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" />
+    </list>
     <ignored path="TomcatReportsV9.0.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Discipline.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1393288565194" ignored="false" />
@@ -84,7 +87,7 @@
     <file path="/ReportWithReportEntry.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1393238755921" ignored="false" />
     <file path="/1.regexp" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1393290518100" ignored="false" />
     <file path="/__dummy.html" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1393292707547" ignored="false" />
-    <file path="/createDB.sql" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1393915075159" ignored="false" />
+    <file path="/createDB.sql" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1393919616335" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -227,7 +230,7 @@
       <file leaf-file-name="createDB.sql" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/createDB.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="153" column="51" selection-start="2596" selection-end="2596" vertical-scroll-proportion="2.9896553">
+            <state line="75" column="17" selection-start="0" selection-end="7456" vertical-scroll-proportion="0.45325443">
               <folding />
             </state>
           </provider>
@@ -968,7 +971,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/createDB.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="153" column="51" selection-start="2596" selection-end="2596" vertical-scroll-proportion="2.9896553">
+        <state line="75" column="17" selection-start="0" selection-end="7456" vertical-scroll-proportion="0.45325443">
           <folding />
         </state>
       </provider>
