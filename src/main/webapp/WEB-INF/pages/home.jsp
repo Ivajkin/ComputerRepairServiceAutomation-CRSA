@@ -27,8 +27,9 @@
 ">Чем я могу вам помочь?</div><input type="text">
 -->
 <header class="mainheader">
-    <h1>TomcatReportsV9.0</h1>
-    <h2>Ивайкин Т.С., ПО(м)-21</h2>
+    <img id="logo" src="/img/logo.png" alt="Служба компьютерного ремонта (логотип)" />
+    <h1>Служба компьютерного ремонта</h1>
+    <h2>Techno Media Ltd</h2>
 
 </header>
 
