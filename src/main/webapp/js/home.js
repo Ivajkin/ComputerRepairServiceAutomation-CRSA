@@ -43,6 +43,28 @@
              createPath: '/report/create.html',
              icon: 'reportIcon.png'
          }
+
+
+         'requests': {
+             label: 'Заявки',
+             icon: 'requestIcon.png',
+             path: '/requests.html'
+         },
+         'warehouse': {
+             label: 'Склад',
+             icon: 'warehouseIcon.png',
+             path: '/warehouse.html'
+         },
+         'store': {
+             label: 'Магазин',
+             icon: 'storeIcon.png',
+             path: '/store.html'
+         },
+         'cashbox': {
+             label: 'Касса',
+             icon: 'cashboxIcon.png',
+             path: '/cashbox.html'
+         }
      };
 
      function openDictionary(dictionaryID) {
