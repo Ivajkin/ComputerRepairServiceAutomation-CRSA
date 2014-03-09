@@ -34,9 +34,9 @@
 </header>
 
 <nav class="panel main">
-    <header>
+    <!--<header>
         <h1>Таблицы</h1>
-    </header>
+    </header>-->
 
     <main>
     </main>

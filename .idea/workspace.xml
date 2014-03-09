@@ -8,42 +8,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="281f6575-6afb-495a-9579-c980b0ff741a" name="Default" comment="">
-      <change type="DELETED" beforePath="Z:\ComputerRepairServiceAutomation-CRSA\.idea\libraries\Maven__antlr_antlr_2_7_7.xml" afterPath="" />
-      <change type="DELETED" beforePath="Z:\ComputerRepairServiceAutomation-CRSA\.idea\libraries\Maven__aopalliance_aopalliance_1_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="Z:\ComputerRepairServiceAutomation-CRSA\.idea\libraries\Maven__asm_asm_3_3_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="Z:\ComputerRepairServiceAutomation-CRSA\.idea\libraries\Maven__cglib_cglib_2_2_2.xml" afterPath="" />
-      <change type="DELETED" beforePath="Z:\ComputerRepairServiceAutomation-CRSA\.idea\libraries\Maven__commons_dbcp_commons_dbcp_1_4.xml" afterPath="" />
-      <change type="DELETED" beforePath="Z:\ComputerRepairServiceAutomation-CRSA\.idea\libraries\Maven__commons_logging_commons_logging_1_1_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="Z:\ComputerRepairServiceAutomation-CRSA\.idea\libraries\Maven__commons_pool_commons_pool_1_5_4.xml" afterPath="" />
-      <change type="DELETED" beforePath="Z:\ComputerRepairServiceAutomation-CRSA\.idea\libraries\Maven__dom4j_dom4j_1_6_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="Z:\ComputerRepairServiceAutomation-CRSA\.idea\libraries\Maven__javassist_javassist_3_12_1_GA.xml" afterPath="" />
-      <change type="DELETED" beforePath="Z:\ComputerRepairServiceAutomation-CRSA\.idea\libraries\Maven__javax_servlet_javax_servlet_api_3_0_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="Z:\ComputerRepairServiceAutomation-CRSA\.idea\libraries\Maven__jstl_jstl_1_2.xml" afterPath="" />
-      <change type="DELETED" beforePath="Z:\ComputerRepairServiceAutomation-CRSA\.idea\libraries\Maven__junit_junit_4_8_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="Z:\ComputerRepairServiceAutomation-CRSA\.idea\libraries\Maven__mysql_mysql_connector_java_5_1_21.xml" afterPath="" />
-      <change type="DELETED" beforePath="Z:\ComputerRepairServiceAutomation-CRSA\.idea\libraries\Maven__org_hamcrest_hamcrest_core_1_2_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="Z:\ComputerRepairServiceAutomation-CRSA\.idea\libraries\Maven__org_hamcrest_hamcrest_library_1_2_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="Z:\ComputerRepairServiceAutomation-CRSA\.idea\libraries\Maven__org_hibernate_common_hibernate_commons_annotations_4_0_1_Final.xml" afterPath="" />
-      <change type="DELETED" beforePath="Z:\ComputerRepairServiceAutomation-CRSA\.idea\libraries\Maven__org_hibernate_hibernate_core_4_2_0_Final.xml" afterPath="" />
-      <change type="DELETED" beforePath="Z:\ComputerRepairServiceAutomation-CRSA\.idea\libraries\Maven__org_hibernate_hibernate_entitymanager_4_2_0_Final.xml" afterPath="" />
-      <change type="DELETED" beforePath="Z:\ComputerRepairServiceAutomation-CRSA\.idea\libraries\Maven__org_hibernate_javax_persistence_hibernate_jpa_2_0_api_1_0_1_Final.xml" afterPath="" />
-      <change type="DELETED" beforePath="Z:\ComputerRepairServiceAutomation-CRSA\.idea\libraries\Maven__org_javassist_javassist_3_15_0_GA.xml" afterPath="" />
-      <change type="DELETED" beforePath="Z:\ComputerRepairServiceAutomation-CRSA\.idea\libraries\Maven__org_jboss_logging_jboss_logging_3_1_0_GA.xml" afterPath="" />
-      <change type="DELETED" beforePath="Z:\ComputerRepairServiceAutomation-CRSA\.idea\libraries\Maven__org_jboss_spec_javax_transaction_jboss_transaction_api_1_1_spec_1_0_0_Final.xml" afterPath="" />
-      <change type="DELETED" beforePath="Z:\ComputerRepairServiceAutomation-CRSA\.idea\libraries\Maven__org_springframework_spring_aop_3_2_4_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="Z:\ComputerRepairServiceAutomation-CRSA\.idea\libraries\Maven__org_springframework_spring_beans_3_2_4_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="Z:\ComputerRepairServiceAutomation-CRSA\.idea\libraries\Maven__org_springframework_spring_context_3_2_4_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="Z:\ComputerRepairServiceAutomation-CRSA\.idea\libraries\Maven__org_springframework_spring_core_3_2_4_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="Z:\ComputerRepairServiceAutomation-CRSA\.idea\libraries\Maven__org_springframework_spring_expression_3_2_4_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="Z:\ComputerRepairServiceAutomation-CRSA\.idea\libraries\Maven__org_springframework_spring_jdbc_3_2_4_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="Z:\ComputerRepairServiceAutomation-CRSA\.idea\libraries\Maven__org_springframework_spring_orm_3_2_4_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="Z:\ComputerRepairServiceAutomation-CRSA\.idea\libraries\Maven__org_springframework_spring_test_3_2_4_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="Z:\ComputerRepairServiceAutomation-CRSA\.idea\libraries\Maven__org_springframework_spring_test_mvc_1_0_0_M1.xml" afterPath="" />
-      <change type="DELETED" beforePath="Z:\ComputerRepairServiceAutomation-CRSA\.idea\libraries\Maven__org_springframework_spring_tx_3_2_4_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="Z:\ComputerRepairServiceAutomation-CRSA\.idea\libraries\Maven__org_springframework_spring_web_3_2_4_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="Z:\ComputerRepairServiceAutomation-CRSA\.idea\libraries\Maven__org_springframework_spring_webmvc_3_2_4_RELEASE.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TomcatReportsV9.0.iml" afterPath="$PROJECT_DIR$/TomcatReportsV9.0.iml" />
+      <change type="DELETED" beforePath="Z:\ComputerRepairServiceAutomation-CRSA\src\main\webapp\img\Thumbs.db" afterPath="" />
+      <change type="DELETED" beforePath="Z:\ComputerRepairServiceAutomation-CRSA\src\main\webapp\img\departmentIcon.png" afterPath="" />
+      <change type="DELETED" beforePath="Z:\ComputerRepairServiceAutomation-CRSA\src\main\webapp\img\disciplineIcon.png" afterPath="" />
+      <change type="DELETED" beforePath="Z:\ComputerRepairServiceAutomation-CRSA\src\main\webapp\img\flowIcon.png" afterPath="" />
+      <change type="DELETED" beforePath="Z:\ComputerRepairServiceAutomation-CRSA\src\main\webapp\img\reportIcon.png" afterPath="" />
+      <change type="DELETED" beforePath="Z:\ComputerRepairServiceAutomation-CRSA\src\main\webapp\img\semesterIcon.png" afterPath="" />
+      <change type="DELETED" beforePath="Z:\ComputerRepairServiceAutomation-CRSA\src\main\webapp\img\teacherIcon.png" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/js/home.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/home.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/home.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/home.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/css/style.css" afterPath="$PROJECT_DIR$/src/main/webapp/css/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="TomcatReportsV9.0.iws" />
@@ -56,14 +30,14 @@
     <file path="/DisciplineService.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1392551785178" ignored="false" />
     <file path="/DisciplineServiceImpl.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1393208994915" ignored="false" />
     <file path="/LinkController.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1392291517903" ignored="false" />
-    <file path="/home.jsp" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1394261577794" ignored="false" />
+    <file path="/home.jsp" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1394351685792" ignored="false" />
     <file path="/DisciplineController.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1393208820917" ignored="false" />
     <file path="/list-of-disciplines.jsp" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1392686384146" ignored="false" />
     <file path="/create-discipline-form.jsp" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1392715604896" ignored="false" />
     <file path="/pom.xml" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1392205466773" ignored="false" />
     <file path="/web.xml" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1392203969782" ignored="false" />
     <file path="/WebAppConfig.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1392292695528" ignored="false" />
-    <file path="/style.css" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1394263050120" ignored="false" />
+    <file path="/style.css" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1394352756607" ignored="false" />
     <file path="/DictionaryItem.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1392889793061" ignored="false" />
     <file path="/Teacher.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1392380695069" ignored="false" />
     <file path="/DictionaryItemDAOImpl.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1393208332245" ignored="false" />
@@ -80,7 +54,7 @@
     <file path="/TeacherService.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1392551833545" ignored="false" />
     <file path="/TeacherServiceImpl.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1393209086100" ignored="false" />
     <file path="/DictionaryItemController.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1393209531916" ignored="false" />
-    <file path="/home.js" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1394349012634" ignored="false" />
+    <file path="/home.js" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1394349123083" ignored="false" />
     <file path="/FlowController.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1393208869126" ignored="false" />
     <file path="/SemesterController.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1393208906469" ignored="false" />
     <file path="/Report.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1393287493862" ignored="false" />
@@ -217,10 +191,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style.css" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="style.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="33" column="14" selection-start="1792" selection-end="1792" vertical-scroll-proportion="0.0">
+            <state line="169" column="1" selection-start="6376" selection-end="6376" vertical-scroll-proportion="0.4574468">
               <folding />
             </state>
           </provider>
@@ -239,15 +213,17 @@
         <entry file="file://$PROJECT_DIR$/src/test/java/pro/tmedia/test/LinkControllerTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="20" column="128" selection-start="531" selection-end="531" vertical-scroll-proportion="0.0">
-              <folding />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="home.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="home.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/js/home.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="63" column="26" selection-start="1850" selection-end="1850" vertical-scroll-proportion="0.8556876">
+            <state line="26" column="28" selection-start="624" selection-end="632" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -265,7 +241,7 @@
       <file leaf-file-name="home.jsp" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/home.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="17" selection-start="1126" selection-end="1130" vertical-scroll-proportion="0.0">
+            <state line="38" column="16" selection-start="1367" selection-end="1367" vertical-scroll-proportion="-11.115385">
               <folding />
             </state>
           </provider>
@@ -307,11 +283,11 @@
         <option value="$PROJECT_DIR$/src/main/java/pro/tmedia/controller/ReportEntityController.java" />
         <option value="$PROJECT_DIR$/src/main/java/pro/tmedia/model/ReportEntry.java" />
         <option value="$PROJECT_DIR$/createDB.sql" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/home.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/css/style.css" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/test/java/pro/tmedia/test/LinkControllerTest.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/js/home.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/home.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/css/style.css" />
       </list>
     </option>
   </component>
@@ -465,6 +441,62 @@
               <option name="myItemId" value="webapp" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WEB-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TomcatReportsV9.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ComputerRepairServiceAutomation-CRSA" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WEB-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TomcatReportsV9.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ComputerRepairServiceAutomation-CRSA" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -489,6 +521,32 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TomcatReportsV9.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ComputerRepairServiceAutomation-CRSA" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1079,23 +1137,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/home.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="17" selection-start="1126" selection-end="1130" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pro/tmedia/controller/TeacherController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="2" column="51" selection-start="83" selection-end="83" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="14" selection-start="1792" selection-end="1792" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -1152,13 +1196,29 @@
     <entry file="file://$PROJECT_DIR$/src/test/java/pro/tmedia/test/LinkControllerTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="20" column="128" selection-start="531" selection-end="531" vertical-scroll-proportion="0.0">
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/js/home.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="63" column="26" selection-start="1850" selection-end="1850" vertical-scroll-proportion="0.8556876">
+        <state line="26" column="28" selection-start="624" selection-end="632" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/home.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="16" selection-start="1367" selection-end="1367" vertical-scroll-proportion="-11.115385">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="169" column="1" selection-start="6376" selection-end="6376" vertical-scroll-proportion="0.4574468">
           <folding />
         </state>
       </provider>

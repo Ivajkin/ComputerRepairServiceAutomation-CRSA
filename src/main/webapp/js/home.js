@@ -6,48 +6,10 @@
 
      $('#loading-bar').hide();
 
-     var dictionaries = {
-         'disciplines': {
-             label: 'Список дисциплин',
-             listPath: '/discipline/list.html',
-             createPath: '/discipline/create.html',
-             icon: 'disciplineIcon.png'
-         },
-         'teachers': {
-             label: 'Список преподавателей',
-             listPath: '/teacher/list.html',
-             createPath: '/teacher/create.html',
-             icon: 'teacherIcon.png'
-         },
-         'flows': {
-             label: 'Список потоков',
-             listPath: '/flow/list.html',
-             createPath: '/flow/create.html',
-             icon: 'flowIcon.png'
-         },
-         'semesters': {
-             label: 'Список семестров',
-             listPath: '/semester/list.html',
-             createPath: '/semester/create.html',
-             icon: 'semesterIcon.png'
-         },
-         'departments': {
-             label: 'Список кафедр',
-             listPath: '/department/list.html',
-             createPath: '/department/create.html',
-             icon: 'departmentIcon.png'
-         },
-         'reports': {
-             label: 'Вывести отчет',
-             listPath: '/report/select.html',
-             createPath: '/report/create.html',
-             icon: 'reportIcon.png'
-         }
-
-
+     var mainMenuItems = {
          'requests': {
              label: 'Заявки',
-             icon: 'requestIcon.png',
+             icon: 'requestsIcon.png',
              path: '/requests.html'
          },
          'warehouse': {
@@ -60,10 +22,15 @@
              icon: 'storeIcon.png',
              path: '/store.html'
          },
-         'cashbox': {
+         'cash': {
              label: 'Касса',
-             icon: 'cashboxIcon.png',
-             path: '/cashbox.html'
+             icon: 'cashIcon.png',
+             path: '/cash.html'
+         } ,
+         'reports': {
+             label: 'Отчеты',
+             icon: 'reportsIcon.png',
+             path: '/reports.html'
          }
      };
 
@@ -71,21 +38,21 @@
          $('#loading-bar').show();
 
          $('#listPanel').html('');
-         $.ajax(dictionaries[dictionaryID]['listPath']).success(function(data) {
+         $.ajax(mainMenuItems[dictionaryID]['listPath']).success(function(data) {
              $('#listPanel').html(data);
 
              $('#loading-bar').hide();
          });
          $('#actionPanel').html('');
-         $.ajax(dictionaries[dictionaryID]['createPath']).success(function(data) {
+         $.ajax(mainMenuItems[dictionaryID]['createPath']).success(function(data) {
              $('#actionPanel').html(data);
          });
      }
 
-     for(var dic in dictionaries) {
+     for(var dic in mainMenuItems) {
          $('<a class="tableButton" id="'+ dic + '" href="#">'
-             + '<img class="tableIcon" src="/img/' + dictionaries[dic]['icon'] + '" />'
-             + dictionaries[dic]['label'] + '</a><br/>').appendTo("nav main");
+             + '<img class="tableIcon" src="/img/' + mainMenuItems[dic]['icon'] + '" />'
+             + mainMenuItems[dic]['label'] + '</a><br/>').appendTo("nav main");
          $('#' + dic).click(function () {
              openDictionary(this.id);
          });

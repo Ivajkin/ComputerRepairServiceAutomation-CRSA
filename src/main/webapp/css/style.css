@@ -98,12 +98,6 @@ h2 {
     color: #594f4f;
 }
 
-nav.main {
-    float: left;
-    width: 20%;
-    height: 100%;
-}
-
 main.main {
     float: left;
     width: 53%;
@@ -155,15 +149,47 @@ footer #loading-bar {
     min-height: 551px;
 }
 
+
+nav.main {
+    float: left;
+    width: 90px;
+    height: 365px;
+    -moz-border-radius: 0 15px 15px 0;
+    border-radius: 0 15px 15px 0;
+    margin-left: 0;
+    margin-top: 150px;
+}
+
 .tableButton {
-    height: 32px;
+    width: 40px;
+    height: 54px;
     display: block;
+    margin-left: 16px;
+    text-align: center;
+    text-decoration: initial;
+}
 }
 
 .tableIcon {
-    width: 32px;
-    margin-bottom: -10px;
-    margin-right: 5px;
+    width: 40px;
+    margin: 2.5px;
+
+
+    opacity: 0.3;
+
+    /*Transition*/
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+
+}
+.tableIcon:hover {
+    width: 45px;
+    margin: 0;
+
+    opacity: 1;
 }
 
 .iDemandPancakeTableStyle {
