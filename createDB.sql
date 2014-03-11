@@ -109,7 +109,33 @@ INSERT INTO `warehouse_item` (`invoice_number`, `hardware_id`, `item_count`, `wa
 --		Примерная стоимость -> The approximate cost?
 --		Предоплата -> prepayment?
 --		Установленные запчасти -> parts installed?
-
+create table if not exists `request` (
+  `req_num_id` int not null AUTO_INCREMENT unique primary key,
+  `hardware_id` integer not null references hardware(id),
+  `manufacturer_id` integer not null references manufacturer(id),
+  `model` varchar(100) CHARACTER SET utf8 not null,
+  `serial_number` varchar(100) CHARACTER SET utf8 not null,
+  `fault_id` integer not null references fault(id),
+  `appearance_id` integer not null references appearance(id),
+  `completeness_id` integer not null references completeness(id),
+  `phone` varchar(20),
+  `address` varchar(300) CHARACTER SET utf8 default null,
+  `customer_name` varchar(300) CHARACTER SET utf8 not null,
+  `source_id` integer not null references source(id),  
+  `date_of_call` varchar(20),
+  `note` varchar(200),
+  `approximate_cost` int default null,
+  `prepayment` int default null,
+  `acceptor_id` integer not null references employee(id),
+  `responsible_id` integer not null references employee(id),
+  `date_of_reciept` varchar(20) not null,
+  `date_of_issue` varchar(20),
+  `amount` int,
+  `method_of_peyment` varchar(100),
+  `request_status_id` integer not null references status(id),
+  `completed_works_id` integer not null references completed_works(id),
+  `parts_installed_id` integer not null references goods(id)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=3;
 
 -- ------------------------------------------------------------------
 
