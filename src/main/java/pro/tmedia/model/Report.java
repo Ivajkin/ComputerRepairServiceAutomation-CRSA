@@ -54,8 +54,6 @@ public class Report implements Serializable {
         }
     }
 
-    @ManyToOne
-    private Semester sem;
 
     @ManyToOne
     private Department dept;
@@ -64,12 +62,6 @@ public class Report implements Serializable {
     private Teacher teacher;
 
 
-    public Semester getSem() {
-        return sem;
-    }
-    public void setSem(Semester sem) {
-        this.sem = sem;
-    }
 
 
     public Department getDept() {

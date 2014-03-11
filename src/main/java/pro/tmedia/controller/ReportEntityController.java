@@ -28,8 +28,6 @@ public class ReportEntityController {
     @Autowired
     private ReportService reportService;
     @Autowired
-    private SemesterService semesterService;
-    @Autowired
     private DepartmentService departmentService;
     @Autowired
     private TeacherService teacherService;
@@ -48,8 +46,6 @@ public class ReportEntityController {
         //modelAndView.addObject("reportEntries", reportEntries);
 
 
-        List<Semester> semesterList = semesterService.findItems();
-        modelAndView.addObject("semesterList", semesterList);
         List<Department> departmentList = departmentService.findItems();
         modelAndView.addObject("departmentList", departmentList);
         List<Teacher> teacherList = teacherService.findItems();
@@ -66,8 +62,6 @@ public class ReportEntityController {
         modelAndView.addObject("reportEntryForm", reportEntry);
 
 
-        List<Semester> semesterList = semesterService.findItems();
-        modelAndView.addObject("semesterList", semesterList);
 
         List<Department> departmentList = departmentService.findItems();
         modelAndView.addObject("departmentList", departmentList);
@@ -118,7 +112,7 @@ public class ReportEntityController {
 
         /*List<ReportEntry> reportEntries = reportEntryService.findItems(reportSelectForm.getSem().getId(),
                 reportSelectForm.getDept().getId(), reportSelectForm.getTeacher().getId()); */
-        List<ReportEntry> reportEntries = reportEntryService.findItems(reportSelectForm.getSem().getId(),
+        List<ReportEntry> reportEntries = reportEntryService.findItems(-1,
                 reportSelectForm.getDept().getId(),
                 reportSelectForm.getTeacher().getId());
         modelAndView.addObject("reportEntries", reportEntries/*reportSelectForm.getReportEntries()*/);
@@ -146,8 +140,6 @@ public class ReportEntityController {
         modelAndView.addObject("reportEntryFullForm", new ReportWithReportEntry());
 
 
-        List<Semester> semesterList = semesterService.findItems();
-        modelAndView.addObject("semesterList", semesterList);
 
         List<Department> departmentList = departmentService.findItems();
         modelAndView.addObject("departmentList", departmentList);
@@ -174,7 +166,6 @@ public class ReportEntityController {
 
         if(/*reportService.find(reportEntryFullForm.report.getId())*/reportEntryFullForm.report.getId() == null) {
             Report rep = new Report();
-            rep.setSem(reportEntryFullForm.report.getSem());
             rep.setDept(reportEntryFullForm.report.getDept());
             rep.setTeacher(reportEntryFullForm.report.getTeacher());
             reportService.create(rep);
@@ -194,17 +185,4 @@ public class ReportEntityController {
         return modelAndView;
     }
 
-    /*protected Map referenceData(HttpServletRequest request) throws Exception {
-
-        Map referenceData = new HashMap();
-
-        List<Semester> semesterList = semesterService.findItems();
-        Map<String,String> semesterMap = new LinkedHashMap<String,String>();
-        for(int i = 0; i < semesterList.size(); ++i) {
-            semesterMap.put(semesterList.get(i).getName(), semesterList.get(i).getName());
-        }
-        referenceData.put("semesterList", semesterMap);
-
-        return referenceData;
-    }  */
 }

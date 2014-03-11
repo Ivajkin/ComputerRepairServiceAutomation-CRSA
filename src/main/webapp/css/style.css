@@ -166,10 +166,8 @@ nav.main {
     display: block;
     margin-left: 16px;
     text-align: center;
-    text-decoration: initial;
+    text-decoration: none;
 }
-}
-
 .tableIcon {
     width: 40px;
     margin: 2.5px;

@@ -2,9 +2,7 @@ package pro.tmedia.validator;
 
 
 import org.springframework.validation.Errors;
-import org.springframework.validation.ValidationUtils;
 import org.springframework.validation.Validator;
-import pro.tmedia.model.Semester;
 
 /**
  * User: Ivaykin Timofey
@@ -15,16 +13,16 @@ public class SemesterValidator implements Validator {
     @Override
     public boolean supports(Class clazz) {
         //just validate the Customer instances
-        return Semester.class.isAssignableFrom(clazz);
+        return true;//Semester1.class.isAssignableFrom(clazz);
     }
 
     @Override
     public void validate(Object target, Errors errors) {
 
-        Semester sem = (Semester)target;
+        /*Semester1 sem = (Semester1)target;
 
         if("NONE".equals(sem.getName())){
             errors.rejectValue("sem", "required.sem");
-        }
+        }     */
     }
 }

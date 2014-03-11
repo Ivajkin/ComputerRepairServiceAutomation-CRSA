@@ -30,8 +30,8 @@ create table if not exists `category` (
   `name` varchar(100) CHARACTER SET utf8 not null unique
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=3;
 
-INSERT INTO `category` (`id`, `name`) VALUES
-(1, 'Видеокарты');
+INSERT INTO `category` (`name`) VALUES
+('Видеокарты');
 
 --
 --	Таблица оборудования -> Hardware -> hardware
@@ -83,60 +83,36 @@ INSERT INTO `warehouse_item` (`invoice_number`, `hardware_id`, `item_count`, `wa
 ('es0215', 1, 15, '5 лет, с 30 мая 2012');
 
 
+
+--	Таблица заявок -> Request -> request
+--		Номер заявки -> request Number? (string or int??)
+--		Наименование оборудования -> name of equipment?
+--		Производитель -> manufacturer?
+--		Модель -> model?
+--		Серийный номер -> serial number?
+--		Адрес -> address?
+--		Телефон -> phone?
+--		Неисправность -> fault?
+--		инженер -> engineer?
+--		Дата получения (приема) -> Date of receipt ( receiving )?
+--		Дата выдачи -> date of issue?
+--		Сумма -> amount?
+--		Способ оплаты -> method of payment?
+--		Внешний вид -> appearance?
+--		Комплектность -> completeness?
+--		Источник -> source?
+--		Выполненные работы -> Completed works?
+--		Дата звонка -> Date of call?
+--		Примечание -> note?
+--		Имя клиента -> customer Name?
+--		Статус заявки -> application Status?
+--		Примерная стоимость -> The approximate cost?
+--		Предоплата -> prepayment?
+--		Установленные запчасти -> parts installed?
+
+
 -- ------------------------------------------------------------------
 
-
---	Таблица заявок
---		Номер заявки
---		Наименование оборудования
---		Производитель
---		Модель
---		Серийный номер
---		Адрес
---		Телефон
---		Неисправность
---		инженер
---		Дата получения (приема)
---		Дата выдачи
---		Сумма
---		Способ оплаты
---		Внешний вид
---		Комплектность
---		Источник
---		Выполненные работы
---		Дата звонка
---		Примечание
---		Имя клиента
---		Статус заявки
---		Примерная стоимость
---		Предоплата
---		Установленные запчасти
-
---	Request -> request
---		request Number? (string or int??)
---		name of equipment?
---		manufacturer?
---		model?
---		serial number?
---		address?
---		phone?
---		fault?
---		engineer?
---		Date of receipt ( receiving )?
---		date of issue?
---		amount?
---		method of payment?
---		appearance?
---		completeness?
---		source?
---		Completed works?
---		Date of call?
---		note?
---		customer Name?
---		application Status?
---		The approximate cost?
---		prepayment?
---		parts installed?
 
 --		
 --	Таблица производителей

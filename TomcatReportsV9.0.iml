@@ -9,10 +9,6 @@
         <webroots>
           <root url="file://$MODULE_DIR$/src/main/webapp" relative="/" />
         </webroots>
-        <sourceRoots>
-          <root url="file://$MODULE_DIR$/src/main/java" />
-          <root url="file://$MODULE_DIR$/src/main/resources" />
-        </sourceRoots>
       </configuration>
     </facet>
   </component>
@@ -61,6 +57,9 @@
     <orderEntry type="library" scope="TEST" name="Maven: org.springframework:spring-test-mvc:1.0.0.M1" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.hamcrest:hamcrest-library:1.2.1" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.hamcrest:hamcrest-core:1.2.1" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: com.jayway.jsonpath:json-path:0.8.1" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: net.minidev:json-smart:1.1.1" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: commons-lang:commons-lang:2.6" level="project" />
   </component>
 </module>
 

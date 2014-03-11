@@ -38,10 +38,9 @@ public class ReportEntryDAOImpl implements ReportEntryDAO {
                 "and (dept_id=" + dept_id + ") " +
                 "and (teacher_id=" + teacher_id + ")").list().size() == 0) {
             Report report = new Report();
-            Semester sem = new Semester(); sem.setId(sem_id);
             Department dept = new Department(); dept.setId(dept_id);
             Teacher teacher = new Teacher(); teacher.setId(teacher_id);
-            report.setSem(sem); report.setDept(dept); report.setTeacher(teacher);
+            report.setDept(dept); report.setTeacher(teacher);
             getCurrentSession().save(report);
             return Collections.<ReportEntry>emptyList();
         } else {

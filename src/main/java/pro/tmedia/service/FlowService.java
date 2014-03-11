@@ -1,7 +1,6 @@
 package pro.tmedia.service;
 
 import pro.tmedia.model.Flow;
-import pro.tmedia.model.Semester;
 
 /**
  * User: Ivaykin Timofey
