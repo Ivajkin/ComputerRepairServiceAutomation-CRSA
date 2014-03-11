@@ -2,19 +2,13 @@ package pro.tmedia.test;
 
 import org.junit.Before;
 import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
-import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-import org.springframework.test.context.web.WebAppConfiguration;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
-import org.springframework.web.context.WebApplicationContext;
 import pro.tmedia.controller.RequestsController;
 import pro.tmedia.init.WebAppConfig;
 
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 /**
@@ -31,14 +25,57 @@ public class RequestsSearchTest extends WebAppConfig {
     }
 
     @Test
-    public void testSearchProduct() throws Exception {
+    public void testSearchRequest() throws Exception {
         String keyword = "NVIDIA GTX 520";
         this.mockMvc.perform(get("/requests/search")
                 .param("q", keyword)
                 .accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
-                .andExpect(content().contentType(MediaType.APPLICATION_JSON))
-                .andExpect(jsonPath("$.hardware.name").value(keyword));
+                .andExpect(content().contentType(IntegrationTestUtil.APPLICATION_JSON_UTF8))
+                .andExpect(jsonPath("$.status").value("found"))
+                .andExpect(jsonPath("$.requests[0].hardware.name").value(keyword));
     }
+
+    @Test
+    public void testSearchRequestByNameGTXFoundOne() throws Exception {
+        String keyword = "NVIDIA GTX 550";
+        this.mockMvc.perform(get("/requests/search")
+                .param("q", keyword)
+                .accept(MediaType.APPLICATION_JSON))
+                .andExpect(status().isOk())
+                .andExpect(content().contentType(IntegrationTestUtil.APPLICATION_JSON_UTF8))
+                .andExpect(jsonPath("$.status").value("found"))
+                .andExpect(jsonPath("$.requests[0].hardware.name").value(keyword))
+                .andExpect(jsonPath("$.requests[1]").doesNotExist());
+    }
+
+    @Test
+    public void testSearchRequestByNameGTXFoundTwo() throws Exception {
+        String keyword = "GTX";
+
+        this.mockMvc.perform(get("/requests/search")
+                .param("q", keyword)
+                .accept(MediaType.APPLICATION_JSON))
+                .andExpect(status().isOk())
+                .andExpect(content().contentType(IntegrationTestUtil.APPLICATION_JSON_UTF8))
+                .andExpect(jsonPath("$.status").value("found"))
+                .andExpect(jsonPath("$.requests[0].hardware.name").value("NVIDIA GTX 520"))
+                .andExpect(jsonPath("$.requests[1].hardware.name").value("NVIDIA GTX 550"));
+    }
+
+    @Test
+    public void testSearchRequestByNameNotFound() throws Exception {
+        String keyword = "Intel i7 3254";
+        String text = String.format("Нет возможности найти запрос, содержащий '%s'", keyword);
+
+        this.mockMvc.perform(get("/requests/search")
+                .param("q", keyword)
+                .accept(MediaType.APPLICATION_JSON))
+                .andExpect(status().isOk())
+                .andExpect(content().contentType(IntegrationTestUtil.APPLICATION_JSON_UTF8))
+                .andExpect(jsonPath("$.status").value("not found"))
+                .andExpect(jsonPath("$.text").value(text));
+    }
+
 
 }

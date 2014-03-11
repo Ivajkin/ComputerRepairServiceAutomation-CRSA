@@ -14,7 +14,8 @@ interface IConfigConstants {
     public static final String SCRIPT_HANDLER="/scripts/**";
     public static final String SCRIPT_LOCATION="/script/";
 
-    public static final Integer CACHE_PERIOD_DEFAULT=30*24*3600*1000;
+    public static final Integer CACHE_PERIOD_DEFAULT=30*24*3600;
+
     // public static final Integer CACHE_PERIOD_6_MONTHS=6*30*24*3600*1000;
     // public static final Integer CACHE_PERIOD_YEAR=365*24*3600*1000;
 }
