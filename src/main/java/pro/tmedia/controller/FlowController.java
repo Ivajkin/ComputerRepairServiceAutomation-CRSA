@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import pro.tmedia.dao.FlowDAO;
-import pro.tmedia.model.Flow;
+import pro.tmedia.model.Fault;
 
 import java.util.List;
 
@@ -14,24 +14,24 @@ import java.util.List;
  */
 @Controller
 @RequestMapping("/flow")
-public class FlowController extends DictionaryItemController<Flow> {
+public class FlowController extends DictionaryItemController<Fault> {
     @Autowired
     private FlowDAO flowService;
 
     @Override
-    protected Flow getNewDictionaryItem() {
-        return new Flow();
+    protected Fault getNewDictionaryItem() {
+        return new Fault();
     }
 
     @Override
-    protected String createDictionaryItemDB(Flow flow) {
-        flowService.create(flow);
-        String message = "Поток успешно добавлен: " + flow.getName() + ".";
+    protected String createDictionaryItemDB(Fault fault) {
+        flowService.create(fault);
+        String message = "Поток успешно добавлен: " + fault.getName() + ".";
         return message;
     }
 
     @Override
-    protected List<Flow> getItems() {
+    protected List<Fault> getItems() {
         return flowService.findItems();
     }
 
@@ -58,12 +58,12 @@ public class FlowController extends DictionaryItemController<Flow> {
     }
 
     @Override
-    protected Flow find(Integer id) {
+    protected Fault find(Integer id) {
         return flowService.find(id);
     }
 
     @Override
-    protected void updateDictionaryItem(Flow dictionaryItem) {
+    protected void updateDictionaryItem(Fault dictionaryItem) {
         flowService.update(dictionaryItem);
     }
 }

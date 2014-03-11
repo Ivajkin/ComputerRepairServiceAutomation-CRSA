@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import pro.tmedia.dao.TeacherDAO;
-import pro.tmedia.model.Teacher;
+import pro.tmedia.model.Manufacturer;
 
 import java.util.List;
 
@@ -14,24 +14,24 @@ import java.util.List;
  */
 @Controller
 @RequestMapping("/teacher")
-public class TeacherController extends DictionaryItemController<Teacher>  {
+public class TeacherController extends DictionaryItemController<Manufacturer>  {
     @Autowired
     private TeacherDAO teacherService;
 
     @Override
-    protected Teacher getNewDictionaryItem() {
-        return new Teacher();
+    protected Manufacturer getNewDictionaryItem() {
+        return new Manufacturer();
     }
 
     @Override
-    protected String createDictionaryItemDB(Teacher teacher) {
-        teacherService.create(teacher);
-        String message = "Запись о преподавателе успешно добавлена: " + teacher.getName() + ".";
+    protected String createDictionaryItemDB(Manufacturer manufacturer) {
+        teacherService.create(manufacturer);
+        String message = "Запись о преподавателе успешно добавлена: " + manufacturer.getName() + ".";
         return message;
     }
 
     @Override
-    protected List<Teacher> getItems() {
+    protected List<Manufacturer> getItems() {
         return teacherService.findItems();
     }
 
@@ -58,12 +58,12 @@ public class TeacherController extends DictionaryItemController<Teacher>  {
     }
 
     @Override
-    protected Teacher find(Integer id) {
+    protected Manufacturer find(Integer id) {
         return teacherService.find(id);
     }
 
     @Override
-    protected void updateDictionaryItem(Teacher dictionaryItem) {
+    protected void updateDictionaryItem(Manufacturer dictionaryItem) {
         teacherService.update(dictionaryItem);
     }
 }

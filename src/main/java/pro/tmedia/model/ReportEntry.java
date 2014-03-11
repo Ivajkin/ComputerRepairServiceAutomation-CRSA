@@ -1,7 +1,5 @@
 package pro.tmedia.model;
 
-import org.hibernate.annotations.ForeignKey;
-
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -40,9 +38,9 @@ public class ReportEntry implements Serializable {
     private Report report;
 
     @ManyToOne
-    private Flow flow;
+    private Fault fault;
     @ManyToOne
-    private Discipline disc;
+    private Appearance disc;
 
     private Integer stud_count_plan;
     private Integer lection_count_plan;
@@ -63,17 +61,17 @@ public class ReportEntry implements Serializable {
         }
     }
 
-    public Flow getFlow() {
-        return flow;
+    public Fault getFault() {
+        return fault;
     }
-    public void setFlow(Flow flow) {
-        this.flow = flow;
+    public void setFault(Fault fault) {
+        this.fault = fault;
     }
 
-    public Discipline getDisc() {
+    public Appearance getDisc() {
         return disc;
     }
-    public void setDisc(Discipline disc) {
+    public void setDisc(Appearance disc) {
         this.disc = disc;
     }
 

@@ -1,15 +1,8 @@
 package pro.tmedia.dao;
 
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
-import pro.tmedia.model.DictionaryItem;
-import pro.tmedia.model.Discipline;
-import pro.tmedia.model.Teacher;
-
-import java.util.List;
+import pro.tmedia.model.Manufacturer;
 
 /**
  * User: Ivaykin Timofey
@@ -17,5 +10,5 @@ import java.util.List;
  */
 @Repository
 @Transactional
-public final class TeacherDAOImpl extends DictionaryItemDAOImpl<Teacher> implements TeacherDAO {
+public final class TeacherDAOImpl extends DictionaryItemDAOImpl<Manufacturer> implements TeacherDAO {
 }

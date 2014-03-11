@@ -5,7 +5,10 @@ import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
-import pro.tmedia.model.*;
+import pro.tmedia.model.Department;
+import pro.tmedia.model.Manufacturer;
+import pro.tmedia.model.Report;
+import pro.tmedia.model.ReportEntry;
 
 import java.util.Collections;
 import java.util.List;
@@ -39,8 +42,8 @@ public class ReportEntryDAOImpl implements ReportEntryDAO {
                 "and (teacher_id=" + teacher_id + ")").list().size() == 0) {
             Report report = new Report();
             Department dept = new Department(); dept.setId(dept_id);
-            Teacher teacher = new Teacher(); teacher.setId(teacher_id);
-            report.setDept(dept); report.setTeacher(teacher);
+            Manufacturer manufacturer = new Manufacturer(); manufacturer.setId(teacher_id);
+            report.setDept(dept); report.setManufacturer(manufacturer);
             getCurrentSession().save(report);
             return Collections.<ReportEntry>emptyList();
         } else {

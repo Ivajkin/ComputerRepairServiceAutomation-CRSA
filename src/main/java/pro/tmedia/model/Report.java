@@ -1,12 +1,8 @@
 package pro.tmedia.model;
 
-import org.hibernate.annotations.ForeignKey;
-
 import javax.persistence.*;
 import java.io.Serializable;
-import java.util.Collection;
 import java.util.List;
-import java.util.Set;
 
 /**
  * User: Ivaykin Timofey
@@ -59,7 +55,7 @@ public class Report implements Serializable {
     private Department dept;
 
     @ManyToOne
-    private Teacher teacher;
+    private Manufacturer manufacturer;
 
 
 
@@ -71,11 +67,11 @@ public class Report implements Serializable {
         this.dept = dept;
     }
 
-    public Teacher getTeacher() {
-        return teacher;
+    public Manufacturer getManufacturer() {
+        return manufacturer;
     }
-    public void setTeacher(Teacher teacher) {
-        this.teacher = teacher;
+    public void setManufacturer(Manufacturer manufacturer) {
+        this.manufacturer = manufacturer;
     }
 
 

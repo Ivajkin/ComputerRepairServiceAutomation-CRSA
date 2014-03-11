@@ -42,16 +42,6 @@
                     <td><form:errors path="dept" cssClass="error" /></td>
                 </tr>
                 <tr>
-                    <td>Преподаватель:</td>
-                    <td><form:select path="teacher.id">
-                        <form:option value="NONE" label="--- выберите ---" />
-                        <form:options items="${teacherList}" itemValue="id" itemLabel="name" />
-                    </form:select>
-                    </td>
-                    <td><form:errors path="teacher" cssClass="error" /></td>
-                </tr>
-
-                <tr>
                     <td colspan="3">Дальше <input type="submit" /></td>
                 </tr>
             </table>

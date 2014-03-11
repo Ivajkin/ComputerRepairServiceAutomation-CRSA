@@ -2,7 +2,7 @@ package pro.tmedia.dao;
 
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
-import pro.tmedia.model.Flow;
+import pro.tmedia.model.Fault;
 
 /**
  * User: Ivaykin Timofey
@@ -10,5 +10,5 @@ import pro.tmedia.model.Flow;
  */
 @Repository
 @Transactional
-public final class FlowDAOImpl extends DictionaryItemDAOImpl<Flow> implements FlowDAO {
+public final class FlowDAOImpl extends DictionaryItemDAOImpl<Fault> implements FlowDAO {
 }

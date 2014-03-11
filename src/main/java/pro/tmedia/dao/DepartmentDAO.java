@@ -2,7 +2,6 @@ package pro.tmedia.dao;
 
 import org.springframework.transaction.annotation.Transactional;
 import pro.tmedia.model.Department;
-import pro.tmedia.model.Discipline;
 
 /**
  * User: Ivaykin Timofey

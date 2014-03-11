@@ -27,7 +27,6 @@
             <li>Семестр: ${report.sem.name}</li>
             <li>Кафедра: ${report.dept.name}</li>
             <li>Зав. кафедрой: ${report.dept.head}</li>
-            <li>Преподаватель: ${report.teacher.name}</li>
         </ul>
 
         <div class="iDemandPancakeTableStyle">
@@ -47,7 +46,7 @@
                     <tr>
 
                         <td>
-                            ${reportEntry.flow.name}
+                            ${reportEntry.fault.name}
                         </td>
                         <td>
                             ${reportEntry.disc.name}

@@ -1,14 +1,8 @@
 package pro.tmedia.dao;
 
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
-import pro.tmedia.model.DictionaryItem;
-import pro.tmedia.model.Discipline;
-
-import java.util.List;
+import pro.tmedia.model.Appearance;
 
 /**
  * User: Ivaykin Timofey
@@ -16,7 +10,7 @@ import java.util.List;
  */
 @Repository
 @Transactional
-public final class DisciplineDAOImpl extends DictionaryItemDAOImpl<Discipline> implements DisciplineDAO {
+public final class DisciplineDAOImpl extends DictionaryItemDAOImpl<Appearance> implements DisciplineDAO {
      /*
     @Autowired
     private SessionFactory sessionFactory;
@@ -27,13 +21,13 @@ public final class DisciplineDAOImpl extends DictionaryItemDAOImpl<Discipline> i
 
     @Override
     public void createDictionaryItem(DictionaryItem dictionaryItem) {
-        Discipline discipline = (Discipline) dictionaryItem;
+        Appearance discipline = (Appearance) dictionaryItem;
         getCurrentSession().save(discipline);
     }
 
     @Override
     public DictionaryItem getDictionaryItem(int id) {
-        DictionaryItem dictionaryItem = (DictionaryItem) getCurrentSession().get(Discipline.class, id);
+        DictionaryItem dictionaryItem = (DictionaryItem) getCurrentSession().get(Appearance.class, id);
         return dictionaryItem;
     }
 
@@ -47,7 +41,7 @@ public final class DisciplineDAOImpl extends DictionaryItemDAOImpl<Discipline> i
     @SuppressWarnings("unchecked")
     @Override
     public List<DictionaryItem> getDictionaryItems() {
-        return getCurrentSession().createQuery("from Discipline").list();
+        return getCurrentSession().createQuery("from Appearance").list();
     }    */
 
     /*

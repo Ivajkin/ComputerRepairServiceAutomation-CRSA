@@ -1,7 +1,6 @@
 package pro.tmedia.service;
 
 import pro.tmedia.model.Department;
-import pro.tmedia.model.Discipline;
 
 /**
  * User: Ivaykin Timofey

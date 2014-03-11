@@ -11,11 +11,7 @@ import org.springframework.web.servlet.ModelAndView;
 import pro.tmedia.model.*;
 import pro.tmedia.service.*;
 
-import javax.servlet.http.HttpServletRequest;
-import java.util.HashMap;
-import java.util.LinkedHashMap;
 import java.util.List;
-import java.util.Map;
 
 /**
  * User: Ivaykin Timofey
@@ -48,8 +44,8 @@ public class ReportEntityController {
 
         List<Department> departmentList = departmentService.findItems();
         modelAndView.addObject("departmentList", departmentList);
-        List<Teacher> teacherList = teacherService.findItems();
-        modelAndView.addObject("teacherList", teacherList);
+        List<Manufacturer> manufacturerList = teacherService.findItems();
+        modelAndView.addObject("teacherList", manufacturerList);
 
         return modelAndView;
     }
@@ -66,16 +62,16 @@ public class ReportEntityController {
         List<Department> departmentList = departmentService.findItems();
         modelAndView.addObject("departmentList", departmentList);
 
-        List<Teacher> teacherList = teacherService.findItems();
-        modelAndView.addObject("teacherList", teacherList);
+        List<Manufacturer> manufacturerList = teacherService.findItems();
+        modelAndView.addObject("teacherList", manufacturerList);
 
-        List<Discipline> disciplineList = disciplineService.findItems();
-        modelAndView.addObject("disciplineList", disciplineList);
+        List<Appearance> appearanceList = disciplineService.findItems();
+        modelAndView.addObject("disciplineList", appearanceList);
 
         modelAndView.addObject("processPath", "/report/edit/"+id);
 
-        List<Flow> flowList = flowService.findItems();
-        modelAndView.addObject("flowList", flowList);
+        List<Fault> faultList = flowService.findItems();
+        modelAndView.addObject("flowList", faultList);
 
 
         return modelAndView;
@@ -110,11 +106,10 @@ public class ReportEntityController {
 
         modelAndView.addObject("reportSelectForm", new ReportEntry());
 
-        /*List<ReportEntry> reportEntries = reportEntryService.findItems(reportSelectForm.getSem().getId(),
-                reportSelectForm.getDept().getId(), reportSelectForm.getTeacher().getId()); */
+
         List<ReportEntry> reportEntries = reportEntryService.findItems(-1,
                 reportSelectForm.getDept().getId(),
-                reportSelectForm.getTeacher().getId());
+                reportSelectForm.getManufacturer().getId());
         modelAndView.addObject("reportEntries", reportEntries/*reportSelectForm.getReportEntries()*/);
 
         if(reportEntries.size() > 0)
@@ -144,14 +139,14 @@ public class ReportEntityController {
         List<Department> departmentList = departmentService.findItems();
         modelAndView.addObject("departmentList", departmentList);
 
-        List<Teacher> teacherList = teacherService.findItems();
-        modelAndView.addObject("teacherList", teacherList);
+        List<Manufacturer> manufacturerList = teacherService.findItems();
+        modelAndView.addObject("teacherList", manufacturerList);
 
-        List<Discipline> disciplineList = disciplineService.findItems();
-        modelAndView.addObject("disciplineList", disciplineList);
+        List<Appearance> appearanceList = disciplineService.findItems();
+        modelAndView.addObject("disciplineList", appearanceList);
 
-        List<Flow> flowList = flowService.findItems();
-        modelAndView.addObject("flowList", flowList);
+        List<Fault> faultList = flowService.findItems();
+        modelAndView.addObject("flowList", faultList);
 
         modelAndView.addObject("processPath", "/report/create/process");
 
@@ -167,7 +162,7 @@ public class ReportEntityController {
         if(/*reportService.find(reportEntryFullForm.report.getId())*/reportEntryFullForm.report.getId() == null) {
             Report rep = new Report();
             rep.setDept(reportEntryFullForm.report.getDept());
-            rep.setTeacher(reportEntryFullForm.report.getTeacher());
+            rep.setManufacturer(reportEntryFullForm.report.getManufacturer());
             reportService.create(rep);
             reportEntryFullForm.report = rep;
         }

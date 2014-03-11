@@ -40,15 +40,6 @@
                     <td><form:errors path="dept" cssClass="error" /></td>
                 </tr>
 
-                <tr>
-                    <td>Преподаватель:</td>
-                    <td><form:select path="teacher.id">
-                        <c:if test="${!processPath.contains(\"edit\")}"> <form:option value="NONE" label="--- выберите ---" /> </c:if>
-                        <form:options items="${teacherList}" itemValue="id" itemLabel="name" />
-                    </form:select>
-                    </td>
-                    <td><form:errors path="teacher" cssClass="error" /></td>
-                </tr>
 
                 <tr>
                     <td>Дисциплина:</td>
@@ -62,12 +53,12 @@
 
                 <tr>
                     <td>Поток:</td>
-                    <td><form:select path="flow.id">
+                    <td><form:select path="fault.id">
                         <c:if test="${!processPath.contains(\"edit\")}"> <form:option value="NONE" label="--- выберите ---" /> </c:if>
                         <form:options items="${flowList}" itemValue="id" itemLabel="name" />
                     </form:select>
                     </td>
-                    <td><form:errors path="flow" cssClass="error" /></td>
+                    <td><form:errors path="fault" cssClass="error" /></td>
                 </tr>
 
                 <tr>

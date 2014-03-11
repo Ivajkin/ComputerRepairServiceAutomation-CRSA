@@ -43,13 +43,13 @@
 </nav>
 
 <main id="listPanel" class="main">
-    <!--<iframe id="listPanelFrame" scrolling="no" src="${pageContext.request.contextPath}/discipline/list.html" seamless>         -->
+    <!--<iframe id="listPanelFrame" scrolling="no" src="${pageContext.request.contextPath}/appearance/list.html" seamless>         -->
         <!-- //required for browser compatibility -->
     <!--</iframe> -->
 </main>
 
 <section id="actionPanel" class="main">
-    <!--<iframe id="actionPanelFrame" scrolling="no" src="${pageContext.request.contextPath}/discipline/create.html" seamless>    -->
+    <!--<iframe id="actionPanelFrame" scrolling="no" src="${pageContext.request.contextPath}/appearance/create.html" seamless>    -->
         <!-- //required for browser compatibility -->
     <!--</iframe>             -->
 </section>

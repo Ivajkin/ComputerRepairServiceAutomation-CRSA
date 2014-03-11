@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import pro.tmedia.dao.DisciplineDAO;
-import pro.tmedia.model.Discipline;
+import pro.tmedia.model.Appearance;
 
 import java.util.List;
 
@@ -20,12 +20,12 @@ public class DisciplineServiceImpl implements DisciplineService {
     private DisciplineDAO disciplineDAO;
 
     @Override
-    public void create(Discipline discipline) {
-        disciplineDAO.create(discipline);
+    public void create(Appearance appearance) {
+        disciplineDAO.create(appearance);
     }
 
     @Override
-    public Discipline find(int id) {
+    public Appearance find(int id) {
         return disciplineDAO.find(id);
     }
 
@@ -35,12 +35,12 @@ public class DisciplineServiceImpl implements DisciplineService {
     }
 
     @Override
-    public List<Discipline> findItems() {
+    public List<Appearance> findItems() {
         return disciplineDAO.findItems();
     }
 
     @Override
-    public void update(Discipline dictionaryItem) {
+    public void update(Appearance dictionaryItem) {
         disciplineDAO.update(dictionaryItem);
     }
 }

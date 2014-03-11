@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import pro.tmedia.dao.TeacherDAO;
-import pro.tmedia.model.Teacher;
+import pro.tmedia.model.Manufacturer;
 
 import java.util.List;
 
@@ -20,12 +20,12 @@ public class TeacherServiceImpl implements TeacherService {
     private TeacherDAO teacherDAO;
 
     @Override
-    public void create(Teacher teacher) {
-        teacherDAO.create(teacher);
+    public void create(Manufacturer manufacturer) {
+        teacherDAO.create(manufacturer);
     }
 
     @Override
-    public Teacher find(int id) {
+    public Manufacturer find(int id) {
         return teacherDAO.find(id);
     }
 
@@ -35,12 +35,12 @@ public class TeacherServiceImpl implements TeacherService {
     }
 
     @Override
-    public List<Teacher> findItems() {
+    public List<Manufacturer> findItems() {
         return teacherDAO.findItems();
     }
 
     @Override
-    public void update(Teacher dictionaryItem) {
+    public void update(Manufacturer dictionaryItem) {
         teacherDAO.update(dictionaryItem);
     }
 }

@@ -20,6 +20,8 @@ public class RequestsController {
     @RequestMapping(value = "search", method = RequestMethod.GET)
     public void searchRequests(Locale locale, Model model, HttpServletResponse response) throws IOException {
         response.setContentType(MediaType.APPLICATION_JSON_VALUE);
-        response.getWriter().write("{hardware: {name: \"NVIDIA GTX 520\"} }");
+
+
+        response.getWriter().write("{\"hardware\": {\"name\": \"NVIDIA GTX 520\"} }");
     }
 }

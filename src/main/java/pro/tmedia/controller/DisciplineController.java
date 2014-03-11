@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import pro.tmedia.dao.DisciplineDAO;
-import pro.tmedia.model.Discipline;
+import pro.tmedia.model.Appearance;
 
 import java.util.List;
 
@@ -14,24 +14,24 @@ import java.util.List;
  */
 @Controller
 @RequestMapping("/discipline")
-public class DisciplineController extends DictionaryItemController<Discipline> {
+public class DisciplineController extends DictionaryItemController<Appearance> {
     @Autowired
     private DisciplineDAO disciplineService;
 
     @Override
-    protected Discipline getNewDictionaryItem() {
-        return new Discipline();
+    protected Appearance getNewDictionaryItem() {
+        return new Appearance();
     }
 
     @Override
-    protected String createDictionaryItemDB(Discipline discipline) {
-        disciplineService.create(discipline);
-        String message = "Дисциплина успешно добавлена: " + discipline.getName() + ".";
+    protected String createDictionaryItemDB(Appearance appearance) {
+        disciplineService.create(appearance);
+        String message = "Дисциплина успешно добавлена: " + appearance.getName() + ".";
         return message;
     }
 
     @Override
-    protected List<Discipline> getItems() {
+    protected List<Appearance> getItems() {
         return disciplineService.findItems();
     }
 
@@ -58,12 +58,12 @@ public class DisciplineController extends DictionaryItemController<Discipline> {
     }
 
     @Override
-    protected Discipline find(Integer id) {
+    protected Appearance find(Integer id) {
         return disciplineService.find(id);
     }
 
     @Override
-    protected void updateDictionaryItem(Discipline dictionaryItem) {
+    protected void updateDictionaryItem(Appearance dictionaryItem) {
         disciplineService.update(dictionaryItem);
     }
 }

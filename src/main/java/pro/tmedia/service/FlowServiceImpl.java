@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import pro.tmedia.dao.FlowDAO;
-import pro.tmedia.model.Flow;
+import pro.tmedia.model.Fault;
 
 import java.util.List;
 
@@ -20,12 +20,12 @@ public class FlowServiceImpl implements FlowService {
     private FlowDAO flowDAO;
 
     @Override
-    public void create(Flow flow) {
-        flowDAO.create(flow);
+    public void create(Fault fault) {
+        flowDAO.create(fault);
     }
 
     @Override
-    public Flow find(int id) {
+    public Fault find(int id) {
         return flowDAO.find(id);
     }
 
@@ -35,12 +35,12 @@ public class FlowServiceImpl implements FlowService {
     }
 
     @Override
-    public List<Flow> findItems() {
+    public List<Fault> findItems() {
         return flowDAO.findItems();
     }
 
     @Override
-    public void update(Flow dictionaryItem) {
+    public void update(Fault dictionaryItem) {
         flowDAO.update(dictionaryItem);
     }
 }
