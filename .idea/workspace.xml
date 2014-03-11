@@ -7,26 +7,19 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="281f6575-6afb-495a-9579-c980b0ff741a" name="Default" comment="Tests for RequestsController search">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/pro/tmedia/test/IntegrationTestUtil.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_gson_gson_2_2_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_6_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_simple_1_6_1.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pro/tmedia/init/IConfigConstants.java" afterPath="$PROJECT_DIR$/src/main/java/pro/tmedia/init/IConfigConstants.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pro/tmedia/init/Initializer.java" afterPath="$PROJECT_DIR$/src/main/java/pro/tmedia/init/Initializer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pro/tmedia/model/Request.java" afterPath="$PROJECT_DIR$/src/main/java/pro/tmedia/model/Request.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pro/tmedia/controller/RequestsController.java" afterPath="$PROJECT_DIR$/src/main/java/pro/tmedia/controller/RequestsController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/pro/tmedia/test/RequestsSearchTest.java" afterPath="$PROJECT_DIR$/src/test/java/pro/tmedia/test/RequestsSearchTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TomcatReportsV9.0.iml" afterPath="$PROJECT_DIR$/TomcatReportsV9.0.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/TomcatReportsV9_0_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/TomcatReportsV9_0_war_exploded.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+    <list default="true" id="281f6575-6afb-495a-9579-c980b0ff741a" name="Default" comment="Tests for RequestsService (findByKeyword)">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/pro/tmedia/service/RequestsService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/pro/tmedia/service/RequestsServiceImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/test/java/pro/tmedia/crsa/service/RequestsServiceTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/createDB.sql" afterPath="$PROJECT_DIR$/createDB.sql" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MOVED" beforePath="Z:\ComputerRepairServiceAutomation-CRSA\src\test\java\pro\tmedia\test\LinkControllerTest.java" afterPath="$PROJECT_DIR$/src/test/java/pro/tmedia/crsa/controller/LinkControllerTest.java" />
+      <change type="MOVED" beforePath="Z:\ComputerRepairServiceAutomation-CRSA\src\test\java\pro\tmedia\test\RequestsSearchTest.java" afterPath="$PROJECT_DIR$/src/test/java/pro/tmedia/crsa/controller/RequestsSearchTest.java" />
     </list>
     <ignored path="TomcatReportsV9.0.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Discipline.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1393288565194" ignored="false" />
-    <file path="/fragment.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1394520269585" ignored="false" />
+    <file path="/fragment.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1394526210225" ignored="false" />
     <file path="/application.properties" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1392206891317" ignored="false" />
     <file path="/DisciplineDAO.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1392514090704" ignored="false" />
     <file path="/DisciplineDAOImpl.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1392792569548" ignored="false" />
@@ -70,7 +63,7 @@
     <file path="/ReportDAO.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1392789561701" ignored="false" />
     <file path="/ReportService.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1392789983661" ignored="false" />
     <file path="/ReportServiceImpl.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1392790039046" ignored="false" />
-    <file path="/LinkControllerTest.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1394345496339" ignored="false" />
+    <file path="/LinkControllerTest.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1394525727104" ignored="false" />
     <file path="/ReportEntry.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1393292422607" ignored="false" />
     <file path="/ReportEntityController.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1393292166194" ignored="false" />
     <file path="/Department.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1392893106922" ignored="false" />
@@ -90,7 +83,7 @@
     <file path="/SemesterValidator.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1394501422646" ignored="false" />
     <file path="/DepartmentController.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1392892134445" ignored="false" />
     <file path="/list.jsp" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1393291288482" ignored="false" />
-    <file path="/Dummy.txt" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1394520592055" ignored="false" />
+    <file path="/Dummy.txt" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1394528579859" ignored="false" />
     <file path="/core5429_tomcat.sql" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1393288062387" ignored="false" />
     <file path="/ReportEntryServiceImpl.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1393205656125" ignored="false" />
     <file path="/ReportEntryDAOImpl.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1393236602128" ignored="false" />
@@ -106,6 +99,9 @@
     <file path="/Request.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1394511616071" ignored="false" />
     <file path="/a.dummy" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1394511504806" ignored="false" />
     <file path="/IConfigConstants.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1394520968150" ignored="false" />
+    <file path="/RequestsServiceTest.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1394528105816" ignored="false" />
+    <file path="/RequestsService.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1394526518852" ignored="false" />
+    <file path="/RequestsServiceImpl.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1394528515045" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,6 +128,20 @@
   <component name="DebuggerManager">
     <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint url="file://$PROJECT_DIR$/src/main/java/pro/tmedia/model/Report.java" line="46" class="pro.tmedia.model.Report" package="pro.tmedia.model">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/test/java/pro/tmedia/crsa/controller/LinkControllerTest.java" line="21" class="pro.tmedia.crsa.controller.LinkControllerTest" package="pro.tmedia.crsa.controller">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -192,9 +202,9 @@
   <component name="FileEditorManager">
     <leaf>
       <file leaf-file-name="RequestsSearchTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/pro/tmedia/test/RequestsSearchTest.java">
+        <entry file="file://$PROJECT_DIR$/src/test/java/pro/tmedia/crsa/controller/RequestsSearchTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="48" column="68" selection-start="1929" selection-end="1929" vertical-scroll-proportion="0.0">
+            <state line="59" column="41" selection-start="2292" selection-end="2292" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -202,10 +212,32 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Initializer.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pro/tmedia/init/Initializer.java">
+      <file leaf-file-name="RequestsServiceTest.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/pro/tmedia/crsa/service/RequestsServiceTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="43" selection-start="1073" selection-end="1073" vertical-scroll-proportion="0.4857143">
+            <state line="28" column="39" selection-start="978" selection-end="978" vertical-scroll-proportion="0.1609658">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RequestsServiceImpl.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pro/tmedia/service/RequestsServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="17" column="47" selection-start="424" selection-end="424" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="createDB.sql" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/createDB.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="271" column="42" selection-start="10320" selection-end="10320" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -214,7 +246,7 @@
       <file leaf-file-name="RequestsController.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/pro/tmedia/controller/RequestsController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="69" column="28" selection-start="2369" selection-end="2369" vertical-scroll-proportion="0.0">
+            <state line="35" column="54" selection-start="887" selection-end="1056" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -222,10 +254,48 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="RequestsService.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pro/tmedia/service/RequestsService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="11" column="25" selection-start="197" selection-end="197" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ReportServiceImpl.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pro/tmedia/service/ReportServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="18" column="13" selection-start="456" selection-end="456" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ReportService.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pro/tmedia/service/ReportService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="11" column="17" selection-start="190" selection-end="190" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="WebAppConfig.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/pro/tmedia/init/WebAppConfig.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="61" column="172" selection-start="2718" selection-end="2718" vertical-scroll-proportion="0.0">
+            <state line="31" column="25" selection-start="1248" selection-end="1260" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Initializer.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pro/tmedia/init/Initializer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="17" column="24" selection-start="585" selection-end="596" vertical-scroll-proportion="8.84">
               <folding />
             </state>
           </provider>
@@ -256,11 +326,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/pro/tmedia/model/Fault.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pro/tmedia/model/Discipline.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pro/tmedia/model/Appearance.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pro/tmedia/model/Completeness.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pro/tmedia/model/Source.java" />
         <option value="$PROJECT_DIR$/src/main/java/pro/tmedia/model/Employee.java" />
         <option value="$PROJECT_DIR$/src/main/java/pro/tmedia/model/RequestStatus.java" />
         <option value="$PROJECT_DIR$/src/main/java/pro/tmedia/model/Task.java" />
@@ -272,6 +337,11 @@
         <option value="$PROJECT_DIR$/src/test/java/pro/tmedia/test/RequestsSearchTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/pro/tmedia/controller/RequestsController.java" />
         <option value="$PROJECT_DIR$/src/main/java/pro/tmedia/init/IConfigConstants.java" />
+        <option value="$PROJECT_DIR$/src/test/java/pro/tmedia/crsa/controller/LinkControllerTest.java" />
+        <option value="$PROJECT_DIR$/createDB.sql" />
+        <option value="$PROJECT_DIR$/src/main/java/pro/tmedia/service/RequestsService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pro/tmedia/service/RequestsServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/test/java/pro/tmedia/crsa/service/RequestsServiceTest.java" />
       </list>
     </option>
   </component>
@@ -411,7 +481,79 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="tmedia" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TomcatReportsV9.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ComputerRepairServiceAutomation-CRSA" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tmedia" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="crsa" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="service" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TomcatReportsV9.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ComputerRepairServiceAutomation-CRSA" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tmedia" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="crsa" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controller" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -809,6 +951,9 @@
       <recent name="pro.tmedia.controller.DictionaryItemController" />
       <recent name="pro.tmedia.init.IConfigConstants" />
     </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="pro.tmedia.service" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="K:\TomcatReports\Intellij-TomcatReportsV9.0\src\main\webapp\WEB-INF\pages\report" />
       <recent name="C:\Users\Timofej\Dropbox\Study\ПО(м) - 3 семестр\1. Распределённые информационные системы\Intellij-TomcatReportsV9.0\src\main\webapp\module" />
@@ -817,7 +962,69 @@
       <recent name="C:\Users\Timofej\Dropbox\Study\ПО(м) - 3 семестр\1. Распределённые информационные системы\TomcatReportsV9.0\src\main\webapp\WEB-INF" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.RequestsSearchTest">
+  <component name="RunManager" selected="JUnit.RequestsServiceTest">
+    <configuration default="false" name="LinkControllerTest" type="JUnit" factoryName="JUnit" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="pro.tmedia.crsa.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="TomcatReportsV9.0" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="pro.tmedia.crsa.controller" />
+      <option name="MAIN_CLASS_NAME" value="pro.tmedia.crsa.controller.LinkControllerTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Debug" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="RequestsServiceTest" type="JUnit" factoryName="JUnit" temporary="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="pro.tmedia.crsa.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="TomcatReportsV9.0" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="pro.tmedia.crsa.service" />
+      <option name="MAIN_CLASS_NAME" value="pro.tmedia.crsa.service.RequestsServiceTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
@@ -1014,8 +1221,8 @@
       <module name="TomcatReportsV9.0" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="pro.tmedia.test" />
-      <option name="MAIN_CLASS_NAME" value="pro.tmedia.test.RequestsSearchTest" />
+      <option name="PACKAGE_NAME" value="pro.tmedia.crsa.controller" />
+      <option name="MAIN_CLASS_NAME" value="pro.tmedia.crsa.controller.RequestsSearchTest" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -1176,11 +1383,19 @@
         </option>
       </method>
     </configuration>
-    <list size="3">
+    <list size="5">
       <item index="0" class="java.lang.String" itemvalue="JUnit.RequestsSearchTest" />
       <item index="1" class="java.lang.String" itemvalue="Tomcat Server.Tomcat 7" />
       <item index="2" class="java.lang.String" itemvalue="Tomcat Server.Tomcat 8" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.LinkControllerTest" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.RequestsServiceTest" />
     </list>
+    <recent_temporary>
+      <list size="2">
+        <item index="0" class="java.lang.String" itemvalue="JUnit.RequestsServiceTest" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.LinkControllerTest" />
+      </list>
+    </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
       <Port>5050</Port>
@@ -1210,7 +1425,11 @@
       <created>1394516296601</created>
       <updated>1394516296601</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Tests for RequestsController search">
+      <created>1394521166399</created>
+      <updated>1394521166399</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1243,7 +1462,7 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20200893" sideWeight="0.4939394" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.40311804" sideWeight="0.7375" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4732143" sideWeight="0.6090909" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.47272727" sideWeight="0.6090909" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.47350428" sideWeight="0.38560605" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21558164" sideWeight="0.08147322" order="3" side_tool="true" content_ui="tabs" />
@@ -1256,7 +1475,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.6717949" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924107" sideWeight="0.49786553" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36971048" sideWeight="0.7409091" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.36191538" sideWeight="0.6806818" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2590909" sideWeight="0.8212121" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1302,7 +1521,7 @@
     <option name="MAXIMUM_HISTORY_ROWS" value="1000" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Tests for RequestsController search" />
+    <option name="LAST_COMMIT_MESSAGE" value="Tests for RequestsService (findByKeyword)" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1319,6 +1538,7 @@
     <MESSAGE value="All SQL tables created" />
     <MESSAGE value="Entity models for sql tables created" />
     <MESSAGE value="Tests for RequestsController search" />
+    <MESSAGE value="Tests for RequestsService (findByKeyword)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1328,82 +1548,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/pro/tmedia/controller/DepartmentController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="13" selection-start="688" selection-end="688" vertical-scroll-proportion="0.27732465">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pro/tmedia/dao/DepartmentDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="17" selection-start="209" selection-end="209" vertical-scroll-proportion="0.24440895">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pro/tmedia/controller/ReportEntityController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="13" selection-start="666" selection-end="666" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="152" column="0" selection-start="5297" selection-end="5297" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/javax/servlet/javax.servlet-api/3.0.1/javax.servlet-api-3.0.1.jar!/javax/servlet/ServletResponse.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="9" selection-start="510" selection-end="510" vertical-scroll-proportion="0.34888437">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/pro/tmedia/test/IntegrationTestUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="0" selection-start="365" selection-end="365" vertical-scroll-proportion="0.3050571">
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/pro/tmedia/test/LinkControllerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="13" selection-start="168" selection-end="168" vertical-scroll-proportion="0.2172524">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/pro/tmedia/test/RequestsSearchTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="68" selection-start="1929" selection-end="1929" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pro/tmedia/controller/DictionaryItemController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="70" column="103" selection-start="2778" selection-end="2778" vertical-scroll-proportion="0.33333334">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pro/tmedia/model/Request.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="19" selection-start="1048" selection-end="1048" vertical-scroll-proportion="0.33333334">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/3.2.4.RELEASE/spring-webmvc-3.2.4.RELEASE.jar!/org/springframework/web/servlet/config/annotation/ResourceHandlerRegistration.class">
       <provider selected="true" editor-type-id="text-editor">
         <state line="16" column="89" selection-start="896" selection-end="896" vertical-scroll-proportion="0.0">
@@ -1411,25 +1555,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pro/tmedia/controller/RequestsController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="69" column="28" selection-start="2369" selection-end="2369" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/3.2.4.RELEASE/spring-webmvc-3.2.4.RELEASE-sources.jar!/org/springframework/web/servlet/config/annotation/ResourceHandlerRegistration.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="80" column="23" selection-start="3392" selection-end="3392" vertical-scroll-proportion="0.5528757">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pro/tmedia/init/WebAppConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="61" column="172" selection-start="2718" selection-end="2718" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -1441,10 +1569,106 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="152" column="0" selection-start="5297" selection-end="5297" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/pro/tmedia/crsa/controller/LinkControllerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="41" column="33" selection-start="1246" selection-end="1246" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pro/tmedia/init/Initializer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="43" selection-start="1073" selection-end="1073" vertical-scroll-proportion="0.4857143">
+        <state line="17" column="24" selection-start="585" selection-end="596" vertical-scroll-proportion="8.84">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/pro/tmedia/crsa/controller/RequestsSearchTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="59" column="41" selection-start="2292" selection-end="2292" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-test/3.2.4.RELEASE/spring-test-3.2.4.RELEASE.jar!/org/springframework/test/context/web/WebAppConfiguration.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="18" selection-start="397" selection-end="397" vertical-scroll-proportion="0.2802198">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pro/tmedia/init/WebAppConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="25" selection-start="1248" selection-end="1260" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pro/tmedia/service/ReportService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="17" selection-start="190" selection-end="190" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pro/tmedia/service/ReportServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="13" selection-start="456" selection-end="456" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pro/tmedia/controller/RequestsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="35" column="54" selection-start="887" selection-end="1056" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pro/tmedia/service/RequestsService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="25" selection-start="197" selection-end="197" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/createDB.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="271" column="42" selection-start="10320" selection-end="10320" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pro/tmedia/service/RequestsServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="47" selection-start="424" selection-end="424" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/pro/tmedia/crsa/service/RequestsServiceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="39" selection-start="978" selection-end="978" vertical-scroll-proportion="0.1609658">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

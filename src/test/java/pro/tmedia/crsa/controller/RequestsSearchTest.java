@@ -1,4 +1,4 @@
-package pro.tmedia.test;
+package pro.tmedia.crsa.controller;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -7,6 +7,7 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import pro.tmedia.controller.RequestsController;
 import pro.tmedia.init.WebAppConfig;
+import pro.tmedia.test.IntegrationTestUtil;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
