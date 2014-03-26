@@ -1,9 +1,7 @@
 package pro.tmedia.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
+import java.util.Set;
 
 /**
  * User: Ivaykin Timofey
@@ -16,6 +14,18 @@ public class Category {
     @GeneratedValue
     private Integer id;
     private String name;
+
+
+    @OneToMany
+    Set<Hardware> hardware;
+
+    public Set<Hardware> getHardware() {
+        return hardware;
+    }
+
+    public void setHardware(Set<Hardware> hardware) {
+        this.hardware = hardware;
+    }
 
     public Integer getId() {
         return id;

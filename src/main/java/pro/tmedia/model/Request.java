@@ -1,9 +1,6 @@
 package pro.tmedia.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 /**
  * User: Ivaykin Timofey
@@ -15,29 +12,40 @@ public class Request {
     @Id
     @GeneratedValue
     private Integer req_num_id;
+    @ManyToOne
     private Hardware hardware;
+    @ManyToOne
     private Manufacturer manufacturer;
     private String model;
     private String serial_number;
+    @ManyToOne
     private Fault fault;
+    @ManyToOne
     private Appearance appearance;
-    Completeness completeness;
+    @ManyToOne
+    private Completeness completeness;
     private String phone;
     private String address;
     private String customer_name;
+    @ManyToOne
     private Source source;
     private String date_of_call;
     private String note;
     private Integer approximate_cost;
     private Integer prepayment;
+
+    @ManyToOne
     Employee acceptor;
+    @ManyToOne
     Employee responsible;
     private String date_of_receipt;
     private String date_of_issue;
     Integer amount;
     private String method_of_payment;
-    RequestStatus request_status;
-    Task completed_works;
+    @ManyToOne
+    private RequestStatus request_status;
+    @ManyToOne
+    private Task completed_works;
 
     public Integer getReq_num_id() {
         return req_num_id;
@@ -239,5 +247,6 @@ public class Request {
         this.parts_installed = parts_installed;
     }
 
+    @ManyToOne
     Hardware parts_installed;
 }

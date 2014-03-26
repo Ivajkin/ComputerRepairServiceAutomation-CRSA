@@ -29,8 +29,8 @@ public class DictionaryItem {
         this.name = name;
     }
 
-    //@OneToMany
-    //Set<ReportEntry> reports;
+    @OneToMany
+    Set<Request> requests;
 
     /*@Override
     public String toString() {

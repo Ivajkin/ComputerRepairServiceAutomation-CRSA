@@ -52,7 +52,9 @@ create table if not exists `hardware` (
   `id` int not null AUTO_INCREMENT unique primary key,
   `name` varchar(100) CHARACTER SET utf8 not null unique,
   `description` varchar(200) CHARACTER SET utf8 default null,
-  `category_id` integer not null references category(id) ON UPDATE CASCADE ON DELETE RESTRICT
+  `category_id` integer not null,
+  foreign key (category_id) references category(id) ON UPDATE CASCADE
+    -- ON DELETE RESTRICT
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=3;
 
 INSERT INTO `hardware` (`name`, `description`, `category_id`) VALUES
