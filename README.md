@@ -8,7 +8,7 @@ IDE: IntelliJ IDEA
 
 JavaEE + Spring MVC + Hibernate
 
-jQuery
+jQuery, AngularJS
 
 VCS+Tracker: Github
 
