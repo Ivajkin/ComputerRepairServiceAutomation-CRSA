@@ -3,19 +3,19 @@
  * Date: 2/18/14
  */
 
-angular.module('project', ['restangular', 'ngRoute']).
+angular.module('request', ['restangular', 'ngRoute']).
     config(function($routeProvider, RestangularProvider) {
         $routeProvider.
             when('/', {
                 controller:ListCtrl,
                 templateUrl:'list.html'
             }).
-            when('/edit/:projectId', {
+            when('/edit/:requestId', {
                 controller:EditCtrl,
                 templateUrl:'detail.html',
                 resolve: {
-                    project: function(Restangular, $route){
-                        return Restangular.one('requests', $route.current.params.projectId).get();
+                    request: function(Restangular, $route){
+                        return Restangular.one('requests', $route.current.params.requestId).get();
                     }
                 }
             }).
@@ -25,7 +25,7 @@ angular.module('project', ['restangular', 'ngRoute']).
         RestangularProvider.setBaseUrl('');
         // RestangularProvider.setDefaultRequestParams({ apiKey: '4f847ad3e4b08a2eed5f3b54' })
         RestangularProvider.setRestangularFields({
-            id: '_id.$oid'
+            /*id: '_id.$oid'   */
         });
 
         RestangularProvider.setRequestInterceptor(function(elem, operation, what) {
@@ -46,19 +46,19 @@ function ListCtrl($scope, Restangular) {
 
 function CreateCtrl($scope, $location, Restangular) {
     $scope.save = function() {
-        Restangular.all('requests').post($scope.project).then(function(project) {
+        Restangular.all('requests').post($scope.request).then(function(request) {
             $location.path('/list');
         });
     }
 }
 
-function EditCtrl($scope, $location, Restangular, project) {
-    var original = project;
-    $scope.project = Restangular.copy(original);
+function EditCtrl($scope, $location, Restangular, request) {
+    var original = request;
+    $scope.request = Restangular.copy(original);
 
 
     $scope.isClean = function() {
-        return angular.equals(original, $scope.project);
+        return angular.equals(original, $scope.request);
     }
 
     $scope.destroy = function() {
@@ -68,7 +68,7 @@ function EditCtrl($scope, $location, Restangular, project) {
     };
 
     $scope.save = function() {
-        $scope.project.put().then(function() {
+        $scope.request.put().then(function() {
             $location.path('/');
         });
     };

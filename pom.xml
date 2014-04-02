@@ -151,6 +151,18 @@
             <version>2.2.4</version>
         </dependency>
 
+        <dependency>
+            <groupId>org.codehaus.jackson</groupId>
+            <artifactId>jackson-mapper-asl</artifactId>
+            <version>1.9.13</version>
+        </dependency>
+        <dependency>
+            <groupId>org.codehaus.jackson</groupId>
+            <artifactId>jackson-core-asl</artifactId>
+            <version>1.9.13</version>
+        </dependency>
+
+
 
         <dependency>
             <groupId>org.webjars</groupId>
@@ -187,6 +199,8 @@
             <artifactId>underscorejs</artifactId>
             <version>1.6.0-1</version>
         </dependency>
+
+
 
     </dependencies>
     <repositories>

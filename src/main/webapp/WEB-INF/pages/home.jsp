@@ -52,7 +52,7 @@
 </nav>
 
 <main id="listPanel" class="main">
-    <div ng-app="project">
+    <div ng-app="request">
         <div ng-view></div>
 
 
@@ -63,17 +63,17 @@
             <table>
                 <thead>
                 <tr>
-                    <th>Project</th>
-                    <th>Description</th>
+                    <th>Request Id</th>
+                    <th>Hardware Name</th>
                     <th><a href="#/new"><i class="glyphicon glyphicon-plus-sign"></i></a></th>
                 </tr>
                 </thead>
                 <tbody>
-                <tr ng-repeat="request in requests | filter:search | orderBy:'name'" ng-show="project._id.$oid">
-                    <td><a href="{{project.site}}" target="_blank">{{project.name}}</a></td>
-                    <td>{{project.description}}</td>
+                <tr ng-repeat="request in requests | filter:search | orderBy:'name'" ng-show="request.id">
+                    <td>{{request.id}}</td>
+                    <td>{{request.hardware.name}}</td>
                     <td>
-                        <a href="#/edit/{{project._id.$oid}}"><i class="glyphicon glyphicon-pencil"></i></a>
+                        <a href="#/edit/{{request.id}}"><i class="glyphicon glyphicon-pencil"></i></a>
                     </td>
                 </tr>
                 </tbody>
@@ -86,30 +86,30 @@
         <script type="text/ng-template" id="detail.html">
             <form name="myForm">
                 <div class="control-group" ng-class="{error: myForm.name.$invalid}">
-                    <label>Name</label>
-                    <input type="text" name="name" ng-model="project.name" required>
+                    <label>Hardware Name</label>
+                    <input type="text" name="name" ng-model="request.hardware.name" required>
           <span ng-show="myForm.name.$error.required" class="help-inline">
               Required</span>
                 </div>
 
-                <div class="control-group" ng-class="{error: myForm.site.$invalid}">
+                <!--<div class="control-group" ng-class="{error: myForm.site.$invalid}">
                     <label>Website</label>
-                    <input type="url" name="site" ng-model="project.site" required>
+                    <input type="url" name="site" ng-model="request.site" required>
           <span ng-show="myForm.site.$error.required" class="help-inline">
               Required</span>
           <span ng-show="myForm.site.$error.url" class="help-inline">
               Not a URL</span>
-                </div>
+                </div>-->
 
-                <label>Description</label>
-                <textarea name="description" ng-model="project.description"></textarea>
+                <!--<label>Description</label>
+                <textarea name="description" ng-model="request.description"></textarea>   -->
 
                 <br>
                 <a href="#/" class="btn">Cancel</a>
                 <button ng-click="save()" ng-disabled="isClean() || myForm.$invalid"
                         class="btn btn-primary">Save</button>
                 <button ng-click="destroy()"
-                        ng-show="project._id" class="btn btn-danger">Delete</button>
+                        ng-show="request.id" class="btn btn-danger">Delete</button>
             </form>
         </script>
     </div>

@@ -4,7 +4,7 @@ import com.google.gson.Gson;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import pro.tmedia.model.Hardware;
@@ -70,13 +70,16 @@ public class RequestsController {
     }
 
     @RequestMapping(value = "", method = RequestMethod.POST)
-    public void createRequest(HttpServletRequest httpRequest,  HttpServletResponse response, @ModelAttribute Request request) throws IOException {
+    public void createRequest(HttpServletRequest httpRequest,  HttpServletResponse response, @RequestBody Request request) throws IOException {
 
-        String message = "Request created: " + gson.toJson(request);
+
+        requests.add(request);
+
+        String message = "{\"status\": \"Request created\", \"object\":  " + gson.toJson(request) + "}";
         logger.info(message);
 
         response.setContentType("application/json;charset=UTF-8");
-        response.getWriter().write("{\"message\":\"" + message + "\"}");
+        response.getWriter().write(message);
     }
 
     /*@RequestMapping(value = "search", method = RequestMethod.GET)
