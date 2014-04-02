@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.webjars:underscorejs:1.6.0-1">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/webjars/underscorejs/1.6.0-1/underscorejs-1.6.0-1.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/webjars/underscorejs/1.6.0-1/underscorejs-1.6.0-1-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/webjars/underscorejs/1.6.0-1/underscorejs-1.6.0-1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -10,6 +10,7 @@ import pro.tmedia.init.WebAppConfig;
 import pro.tmedia.test.IntegrationTestUtil;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 /**
@@ -23,6 +24,15 @@ public class RequestsSearchTest extends WebAppConfig {
     @Before
     public void setup() {
         this.mockMvc = MockMvcBuilders.standaloneSetup(new RequestsController()).build();
+    }
+
+    @Test
+    public void testRequestList() throws Exception {
+        this.mockMvc.perform(post("/requests")
+                .accept(MediaType.APPLICATION_JSON))
+                .andExpect(status().isOk())
+                .andExpect(content().contentType(IntegrationTestUtil.APPLICATION_JSON_UTF8))
+                .andExpect(jsonPath("$[0].hardware.name").exists());
     }
 
     @Test

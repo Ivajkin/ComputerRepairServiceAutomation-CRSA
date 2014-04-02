@@ -13,6 +13,8 @@ interface IConfigConstants {
     public static final String IMAGE_LOCATION="/img/";
     public static final String SCRIPT_HANDLER="/scripts/**";
     public static final String SCRIPT_LOCATION="/script/";
+    public static final String WEBJARS_HANDLER="/webjars/**";
+    public static final String WEBJARS_LOCATION="/webjars/";
 
     public static final Integer CACHE_PERIOD_DEFAULT=30*24*3600;
 

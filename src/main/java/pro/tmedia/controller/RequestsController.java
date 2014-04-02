@@ -41,6 +41,27 @@ public class RequestsController {
         requests.add(gson.toJson(request));
     }
 
+    @RequestMapping(value = "", method = RequestMethod.POST)
+    public void listRequests(HttpServletRequest httpRequest,  HttpServletResponse response) throws IOException {
+
+        logger.info("Requests list requested");
+
+        response.setContentType("application/json;charset=UTF-8");
+
+
+        /* генерируем ответ */
+        StringBuffer jsonBuffer = new StringBuffer();
+        jsonBuffer.append("[");
+        for(String product: requests) {
+            jsonBuffer.append(product + ",");
+        }
+        jsonBuffer.append("]");
+
+        response.getWriter().write(jsonBuffer.toString());
+
+
+    }
+
     @RequestMapping(value = "search", method = RequestMethod.GET)
     public void searchRequests(HttpServletRequest httpRequest,  HttpServletResponse response) throws IOException {
 
@@ -73,4 +94,6 @@ public class RequestsController {
         response.getWriter().write(jsonBuffer.toString());
 
     }
+
+
 }

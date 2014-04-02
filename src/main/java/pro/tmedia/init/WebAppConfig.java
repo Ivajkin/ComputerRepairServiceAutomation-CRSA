@@ -1,10 +1,5 @@
 package pro.tmedia.init;
 
-import java.util.Properties;
-
-import javax.annotation.Resource;
-import javax.sql.DataSource;
-
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -19,6 +14,10 @@ import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 import org.springframework.web.servlet.view.JstlView;
 import org.springframework.web.servlet.view.UrlBasedViewResolver;
+
+import javax.annotation.Resource;
+import javax.sql.DataSource;
+import java.util.Properties;
 
 /**
  * User: Ivaykin Timofey
@@ -63,6 +62,7 @@ public class WebAppConfig extends WebMvcConfigurerAdapter {
         registry.addResourceHandler(IConfigConstants.IMAGE_HANDLER).addResourceLocations(IConfigConstants.IMAGE_LOCATION).setCachePeriod(IConfigConstants.CACHE_PERIOD_DEFAULT);
         registry.addResourceHandler(IConfigConstants.CSS_HANDLER).addResourceLocations(IConfigConstants.CSS_LOCATION).setCachePeriod(IConfigConstants.CACHE_PERIOD_DEFAULT);
         registry.addResourceHandler(IConfigConstants.SCRIPT_HANDLER).addResourceLocations(IConfigConstants.SCRIPT_LOCATION).setCachePeriod(IConfigConstants.CACHE_PERIOD_DEFAULT);
+        registry.addResourceHandler(IConfigConstants.WEBJARS_HANDLER).addResourceLocations(IConfigConstants.WEBJARS_LOCATION).setCachePeriod(IConfigConstants.CACHE_PERIOD_DEFAULT);
     }
 
     @Bean
