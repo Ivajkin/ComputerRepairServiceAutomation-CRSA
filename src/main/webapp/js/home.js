@@ -31,7 +31,7 @@ angular.module('request', ['restangular', 'ngRoute']).
         RestangularProvider.setRequestInterceptor(function(elem, operation, what) {
 
             if (operation === 'put') {
-                elem._id = undefined;
+                elem.id = undefined;
                 return elem;
             }
             return elem;
