@@ -1,7 +1,6 @@
 package pro.tmedia.controller;
 
 import com.google.gson.Gson;
-import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
@@ -27,19 +26,24 @@ public class RequestsController {
 
     final Logger logger = LoggerFactory.getLogger(RequestsController.class);
 
-    final static List<String> requests = new ArrayList<>();
-    static {
-        Gson gson = new Gson();
-        Request request = new Request();
-        Hardware hardware = new Hardware();
+    static Gson gson = new Gson();
 
+    final static List<Request> requests = new ArrayList<>();
+    static {
+        Request request;
+        Hardware hardware;
+
+        request = new Request();
+        hardware = new Hardware();
         hardware.setName("NVIDIA GTX 520");
         request.setHardware(hardware);
-        requests.add(gson.toJson(request));
+        requests.add(request);
 
+        request = new Request();
+        hardware = new Hardware();
         hardware.setName("NVIDIA GTX 550");
         request.setHardware(hardware);
-        requests.add(gson.toJson(request));
+        requests.add(request);
     }
 
     @RequestMapping(value = "", method = RequestMethod.GET)
@@ -51,23 +55,22 @@ public class RequestsController {
 
 
         /* генерируем ответ */
-        StringBuffer jsonBuffer = new StringBuffer();
+        /*StringBuffer jsonBuffer = new StringBuffer();
         jsonBuffer.append("[");
         for(String product: requests) {
             jsonBuffer.append(product + ",");
         }
-        jsonBuffer.append("]");
+        jsonBuffer.substring(1,2);
+        jsonBuffer.append("]");       */
+        String json = gson.toJson(requests);
 
-        response.getWriter().write(jsonBuffer.toString());
+        response.getWriter().write(json);
 
 
     }
 
     @RequestMapping(value = "", method = RequestMethod.POST)
     public void createRequest(HttpServletRequest httpRequest,  HttpServletResponse response, @ModelAttribute Request request) throws IOException {
-
-
-        Gson gson = new Gson();
 
         String message = "Request created: " + gson.toJson(request);
         logger.info(message);
@@ -76,7 +79,7 @@ public class RequestsController {
         response.getWriter().write("{\"message\":\"" + message + "\"}");
     }
 
-    @RequestMapping(value = "search", method = RequestMethod.GET)
+    /*@RequestMapping(value = "search", method = RequestMethod.GET)
     public void searchRequests(HttpServletRequest httpRequest,  HttpServletResponse response) throws IOException {
 
         String keyword = StringUtils.stripToEmpty(httpRequest.getParameter("q"));
@@ -85,29 +88,27 @@ public class RequestsController {
 
         response.setContentType("application/json;charset=UTF-8");
 
-        /* ищем запросы */
-        List<String> matchedRequests = new ArrayList<>();
-        for(String request: requests) {
-            if(request.contains(keyword)) {
+        // ищем запросы
+        List<Request> matchedRequests = new ArrayList<>();
+        for(Request request: requests) {
+            if(request.getHardware().getName().contains(keyword)) {
                 matchedRequests.add(request);
             }
         }
 
-        /* генерируем ответ */
+       // генерируем ответ
         StringBuffer jsonBuffer = new StringBuffer();
         if(!matchedRequests.isEmpty()) {
-            jsonBuffer.append("{\"status\":\"found\", \"requests\": [");
-            for(String product: matchedRequests) {
-                jsonBuffer.append(product + ",");
-            }
-            jsonBuffer.append("]}");
+            jsonBuffer.append("{\"status\":\"found\", \"requests\": ");
+            jsonBuffer.append(gson.toJson(requests));
+            jsonBuffer.append("}");
         } else {
             jsonBuffer.append("{\"status\":\"not found\", \"text\":\"" + text + "\"}");
         }
 
         response.getWriter().write(jsonBuffer.toString());
 
-    }
+    }          */
 
 
 }
