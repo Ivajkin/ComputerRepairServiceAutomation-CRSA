@@ -5,6 +5,7 @@ import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import pro.tmedia.model.Hardware;
@@ -41,7 +42,7 @@ public class RequestsController {
         requests.add(gson.toJson(request));
     }
 
-    @RequestMapping(value = "", method = RequestMethod.POST)
+    @RequestMapping(value = "", method = RequestMethod.GET)
     public void listRequests(HttpServletRequest httpRequest,  HttpServletResponse response) throws IOException {
 
         logger.info("Requests list requested");
@@ -60,6 +61,19 @@ public class RequestsController {
         response.getWriter().write(jsonBuffer.toString());
 
 
+    }
+
+    @RequestMapping(value = "", method = RequestMethod.POST)
+    public void createRequest(HttpServletRequest httpRequest,  HttpServletResponse response, @ModelAttribute Request request) throws IOException {
+
+
+        Gson gson = new Gson();
+
+        String message = "Request created: " + gson.toJson(request);
+        logger.info(message);
+
+        response.setContentType("application/json;charset=UTF-8");
+        response.getWriter().write("{\"message\":\"" + message + "\"}");
     }
 
     @RequestMapping(value = "search", method = RequestMethod.GET)

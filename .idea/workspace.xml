@@ -8,28 +8,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="281f6575-6afb-495a-9579-c980b0ff741a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_webjars_angularjs_1_2_14.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_webjars_bootstrap_3_1_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_webjars_jquery_2_1_0_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_webjars_lodash_2_4_1_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_webjars_ng_grid_2_0_8.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_webjars_restangular_1_3_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_webjars_toastr_2_0_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_webjars_underscorejs_1_6_0_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dictionaries/Timofej.xml" />
-      <change type="DELETED" beforePath="Z:\ComputerRepairServiceAutomation-CRSA\src\main\webapp\module\jquery-2.1.0.js" afterPath="" />
-      <change type="DELETED" beforePath="Z:\ComputerRepairServiceAutomation-CRSA\src\main\webapp\module\jquery-2.1.0.min.js" afterPath="" />
-      <change type="DELETED" beforePath="Z:\ComputerRepairServiceAutomation-CRSA\src\main\webapp\module\jquery-2.1.0.min.map" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pro/tmedia/init/IConfigConstants.java" afterPath="$PROJECT_DIR$/src/main/java/pro/tmedia/init/IConfigConstants.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pro/tmedia/controller/RequestsController.java" afterPath="$PROJECT_DIR$/src/main/java/pro/tmedia/controller/RequestsController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/pro/tmedia/crsa/controller/RequestsSearchTest.java" afterPath="$PROJECT_DIR$/src/test/java/pro/tmedia/crsa/controller/RequestsSearchTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TomcatReportsV9.0.iml" afterPath="$PROJECT_DIR$/TomcatReportsV9.0.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/TomcatReportsV9_0_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/TomcatReportsV9_0_war_exploded.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pro/tmedia/init/WebAppConfig.java" afterPath="$PROJECT_DIR$/src/main/java/pro/tmedia/init/WebAppConfig.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/js/home.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/home.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/home.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/home.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/css/style.css" afterPath="$PROJECT_DIR$/src/main/webapp/css/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="TomcatReportsV9.0.iws" />
@@ -99,7 +81,7 @@
     <file path="/SemesterValidator.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1394501422646" ignored="false" />
     <file path="/DepartmentController.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1392892134445" ignored="false" />
     <file path="/list.jsp" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1393291288482" ignored="false" />
-    <file path="/Dummy.txt" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1396398887618" ignored="false" />
+    <file path="/Dummy.txt" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1396421566281" ignored="false" />
     <file path="/core5429_tomcat.sql" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1393288062387" ignored="false" />
     <file path="/ReportEntryServiceImpl.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1393205656125" ignored="false" />
     <file path="/ReportEntryDAOImpl.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1393236602128" ignored="false" />
@@ -109,8 +91,8 @@
     <file path="/1.regexp" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1393290518100" ignored="false" />
     <file path="/__dummy.html" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1393292707547" ignored="false" />
     <file path="/createDB.sql" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1395822944456" ignored="false" />
-    <file path="/RequestsSearchTest.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1396400730498" ignored="false" />
-    <file path="/RequestsController.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1396418532653" ignored="false" />
+    <file path="/RequestsSearchTest.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1396422944404" ignored="false" />
+    <file path="/RequestsController.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1396423212918" ignored="false" />
     <file path="/Hardware.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1395826412694" ignored="false" />
     <file path="/Request.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1395826393375" ignored="false" />
     <file path="/a.dummy" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1394511504806" ignored="false" />
@@ -226,16 +208,16 @@
       <file leaf-file-name="home.jsp" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/home.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="75" column="91" selection-start="3481" selection-end="3481" vertical-scroll-proportion="-6.0">
+            <state line="71" column="38" selection-start="3144" selection-end="3144" vertical-scroll-proportion="-4.6666665">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="create.jsp" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="create.jsp" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/department/create.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="38" selection-start="671" selection-end="671" vertical-scroll-proportion="0.4190141">
+            <state line="26" column="28" selection-start="1023" selection-end="1023" vertical-scroll-proportion="-17.0">
               <folding />
             </state>
           </provider>
@@ -271,7 +253,7 @@
       <file leaf-file-name="home.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/js/home.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="86" column="17" selection-start="2359" selection-end="2363" vertical-scroll-proportion="-58.48">
+            <state line="25" column="11" selection-start="842" selection-end="842" vertical-scroll-proportion="-12.92">
               <folding />
             </state>
           </provider>
@@ -280,7 +262,25 @@
       <file leaf-file-name="RequestsController.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/pro/tmedia/controller/RequestsController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="49" column="33" selection-start="1527" selection-end="1527" vertical-scroll-proportion="0.0">
+            <state line="76" column="75" selection-start="2440" selection-end="2440" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DictionaryItemController.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pro/tmedia/controller/DictionaryItemController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="27" column="39" selection-start="973" selection-end="1218" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RequestsSearchTest.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/pro/tmedia/crsa/controller/RequestsSearchTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="39" column="0" selection-start="1349" selection-end="1349" vertical-scroll-proportion="0.33333334">
               <folding />
             </state>
           </provider>
@@ -334,17 +334,17 @@
         <option value="$PROJECT_DIR$/src/main/java/pro/tmedia/model/DictionaryItem.java" />
         <option value="$PROJECT_DIR$/src/main/java/pro/tmedia/model/Hardware.java" />
         <option value="$PROJECT_DIR$/src/main/java/pro/tmedia/model/Request.java" />
-        <option value="$PROJECT_DIR$/src/test/java/pro/tmedia/crsa/controller/RequestsSearchTest.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/requests/request-list.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/module/angular.min.js" />
         <option value="$PROJECT_DIR$/src/main/java/pro/tmedia/init/IConfigConstants.java" />
         <option value="$PROJECT_DIR$/src/main/java/pro/tmedia/init/WebAppConfig.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/requests/list.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/pro/tmedia/controller/RequestsController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/js/home.js" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/home.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/css/style.css" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/home.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/js/home.js" />
+        <option value="$PROJECT_DIR$/src/test/java/pro/tmedia/crsa/controller/RequestsSearchTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pro/tmedia/controller/RequestsController.java" />
       </list>
     </option>
   </component>
@@ -1552,7 +1552,11 @@
       <created>1394528658661</created>
       <updated>1394528658661</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Webjars, restangularjs, bootstrap, JSON for requests">
+      <created>1396421591165</created>
+      <updated>1396421591165</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1645,7 +1649,7 @@
     <option name="MAXIMUM_HISTORY_ROWS" value="1000" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Tests for RequestsService (findByKeyword)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Webjars, restangularjs, bootstrap, JSON for requests" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1663,6 +1667,7 @@
     <MESSAGE value="Entity models for sql tables created" />
     <MESSAGE value="Tests for RequestsController search" />
     <MESSAGE value="Tests for RequestsService (findByKeyword)" />
+    <MESSAGE value="Webjars, restangularjs, bootstrap, JSON for requests" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1672,20 +1677,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/pro/tmedia/controller/DictionaryItemController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="22" selection-start="431" selection-end="431" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/pro/tmedia/crsa/controller/RequestsSearchTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="61" selection-start="908" selection-end="908" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
       <provider editor-type-id="com.intellij.javaee.module.view.web.viewlets.WebModuleGeneralEditorProvider">
         <state />
@@ -1723,23 +1714,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pro/tmedia/controller/RequestsController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="33" selection-start="1527" selection-end="1527" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="188" column="21" selection-start="6490" selection-end="6490" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/home.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="75" column="91" selection-start="3481" selection-end="3481" vertical-scroll-proportion="-6.0">
           <folding />
         </state>
       </provider>
@@ -1751,16 +1728,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/home.js">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/department/create.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="86" column="17" selection-start="2359" selection-end="2363" vertical-scroll-proportion="-58.48">
+        <state line="26" column="28" selection-start="1023" selection-end="1023" vertical-scroll-proportion="-17.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/department/create.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/java/pro/tmedia/controller/DictionaryItemController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="38" selection-start="671" selection-end="671" vertical-scroll-proportion="0.4190141">
+        <state line="27" column="39" selection-start="973" selection-end="1218" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/home.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="71" column="38" selection-start="3144" selection-end="3144" vertical-scroll-proportion="-4.6666665">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/home.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="11" selection-start="842" selection-end="842" vertical-scroll-proportion="-12.92">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pro/tmedia/controller/RequestsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="76" column="75" selection-start="2440" selection-end="2440" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/pro/tmedia/crsa/controller/RequestsSearchTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="39" column="0" selection-start="1349" selection-end="1349" vertical-scroll-proportion="0.33333334">
           <folding />
         </state>
       </provider>

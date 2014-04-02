@@ -28,11 +28,19 @@ public class RequestsSearchTest extends WebAppConfig {
 
     @Test
     public void testRequestList() throws Exception {
-        this.mockMvc.perform(post("/requests")
+        this.mockMvc.perform(get("/requests")
                 .accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk())
                 .andExpect(content().contentType(IntegrationTestUtil.APPLICATION_JSON_UTF8))
                 .andExpect(jsonPath("$[0].hardware.name").exists());
+    }
+
+    @Test
+    public void testCreateRequest() throws Exception {
+        this.mockMvc.perform(post("/requests")
+                .accept(MediaType.APPLICATION_JSON))
+                .andExpect(status().isOk())
+                .andExpect(content().contentType(IntegrationTestUtil.APPLICATION_JSON_UTF8));
     }
 
     @Test

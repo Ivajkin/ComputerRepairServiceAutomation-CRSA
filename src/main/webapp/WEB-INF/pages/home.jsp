@@ -59,7 +59,7 @@
 
         <!-- CACHE FILE: list.html -->
         <script type="text/ng-template" id="list.html">
-            <input type="text" ng-model="search" class="search-query" placeholder="Search">
+            <input type="text" ng-model="search" class="form-control" placeholder="Search">
             <table>
                 <thead>
                 <tr>
@@ -69,7 +69,7 @@
                 </tr>
                 </thead>
                 <tbody>
-                <tr ng-repeat="project in projects | filter:search | orderBy:'name'" ng-show="project._id.$oid">
+                <tr ng-repeat="request in requests | filter:search | orderBy:'name'" ng-show="project._id.$oid">
                     <td><a href="{{project.site}}" target="_blank">{{project.name}}</a></td>
                     <td>{{project.description}}</td>
                     <td>

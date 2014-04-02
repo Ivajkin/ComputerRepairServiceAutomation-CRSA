@@ -15,15 +15,15 @@ angular.module('project', ['restangular', 'ngRoute']).
                 templateUrl:'detail.html',
                 resolve: {
                     project: function(Restangular, $route){
-                        return Restangular.one('projects', $route.current.params.projectId).get();
+                        return Restangular.one('requests', $route.current.params.projectId).get();
                     }
                 }
             }).
             when('/new', {controller:CreateCtrl, templateUrl:'detail.html'}).
             otherwise({redirectTo:'/'});
 
-        RestangularProvider.setBaseUrl('https://api.mongolab.com/api/1/databases/angularjs/collections');
-        RestangularProvider.setDefaultRequestParams({ apiKey: '4f847ad3e4b08a2eed5f3b54' })
+        RestangularProvider.setBaseUrl('');
+        // RestangularProvider.setDefaultRequestParams({ apiKey: '4f847ad3e4b08a2eed5f3b54' })
         RestangularProvider.setRestangularFields({
             id: '_id.$oid'
         });
@@ -40,13 +40,13 @@ angular.module('project', ['restangular', 'ngRoute']).
 
 
 function ListCtrl($scope, Restangular) {
-    $scope.projects = Restangular.all("projects").getList().$object;
+    $scope.requests = Restangular.all("requests").getList().$object;
 }
 
 
 function CreateCtrl($scope, $location, Restangular) {
     $scope.save = function() {
-        Restangular.all('projects').post($scope.project).then(function(project) {
+        Restangular.all('requests').post($scope.project).then(function(project) {
             $location.path('/list');
         });
     }
