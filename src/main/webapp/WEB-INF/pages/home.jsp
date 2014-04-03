@@ -36,6 +36,7 @@
     <script type="text/javascript" src="webjars/restangular/1.3.1/restangular.js"></script>
 
     <script type="text/javascript" src="${pageContext.request.contextPath}/js/home.js"></script>
+    <script type="text/javascript" src="${pageContext.request.contextPath}/js/phone.controller.js"></script>
 </head>
 <body>
 
@@ -52,6 +53,16 @@
 </nav>
 
 <main id="listPanel" class="main">
+    <div  ng-app="phonecatApp" ng-controller="PhoneListCtrl">
+        Search: <input ng-model="query" />
+        <ul>
+            <li ng-repeat="phone in phones | filter:query">
+                {{phone.name}}
+                <p>{{phone.snippet}}</p>
+            </li>
+        </ul>
+        <p>Total number of phones: 2</p>
+    </div>
     <div ng-app="request">
         <div ng-view></div>
 

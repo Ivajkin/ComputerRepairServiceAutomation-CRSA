@@ -1,6 +1,5 @@
 package pro.tmedia.crsa.controller;
 
-import com.google.gson.Gson;
 import org.junit.Before;
 import org.junit.Test;
 import org.springframework.http.MediaType;
@@ -83,9 +82,9 @@ public class RequestsSearchTest extends WebAppConfig {
         Hardware hardware = new Hardware();
         hardware.setName("iPad Screen");
         request.setHardware(hardware);
-        Gson gson = new Gson();
+        /*Gson gson = new Gson();
 
-        /*this.mockMvc.perform(post("/requests")
+        this.mockMvc.perform(post("/requests")
                 .contentType(IntegrationTestUtil.APPLICATION_JSON_UTF8)
                 .body(gson.toJson(hardware))
                 .accept(MediaType.APPLICATION_JSON))
