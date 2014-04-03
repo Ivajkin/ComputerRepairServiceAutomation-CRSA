@@ -36,15 +36,16 @@
 <body>
 
 <header class="mainheader">
-    <img id="logo" src="/img/logo.png" alt="Служба компьютерного ремонта (логотип)" />
+    <img id="logo" src="${pageContext.request.contextPath}/img/logo.png" alt="Служба компьютерного ремонта (логотип)" />
     <h1>Служба компьютерного ремонта</h1>
     <h2>Techno Media Ltd</h2>
 
 </header>
 
-<!-- TODO: Сделать кнопку "Настройки"
-        Категории - Добавлять, удалять, изменять категории может администратор в разделе Настройка.
-        -->
+<!-- Категории - Добавлять, удалять, изменять категории может администратор в разделе Настройка. -->
+<a id="settingsButton" class="tableButton" href="#">
+    <img class="tableIcon" alt="Настройки" src="${pageContext.request.contextPath}/img/settings.png" />
+</a>
 
 
 <nav class="panel main">

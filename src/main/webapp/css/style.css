@@ -192,6 +192,11 @@ nav.main {
     opacity: 1;
 }
 
+#settingsButton {
+    float: right;
+    margin-right: 20px;
+}
+
 .iDemandPancakeTableStyle {
     padding: 0;
     margin-left: 10px;
