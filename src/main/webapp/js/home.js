@@ -77,7 +77,36 @@ function EditCtrl($scope, $location, Restangular, request) {
 function openRequests() {
 }
 
+/* Message system */
+var messagebox = {
+    info: toastr.info,
+    warning: toastr.warning,
+    success: toastr.success,
+    error: toastr.error
+};
+(function initialiseMessageSystem() {
+    toastr.options = {
+        "closeButton": true,
+        "debug": true,
+        "positionClass": "toast-bottom-right",
+        "showDuration": "300",
+        "hideDuration": "1000",
+        "timeOut": "5000",
+        "extendedTimeOut": "1000",
+        "showEasing": "swing",
+        "hideEasing": "linear",
+        "showMethod": "fadeIn",
+        "hideMethod": "fadeOut"
+    }})();
+/* Message system ends */
+
+function documentLoaded() {
+    messagebox.info('Начните работу с добавления заявок', 'Приложение готово к работе.');
+}
+
  $(document).ready(function() {
+
+     documentLoaded();
 
      $('#loading-bar').hide();
 

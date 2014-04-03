@@ -28,12 +28,7 @@
     <script type="text/javascript" src="webjars/ng-grid/2.0.8/ng-grid.js"></script>
 
     <script type="text/javascript" src="webjars/bootstrap/3.1.1/js/bootstrap.js"></script>
-    <script type="text/javascript" src="webjars/bootstrap/3.1.1/js/bootstrap.js"></script>
     <script type="text/javascript" src="webjars/toastr/2.0.1/toastr.js"></script>
-
-    <script type="text/javascript" src="webjars/underscorejs/1.6.0/underscore.js"></script>
-
-    <script type="text/javascript" src="webjars/restangular/1.3.1/restangular.js"></script>
 
     <script type="text/javascript" src="${pageContext.request.contextPath}/js/home.js"></script>
     <script type="text/javascript" src="${pageContext.request.contextPath}/js/phone.controller.js"></script>
