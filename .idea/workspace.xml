@@ -8,7 +8,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="281f6575-6afb-495a-9579-c980b0ff741a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/home.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/home.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/js/home.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/home.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="TomcatReportsV9.0.iws" />
@@ -45,7 +45,7 @@
     <file path="/TeacherService.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1392551833545" ignored="false" />
     <file path="/TeacherServiceImpl.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1393209086100" ignored="false" />
     <file path="/DictionaryItemController.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1393209531916" ignored="false" />
-    <file path="/home.js" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1396516818125" ignored="false" />
+    <file path="/home.js" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1396525498990" ignored="false" />
     <file path="/FlowController.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1393208869126" ignored="false" />
     <file path="/SemesterController.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1393208906469" ignored="false" />
     <file path="/Report.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1393287493862" ignored="false" />
@@ -78,7 +78,7 @@
     <file path="/SemesterValidator.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1394501422646" ignored="false" />
     <file path="/DepartmentController.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1392892134445" ignored="false" />
     <file path="/list.jsp" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1393291288482" ignored="false" />
-    <file path="/Dummy.txt" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1396517289863" ignored="false" />
+    <file path="/Dummy.txt" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1396518192238" ignored="false" />
     <file path="/core5429_tomcat.sql" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1393288062387" ignored="false" />
     <file path="/ReportEntryServiceImpl.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1393205656125" ignored="false" />
     <file path="/ReportEntryDAOImpl.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1393236602128" ignored="false" />
@@ -202,10 +202,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="home.jsp" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="home.jsp" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/home.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="46" column="11" selection-start="2442" selection-end="2442" vertical-scroll-proportion="0.8409894">
+            <state line="46" column="11" selection-start="2442" selection-end="2442" vertical-scroll-proportion="-18.307692">
               <folding />
             </state>
           </provider>
@@ -265,10 +265,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="home.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="home.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/js/home.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="93" column="21" selection-start="2547" selection-end="2547" vertical-scroll-proportion="0.0">
+            <state line="157" column="12" selection-start="4907" selection-end="4907" vertical-scroll-proportion="0.5118243">
               <folding />
             </state>
           </provider>
@@ -322,8 +322,8 @@
         <option value="$PROJECT_DIR$/createDB.sql" />
         <option value="$PROJECT_DIR$/src/test/java/pro/tmedia/crsa/controller/RequestsSearchTest.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/js/phone.controller.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/js/home.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/home.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/js/home.js" />
       </list>
     </option>
   </component>
@@ -1525,7 +1525,11 @@
       <created>1396517315989</created>
       <updated>1396517315989</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Placeholder for settings button">
+      <created>1396518200807</created>
+      <updated>1396518200807</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1618,7 +1622,7 @@
     <option name="MAXIMUM_HISTORY_ROWS" value="1000" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Toastr message system created" />
+    <option name="LAST_COMMIT_MESSAGE" value="Placeholder for settings button" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1642,6 +1646,7 @@
     <MESSAGE value="Request creation prepared with JSON and test" />
     <MESSAGE value="Restangularjs prepared for requests table" />
     <MESSAGE value="Toastr message system created" />
+    <MESSAGE value="Placeholder for settings button" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1749,16 +1754,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/home.js">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/home.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="93" column="21" selection-start="2547" selection-end="2547" vertical-scroll-proportion="0.0">
+        <state line="46" column="11" selection-start="2442" selection-end="2442" vertical-scroll-proportion="-18.307692">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/home.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/home.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="11" selection-start="2442" selection-end="2442" vertical-scroll-proportion="0.8409894">
+        <state line="157" column="12" selection-start="4907" selection-end="4907" vertical-scroll-proportion="0.5118243">
           <folding />
         </state>
       </provider>

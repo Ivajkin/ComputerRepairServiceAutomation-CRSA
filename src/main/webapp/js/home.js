@@ -90,8 +90,8 @@ var messagebox = {
         "debug": true,
         "positionClass": "toast-bottom-right",
         "showDuration": "300",
-        "hideDuration": "1000",
-        "timeOut": "5000",
+        "hideDuration": "1500",
+        "timeOut": "6500",
         "extendedTimeOut": "1000",
         "showEasing": "swing",
         "hideEasing": "linear",
@@ -99,6 +99,16 @@ var messagebox = {
         "hideMethod": "fadeOut"
     }})();
 /* Message system ends */
+
+/* Assertions */
+function assert(expression, expectedMessage) {
+    if(!expression) {
+        assert(expectedMessage, "Сообщение для assert не должно быть пустым");
+        assert(messagebox, "Объект для вывода сообщений (messagebox) не существует");
+        messagebox.error(expectedMessage, "Ошибка при проверке выражения (assert)");
+    }
+}
+/* Assertions ends */
 
 function documentLoaded() {
     messagebox.info('Начните работу с добавления заявок', 'Приложение готово к работе.');
@@ -115,32 +125,44 @@ function documentLoaded() {
              label: 'Заявки',
              icon: 'requestsIcon.png',
              path: '/requests.html',
+             message: {header: "Раздел работы с заявками на ремонт", text: "В этом разделе вы можете создавать, изменять заявки, печатать талоны, счета."},
              callback: openRequests
          },
          'warehouse': {
              label: 'Склад',
              icon: 'warehouseIcon.png',
-             path: '/warehouse.html'
+             path: '/warehouse.html',
+             message: {header: "Склад", text: "Оприходование, списание и работа с категориями."}
          },
          'store': {
              label: 'Магазин',
              icon: 'storeIcon.png',
-             path: '/store.html'
+             path: '/store.html',
+             message: {header: "Продажа товаров", text: "Раздел продажи товаров, включающий подготовку соответствующих документов."}
          },
          'cash': {
              label: 'Касса',
              icon: 'cashIcon.png',
-             path: '/cash.html'
+             path: '/cash.html',
+             message: {header: "Управление кассой", text: "Раздел управления кассами - приход, расход по типам."}
          } ,
          'reports': {
              label: 'Отчеты',
              icon: 'reportsIcon.png',
-             path: '/reports.html'
+             path: '/reports.html',
+             message: {header: "Форма подготовки отчетов", text: "Позволяет подготовить и экспортировать основные отчеты филиала" +
+                 " - зарплата мастерам, движение денежных средств, остатки на складе, списание со склада, принятие на склад, валовая прибыль."}
          }
      };
+     for(var i in mainMenuItems) {
+         assert(mainMenuItems[i].message && mainMenuItems[i].message.header && mainMenuItems[i].message.text, "У элемента меню " + i + " нет сообщения при открытии пункта меню");
+     }
 
      function openDictionary(dictionaryID) {
          $('#loading-bar').show();
+
+         var message = mainMenuItems[dictionaryID].message;
+         messagebox.info(message.text, message.header);
 
          mainMenuItems[dictionaryID].callback();
          /*$('#listPanel').html('');
