@@ -55,7 +55,10 @@
     <div ng-app="request">
         <div ng-view></div>
 
-
+        <tr ng-repeat="request in requests">
+            <td>{{1+2}}</td>
+            <td>{{request.hardware.name}}</td>
+        </tr>
 
         <!-- CACHE FILE: list.html -->
         <script type="text/ng-template" id="list.html">
@@ -70,7 +73,7 @@
                 </thead>
                 <tbody>
                 <tr ng-repeat="request in requests | filter:search | orderBy:'name'" ng-show="request.id">
-                    <td>{{request.id}}</td>
+                    <td>{{request.hardware.name}}</td>
                     <td>{{request.hardware.name}}</td>
                     <td>
                         <a href="#/edit/{{request.id}}"><i class="glyphicon glyphicon-pencil"></i></a>

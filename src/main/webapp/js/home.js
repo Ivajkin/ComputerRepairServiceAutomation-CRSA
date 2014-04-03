@@ -6,7 +6,7 @@
 angular.module('request', ['restangular', 'ngRoute']).
     config(function($routeProvider, RestangularProvider) {
         $routeProvider.
-            when('/', {
+            when('', {
                 controller:ListCtrl,
                 templateUrl:'list.html'
             }).
@@ -20,13 +20,13 @@ angular.module('request', ['restangular', 'ngRoute']).
                 }
             }).
             when('/new', {controller:CreateCtrl, templateUrl:'detail.html'}).
-            otherwise({redirectTo:'/'});
+            otherwise({redirectTo:''});
 
-        RestangularProvider.setBaseUrl('');
+        RestangularProvider.setBaseUrl('/requests');
         // RestangularProvider.setDefaultRequestParams({ apiKey: '4f847ad3e4b08a2eed5f3b54' })
-        RestangularProvider.setRestangularFields({
-            /*id: '_id.$oid'   */
-        });
+        /*RestangularProvider.setRestangularFields({
+            id: '_id.$oid'
+        });   */
 
         RestangularProvider.setRequestInterceptor(function(elem, operation, what) {
 
