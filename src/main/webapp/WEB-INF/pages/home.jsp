@@ -12,11 +12,14 @@
     <title>Домашняя страница</title>
     <link type="text/css" rel="stylesheet" href="webjars/bootstrap/3.1.1/css/bootstrap.css"/>
     <link type="text/css" rel="stylesheet" href="webjars/toastr/2.0.1/toastr.min.css"/>
+    <link type="text/css" rel="stylesheet" href="webjars/jquery-ui/1.10.4/themes/base/jquery-ui.css"/>
     <link type="text/css" rel="stylesheet" href="webjars/ng-grid/2.0.8/ng-grid.css"/>
     <link type="text/css" rel="stylesheet" href="<c:url value='/css/style.css'/>"/>
+    <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/css/jtable.2.4.0/themes/metro/blue/jtable.css"/>
     <link rel="shortcut icon" type="image/x-icon" href="${pageContext.request.contextPath}/img/favicon.ico" />
 
     <script type="text/javascript" src="webjars/jquery/2.1.0/jquery.js"></script>
+    <script type="text/javascript" src="webjars/jquery-ui/1.10.4/ui/jquery-ui.js"></script>
 
     <script type="text/javascript" src="webjars/angularjs/1.2.14/angular.js"></script>
     <script type="text/javascript" src="webjars/angularjs/1.2.14/angular-resource.js"></script>
@@ -30,6 +33,9 @@
     <script type="text/javascript" src="webjars/bootstrap/3.1.1/js/bootstrap.js"></script>
     <script type="text/javascript" src="webjars/toastr/2.0.1/toastr.js"></script>
 
+    <script type="text/javascript" src="${pageContext.request.contextPath}/js/jtable.2.4.0/external/json2.js"></script>
+    <script type="text/javascript" src="${pageContext.request.contextPath}/js/jtable.2.4.0/jquery.jtable.js"></script>
+    <script type="text/javascript" src="${pageContext.request.contextPath}/js/jtable.2.4.0/localization/jquery.jtable.ru.js"></script>
     <script type="text/javascript" src="${pageContext.request.contextPath}/js/home.js"></script>
     <script type="text/javascript" src="${pageContext.request.contextPath}/js/phone.controller.js"></script>
     <script type="text/javascript" src="${pageContext.request.contextPath}/js/requests.controller.js"></script>
@@ -55,6 +61,11 @@
 </nav>
 
 <main id="listPanel" class="main">
+    <div id="draggable" class="ui-widget-content" style="width: 150px; height: 150px; padding: 0.5em;" onload="$('#draggable').draggable();">
+        <p>Drag me around</p>
+    </div>
+
+    <div id="PersonTableContainer"></div>
 
     <div  ng-app="requestsApp" ng-controller="RequestListCtrl">
         <div class="gridStyle" ng-grid="gridOptions"></div>
