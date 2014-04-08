@@ -32,6 +32,7 @@
 
     <script type="text/javascript" src="${pageContext.request.contextPath}/js/home.js"></script>
     <script type="text/javascript" src="${pageContext.request.contextPath}/js/phone.controller.js"></script>
+    <script type="text/javascript" src="${pageContext.request.contextPath}/js/requests.controller.js"></script>
 </head>
 <body>
 
@@ -54,6 +55,11 @@
 </nav>
 
 <main id="listPanel" class="main">
+
+    <div  ng-app="requestsApp" ng-controller="RequestListCtrl">
+        <div class="gridStyle" ng-grid="gridOptions"></div>
+    </div>
+
     <div  ng-app="phonecatApp" ng-controller="PhoneListCtrl">
         Search: <input ng-model="query" />
         <ul>

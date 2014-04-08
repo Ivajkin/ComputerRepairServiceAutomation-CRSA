@@ -7,10 +7,10 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="281f6575-6afb-495a-9579-c980b0ff741a" name="Default" comment="Settings button created">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/js/home.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/home.js" />
+    <list default="true" id="281f6575-6afb-495a-9579-c980b0ff741a" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/img/settings.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/js/requests.controller.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/home.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/home.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/css/style.css" afterPath="$PROJECT_DIR$/src/main/webapp/css/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="TomcatReportsV9.0.iws" />
@@ -23,7 +23,7 @@
     <file path="/DisciplineService.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1392551785178" ignored="false" />
     <file path="/DisciplineServiceImpl.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1393208994915" ignored="false" />
     <file path="/LinkController.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1392291517903" ignored="false" />
-    <file path="/home.jsp" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1396527013366" ignored="false" />
+    <file path="/home.jsp" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1396947586002" ignored="false" />
     <file path="/DisciplineController.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1393208820917" ignored="false" />
     <file path="/list-of-disciplines.jsp" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1392686384146" ignored="false" />
     <file path="/create-discipline-form.jsp" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1392715604896" ignored="false" />
@@ -80,7 +80,7 @@
     <file path="/SemesterValidator.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1394501422646" ignored="false" />
     <file path="/DepartmentController.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1392892134445" ignored="false" />
     <file path="/list.jsp" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1393291288482" ignored="false" />
-    <file path="/Dummy.txt" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1396527032982" ignored="false" />
+    <file path="/Dummy.txt" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1396948381570" ignored="false" />
     <file path="/core5429_tomcat.sql" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1393288062387" ignored="false" />
     <file path="/ReportEntryServiceImpl.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1393205656125" ignored="false" />
     <file path="/ReportEntryDAOImpl.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1393236602128" ignored="false" />
@@ -119,6 +119,7 @@
     <file path="$PROJECT_DIR$/src/main/java/pro/tmedia/model/CategoryEntity.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1395824608802" ignored="false" />
     <file path="$PROJECT_DIR$/src/main/java/pro/tmedia/model/AppearanceEntity.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1395824608803" ignored="false" />
     <file path="/request-list.jsp" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1396399714833" ignored="false" />
+    <file path="/requests.controller.js" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1396947338532" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -143,7 +144,6 @@
     <sortChildren value="false" />
   </component>
   <component name="DebuggerManager">
-    <breakpoint_rules default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -178,6 +178,7 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint url="file://$PROJECT_DIR$/src/main/java/pro/tmedia/model/Report.java" line="46" class="pro.tmedia.model.Report" package="pro.tmedia.model">
         <option name="ENABLED" value="true" />
@@ -194,7 +195,7 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </line_breakpoints>
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
+    <breakpoint_rules default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -204,10 +205,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="home.jsp" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="home.jsp" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/home.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="48" column="30" selection-start="2590" selection-end="2590" vertical-scroll-proportion="1.3515902">
+            <state line="58" column="53" selection-start="2849" selection-end="2849" vertical-scroll-proportion="-8.5">
               <folding />
             </state>
           </provider>
@@ -258,6 +259,15 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="requests.controller.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/js/requests.controller.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="12" column="10" selection-start="528" selection-end="528" vertical-scroll-proportion="0.35416666">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="pom.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
@@ -280,15 +290,6 @@
         <entry file="file://$PROJECT_DIR$/src/main/webapp/js/home.js">
           <provider selected="true" editor-type-id="text-editor">
             <state line="190" column="152" selection-start="6298" selection-end="6298" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RequestsServiceTest.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/pro/tmedia/crsa/service/RequestsServiceTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="16" selection-start="1318" selection-end="1318" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -319,7 +320,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/pro/tmedia/model/DictionaryItem.java" />
         <option value="$PROJECT_DIR$/src/main/java/pro/tmedia/model/Hardware.java" />
         <option value="$PROJECT_DIR$/src/main/java/pro/tmedia/model/Request.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/requests/request-list.jsp" />
@@ -335,6 +335,7 @@
         <option value="$PROJECT_DIR$/src/main/webapp/css/style.css" />
         <option value="$PROJECT_DIR$/src/main/webapp/js/home.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/home.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/js/requests.controller.js" />
       </list>
     </option>
   </component>
@@ -436,52 +437,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="PackagesPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TomcatReportsV9.0" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TomcatReportsV9.0" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TomcatReportsV9.0" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TomcatReportsV9.0" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pro.tmedia" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TomcatReportsV9.0" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TomcatReportsV9.0" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pro.tmedia" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controller" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -668,40 +623,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="WEB-INF" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="department" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TomcatReportsV9.0" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ComputerRepairServiceAutomation-CRSA" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -725,6 +646,10 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="img" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -954,20 +879,66 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TomcatReportsV9.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TomcatReportsV9.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TomcatReportsV9.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TomcatReportsV9.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pro.tmedia" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TomcatReportsV9.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TomcatReportsV9.0" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pro.tmedia" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controller" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="project.structure.last.edited" value="Modules" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="51" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit3" />
-    <property name="OverrideImplement.combined" value="false" />
-    <property name="project.structure.proportion" value="0.15" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="51" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="51" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="OverrideImplement.combined" value="false" />
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="recentsLimit" value="5" />
-    <property name="MemberChooser.sorted" value="false" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="51" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
+    <property name="MemberChooser.sorted" value="false" />
+    <property name="recentsLimit" value="5" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/hibernate-session-factory.xml" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="51" />
@@ -983,9 +954,9 @@
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
     <property name="options.splitter.details.proportions" value="0.2" />
-    <property name="last_directory_selection" value="$PROJECT_DIR$/src/test/java/pro/tmedia/test" />
-    <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
+    <property name="GoToFile.includeJavaFiles" value="false" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/src/test/java/pro/tmedia/test" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
@@ -994,16 +965,16 @@
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.includeInheritedMembers" value="false" />
     <property name="restartRequiresConfirmation" value="true" />
-    <property name="dynamic.classpath" value="false" />
     <property name="options.searchVisible" value="true" />
+    <property name="dynamic.classpath" value="false" />
   </component>
   <component name="RecentsManager">
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="junit.framework.TestCase" />
-    </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="pro.tmedia.test" />
       <recent name="pro.tmedia.controller" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="junit.framework.TestCase" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="pro.tmedia.model" />
@@ -1012,6 +983,7 @@
       <recent name="pro.tmedia.controller" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="Z:\ComputerRepairServiceAutomation-CRSA\src\main\webapp\js" />
       <recent name="Z:\ComputerRepairServiceAutomation-CRSA\src\main\webapp\module" />
       <recent name="K:\TomcatReports\Intellij-TomcatReportsV9.0\src\main\webapp\WEB-INF\pages" />
       <recent name="C:\Users\Timofej\Dropbox\Study\ПО(м) - 3 семестр\1. Распределённые информационные системы\Intellij-TomcatReportsV9.0\src\main\webapp\WEB-INF\pages\department" />
@@ -1025,15 +997,15 @@
     <key name="CreateClassDialog.RecentsKey">
       <recent name="pro.tmedia.service" />
     </key>
+    <key name="ImportMappingsDialog.RecentPackages">
+      <recent name="pro.tmedia.model" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="K:\TomcatReports\Intellij-TomcatReportsV9.0\src\main\webapp\WEB-INF\pages\report" />
       <recent name="C:\Users\Timofej\Dropbox\Study\ПО(м) - 3 семестр\1. Распределённые информационные системы\Intellij-TomcatReportsV9.0\src\main\webapp\module" />
       <recent name="C:\Users\Timofej\Dropbox\Study\ПО(м) - 3 семестр\1. Распределённые информационные системы\TomcatReportsV9.0\src\main\webapp" />
       <recent name="C:\Users\Timofej\Dropbox\Study\ПО(м) - 3 семестр\1. Распределённые информационные системы\TomcatReportsV9.0\src\main\webapp\WEB-INF\pages" />
       <recent name="C:\Users\Timofej\Dropbox\Study\ПО(м) - 3 семестр\1. Распределённые информационные системы\TomcatReportsV9.0\src\main\webapp\WEB-INF" />
-    </key>
-    <key name="ImportMappingsDialog.RecentPackages">
-      <recent name="pro.tmedia.model" />
     </key>
   </component>
   <component name="RunManager" selected="Tomcat Server.Tomcat 7">
@@ -1162,19 +1134,6 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method />
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -1201,6 +1160,19 @@
       <envs />
       <properties />
       <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -1244,6 +1216,12 @@
       </option>
       <envs />
       <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="com.intellij.persistence.run.ConsoleRunConfigurationType" factoryName="Query Language Console">
+      <option name="VM_PARAMETERS" value="" />
+      <option name="USER_CFG_CLASS" />
+      <option name="CONTEXT_PROVIDER" />
       <method />
     </configuration>
     <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local">
@@ -1305,12 +1283,6 @@
           <option name="PROGRAM_PARAMETERS" value="" />
         </SHUTDOWN>
       </ConfigurationWrapper>
-      <method />
-    </configuration>
-    <configuration default="true" type="com.intellij.persistence.run.ConsoleRunConfigurationType" factoryName="Query Language Console">
-      <option name="VM_PARAMETERS" value="" />
-      <option name="USER_CFG_CLASS" />
-      <option name="CONTEXT_PROVIDER" />
       <method />
     </configuration>
     <configuration default="false" name="RequestsSearchTest" type="JUnit" factoryName="JUnit">
@@ -1595,9 +1567,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32850778" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.328125" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32959852" sideWeight="0.67045456" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.40288314" sideWeight="0.52649575" order="6" side_tool="false" content_ui="tabs" />
@@ -1615,8 +1587,8 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.6717949" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924107" sideWeight="0.49786553" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19444445" sideWeight="0.68973213" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31026787" sideWeight="0.8118361" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19391026" sideWeight="0.671875" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3091518" sideWeight="0.8118361" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27617604" sideWeight="0.4051282" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.6697039" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1663,7 +1635,7 @@
     <option name="MAXIMUM_HISTORY_ROWS" value="1000" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Settings button created" />
+    <option name="LAST_COMMIT_MESSAGE" value="Settings button image and ng-table" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1690,6 +1662,7 @@
     <MESSAGE value="Placeholder for settings button" />
     <MESSAGE value="Добавлены сообщения при выборе раздела, а также проверки assert" />
     <MESSAGE value="Settings button created" />
+    <MESSAGE value="Settings button image and ng-table" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1699,13 +1672,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/department/create.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="28" selection-start="1023" selection-end="1023" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pro/tmedia/controller/DictionaryItemController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="70" column="30" selection-start="2705" selection-end="2705" vertical-scroll-proportion="0.0">
@@ -1776,16 +1742,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/phone.controller.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="17" selection-start="126" selection-end="132" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/webjars/toastr/2.0.1/toastr-2.0.1.jar!/META-INF/resources/webjars/toastr/2.0.1/toastr.min.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="3159" selection-start="3411" selection-end="3411" vertical-scroll-proportion="0.029360967">
+        <state line="1" column="3159" selection-start="3411" selection-end="3411" vertical-scroll-proportion="0.029360967" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/home.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="190" column="152" selection-start="6298" selection-end="6298" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -1797,16 +1761,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/home.js">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/home.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="190" column="152" selection-start="6298" selection-end="6298" vertical-scroll-proportion="0.0">
+        <state line="58" column="53" selection-start="2849" selection-end="2849" vertical-scroll-proportion="-8.5">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/home.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/phone.controller.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="30" selection-start="2590" selection-end="2590" vertical-scroll-proportion="1.3515902">
+        <state line="4" column="17" selection-start="126" selection-end="132" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/requests.controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="10" selection-start="528" selection-end="528" vertical-scroll-proportion="0.35416666">
           <folding />
         </state>
       </provider>
