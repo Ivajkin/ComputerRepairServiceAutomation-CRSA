@@ -1,6 +1,7 @@
 package pro.tmedia.model;
 
 import javax.persistence.Entity;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
@@ -21,6 +22,7 @@ public class Hardware extends DictionaryItem {
     private String description;
 
     @ManyToOne
+    @JoinColumn(name="category_id")
     //@JoinColumn(/*name = "category_id", */referencedColumnName = "category_id", table = "category", insertable = false, updatable = false)
     private Category category;
 
@@ -55,4 +57,5 @@ public class Hardware extends DictionaryItem {
     public void setCategory(Category category) {
         this.category = category;
     }
+
 }

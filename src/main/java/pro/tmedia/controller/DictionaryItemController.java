@@ -34,6 +34,7 @@ public class DictionaryItemController {
         catch (Exception ex)
         {
             fault = new jTableResponse<Fault>(ex.getMessage());
+            logger.error(ex.getMessage());
         }
 
         logger.info(fault.getJSON());

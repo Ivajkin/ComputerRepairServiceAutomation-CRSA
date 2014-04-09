@@ -13,7 +13,7 @@ public interface DictionaryItemDAO<T> {
     public void create(T dictionaryItem);
     public T find(int id);
     public void delete(int id);
-    public List<T> findItems();
+    public List<T> list();
 
     public void update(T dictionaryItem);
 }

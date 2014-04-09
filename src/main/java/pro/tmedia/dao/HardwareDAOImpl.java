@@ -2,7 +2,7 @@ package pro.tmedia.dao;
 
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
-import pro.tmedia.model.Fault;
+import pro.tmedia.model.Hardware;
 
 import java.util.List;
 
@@ -12,11 +12,10 @@ import java.util.List;
  */
 @Transactional
 @Repository
-public class FaultDAOImpl extends WithSessionFactory implements FaultDAO {
-
+public class HardwareDAOImpl extends WithSessionFactory implements HardwareDAO {
 
     @Override
-    public List<Fault> list() {
-        return getCurrentSession().createQuery("from Fault").list();
+    public List<Hardware> list() {
+        return getCurrentSession().createQuery("from Hardware").list();
     }
 }

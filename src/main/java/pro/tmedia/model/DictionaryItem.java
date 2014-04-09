@@ -2,9 +2,8 @@ package pro.tmedia.model;
 
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.MappedSuperclass;
-import javax.persistence.OneToMany;
-import java.util.Set;
 
 /**
  * User: Ivaykin Timofey
@@ -29,8 +28,9 @@ public class DictionaryItem {
         this.name = name;
     }
 
-    @OneToMany
-    Set<Request> requests;
+
+    @ManyToOne
+    Request requests;
 
     /*@Override
     public String toString() {

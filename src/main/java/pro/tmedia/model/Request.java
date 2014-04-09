@@ -13,6 +13,7 @@ public class Request {
     @GeneratedValue
     private Integer req_num_id;
     @ManyToOne
+    @JoinColumn(name="hardware_id")
     private Hardware hardware;
     @ManyToOne
     private Manufacturer manufacturer;

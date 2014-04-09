@@ -52,7 +52,7 @@ public abstract class DictionaryItemDAOImpl<T> implements DictionaryItemDAO<T> {
 
     @SuppressWarnings("unchecked")
     @Override
-    public List<T> findItems() {
+    public List<T> list() {
         return getCurrentSession().createQuery("from " + type.getName()).list();
     }
 

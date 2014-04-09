@@ -35,6 +35,7 @@ public class RequestsController {
         catch (Exception ex)
         {
             response = new jTableResponse<Request>(ex.getMessage());
+            logger.error(ex.getMessage());
         }
 
         logger.info(response.getJSON());
@@ -70,6 +71,7 @@ public class RequestsController {
                 response = new jTableResponse<Request>(request);
             } catch (Exception e) {
                 response = new jTableResponse<Request>(e.getMessage());
+                logger.error(e.getMessage());
             }
         }
         return response;

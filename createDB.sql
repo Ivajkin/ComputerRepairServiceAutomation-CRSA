@@ -58,8 +58,8 @@ create table if not exists `hardware` (
     -- ON DELETE RESTRICT
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=3;
 
-INSERT INTO `hardware` (`name`, `description`, `category_id`) VALUES
-('NVIDIA GTX 520', 'Жизнь стремительна, таким должен быть и твой ПК. Мощь позволит тебе ускорить редактирование фотографий и HD видео.', 1);
+INSERT INTO `hardware` (`id`, `name`, `description`, `category_id`) VALUES
+(1, 'NVIDIA GTX 520', 'Жизнь стремительна, таким должен быть и твой ПК. Мощь позволит тебе ускорить редактирование фотографий и HD видео.', 1);
 
 --	Склад -> Warehouse item -> warehouse_item
 --		x Номер накладной     -> Invoice number -> invoice_number : string, unique
@@ -95,8 +95,8 @@ create table if not exists `manufacturer` (
   `name` varchar(100) CHARACTER SET utf8 not null unique
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=3;
 
-INSERT INTO `manufacturer` (`name`) VALUES
-('ASUS');
+INSERT INTO `manufacturer` (`id`, `name`) VALUES
+(1, 'ASUS');
 
 
 --
@@ -108,8 +108,8 @@ create table if not exists `fault` (
   `name` varchar(200) CHARACTER SET utf8 not null unique
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=3;
 
-INSERT INTO `fault` (`name`) VALUES
-('Разрыв шлейфов');
+INSERT INTO `fault` (`id`, `name`) VALUES
+(1, 'Разрыв шлейфов');
 
 
 --
@@ -121,8 +121,8 @@ create table if not exists `appearance` (
   `name` varchar(100) CHARACTER SET utf8 not null unique
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=3;
 
-INSERT INTO `appearance` (`name`) VALUES
-('В отличном состоянии');
+INSERT INTO `appearance` (`id`, `name`) VALUES
+(1, 'В отличном состоянии');
 
 --
 --	Комплектность -> completeness
@@ -133,8 +133,8 @@ create table if not exists `completeness` (
   `name` varchar(100) CHARACTER SET utf8 not null unique
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=3;
 
-INSERT INTO `completeness` (`name`) VALUES
-('Полная комплектность');
+INSERT INTO `completeness` (`id`, `name`) VALUES
+(1, 'Полная комплектность');
 
 --
 --	Источник -> source
@@ -145,8 +145,8 @@ create table if not exists `source` (
   `name` varchar(100) CHARACTER SET utf8 not null unique
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=3;
 
-INSERT INTO `source` (`name`) VALUES
-('Заявка клиента');
+INSERT INTO `source` (`id`, `name`) VALUES
+(1, 'Заявка клиента');
 
 --
 --	Выполненные работы -> task
@@ -157,8 +157,8 @@ create table if not exists `task` (
   `name` varchar(100) CHARACTER SET utf8 not null unique
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=3;
 
-INSERT INTO `task` (`name`) VALUES
-('Замена шлейфа');
+INSERT INTO `task` (`id`, `name`) VALUES
+(1, 'Замена шлейфа');
 
 
 --
@@ -170,11 +170,11 @@ create table if not exists `request_status` (
   `name` varchar(100) CHARACTER SET utf8 not null unique
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=3;
 
-INSERT INTO `request_status` (`name`) VALUES
-('В работе'),
-('В ожидании'),
-('На согласовании'),
-('Готов');
+INSERT INTO `request_status` (`id`, `name`) VALUES
+(1, 'В работе'),
+(2, 'В ожидании'),
+(3, 'На согласовании'),
+(4, 'Готов');
 
 --
 --	Роль сотрудника в системе -> role
@@ -210,9 +210,9 @@ create table if not exists `employee` (
 
 -- login: milkshake32 pass: milkshake32
 -- login: avangebit pass: 123456
-INSERT INTO `employee` (`name`, `login`, `password_hash`, `email`, `fee`, `role_id`) VALUES
-('Иванов Иван Гольцман', 'milkshake32', 'aec6c35c00a0cadc8bf97f4d94e55e9a547bfb8afcf86e2c0602c6d865f84c5d', 'i.golz@mail.ru', 10, 2),
-('Алексей Верещагин', 'avangebit', '27f5365e3d7609197e381253b6e361e29a53732b53eb2be5884594631378c2cf', 'avangebit@gmail.com', 10, 1);
+INSERT INTO `employee` (`id`, `name`, `login`, `password_hash`, `email`, `fee`, `role_id`) VALUES
+(1, 'Иванов Иван Гольцман', 'milkshake32', 'aec6c35c00a0cadc8bf97f4d94e55e9a547bfb8afcf86e2c0602c6d865f84c5d', 'i.golz@mail.ru', 10, 2),
+(2, 'Алексей Верещагин', 'avangebit', '27f5365e3d7609197e381253b6e361e29a53732b53eb2be5884594631378c2cf', 'avangebit@gmail.com', 10, 1);
 
 
 

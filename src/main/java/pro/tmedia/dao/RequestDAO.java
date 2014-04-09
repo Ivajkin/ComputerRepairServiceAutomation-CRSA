@@ -1,7 +1,7 @@
 package pro.tmedia.dao;
 
 import org.springframework.transaction.annotation.Transactional;
-import pro.tmedia.model.Fault;
+import pro.tmedia.model.Request;
 
 import java.util.List;
 
@@ -10,6 +10,6 @@ import java.util.List;
  * Date: 09.04.14
  */
 @Transactional
-public interface FaultDAO {
-    List<Fault> list();
+public interface RequestDAO {
+    List<Request> list();
 }

@@ -1,10 +1,11 @@
 package pro.tmedia.service;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import pro.tmedia.model.Hardware;
+import org.springframework.transaction.annotation.Transactional;
+import pro.tmedia.dao.RequestDAO;
 import pro.tmedia.model.Request;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -12,10 +13,15 @@ import java.util.List;
  * Date: 3/11/14
  */
 @Service
+@Transactional
 public class RequestsServiceImpl implements RequestsService {
+
+    @Autowired
+    RequestDAO requestDAO;
+
     public List<Request> list() {
 
-        List<Request> requests = new ArrayList<>();
+        /*List<Request> requests = new ArrayList<>();
 
         Request request = new Request();
         Hardware hardware = new Hardware();
@@ -37,7 +43,8 @@ public class RequestsServiceImpl implements RequestsService {
         requests.add(request);
 
 
-        return requests;
+        return requests;*/
+        return requestDAO.list();
     }
 
     @Override
