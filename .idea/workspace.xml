@@ -8,6 +8,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="281f6575-6afb-495a-9579-c980b0ff741a" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/pro/tmedia/controller/jTableResponse.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pro/tmedia/controller/RequestsController.java" afterPath="$PROJECT_DIR$/src/main/java/pro/tmedia/controller/RequestsController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/js/home.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/home.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/home.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/home.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="TomcatReportsV9.0.iws" />
@@ -20,7 +24,7 @@
     <file path="/DisciplineService.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1392551785178" ignored="false" />
     <file path="/DisciplineServiceImpl.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1393208994915" ignored="false" />
     <file path="/LinkController.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1392291517903" ignored="false" />
-    <file path="/home.jsp" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1396999144708" ignored="false" />
+    <file path="/home.jsp" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1397003744082" ignored="false" />
     <file path="/DisciplineController.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1393208820917" ignored="false" />
     <file path="/list-of-disciplines.jsp" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1392686384146" ignored="false" />
     <file path="/create-discipline-form.jsp" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1392715604896" ignored="false" />
@@ -77,7 +81,7 @@
     <file path="/SemesterValidator.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1394501422646" ignored="false" />
     <file path="/DepartmentController.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1392892134445" ignored="false" />
     <file path="/list.jsp" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1393291288482" ignored="false" />
-    <file path="/Dummy.txt" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1397003557499" ignored="false" />
+    <file path="/Dummy.txt" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1397003611289" ignored="false" />
     <file path="/core5429_tomcat.sql" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1393288062387" ignored="false" />
     <file path="/ReportEntryServiceImpl.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1393205656125" ignored="false" />
     <file path="/ReportEntryDAOImpl.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1393236602128" ignored="false" />
@@ -88,7 +92,7 @@
     <file path="/__dummy.html" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1393292707547" ignored="false" />
     <file path="/createDB.sql" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1396437797301" ignored="false" />
     <file path="/RequestsSearchTest.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1396437622592" ignored="false" />
-    <file path="/RequestsController.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1396437245108" ignored="false" />
+    <file path="/RequestsController.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1397004969113" ignored="false" />
     <file path="/Hardware.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1395826412694" ignored="false" />
     <file path="/Request.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1395826393375" ignored="false" />
     <file path="/a.dummy" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1394511504806" ignored="false" />
@@ -117,6 +121,7 @@
     <file path="$PROJECT_DIR$/src/main/java/pro/tmedia/model/AppearanceEntity.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1395824608803" ignored="false" />
     <file path="/request-list.jsp" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1396399714833" ignored="false" />
     <file path="/requests.controller.js" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1396995758521" ignored="false" />
+    <file path="/jTableResponse.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1397004868050" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -205,7 +210,7 @@
       <file leaf-file-name="home.jsp" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/home.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="96" selection-start="2022" selection-end="2022" vertical-scroll-proportion="-17.0">
+            <state line="52" column="13" selection-start="2641" selection-end="2663" vertical-scroll-proportion="-13.846154">
               <folding />
             </state>
           </provider>
@@ -220,10 +225,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style.css" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="style.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="145" column="7" selection-start="5943" selection-end="5943" vertical-scroll-proportion="0.33333334">
+            <state line="145" column="7" selection-start="5943" selection-end="5943" vertical-scroll-proportion="-7.4">
               <folding />
             </state>
           </provider>
@@ -250,8 +255,28 @@
       <file leaf-file-name="home.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/js/home.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="0" selection-start="50" selection-end="50" vertical-scroll-proportion="0.0">
+            <state line="183" column="53" selection-start="5938" selection-end="5938" vertical-scroll-proportion="0.0">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RequestsController.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pro/tmedia/controller/RequestsController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="39" column="28" selection-start="1140" selection-end="1140" vertical-scroll-proportion="0.3447738">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="jTableResponse.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pro/tmedia/controller/jTableResponse.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="31" column="25" selection-start="710" selection-end="710" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -290,22 +315,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/pro/tmedia/model/Hardware.java" />
         <option value="$PROJECT_DIR$/src/main/java/pro/tmedia/model/Request.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/requests/request-list.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/module/angular.min.js" />
         <option value="$PROJECT_DIR$/src/main/java/pro/tmedia/init/IConfigConstants.java" />
         <option value="$PROJECT_DIR$/src/main/java/pro/tmedia/init/WebAppConfig.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/requests/list.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/pro/tmedia/controller/RequestsController.java" />
         <option value="$PROJECT_DIR$/createDB.sql" />
         <option value="$PROJECT_DIR$/src/test/java/pro/tmedia/crsa/controller/RequestsSearchTest.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/js/phone.controller.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/js/requests.controller.js" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/css/style.css" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/home.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/js/home.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/css/style.css" />
+        <option value="$PROJECT_DIR$/src/main/java/pro/tmedia/controller/jTableResponse.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pro/tmedia/controller/RequestsController.java" />
       </list>
     </option>
   </component>
@@ -617,96 +642,6 @@
               <option name="myItemId" value="webapp" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jtable.2.4.0" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TomcatReportsV9.0" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ComputerRepairServiceAutomation-CRSA" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="img" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TomcatReportsV9.0" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ComputerRepairServiceAutomation-CRSA" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TomcatReportsV9.0" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ComputerRepairServiceAutomation-CRSA" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="jtable.2.4.0" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -903,20 +838,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="controller" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TomcatReportsV9.0" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ComputerRepairServiceAutomation-CRSA" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Mockups" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1598,7 +1519,11 @@
       <created>1397003566301</created>
       <updated>1397003566301</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Deleted tested ng-table, angular etc">
+      <created>1397003614691</created>
+      <updated>1397003614691</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1643,8 +1568,8 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.6717949" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924107" sideWeight="0.49786553" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19337606" sideWeight="0.69084823" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3091518" sideWeight="0.8118361" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19337606" sideWeight="0.74441963" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25558037" sideWeight="0.8118361" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27617604" sideWeight="0.4051282" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.6697039" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1796,6 +1721,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="145" column="7" selection-start="5943" selection-end="5943" vertical-scroll-proportion="-7.4">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/home.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="183" column="53" selection-start="5938" selection-end="5938" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/home.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="52" column="13" selection-start="2641" selection-end="2663" vertical-scroll-proportion="-13.846154">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/createDB.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state line="243" column="68" selection-start="8589" selection-end="9827" vertical-scroll-proportion="-3.32">
@@ -1803,23 +1749,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/home.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/java/pro/tmedia/controller/jTableResponse.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="96" selection-start="2022" selection-end="2022" vertical-scroll-proportion="-17.0">
-          <folding />
+        <state line="31" column="25" selection-start="710" selection-end="710" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/home.js">
+    <entry file="file://$PROJECT_DIR$/src/main/java/pro/tmedia/controller/RequestsController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="0" selection-start="50" selection-end="50" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="145" column="7" selection-start="5943" selection-end="5943" vertical-scroll-proportion="0.33333334">
+        <state line="39" column="28" selection-start="1140" selection-end="1140" vertical-scroll-proportion="0.3447738">
           <folding />
         </state>
       </provider>

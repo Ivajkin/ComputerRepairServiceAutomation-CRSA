@@ -50,7 +50,7 @@
 </nav>
 
 <main id="listPanel" class="main">
-    <div id="PersonTableContainer"></div>
+    <div id="requestsTableContainer"></div>
 </main>
 
 <footer class="panel">

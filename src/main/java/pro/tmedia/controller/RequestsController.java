@@ -37,16 +37,18 @@ public class RequestsController {
         hardware = new Hardware();
         hardware.setName("NVIDIA GTX 520");
         request.setHardware(hardware);
+        request.setAmount(12);
         requests.add(request);
 
         request = new Request();
         hardware = new Hardware();
         hardware.setName("NVIDIA GTX 550");
         request.setHardware(hardware);
+        request.setAmount(5);
         requests.add(request);
     }
 
-    @RequestMapping(value = "", method = RequestMethod.GET)
+    @RequestMapping(value = "/list", method = RequestMethod.POST)
     public void listRequests(HttpServletRequest httpRequest,  HttpServletResponse response) throws IOException {
 
         logger.info("Requests list requested");
@@ -54,15 +56,16 @@ public class RequestsController {
         response.setContentType("application/json;charset=UTF-8");
 
 
-        /* генерируем ответ */
-        /*StringBuffer jsonBuffer = new StringBuffer();
-        jsonBuffer.append("[");
-        for(String product: requests) {
-            jsonBuffer.append(product + ",");
+
+        String json;
+        try
+        {
+            json = new jTableResponse<Request>(requests).getJSON();
         }
-        jsonBuffer.substring(1,2);
-        jsonBuffer.append("]");       */
-        String json = gson.toJson(requests);
+        catch (Exception ex)
+        {
+            json = new jTableResponse<Request>(ex.getMessage()).getJSON();
+        }
 
         response.getWriter().write(json);
 
@@ -81,37 +84,6 @@ public class RequestsController {
         response.setContentType("application/json;charset=UTF-8");
         response.getWriter().write(message);
     }
-
-    /*@RequestMapping(value = "search", method = RequestMethod.GET)
-    public void searchRequests(HttpServletRequest httpRequest,  HttpServletResponse response) throws IOException {
-
-        String keyword = StringUtils.stripToEmpty(httpRequest.getParameter("q"));
-        String text = String.format("Нет возможности найти запрос, содержащий '%s'", keyword);
-        logger.info("searchRequests called with '" + keyword + "'");
-
-        response.setContentType("application/json;charset=UTF-8");
-
-        // ищем запросы
-        List<Request> matchedRequests = new ArrayList<>();
-        for(Request request: requests) {
-            if(request.getHardware().getName().contains(keyword)) {
-                matchedRequests.add(request);
-            }
-        }
-
-       // генерируем ответ
-        StringBuffer jsonBuffer = new StringBuffer();
-        if(!matchedRequests.isEmpty()) {
-            jsonBuffer.append("{\"status\":\"found\", \"requests\": ");
-            jsonBuffer.append(gson.toJson(requests));
-            jsonBuffer.append("}");
-        } else {
-            jsonBuffer.append("{\"status\":\"not found\", \"text\":\"" + text + "\"}");
-        }
-
-        response.getWriter().write(jsonBuffer.toString());
-
-    }          */
 
 
 }

@@ -121,64 +121,65 @@ function documentLoaded() {
      });
 
 
-         $('#PersonTableContainer').jtable({
-             title: 'Заявки',
-             actions: {
-                 listAction: '/requests/list',
-                 createAction: '/requests/create',
-                 updateAction: '/requests/update',
-                 deleteAction: '/requests/delete'
+     $('#requestsTableContainer').jtable({
+         title: 'Заявки',
+         actions: {
+             listAction: '/requests/list',
+             createAction: '/requests/create',
+             updateAction: '/requests/update',
+             deleteAction: '/requests/delete'
+         },
+         fields: {
+             PersonId: {
+                 key: true,
+                 list: false
              },
-             fields: {
-                 PersonId: {
-                     key: true,
-                     list: false
-                 },
-                 Name: {
-                     title: 'Author Name',
-                     width: '40%'
-                 },
-                 Age: {
-                     title: 'Age',
-                     width: '20%'
-                 },
-                 RecordDate: {
-                     title: 'Record date',
-                     width: '30%',
-                     type: 'date',
-                     create: false,
-                     edit: false
-                 },
-                 req_num_id: {
-                     title: 'Номер заявки'
-                 },
-                 hardware_name: {
-                     title: 'Наименование оборудования'
-                 },
-                 manufacturer: {
-                     title: 'Производитель'
-                 },
-                 model: {
-                     title: 'Модель'
-                 },
-                 serial_number: {
-                     title: 'Серийный номер'
-                 },
-                 fault: {
-                     title: 'Неисправность'
-                 },
-                 responsible: {
-                     title: 'Инженер'
-                 },
-                 date_of_receipt: {
-                     title: 'Дата получения'
-                 },
-                 date_of_issue: {
-                     title: 'Дата выдачи'
-                 },
-                 amount: {
-                     title: 'Сумма'
-                 }
+             Name: {
+                 title: 'Author Name',
+                 width: '40%'
+             },
+             Age: {
+                 title: 'Age',
+                 width: '20%'
+             },
+             RecordDate: {
+                 title: 'Record date',
+                 width: '30%',
+                 type: 'date',
+                 create: false,
+                 edit: false
+             },
+             req_num_id: {
+                 title: 'Номер заявки'
+             },
+             hardware_name: {
+                 title: 'Наименование оборудования'
+             },
+             manufacturer: {
+                 title: 'Производитель'
+             },
+             model: {
+                 title: 'Модель'
+             },
+             serial_number: {
+                 title: 'Серийный номер'
+             },
+             fault: {
+                 title: 'Неисправность'
+             },
+             responsible: {
+                 title: 'Инженер'
+             },
+             date_of_receipt: {
+                 title: 'Дата получения'
+             },
+             date_of_issue: {
+                 title: 'Дата выдачи'
+             },
+             amount: {
+                 title: 'Сумма'
              }
-         });
+         }
+     });
+     $('#requestsTableContainer').jtable('load');
  });
