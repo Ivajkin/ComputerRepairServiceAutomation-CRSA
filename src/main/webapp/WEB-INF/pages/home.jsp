@@ -21,15 +21,6 @@
     <script type="text/javascript" src="webjars/jquery/2.1.0/jquery.js"></script>
     <script type="text/javascript" src="webjars/jquery-ui/1.10.4/ui/jquery-ui.js"></script>
 
-    <script type="text/javascript" src="webjars/angularjs/1.2.14/angular.js"></script>
-    <script type="text/javascript" src="webjars/angularjs/1.2.14/angular-resource.js"></script>
-    <script type="text/javascript" src="webjars/angularjs/1.2.14/angular-route.js"></script>
-    <script type="text/javascript" src="webjars/angularjs/1.2.14/angular-sanitize.js"></script>
-    <script type="text/javascript" src="webjars/angularjs/1.2.14/angular-cookies.js"></script>
-    <script type="text/javascript" src="webjars/angularjs/1.2.14/angular-animate.js"></script>
-
-    <script type="text/javascript" src="webjars/ng-grid/2.0.8/ng-grid.js"></script>
-
     <script type="text/javascript" src="webjars/bootstrap/3.1.1/js/bootstrap.js"></script>
     <script type="text/javascript" src="webjars/toastr/2.0.1/toastr.js"></script>
 
@@ -37,8 +28,6 @@
     <script type="text/javascript" src="${pageContext.request.contextPath}/js/jtable.2.4.0/jquery.jtable.js"></script>
     <script type="text/javascript" src="${pageContext.request.contextPath}/js/jtable.2.4.0/localization/jquery.jtable.ru.js"></script>
     <script type="text/javascript" src="${pageContext.request.contextPath}/js/home.js"></script>
-    <script type="text/javascript" src="${pageContext.request.contextPath}/js/phone.controller.js"></script>
-    <script type="text/javascript" src="${pageContext.request.contextPath}/js/requests.controller.js"></script>
 </head>
 <body>
 
@@ -61,90 +50,7 @@
 </nav>
 
 <main id="listPanel" class="main">
-    <div id="draggable" class="ui-widget-content" style="width: 150px; height: 150px; padding: 0.5em;" onload="$('#draggable').draggable();">
-        <p>Drag me around</p>
-    </div>
-
     <div id="PersonTableContainer"></div>
-
-    <div  ng-app="requestsApp" ng-controller="RequestListCtrl">
-        <div class="gridStyle" ng-grid="gridOptions"></div>
-    </div>
-
-    <div  ng-app="phonecatApp" ng-controller="PhoneListCtrl">
-        Search: <input ng-model="query" />
-        <ul>
-            <li ng-repeat="phone in phones | filter:query">
-                {{phone.name}}
-                <p>{{phone.snippet}}</p>
-            </li>
-        </ul>
-        <p>Total number of phones: 2</p>
-    </div>
-    <div ng-app="request">
-        <div ng-view></div>
-
-        <tr ng-repeat="request in requests">
-            <td>{{1+2}}</td>
-            <td>{{request.hardware.name}}</td>
-        </tr>
-
-        <!-- CACHE FILE: list.html -->
-        <script type="text/ng-template" id="list.html">
-            <input type="text" ng-model="search" class="form-control" placeholder="Search">
-            <table>
-                <thead>
-                <tr>
-                    <th>Request Id</th>
-                    <th>Hardware Name</th>
-                    <th><a href="#/new"><i class="glyphicon glyphicon-plus-sign"></i></a></th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr ng-repeat="request in requests | filter:search | orderBy:'name'" ng-show="request.id">
-                    <td>{{request.hardware.name}}</td>
-                    <td>{{request.hardware.name}}</td>
-                    <td>
-                        <a href="#/edit/{{request.id}}"><i class="glyphicon glyphicon-pencil"></i></a>
-                    </td>
-                </tr>
-                </tbody>
-            </table>
-        </script>
-
-
-
-        <!-- CACHE FILE: detail.html -->
-        <script type="text/ng-template" id="detail.html">
-            <form name="myForm">
-                <div class="control-group" ng-class="{error: myForm.name.$invalid}">
-                    <label>Hardware Name</label>
-                    <input type="text" name="name" ng-model="request.hardware.name" required>
-          <span ng-show="myForm.name.$error.required" class="help-inline">
-              Required</span>
-                </div>
-
-                <!--<div class="control-group" ng-class="{error: myForm.site.$invalid}">
-                    <label>Website</label>
-                    <input type="url" name="site" ng-model="request.site" required>
-          <span ng-show="myForm.site.$error.required" class="help-inline">
-              Required</span>
-          <span ng-show="myForm.site.$error.url" class="help-inline">
-              Not a URL</span>
-                </div>-->
-
-                <!--<label>Description</label>
-                <textarea name="description" ng-model="request.description"></textarea>   -->
-
-                <br>
-                <a href="#/" class="btn">Cancel</a>
-                <button ng-click="save()" ng-disabled="isClean() || myForm.$invalid"
-                        class="btn btn-primary">Save</button>
-                <button ng-click="destroy()"
-                        ng-show="request.id" class="btn btn-danger">Delete</button>
-            </form>
-        </script>
-    </div>
 </main>
 
 <footer class="panel">

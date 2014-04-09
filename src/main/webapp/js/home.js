@@ -3,77 +3,6 @@
  * Date: 2/18/14
  */
 
-angular.module('request', ['restangular', 'ngRoute']).
-    config(function($routeProvider, RestangularProvider) {
-        $routeProvider.
-            when('', {
-                controller:ListCtrl,
-                templateUrl:'list.html'
-            }).
-            when('/edit/:requestId', {
-                controller:EditCtrl,
-                templateUrl:'detail.html',
-                resolve: {
-                    request: function(Restangular, $route){
-                        return Restangular.one('requests', $route.current.params.requestId).get();
-                    }
-                }
-            }).
-            when('/new', {controller:CreateCtrl, templateUrl:'detail.html'}).
-            otherwise({redirectTo:''});
-
-        RestangularProvider.setBaseUrl('/requests');
-        // RestangularProvider.setDefaultRequestParams({ apiKey: '4f847ad3e4b08a2eed5f3b54' })
-        /*RestangularProvider.setRestangularFields({
-            id: '_id.$oid'
-        });   */
-
-        RestangularProvider.setRequestInterceptor(function(elem, operation, what) {
-
-            if (operation === 'put') {
-                elem.id = undefined;
-                return elem;
-            }
-            return elem;
-        })
-    });
-
-
-function ListCtrl($scope, Restangular) {
-    $scope.requests = Restangular.all("requests").getList().$object;
-}
-
-
-function CreateCtrl($scope, $location, Restangular) {
-    $scope.save = function() {
-        Restangular.all('requests').post($scope.request).then(function(request) {
-            $location.path('/list');
-        });
-    }
-}
-
-function EditCtrl($scope, $location, Restangular, request) {
-    var original = request;
-    $scope.request = Restangular.copy(original);
-
-
-    $scope.isClean = function() {
-        return angular.equals(original, $scope.request);
-    }
-
-    $scope.destroy = function() {
-        original.remove().then(function() {
-            $location.path('/list');
-        });
-    };
-
-    $scope.save = function() {
-        $scope.request.put().then(function() {
-            $location.path('/');
-        });
-    };
-}
-
 function openRequests() {
 }
 
@@ -193,12 +122,12 @@ function documentLoaded() {
 
 
          $('#PersonTableContainer').jtable({
-             title: 'Table of people',
+             title: 'Заявки',
              actions: {
-                 listAction: '/GettingStarted/PersonList',
-                 createAction: '/GettingStarted/CreatePerson',
-                 updateAction: '/GettingStarted/UpdatePerson',
-                 deleteAction: '/GettingStarted/DeletePerson'
+                 listAction: '/requests/list',
+                 createAction: '/requests/create',
+                 updateAction: '/requests/update',
+                 deleteAction: '/requests/delete'
              },
              fields: {
                  PersonId: {
@@ -219,6 +148,36 @@ function documentLoaded() {
                      type: 'date',
                      create: false,
                      edit: false
+                 },
+                 req_num_id: {
+                     title: 'Номер заявки'
+                 },
+                 hardware_name: {
+                     title: 'Наименование оборудования'
+                 },
+                 manufacturer: {
+                     title: 'Производитель'
+                 },
+                 model: {
+                     title: 'Модель'
+                 },
+                 serial_number: {
+                     title: 'Серийный номер'
+                 },
+                 fault: {
+                     title: 'Неисправность'
+                 },
+                 responsible: {
+                     title: 'Инженер'
+                 },
+                 date_of_receipt: {
+                     title: 'Дата получения'
+                 },
+                 date_of_issue: {
+                     title: 'Дата выдачи'
+                 },
+                 amount: {
+                     title: 'Сумма'
                  }
              }
          });
