@@ -5,6 +5,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.core.env.Environment;
+import org.springframework.http.converter.HttpMessageConverter;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.orm.hibernate4.HibernateTransactionManager;
 import org.springframework.orm.hibernate4.LocalSessionFactoryBean;
@@ -17,6 +18,7 @@ import org.springframework.web.servlet.view.UrlBasedViewResolver;
 
 import javax.annotation.Resource;
 import javax.sql.DataSource;
+import java.util.List;
 import java.util.Properties;
 
 /**
@@ -97,5 +99,12 @@ public class WebAppConfig extends WebMvcConfigurerAdapter {
         resolver.setViewClass(JstlView.class);
         return resolver;
     }
+
+
+    @Override
+    public void configureMessageConverters(List<HttpMessageConverter<?>> converters) {
+        converters.add(new GsonHttpMessageConverter());
+    }
+
 
 }

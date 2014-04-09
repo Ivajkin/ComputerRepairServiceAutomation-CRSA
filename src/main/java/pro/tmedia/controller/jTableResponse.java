@@ -1,6 +1,7 @@
 package pro.tmedia.controller;
 
 import com.google.gson.Gson;
+import pro.tmedia.model.Request;
 
 import java.util.List;
 
@@ -17,17 +18,30 @@ public class jTableResponse<T> {
     private final String Result;
     private final String Message;
     final List<T> Records;
+    final Request Record;
 
     public jTableResponse(String ErrorMessage) {
-        Records = null;
         Result = ERROR;
         Message = ErrorMessage;
+
+        Records = null;
+        Record = null;
     }
     public jTableResponse(List<T> Records) {
-        Message = null;
         Result = OK;
         this.Records = Records;
+
+        Message = null;
+        Record = null;
     }
+    public jTableResponse(Request Record) {
+        Result = OK;
+        this.Record = Record;
+
+        Message = null;
+        Records = null;
+    }
+
     public String getJSON() {
         return gson.toJson(this);
     }

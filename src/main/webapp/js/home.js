@@ -123,6 +123,9 @@ function documentLoaded() {
 
      $('#requestsTableContainer').jtable({
          title: 'Заявки',
+         paging: true,
+         sorting: true,
+         defaultSorting: 'date_of_issue ASC',
          actions: {
              listAction: '/requests/list',
              createAction: '/requests/create',
@@ -130,55 +133,76 @@ function documentLoaded() {
              deleteAction: '/requests/delete'
          },
          fields: {
-             PersonId: {
+             // TODO: Добавить все поля и настроить для каждого свойства (в первую очередь для тех, что выбираем из списка)
+             req_num_id: {
+                 title: 'Номер заявки',
                  key: true,
+                 create: false,
+                 edit: false,
                  list: false
              },
-             Name: {
-                 title: 'Author Name',
-                 width: '40%'
-             },
-             Age: {
-                 title: 'Age',
-                 width: '20%'
-             },
-             RecordDate: {
-                 title: 'Record date',
-                 width: '30%',
-                 type: 'date',
-                 create: false,
-                 edit: false
-             },
-             req_num_id: {
-                 title: 'Номер заявки'
-             },
              hardware_name: {
-                 title: 'Наименование оборудования'
+                 title: 'Наименование оборудования',
+                 width: '10%'
              },
              manufacturer: {
-                 title: 'Производитель'
+                 title: 'Производитель',
+                 width: '5%'
              },
              model: {
-                 title: 'Модель'
+                 title: 'Модель',
+                 width: '5%'
              },
              serial_number: {
-                 title: 'Серийный номер'
+                 title: 'Серийный номер',
+                 width: '10%'
              },
              fault: {
-                 title: 'Неисправность'
+                 title: 'Неисправность',
+                 width: '5%',
+                 options: '/fault/list'
              },
              responsible: {
-                 title: 'Инженер'
+                 title: 'Инженер',
+                 width: '5%'
              },
              date_of_receipt: {
-                 title: 'Дата получения'
+                 title: 'Дата получения',
+                 width: '10%',
+                 type: 'date',
+                 displayFormat: 'dd.mm.yy'
              },
              date_of_issue: {
-                 title: 'Дата выдачи'
+                 title: 'Дата выдачи',
+                 width: '10%',
+                 type: 'date',
+                 displayFormat: 'dd.mm.yy'
              },
              amount: {
-                 title: 'Сумма'
+                 title: 'Сумма',
+                 width: '5%'
+             },
+             hardware: {
+                title: 'Оборудование',
+                list: false
              }
+         },
+         //Initialize validation logic when a form is created
+         formCreated: function (event, data) {
+             // TODO: Добавить валидайию для всех полей
+             data.form.find('input[name="fault"]').addClass('validate[required]');
+             data.form.find('input[name="amount"]').addClass('validate[required]');
+             data.form.find('input[name="date_of_receipt"]').addClass('validate[required,custom[date]]');   // var dateMMDDYYYRegex = '^(0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])[- /.](19|20)\d\d$';
+             data.form.validationEngine();
+         },
+         //Validate form when it is being submitted
+         formSubmitting: function (event, data) {
+             return data.form.validationEngine('validate');
+         },
+         //Dispose validation logic when form is closed
+         formClosed: function (event, data) {
+             data.form.validationEngine('hide');
+             data.form.validationEngine('detach');
          }
      });
      $('#requestsTableContainer').jtable('load');

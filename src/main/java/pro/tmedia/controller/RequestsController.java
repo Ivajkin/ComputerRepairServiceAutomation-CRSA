@@ -1,20 +1,14 @@
 package pro.tmedia.controller;
 
-import com.google.gson.Gson;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import pro.tmedia.model.Hardware;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.*;
 import pro.tmedia.model.Request;
-
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
+import pro.tmedia.service.RequestsService;
 
 /**
  * User: Ivaykin Timofey
@@ -23,67 +17,64 @@ import java.util.List;
 @Controller
 @RequestMapping("/requests")
 public class RequestsController {
+    @Autowired
+    RequestsService requestsService;
 
     final Logger logger = LoggerFactory.getLogger(RequestsController.class);
 
-    static Gson gson = new Gson();
+    @RequestMapping(value = "/list", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
+    @ResponseBody
+    public jTableResponse<Request> listRequests(@RequestParam("jtStartIndex") int startIndex,
+                                                @RequestParam("jtPageSize") int pageSize,
+                                                @RequestParam("jtSorting") String sorting) {
+        jTableResponse<Request> response;
+        try
+        {
+            response = new jTableResponse<Request>(requestsService.list());
+        }
+        catch (Exception ex)
+        {
+            response = new jTableResponse<Request>(ex.getMessage());
+        }
 
-    final static List<Request> requests = new ArrayList<>();
-    static {
-        Request request;
-        Hardware hardware;
-
-        request = new Request();
-        hardware = new Hardware();
-        hardware.setName("NVIDIA GTX 520");
-        request.setHardware(hardware);
-        request.setAmount(12);
-        requests.add(request);
-
-        request = new Request();
-        hardware = new Hardware();
-        hardware.setName("NVIDIA GTX 550");
-        request.setHardware(hardware);
-        request.setAmount(5);
-        requests.add(request);
+        logger.info(response.getJSON());
+        return response;
     }
 
-    @RequestMapping(value = "/list", method = RequestMethod.POST)
-    public void listRequests(HttpServletRequest httpRequest,  HttpServletResponse response) throws IOException {
-
-        logger.info("Requests list requested");
-
-        response.setContentType("application/json;charset=UTF-8");
-
-
-
+    /*@RequestMapping(value = "/create", method = RequestMethod.POST)
+    public void createRequest(HttpServletRequest httpRequest,  HttpServletResponse response, @RequestBody Request request) throws IOException {
         String json;
         try
         {
-            json = new jTableResponse<Request>(requests).getJSON();
+            requestsService.create(request);
+            json = new jTableResponse<Request>(request).getJSON();
         }
         catch (Exception ex)
         {
             json = new jTableResponse<Request>(ex.getMessage()).getJSON();
         }
 
-        response.getWriter().write(json);
-
-
-    }
-
-    @RequestMapping(value = "", method = RequestMethod.POST)
-    public void createRequest(HttpServletRequest httpRequest,  HttpServletResponse response, @RequestBody Request request) throws IOException {
-
-
-        requests.add(request);
-
-        String message = "{\"status\": \"Request created\", \"object\":  " + gson.toJson(request) + "}";
-        logger.info(message);
-
+        logger.info(json);
         response.setContentType("application/json;charset=UTF-8");
-        response.getWriter().write(message);
+        response.getWriter().write(json);
+    }    */
+    @RequestMapping(value = "/create", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
+    @ResponseBody
+    public jTableResponse<Request> createRequest(@ModelAttribute Request  request, BindingResult result) {
+        jTableResponse<Request> response;
+        if (result.hasErrors()) {
+            response = new jTableResponse<Request>("Form invalid");
+        } else {
+            try {
+                requestsService.create(request);
+                response = new jTableResponse<Request>(request);
+            } catch (Exception e) {
+                response = new jTableResponse<Request>(e.getMessage());
+            }
+        }
+        return response;
     }
+
 
 
 }

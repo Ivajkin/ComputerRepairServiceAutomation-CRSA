@@ -15,6 +15,7 @@
     <link type="text/css" rel="stylesheet" href="webjars/jquery-ui/1.10.4/themes/base/jquery-ui.css"/>
     <link type="text/css" rel="stylesheet" href="webjars/ng-grid/2.0.8/ng-grid.css"/>
     <link type="text/css" rel="stylesheet" href="<c:url value='/css/style.css'/>"/>
+    <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/css/validationEngine/validationEngine.jquery.css"/>
     <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/css/jtable.2.4.0/themes/metro/blue/jtable.css"/>
     <link rel="shortcut icon" type="image/x-icon" href="${pageContext.request.contextPath}/img/favicon.ico" />
 
@@ -27,6 +28,8 @@
     <script type="text/javascript" src="${pageContext.request.contextPath}/js/jtable.2.4.0/external/json2.js"></script>
     <script type="text/javascript" src="${pageContext.request.contextPath}/js/jtable.2.4.0/jquery.jtable.js"></script>
     <script type="text/javascript" src="${pageContext.request.contextPath}/js/jtable.2.4.0/localization/jquery.jtable.ru.js"></script>
+    <script type="text/javascript" src="${pageContext.request.contextPath}/js/validationEngine/languages/jquery.validationEngine-ru.js"></script>
+    <script type="text/javascript" src="${pageContext.request.contextPath}/js/validationEngine/jquery.validationEngine.js"></script>
     <script type="text/javascript" src="${pageContext.request.contextPath}/js/home.js"></script>
 </head>
 <body>

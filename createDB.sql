@@ -30,8 +30,9 @@ create table if not exists `category` (
   `name` varchar(100) CHARACTER SET utf8 not null unique
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=3;
 
-INSERT INTO `category` (`name`) VALUES
-('Видеокарты');
+INSERT INTO `category` (`id`, `name`) VALUES
+(1, 'Видеокарты'),
+(2, 'Мониторы');
 
 --
 --	Таблица оборудования -> Hardware -> hardware

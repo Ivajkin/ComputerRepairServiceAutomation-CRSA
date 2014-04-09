@@ -40,8 +40,6 @@
           <element id="library" level="project" name="Maven: org.slf4j:slf4j-simple:1.6.1" />
           <element id="library" level="project" name="Maven: org.apache.commons:commons-lang3:3.3" />
           <element id="library" level="project" name="Maven: com.google.code.gson:gson:2.2.4" />
-          <element id="library" level="project" name="Maven: org.codehaus.jackson:jackson-mapper-asl:1.9.13" />
-          <element id="library" level="project" name="Maven: org.codehaus.jackson:jackson-core-asl:1.9.13" />
           <element id="library" level="project" name="Maven: org.webjars:jquery:2.1.0-2" />
           <element id="library" level="project" name="Maven: org.webjars:angularjs:1.2.14" />
           <element id="library" level="project" name="Maven: org.webjars:ng-grid:2.0.8" />
