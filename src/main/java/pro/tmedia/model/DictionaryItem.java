@@ -2,7 +2,6 @@ package pro.tmedia.model;
 
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.ManyToOne;
 import javax.persistence.MappedSuperclass;
 
 /**
@@ -29,10 +28,10 @@ public class DictionaryItem {
     }
 
 
-    @ManyToOne
+    /*@ManyToOne
     Request requests;
 
-    /*@Override
+    @Override
     public String toString() {
         return getName();
     }    */

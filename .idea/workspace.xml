@@ -8,31 +8,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="281f6575-6afb-495a-9579-c980b0ff741a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/pro/tmedia/dao/HardwareDAO.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/pro/tmedia/dao/HardwareDAOImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/pro/tmedia/dao/RequestDAO.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/pro/tmedia/dao/RequestDAOImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/pro/tmedia/dao/WithSessionFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pro/tmedia/model/Category.java" afterPath="$PROJECT_DIR$/src/main/java/pro/tmedia/model/Category.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_validation_validation_api_1_0_0_GA.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_validator_4_2_0_Final.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/validation.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.name" afterPath="$PROJECT_DIR$/.idea/.name" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pro/tmedia/model/DictionaryItem.java" afterPath="$PROJECT_DIR$/src/main/java/pro/tmedia/model/DictionaryItem.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pro/tmedia/controller/DictionaryItemController.java" afterPath="$PROJECT_DIR$/src/main/java/pro/tmedia/controller/DictionaryItemController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pro/tmedia/dao/DictionaryItemDAO.java" afterPath="$PROJECT_DIR$/src/main/java/pro/tmedia/dao/DictionaryItemDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pro/tmedia/dao/DictionaryItemDAOImpl.java" afterPath="$PROJECT_DIR$/src/main/java/pro/tmedia/dao/DictionaryItemDAOImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pro/tmedia/service/DictionaryItemService.java" afterPath="$PROJECT_DIR$/src/main/java/pro/tmedia/service/DictionaryItemService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pro/tmedia/service/DictionaryItemServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/pro/tmedia/service/DictionaryItemServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pro/tmedia/dao/FaultDAO.java" afterPath="$PROJECT_DIR$/src/main/java/pro/tmedia/dao/FaultDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pro/tmedia/dao/FaultDAOImpl.java" afterPath="$PROJECT_DIR$/src/main/java/pro/tmedia/dao/FaultDAOImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pro/tmedia/model/Hardware.java" afterPath="$PROJECT_DIR$/src/main/java/pro/tmedia/model/Hardware.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pro/tmedia/model/Employee.java" afterPath="$PROJECT_DIR$/src/main/java/pro/tmedia/model/Employee.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pro/tmedia/model/Request.java" afterPath="$PROJECT_DIR$/src/main/java/pro/tmedia/model/Request.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pro/tmedia/controller/RequestsController.java" afterPath="$PROJECT_DIR$/src/main/java/pro/tmedia/controller/RequestsController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pro/tmedia/service/RequestsServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/pro/tmedia/service/RequestsServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/createDB.sql" afterPath="$PROJECT_DIR$/createDB.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TomcatReportsV9.0.iml" afterPath="$PROJECT_DIR$/TomcatReportsV9.0.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/TomcatReportsV9_0_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/TomcatReportsV9_0_war_exploded.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="TomcatReportsV9.0.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Discipline.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1393288565194" ignored="false" />
-    <file path="/fragment.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1397022215848" ignored="false" />
+    <file path="/fragment.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1397111124743" ignored="false" />
     <file path="/application.properties" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1392206891317" ignored="false" />
     <file path="/DisciplineDAO.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1392514090704" ignored="false" />
     <file path="/DisciplineDAOImpl.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1392792569548" ignored="false" />
@@ -96,7 +88,7 @@
     <file path="/SemesterValidator.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1394501422646" ignored="false" />
     <file path="/DepartmentController.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1392892134445" ignored="false" />
     <file path="/list.jsp" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1393291288482" ignored="false" />
-    <file path="/Dummy.txt" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1397016749863" ignored="false" />
+    <file path="/Dummy.txt" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1397022584148" ignored="false" />
     <file path="/core5429_tomcat.sql" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1393288062387" ignored="false" />
     <file path="/ReportEntryServiceImpl.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1393205656125" ignored="false" />
     <file path="/ReportEntryDAOImpl.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1393236602128" ignored="false" />
@@ -109,7 +101,7 @@
     <file path="/RequestsSearchTest.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1396437622592" ignored="false" />
     <file path="/RequestsController.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1397016965435" ignored="false" />
     <file path="/Hardware.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1397021751661" ignored="false" />
-    <file path="/Request.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1397021655389" ignored="false" />
+    <file path="/Request.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1397115448343" ignored="false" />
     <file path="/a.dummy" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1394511504806" ignored="false" />
     <file path="/IConfigConstants.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1396404500238" ignored="false" />
     <file path="/RequestsServiceTest.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1394528105816" ignored="false" />
@@ -147,6 +139,9 @@
     <file path="/WithSessionFactory.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1397019956241" ignored="false" />
     <file path="/IDictionaryDAO.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1397018666713" ignored="false" />
     <file path="/HardwareDAOImpl.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1397018753968" ignored="false" />
+    <file path="dbtable:/88a3e682/4bb37cd6-b43a-4fce-866c-e06ccd4c15f9/core5429_repair..employee" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1397106011332" ignored="false" />
+    <file path="dbtable:/88a3e682/4bb37cd6-b43a-4fce-866c-e06ccd4c15f9/core5429_repair..completeness" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1397106011332" ignored="false" />
+    <file path="/Employee.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1397115012504" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -158,6 +153,9 @@
     <leftPanel />
     <rightPanel />
     <splitter proportion="0.5" />
+  </component>
+  <component name="CompilerWorkspaceConfiguration">
+    <option name="MAKE_PROJECT_ON_SAVE" value="true" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -221,7 +219,7 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
-      <breakpoint url="file://$PROJECT_DIR$/src/main/java/pro/tmedia/dao/RequestDAOImpl.java" line="29" class="pro.tmedia.dao.RequestDAOImpl" package="pro.tmedia.dao">
+      <breakpoint url="file://$PROJECT_DIR$/src/main/java/pro/tmedia/dao/RequestDAOImpl.java" line="28" class="pro.tmedia.dao.RequestDAOImpl" package="pro.tmedia.dao">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
@@ -246,62 +244,51 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="FaultDAO.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pro/tmedia/dao/FaultDAO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="0" selection-start="197" selection-end="211" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FaultDAOImpl.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pro/tmedia/dao/FaultDAOImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="52" selection-start="456" selection-end="456" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Category.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pro/tmedia/model/Category.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="13" selection-start="508" selection-end="508" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Hardware.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pro/tmedia/model/Hardware.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="27" column="0" selection-start="760" selection-end="760" vertical-scroll-proportion="-12.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DictionaryItem.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="DictionaryItem.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/pro/tmedia/model/DictionaryItem.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="4" selection-start="543" selection-end="543" vertical-scroll-proportion="2.5544043">
+            <state line="31" column="4" selection-start="604" selection-end="606" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="WithSessionFactory.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pro/tmedia/dao/WithSessionFactory.java">
+      <file leaf-file-name="home.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/js/home.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="14" selection-start="403" selection-end="403" vertical-scroll-proportion="0.0">
+            <state line="201" column="55" selection-start="7103" selection-end="7103" vertical-scroll-proportion="2.9008439">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Employee.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pro/tmedia/model/Employee.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="76" column="18" selection-start="1506" selection-end="1506" vertical-scroll-proportion="-30.36">
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="docComment;class#Employee#0" expanded="false" />
+                <element signature="e#347#354#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Fault.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pro/tmedia/model/Fault.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="12" column="32" selection-start="205" selection-end="205" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="227" column="24" selection-start="7913" selection-end="7913" vertical-scroll-proportion="-12.8">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -309,34 +296,47 @@
       <file leaf-file-name="Request.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/pro/tmedia/model/Request.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="30" selection-start="265" selection-end="265" vertical-scroll-proportion="0.0">
+            <state line="212" column="56" selection-start="4488" selection-end="4488" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Appearance.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pro/tmedia/model/Appearance.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="12" column="13" selection-start="191" selection-end="191" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RequestDAO.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pro/tmedia/dao/RequestDAO.java">
+      <file leaf-file-name="DictionaryItemService.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pro/tmedia/service/DictionaryItemService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="14" selection-start="244" selection-end="244" vertical-scroll-proportion="0.0">
+            <state line="10" column="9" selection-start="168" selection-end="168" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RequestsService.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pro/tmedia/service/RequestsService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="10" column="36" selection-start="171" selection-end="171" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RequestDAOImpl.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pro/tmedia/dao/RequestDAOImpl.java">
+      <file leaf-file-name="RequestsServiceImpl.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pro/tmedia/service/RequestsServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="0" selection-start="697" selection-end="697" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Completeness.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pro/tmedia/model/Completeness.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="13" selection-start="193" selection-end="193" vertical-scroll-proportion="0.0">
+            <state line="20" column="15" selection-start="512" selection-end="512" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -367,21 +367,21 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/pro/tmedia/dao/DictionaryItemDAOImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pro/tmedia/dao/DictionaryItemDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pro/tmedia/dao/IDictionaryDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/pro/tmedia/dao/HardwareDAOImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/pro/tmedia/dao/FaultDAOImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/pro/tmedia/service/DictionaryItemServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pro/tmedia/service/RequestsServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/pro/tmedia/dao/FaultDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/pro/tmedia/dao/HardwareDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/pro/tmedia/dao/RequestDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/pro/tmedia/service/DictionaryItemService.java" />
         <option value="$PROJECT_DIR$/src/main/java/pro/tmedia/model/Category.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pro/tmedia/model/Request.java" />
         <option value="$PROJECT_DIR$/src/main/java/pro/tmedia/model/Hardware.java" />
         <option value="$PROJECT_DIR$/src/main/java/pro/tmedia/dao/WithSessionFactory.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/pro/tmedia/service/RequestsService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pro/tmedia/service/RequestsServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pro/tmedia/model/Employee.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pro/tmedia/model/Request.java" />
         <option value="$PROJECT_DIR$/src/main/java/pro/tmedia/model/DictionaryItem.java" />
       </list>
     </option>
@@ -452,10 +452,10 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="2" />
-    <option name="y" value="2" />
-    <option name="width" value="1918" />
-    <option name="height" value="1038" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -487,49 +487,23 @@
         <subPane>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="TomcatReportsV9.0" />
+              <option name="myItemId" value="CRSAV10.0" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="TomcatReportsV9.0" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ComputerRepairServiceAutomation-CRSA" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TomcatReportsV9.0" />
+              <option name="myItemId" value="CRSAV10.0" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="ComputerRepairServiceAutomation-CRSA" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tmedia" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="TomcatReportsV9.0" />
+              <option name="myItemId" value="CRSAV10.0" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -540,116 +514,10 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tmedia" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="crsa" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="TomcatReportsV9.0" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ComputerRepairServiceAutomation-CRSA" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tmedia" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="crsa" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controller" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TomcatReportsV9.0" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ComputerRepairServiceAutomation-CRSA" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WEB-INF" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TomcatReportsV9.0" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ComputerRepairServiceAutomation-CRSA" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="webapp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="WEB-INF" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="pages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TomcatReportsV9.0" />
+              <option name="myItemId" value="CRSAV10.0" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -671,7 +539,7 @@
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="TomcatReportsV9.0" />
+              <option name="myItemId" value="CRSAV10.0" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -691,13 +559,13 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
+              <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="TomcatReportsV9.0" />
+              <option name="myItemId" value="CRSAV10.0" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -712,40 +580,10 @@
               <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="TomcatReportsV9.0" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ComputerRepairServiceAutomation-CRSA" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tmedia" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TomcatReportsV9.0" />
+              <option name="myItemId" value="CRSAV10.0" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -768,14 +606,10 @@
               <option name="myItemId" value="tmedia" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="service" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="TomcatReportsV9.0" />
+              <option name="myItemId" value="CRSAV10.0" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -800,96 +634,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="model" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TomcatReportsV9.0" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ComputerRepairServiceAutomation-CRSA" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tmedia" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="init" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TomcatReportsV9.0" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ComputerRepairServiceAutomation-CRSA" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tmedia" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dao" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TomcatReportsV9.0" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ComputerRepairServiceAutomation-CRSA" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tmedia" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controller" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -945,7 +689,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="51" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit3" />
     <property name="OverrideImplement.combined" value="false" />
@@ -977,7 +721,7 @@
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
-    <property name="options.lastSelected" value="vcs.Git" />
+    <property name="options.lastSelected" value="project.propCompiler" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.includeInheritedMembers" value="false" />
@@ -1588,7 +1332,11 @@
       <created>1397016752748</created>
       <updated>1397016752748</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Services, DAO repositories, REST (list,create) jTable prepared.&#10;Осталось решить проблему с ResultSet - получать requests из базы">
+      <created>1397022593428</created>
+      <updated>1397022593428</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1612,14 +1360,15 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="2" y="2" width="1918" height="1038" extended-state="0" />
-    <editor active="false" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328125" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32959852" sideWeight="0.67045456" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.48974943" sideWeight="0.4908953" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.40668824" sideWeight="0.2733485" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4027778" sideWeight="0.6238839" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.47266516" sideWeight="0.6090909" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -1627,15 +1376,15 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27617604" sideWeight="0.3270869" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928678" sideWeight="0.52649575" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32879046" sideWeight="0.4969697" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31321186" sideWeight="0.75454545" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3125" sideWeight="0.75454545" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27617604" sideWeight="0.3100511" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924107" sideWeight="0.49359658" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27617604" sideWeight="0.318569" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.6717949" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924107" sideWeight="0.49786553" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1952535" sideWeight="0.2733485" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.7266515" sideWeight="0.8118361" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19337606" sideWeight="0.6238839" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.37611607" sideWeight="0.8118361" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27617604" sideWeight="0.4051282" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.6697039" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1681,7 +1430,7 @@
     <option name="MAXIMUM_HISTORY_ROWS" value="1000" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Удалил лишние jsp" />
+    <option name="LAST_COMMIT_MESSAGE" value="Services, DAO repositories, REST (list,create) jTable prepared.&#10;Осталось решить проблему с ResultSet - получать requests из базы" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1714,6 +1463,7 @@
     <MESSAGE value="Request object on server side for jTable" />
     <MESSAGE value="Services with DAO along with Gson RequestBody serialiser and response.write removed" />
     <MESSAGE value="Удалил лишние jsp" />
+    <MESSAGE value="Services, DAO repositories, REST (list,create) jTable prepared.&#10;Осталось решить проблему с ResultSet - получать requests из базы" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1723,102 +1473,21 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/pro/tmedia/dao/HardwareDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="11" selection-start="230" selection-end="245" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pro/tmedia/dao/HardwareDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="15" selection-start="584" selection-end="584" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pro/tmedia/service/RequestsService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="17" selection-start="154" selection-end="154" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pro/tmedia/service/DictionaryItemService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="9" selection-start="168" selection-end="168" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pro/tmedia/service/DictionaryItemServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="14" selection-start="422" selection-end="435" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pro/tmedia/controller/RequestsController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="13" selection-start="529" selection-end="529" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pro/tmedia/dao/FaultDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="0" selection-start="197" selection-end="211" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pro/tmedia/dao/FaultDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="52" selection-start="456" selection-end="456" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pro/tmedia/model/Completeness.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="13" selection-start="193" selection-end="193" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pro/tmedia/model/Category.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="13" selection-start="508" selection-end="508" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pro/tmedia/dao/RequestDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="14" selection-start="244" selection-end="244" vertical-scroll-proportion="0.0">
-          <folding />
+        <state line="11" column="14" selection-start="213" selection-end="213" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pro/tmedia/dao/RequestDAOImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="0" selection-start="697" selection-end="697" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pro/tmedia/model/Request.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="30" selection-start="265" selection-end="265" vertical-scroll-proportion="0.0">
-          <folding />
+        <state line="28" column="0" selection-start="666" selection-end="666" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1838,9 +1507,94 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/createDB.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="79" column="43" selection-start="3113" selection-end="3123" vertical-scroll-proportion="0.78070176">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="227" column="24" selection-start="7913" selection-end="7913" vertical-scroll-proportion="-12.8">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pro/tmedia/service/DictionaryItemService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="9" selection-start="168" selection-end="168" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pro/tmedia/service/RequestsService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="36" selection-start="171" selection-end="171" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pro/tmedia/service/RequestsServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="15" selection-start="512" selection-end="512" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/validationEngine/script.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pro/tmedia/model/Fault.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="32" selection-start="205" selection-end="205" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pro/tmedia/model/Employee.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="76" column="18" selection-start="1506" selection-end="1506" vertical-scroll-proportion="-30.36">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="docComment;class#Employee#0" expanded="false" />
+            <element signature="e#347#354#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pro/tmedia/model/Request.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="212" column="56" selection-start="4488" selection-end="4488" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pro/tmedia/model/Appearance.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="13" selection-start="191" selection-end="191" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pro/tmedia/model/DictionaryItem.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="4" selection-start="543" selection-end="543" vertical-scroll-proportion="2.5544043">
+        <state line="31" column="4" selection-start="604" selection-end="606" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/home.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="201" column="55" selection-start="7103" selection-end="7103" vertical-scroll-proportion="2.9008439">
           <folding />
         </state>
       </provider>
@@ -1923,7 +1677,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>Maven: antlr:antlr:2.7.7</last-edited>
+          <last-edited>Maven: com.jayway.jsonpath:json-path:0.8.1</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

@@ -1,6 +1,7 @@
 package pro.tmedia.model;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotNull;
 
 /**
  * User: Ivaykin Timofey
@@ -39,8 +40,13 @@ public class Request {
     Employee acceptor;
     @ManyToOne
     Employee responsible;
+
+
+    @NotNull
     private String date_of_receipt;
+
     private String date_of_issue;
+
     Integer amount;
     private String method_of_payment;
     @ManyToOne
