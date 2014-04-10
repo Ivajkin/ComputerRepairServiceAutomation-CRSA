@@ -124,6 +124,7 @@ function documentLoaded() {
      $('#requestsTableContainer').jtable({
          title: 'Заявки',
          paging: true,
+         pageSize: 15,
          sorting: true,
          defaultSorting: 'date_of_issue ASC',
          actions: {
@@ -134,6 +135,7 @@ function documentLoaded() {
          },
          fields: {
              // TODO: Добавить все поля и настроить для каждого свойства (в первую очередь для тех, что выбираем из списка)
+             // TODO: Применить дочерние таблицы (CHILD TABLE), http://www.jtable.org/demo/masterchild
              req_num_id: {
                  title: 'Номер заявки',
                  key: true,

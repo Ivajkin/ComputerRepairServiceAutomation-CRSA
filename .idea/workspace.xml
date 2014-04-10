@@ -8,10 +8,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="281f6575-6afb-495a-9579-c980b0ff741a" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pro/tmedia/dao/RequestDAO.java" afterPath="$PROJECT_DIR$/src/main/java/pro/tmedia/dao/RequestDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pro/tmedia/dao/RequestDAOImpl.java" afterPath="$PROJECT_DIR$/src/main/java/pro/tmedia/dao/RequestDAOImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pro/tmedia/controller/RequestsController.java" afterPath="$PROJECT_DIR$/src/main/java/pro/tmedia/controller/RequestsController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pro/tmedia/service/RequestsServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/pro/tmedia/service/RequestsServiceImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/js/home.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/home.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -82,7 +78,7 @@
     <file path="/SemesterValidator.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1394501422646" ignored="false" />
     <file path="/DepartmentController.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1392892134445" ignored="false" />
     <file path="/list.jsp" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1393291288482" ignored="false" />
-    <file path="/Dummy.txt" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1397118927894" ignored="false" />
+    <file path="/Dummy.txt" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1397131412753" ignored="false" />
     <file path="/core5429_tomcat.sql" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1393288062387" ignored="false" />
     <file path="/ReportEntryServiceImpl.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1393205656125" ignored="false" />
     <file path="/ReportEntryDAOImpl.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1393236602128" ignored="false" />
@@ -238,7 +234,7 @@
       <file leaf-file-name="home.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/js/home.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="167" column="28" selection-start="5756" selection-end="5757" vertical-scroll-proportion="0.23031496">
+            <state line="137" column="102" selection-start="4883" selection-end="4883" vertical-scroll-proportion="0.43110237">
               <folding />
             </state>
           </provider>
@@ -1408,7 +1404,11 @@
       <created>1397118933296</created>
       <updated>1397118933296</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Практически полная работа с базой - осталось добить проблемы с созданием и обновлением (особенно выбор опций для вложенных объектов), добавить удаление">
+      <created>1397131425085</created>
+      <updated>1397131425085</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1502,7 +1502,7 @@
     <option name="MAXIMUM_HISTORY_ROWS" value="1000" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Обмен с базой данных" />
+    <option name="LAST_COMMIT_MESSAGE" value="Практически полная работа с базой - осталось добить проблемы с созданием и обновлением (особенно выбор опций для вложенных объектов), добавить удаление" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1538,6 +1538,7 @@
     <MESSAGE value="Services, DAO repositories, REST (list,create) jTable prepared.&#10;Осталось решить проблему с ResultSet - получать requests из базы" />
     <MESSAGE value="Employee persistance entity - now requests data works fine" />
     <MESSAGE value="Обмен с базой данных" />
+    <MESSAGE value="Практически полная работа с базой - осталось добить проблемы с созданием и обновлением (особенно выбор опций для вложенных объектов), добавить удаление" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1662,7 +1663,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/js/home.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="167" column="28" selection-start="5756" selection-end="5757" vertical-scroll-proportion="0.23031496">
+        <state line="137" column="102" selection-start="4883" selection-end="4883" vertical-scroll-proportion="0.43110237">
           <folding />
         </state>
       </provider>
