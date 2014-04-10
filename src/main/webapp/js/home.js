@@ -159,8 +159,8 @@ function documentLoaded() {
              },
              fault: {
                  title: 'Неисправность',
-                 width: '5%',
-                 options: '/fault/list'
+                 width: '5%'/*,
+                 Options: '/fault/list' */
              },
              responsible: {
                  title: 'Инженер',
@@ -170,13 +170,13 @@ function documentLoaded() {
                  title: 'Дата получения',
                  width: '10%',
                  type: 'date',
-                 displayFormat: 'dd.mm.yy'
+                 displayFormat: 'yy-mm-dd'
              },
              date_of_issue: {
                  title: 'Дата выдачи',
                  width: '10%',
                  type: 'date',
-                 displayFormat: 'dd.mm.yy'
+                 displayFormat: 'yy-mm-dd'
              },
              amount: {
                  title: 'Сумма',
