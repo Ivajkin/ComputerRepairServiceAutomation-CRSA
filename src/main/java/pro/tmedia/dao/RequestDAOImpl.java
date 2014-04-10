@@ -28,4 +28,21 @@ public class RequestDAOImpl implements RequestDAO {
     public List<Request> list() {
         return getCurrentSession().createQuery("from Request").list();
     }
+
+    @Override
+    public void create(Request request) {
+        getCurrentSession().save(request);
+    }
+
+    @Override
+    public void delete(int id) {
+        Request request = (Request) getCurrentSession().get(Request.class, id);
+        if(request != null)
+            getCurrentSession().delete(request);
+    }
+
+    @Override
+    public void update(Request request) {
+        getCurrentSession().update(request);
+    }
 }

@@ -6,9 +6,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
+import org.springframework.validation.FieldError;
 import org.springframework.web.bind.annotation.*;
 import pro.tmedia.model.Request;
 import pro.tmedia.service.RequestsService;
+
+import java.util.List;
 
 /**
  * User: Ivaykin Timofey
@@ -64,7 +67,7 @@ public class RequestsController {
     public jTableResponse<Request> createRequest(@ModelAttribute Request  request, BindingResult result) {
         jTableResponse<Request> response;
         if (result.hasErrors()) {
-            response = new jTableResponse<Request>("Form invalid");
+            response = new jTableResponse<Request>("Form invalid while create: " + getBindingErrorMessages(result));
         } else {
             try {
                 requestsService.create(request);
@@ -79,4 +82,32 @@ public class RequestsController {
 
 
 
+
+    @RequestMapping(value = "/update", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
+    @ResponseBody
+    public jTableResponse<Request> updateRequest(@ModelAttribute Request  request, BindingResult result) {
+        jTableResponse<Request> response;
+        if (result.hasErrors()) {
+            response = new jTableResponse<Request>("Form invalid while update: " + getBindingErrorMessages(result));
+        } else {
+            try {
+                requestsService.update(request);
+                response = new jTableResponse<Request>(request);
+            } catch (Exception e) {
+                response = new jTableResponse<Request>(e.getMessage());
+                logger.error(e.getMessage());
+            }
+        }
+        return response;
+    }
+
+
+    private String getBindingErrorMessages(BindingResult bindingResult) {
+        String errorMessage = "";
+        List<FieldError> errors = bindingResult.getFieldErrors();
+        for (FieldError error : errors ) {
+            errorMessage += error.getObjectName() + " - " + error.getDefaultMessage() + "\n<br/>";
+        }
+        return errorMessage;
+    }
 }

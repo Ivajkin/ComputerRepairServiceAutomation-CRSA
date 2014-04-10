@@ -53,16 +53,16 @@ public class RequestsServiceImpl implements RequestsService {
 
     @Override
     public void create(Request request) {
-        //To change body of implemented methods use File | Settings | File Templates.
+        requestDAO.create(request);
     }
 
     @Override
     public void delete(int id) {
-        //To change body of implemented methods use File | Settings | File Templates.
+        requestDAO.delete(id);
     }
 
     @Override
     public void update(Request request) {
-        //To change body of implemented methods use File | Settings | File Templates.
+        requestDAO.update(request);
     }
 }

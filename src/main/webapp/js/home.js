@@ -143,11 +143,17 @@ function documentLoaded() {
              },
              hardware_name: {
                  title: 'Наименование оборудования',
-                 width: '10%'
+                 width: '10%',
+                 display: function (data) {
+                     return data.record.hardware.name;
+                 }
              },
              manufacturer: {
                  title: 'Производитель',
-                 width: '5%'
+                 width: '5%',
+                 display: function (data) {
+                     return data.record.manufacturer.name;
+                 }
              },
              model: {
                  title: 'Модель',
@@ -159,12 +165,18 @@ function documentLoaded() {
              },
              fault: {
                  title: 'Неисправность',
-                 width: '5%'/*,
-                 Options: '/fault/list' */
+                 width: '5%',/*
+                 Options: '/fault/list', */
+                 display: function (data) {
+                     return data.record.fault.name;
+                 }
              },
              responsible: {
                  title: 'Инженер',
-                 width: '5%'
+                 width: '5%',
+                 display: function (data) {
+                     return data.record.responsible.name;
+                 }
              },
              date_of_receipt: {
                  title: 'Дата получения',
@@ -181,10 +193,6 @@ function documentLoaded() {
              amount: {
                  title: 'Сумма',
                  width: '5%'
-             },
-             hardware: {
-                title: 'Оборудование',
-                list: false
              }
          },
          //Initialize validation logic when a form is created

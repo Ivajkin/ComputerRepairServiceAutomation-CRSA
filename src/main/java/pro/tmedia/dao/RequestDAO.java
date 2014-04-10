@@ -12,4 +12,7 @@ import java.util.List;
 @Transactional
 public interface RequestDAO {
     List<Request> list();
+    public void create(Request request);
+    public void delete(int id);
+    public void update(Request request);
 }
