@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import pro.tmedia.model.Fault;
+import pro.tmedia.model.RequestStatus;
 import pro.tmedia.service.DictionaryItemService;
 
 /**
@@ -29,7 +30,7 @@ public class DictionaryItemController {
         jTableResponse<Fault> fault;
         try
         {
-            fault = new jTableResponse<Fault>(dictionaryItemService.listFaults());
+            fault = new jTableResponse<Fault>(dictionaryItemService.listFaults(), true);
         }
         catch (Exception ex)
         {
@@ -39,5 +40,23 @@ public class DictionaryItemController {
 
         logger.info(fault.getJSON());
         return fault;
+    }
+
+    @RequestMapping(value = "/request_status/list", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
+    @ResponseBody
+    public jTableResponse<RequestStatus> requestStatusList() {
+        jTableResponse<RequestStatus> request_status;
+        try
+        {
+            request_status = new jTableResponse<RequestStatus>(dictionaryItemService.requestStatusList(), true);
+        }
+        catch (Exception ex)
+        {
+            request_status = new jTableResponse<RequestStatus>(ex.getMessage());
+            logger.error(ex.getMessage());
+        }
+
+        logger.info(request_status.getJSON());
+        return request_status;
     }
 }

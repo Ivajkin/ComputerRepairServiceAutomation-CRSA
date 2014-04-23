@@ -8,17 +8,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="281f6575-6afb-495a-9579-c980b0ff741a" name="Default" comment="Restored missed files">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/rebel.xml" />
-      <change type="DELETED" beforePath="Z:\ComputerRepairServiceAutomation-CRSA\.idea\libraries\Maven__mysql_mysql_connector_java_5_1_21.xml" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/pro/tmedia/dao/RequestStatusDAO.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/pro/tmedia/dao/RequestStatusDAOImpl.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/rebel_project.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/application.properties" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pro/tmedia/controller/DictionaryItemController.java" afterPath="$PROJECT_DIR$/src/main/java/pro/tmedia/controller/DictionaryItemController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pro/tmedia/service/DictionaryItemService.java" afterPath="$PROJECT_DIR$/src/main/java/pro/tmedia/service/DictionaryItemService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pro/tmedia/service/DictionaryItemServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/pro/tmedia/service/DictionaryItemServiceImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pro/tmedia/model/Request.java" afterPath="$PROJECT_DIR$/src/main/java/pro/tmedia/model/Request.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pro/tmedia/controller/RequestsController.java" afterPath="$PROJECT_DIR$/src/main/java/pro/tmedia/controller/RequestsController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TomcatReportsV9.0.iml" afterPath="$PROJECT_DIR$/TomcatReportsV9.0.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/createDB.sql" afterPath="$PROJECT_DIR$/createDB.sql" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/js/home.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/home.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pro/tmedia/controller/jTableResponse.java" afterPath="$PROJECT_DIR$/src/main/java/pro/tmedia/controller/jTableResponse.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="TomcatReportsV9.0.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Discipline.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1393288565194" ignored="false" />
-    <file path="/fragment.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1397111124743" ignored="false" />
+    <file path="/fragment.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1398230564961" ignored="false" />
     <file path="/application.properties" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1392206891317" ignored="false" />
     <file path="/DisciplineDAO.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1392514090704" ignored="false" />
     <file path="/DisciplineDAOImpl.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1392792569548" ignored="false" />
@@ -44,12 +53,12 @@
     <file path="/SemesterDAOImpl.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1392523110320" ignored="false" />
     <file path="/FlowDAO.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1392523139167" ignored="false" />
     <file path="/FlowDAOImpl.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1392523168438" ignored="false" />
-    <file path="/DictionaryItemServiceImpl.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1397020106839" ignored="false" />
-    <file path="/DictionaryItemService.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1397017996580" ignored="false" />
+    <file path="/DictionaryItemServiceImpl.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1398230522285" ignored="false" />
+    <file path="/DictionaryItemService.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1398230446378" ignored="false" />
     <file path="/TeacherService.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1392551833545" ignored="false" />
     <file path="/TeacherServiceImpl.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1393209086100" ignored="false" />
-    <file path="/DictionaryItemController.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1397015879499" ignored="false" />
-    <file path="/home.js" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1397131091235" ignored="false" />
+    <file path="/DictionaryItemController.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1398239455207" ignored="false" />
+    <file path="/home.js" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1398243917550" ignored="false" />
     <file path="/FlowController.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1393208869126" ignored="false" />
     <file path="/SemesterController.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1393208906469" ignored="false" />
     <file path="/Report.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1393287493862" ignored="false" />
@@ -82,7 +91,7 @@
     <file path="/SemesterValidator.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1394501422646" ignored="false" />
     <file path="/DepartmentController.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1392892134445" ignored="false" />
     <file path="/list.jsp" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1393291288482" ignored="false" />
-    <file path="/Dummy.txt" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1397867617910" ignored="false" />
+    <file path="/Dummy.txt" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1398244452951" ignored="false" />
     <file path="/core5429_tomcat.sql" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1393288062387" ignored="false" />
     <file path="/ReportEntryServiceImpl.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1393205656125" ignored="false" />
     <file path="/ReportEntryDAOImpl.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1393236602128" ignored="false" />
@@ -91,11 +100,11 @@
     <file path="/ReportWithReportEntry.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1393238755921" ignored="false" />
     <file path="/1.regexp" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1393290518100" ignored="false" />
     <file path="/__dummy.html" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1393292707547" ignored="false" />
-    <file path="/createDB.sql" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1397117912110" ignored="false" />
+    <file path="/createDB.sql" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1398228080561" ignored="false" />
     <file path="/RequestsSearchTest.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1396437622592" ignored="false" />
-    <file path="/RequestsController.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1397120200981" ignored="false" />
+    <file path="/RequestsController.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1398243457055" ignored="false" />
     <file path="/Hardware.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1397021751661" ignored="false" />
-    <file path="/Request.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1397115448343" ignored="false" />
+    <file path="/Request.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1398242795034" ignored="false" />
     <file path="/a.dummy" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1394511504806" ignored="false" />
     <file path="/IConfigConstants.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1396404500238" ignored="false" />
     <file path="/RequestsServiceTest.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1394528105816" ignored="false" />
@@ -122,7 +131,7 @@
     <file path="$PROJECT_DIR$/src/main/java/pro/tmedia/model/AppearanceEntity.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1395824608803" ignored="false" />
     <file path="/request-list.jsp" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1396399714833" ignored="false" />
     <file path="/requests.controller.js" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1396995758521" ignored="false" />
-    <file path="/jTableResponse.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1397012734045" ignored="false" />
+    <file path="/jTableResponse.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1398242604419" ignored="false" />
     <file path="/FaultDAO.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1397020505982" ignored="false" />
     <file path="/FaultDAOImpl.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1397018734417" ignored="false" />
     <file path="/ErrorResponse.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1397012819094" ignored="false" />
@@ -163,7 +172,6 @@
     <sortChildren value="false" />
   </component>
   <component name="DebuggerManager">
-    <breakpoint_rules default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -213,7 +221,22 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/main/java/pro/tmedia/model/Request.java" line="106" class="pro.tmedia.model.Request" package="pro.tmedia.model">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
     </line_breakpoints>
+    <breakpoint_rules default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
@@ -228,63 +251,64 @@
       <file leaf-file-name="home.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/js/home.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="147" column="88" selection-start="5199" selection-end="5199" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="WebAppConfig.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pro/tmedia/init/WebAppConfig.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="13" selection-start="1334" selection-end="1334" vertical-scroll-proportion="0.0">
+            <state line="210" column="46" selection-start="7432" selection-end="7432" vertical-scroll-proportion="0.0">
               <folding>
-                <element signature="imports" expanded="true" />
+                <marker date="1398244218440" expanded="true" signature="5525:5536" placeholder="..." />
+                <marker date="1398244218440" expanded="true" signature="5695:5706" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GsonHttpMessageConverter.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pro/tmedia/init/GsonHttpMessageConverter.java">
+      <file leaf-file-name="RequestStatus.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pro/tmedia/model/RequestStatus.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="167" column="1" selection-start="5436" selection-end="5436" vertical-scroll-proportion="0.0">
+            <state line="12" column="13" selection-start="195" selection-end="195" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pom.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
+      <file leaf-file-name="Request.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pro/tmedia/model/Request.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="50" column="61" selection-start="1870" selection-end="1870" vertical-scroll-proportion="-10.56">
+            <state line="252" column="42" selection-start="5369" selection-end="5369" vertical-scroll-proportion="-17.24">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="createDB.sql" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/createDB.sql">
+      <file leaf-file-name="DictionaryItemController.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pro/tmedia/controller/DictionaryItemController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="299" column="40" selection-start="0" selection-end="13292" vertical-scroll-proportion="0.0">
+            <state line="52" column="55" selection-start="1802" selection-end="1802" vertical-scroll-proportion="0.5090253">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="rebel.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/rebel.xml">
+      <file leaf-file-name="LoginController.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pro/tmedia/controller/LoginController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="14" column="13" selection-start="431" selection-end="431" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="application.properties" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <file leaf-file-name="LinkController.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pro/tmedia/controller/LinkController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="2" selection-start="50" selection-end="50" vertical-scroll-proportion="0.06137184">
+            <state line="11" column="13" selection-start="274" selection-end="274" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="jTableResponse.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pro/tmedia/controller/jTableResponse.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="36" column="34" selection-start="888" selection-end="923" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -293,25 +317,16 @@
       <file leaf-file-name="RequestsController.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/pro/tmedia/controller/RequestsController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="108" column="96" selection-start="4095" selection-end="4095" vertical-scroll-proportion="0.0">
+            <state line="77" column="68" selection-start="2806" selection-end="2806" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RequestsService.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pro/tmedia/service/RequestsService.java">
+      <file leaf-file-name="DictionaryItemService.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pro/tmedia/service/DictionaryItemService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="51" selection-start="204" selection-end="318" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RequestDAOImpl.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pro/tmedia/dao/RequestDAOImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="51" selection-start="1053" selection-end="1053" vertical-scroll-proportion="0.0">
+            <state line="15" column="31" selection-start="318" selection-end="318" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -342,22 +357,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/pro/tmedia/dao/WithSessionFactory.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pro/tmedia/service/RequestsService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pro/tmedia/model/Employee.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pro/tmedia/model/Request.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pro/tmedia/model/DictionaryItem.java" />
-        <option value="dbtable:/88a3e682/4bb37cd6-b43a-4fce-866c-e06ccd4c15f9/core5429_repair..request" />
-        <option value="$PROJECT_DIR$/createDB.sql" />
-        <option value="$PROJECT_DIR$/src/main/java/pro/tmedia/service/RequestsServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pro/tmedia/dao/RequestDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pro/tmedia/dao/RequestDAOImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pro/tmedia/controller/RequestsController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/js/home.js" />
         <option value="$PROJECT_DIR$/src/main/java/pro/tmedia/init/WebAppConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/pro/tmedia/init/GsonHttpMessageConverter.java" />
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/createDB.sql" />
+        <option value="db-console:/88a3e682/ae41414a-7af4-4aa0-8419-94951ba34d55/" />
+        <option value="dbtable:/88a3e682/ae41414a-7af4-4aa0-8419-94951ba34d55/core5429_repair..request_status" />
+        <option value="$PROJECT_DIR$/src/main/java/pro/tmedia/service/DictionaryItemService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pro/tmedia/dao/RequestStatusDAOImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pro/tmedia/dao/RequestStatusDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pro/tmedia/service/DictionaryItemServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pro/tmedia/controller/DictionaryItemController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pro/tmedia/controller/jTableResponse.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pro/tmedia/model/Request.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pro/tmedia/controller/RequestsController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/js/home.js" />
       </list>
     </option>
   </component>
@@ -458,7 +473,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane">
         <subPane>
           <PATH>
@@ -505,6 +519,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -789,16 +804,16 @@
   </component>
   <component name="PropertiesComponent">
     <property name="project.structure.last.edited" value="Libraries" />
-    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit3" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="51" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="51" />
-    <property name="project.structure.proportion" value="0.15" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit3" />
     <property name="OverrideImplement.combined" value="false" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="51" />
     <property name="options.splitter.main.proportions" value="0.3" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="51" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
-    <property name="MemberChooser.sorted" value="false" />
     <property name="recentsLimit" value="5" />
+    <property name="MemberChooser.sorted" value="false" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="51" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/hibernate-session-factory.xml" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="51" />
@@ -814,9 +829,9 @@
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
     <property name="options.splitter.details.proportions" value="0.2" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
-    <property name="GoToFile.includeJavaFiles" value="false" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/test/java/pro/tmedia/test" />
+    <property name="GoToFile.includeJavaFiles" value="false" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
@@ -825,16 +840,16 @@
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.includeInheritedMembers" value="false" />
     <property name="restartRequiresConfirmation" value="true" />
-    <property name="options.searchVisible" value="true" />
     <property name="dynamic.classpath" value="false" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="junit.framework.TestCase" />
+    </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="pro.tmedia.test" />
       <recent name="pro.tmedia.controller" />
-    </key>
-    <key name="CreateTestDialog.Recents.Supers">
-      <recent name="junit.framework.TestCase" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="pro.tmedia.dao" />
@@ -857,15 +872,15 @@
     <key name="CreateClassDialog.RecentsKey">
       <recent name="pro.tmedia.service" />
     </key>
-    <key name="ImportMappingsDialog.RecentPackages">
-      <recent name="pro.tmedia.model" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="Z:\ComputerRepairServiceAutomation-CRSA\src\main\webapp\js" />
       <recent name="K:\TomcatReports\Intellij-TomcatReportsV9.0\src\main\webapp\WEB-INF\pages\report" />
       <recent name="C:\Users\Timofej\Dropbox\Study\ПО(м) - 3 семестр\1. Распределённые информационные системы\Intellij-TomcatReportsV9.0\src\main\webapp\module" />
       <recent name="C:\Users\Timofej\Dropbox\Study\ПО(м) - 3 семестр\1. Распределённые информационные системы\TomcatReportsV9.0\src\main\webapp" />
       <recent name="C:\Users\Timofej\Dropbox\Study\ПО(м) - 3 семестр\1. Распределённые информационные системы\TomcatReportsV9.0\src\main\webapp\WEB-INF\pages" />
+    </key>
+    <key name="ImportMappingsDialog.RecentPackages">
+      <recent name="pro.tmedia.model" />
     </key>
   </component>
   <component name="RunManager" selected="Tomcat Server.Tomcat 7">
@@ -994,6 +1009,19 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -1020,19 +1048,6 @@
       <envs />
       <properties />
       <listeners />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -1076,12 +1091,6 @@
       </option>
       <envs />
       <patterns />
-      <method />
-    </configuration>
-    <configuration default="true" type="com.intellij.persistence.run.ConsoleRunConfigurationType" factoryName="Query Language Console">
-      <option name="VM_PARAMETERS" value="" />
-      <option name="USER_CFG_CLASS" />
-      <option name="CONTEXT_PROVIDER" />
       <method />
     </configuration>
     <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local">
@@ -1145,6 +1154,12 @@
       </ConfigurationWrapper>
       <method />
     </configuration>
+    <configuration default="true" type="com.intellij.persistence.run.ConsoleRunConfigurationType" factoryName="Query Language Console">
+      <option name="VM_PARAMETERS" value="" />
+      <option name="USER_CFG_CLASS" />
+      <option name="CONTEXT_PROVIDER" />
+      <method />
+    </configuration>
     <configuration default="false" name="RequestsSearchTest" type="JUnit" factoryName="JUnit">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -1173,8 +1188,7 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <configuration default="false" name="Tomcat 7" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 7.01">
-      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/" />
+    <configuration default="false" name="Tomcat 7" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 7.0 from RAM">
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="TomcatReportsV9.0:war">
@@ -1191,6 +1205,11 @@
       <RunnerSettings RunnerId="Cover" />
       <RunnerSettings RunnerId="Debug">
         <option name="DEBUG_PORT" value="25977" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
+      <RunnerSettings RunnerId="JRebel Debug">
+        <option name="DEBUG_PORT" value="28871" />
         <option name="TRANSPORT" value="0" />
         <option name="LOCAL" value="true" />
       </RunnerSettings>
@@ -1212,6 +1231,21 @@
         </SHUTDOWN>
       </ConfigurationWrapper>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="JRebel Debug">
         <option name="USE_ENV_VARIABLES" value="true" />
         <STARTUP>
           <option name="USE_DEFAULT" value="true" />
@@ -1262,85 +1296,12 @@
         </option>
       </method>
     </configuration>
-    <configuration default="false" name="Tomcat 8" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.0">
-      <option name="UPDATING_POLICY" value="restart-server" />
-      <deployment>
-        <artifact name="TomcatReportsV9.0:war">
-          <settings>
-            <option name="CONTEXT_PATH" value="/" />
-          </settings>
-        </artifact>
-      </deployment>
-      <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="Unnamed_TomcatReportsV9_0_2" />
-      </server-settings>
-      <predefined_log_file id="Tomcat" enabled="true" />
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <RunnerSettings RunnerId="Cover" />
-      <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="25977" />
-        <option name="TRANSPORT" value="0" />
-        <option name="LOCAL" value="true" />
-      </RunnerSettings>
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
-        <option name="USE_ENV_VARIABLES" value="true" />
-        <STARTUP>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </STARTUP>
-        <SHUTDOWN>
-          <option name="USE_DEFAULT" value="true" />
-          <option name="SCRIPT" value="" />
-          <option name="VM_PARAMETERS" value="" />
-          <option name="PROGRAM_PARAMETERS" value="" />
-        </SHUTDOWN>
-      </ConfigurationWrapper>
-      <method>
-        <option name="BuildArtifacts" enabled="true">
-          <artifact name="TomcatReportsV9.0:war" />
-        </option>
-      </method>
-    </configuration>
-    <list size="6">
+    <list size="5">
       <item index="0" class="java.lang.String" itemvalue="JUnit.RequestsSearchTest" />
-      <item index="1" class="java.lang.String" itemvalue="Tomcat Server.Tomcat 7" />
-      <item index="2" class="java.lang.String" itemvalue="Tomcat Server.Tomcat 8" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.LinkControllerTest" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.RequestsServiceTest" />
-      <item index="5" class="java.lang.String" itemvalue="JUnit.LoginControllerTest" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.LinkControllerTest" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.RequestsServiceTest" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.LoginControllerTest" />
+      <item index="4" class="java.lang.String" itemvalue="Tomcat Server.Tomcat 7" />
     </list>
     <recent_temporary>
       <list size="3">
@@ -1498,26 +1459,26 @@
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32959852" sideWeight="0.67045456" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924107" sideWeight="0.49786323" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4027778" sideWeight="0.6707589" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31361607" sideWeight="0.6659091" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="JRebel Executor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32924107" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="JRebel Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="JRebel Executor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328125" sideWeight="0.49358973" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="JRebel Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32924107" sideWeight="0.47863248" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.47266516" sideWeight="0.6090909" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27617604" sideWeight="0.3270869" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924107" sideWeight="0.49839744" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32924107" sideWeight="0.5176282" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="JRebel" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928678" sideWeight="0.52649575" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32254463" sideWeight="0.4969697" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3125" sideWeight="0.75454545" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32254463" sideWeight="0.4946581" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3125" sideWeight="0.7227564" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27617604" sideWeight="0.3100511" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924107" sideWeight="0.49359658" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27617604" sideWeight="0.318569" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.6717949" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924107" sideWeight="0.49786553" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19337606" sideWeight="0.6707589" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.38181818" sideWeight="0.8118361" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.41826922" sideWeight="0.6707589" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.38169643" sideWeight="0.8118361" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27617604" sideWeight="0.4051282" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.6697039" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1611,113 +1572,120 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="dbDummy://dbtable:/88a3e682/4bb37cd6-b43a-4fce-866c-e06ccd4c15f9/core5429_repair..request">
+    <entry file="dbDummy://dbtable:/88a3e682/ae41414a-7af4-4aa0-8419-94951ba34d55/core5429_repair..request_status">
       <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
         <state />
       </provider>
       <provider editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pro/tmedia/service/RequestsServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="9" selection-start="555" selection-end="555" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pro/tmedia/dao/RequestDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="40" selection-start="383" selection-end="383" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/hibernate/hibernate-core/4.2.0.Final/hibernate-core-4.2.0.Final-sources.jar!/org/hibernate/Session.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/pro/tmedia/dao/FaultDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="531" column="16" selection-start="20288" selection-end="20288" vertical-scroll-proportion="0.33208254" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pro/tmedia/dao/HardwareDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="13" selection-start="290" selection-end="290" vertical-scroll-proportion="0.0">
+        <state line="12" column="17" selection-start="229" selection-end="229" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pro/tmedia/dao/DictionaryItemDAOImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/pro/tmedia/dao/RequestStatusDAOImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="54" selection-start="1056" selection-end="1341" vertical-scroll-proportion="0.0">
+        <state line="19" column="19" selection-start="439" selection-end="439" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pro/tmedia/dao/RequestDAOImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="51" selection-start="1053" selection-end="1053" vertical-scroll-proportion="0.0">
+        <state line="17" column="13" selection-start="419" selection-end="419" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pro/tmedia/service/RequestsService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/pro/tmedia/dao/RequestStatusDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="51" selection-start="204" selection-end="318" vertical-scroll-proportion="0.0">
+        <state line="14" column="22" selection-start="309" selection-end="309" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pro/tmedia/service/DictionaryItemServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="16" selection-start="658" selection-end="658" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pro/tmedia/service/DictionaryItemService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="31" selection-start="318" selection-end="318" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pro/tmedia/controller/LoginController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="13" selection-start="431" selection-end="431" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pro/tmedia/controller/LinkController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="13" selection-start="274" selection-end="274" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pro/tmedia/model/RequestStatus.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="13" selection-start="195" selection-end="195" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pro/tmedia/model/Request.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="252" column="42" selection-start="5369" selection-end="5369" vertical-scroll-proportion="-17.24">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pro/tmedia/controller/jTableResponse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="34" selection-start="888" selection-end="923" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pro/tmedia/controller/RequestsController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="108" column="96" selection-start="4095" selection-end="4095" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/home.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="147" column="88" selection-start="5199" selection-end="5199" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pro/tmedia/init/GsonHttpMessageConverter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="167" column="1" selection-start="5436" selection-end="5436" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pro/tmedia/init/WebAppConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="13" selection-start="1334" selection-end="1334" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="61" selection-start="1870" selection-end="1870" vertical-scroll-proportion="-10.56">
+        <state line="77" column="68" selection-start="2806" selection-end="2806" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/createDB.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="299" column="40" selection-start="0" selection-end="13292" vertical-scroll-proportion="0.0">
+        <state line="175" column="19" selection-start="6153" selection-end="6167" vertical-scroll-proportion="-2.1367838">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/rebel.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/home.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
+        <state line="210" column="46" selection-start="7432" selection-end="7432" vertical-scroll-proportion="0.0">
+          <folding>
+            <marker date="1398244218440" expanded="true" signature="5525:5536" placeholder="..." />
+            <marker date="1398244218440" expanded="true" signature="5695:5706" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+    <entry file="file://$PROJECT_DIR$/src/main/java/pro/tmedia/controller/DictionaryItemController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="2" selection-start="50" selection-end="50" vertical-scroll-proportion="0.06137184">
+        <state line="52" column="55" selection-start="1802" selection-end="1802" vertical-scroll-proportion="0.5090253">
           <folding />
         </state>
       </provider>

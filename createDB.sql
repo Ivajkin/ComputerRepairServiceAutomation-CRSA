@@ -171,10 +171,9 @@ create table if not exists `request_status` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=3;
 
 INSERT INTO `request_status` (`id`, `name`) VALUES
-(1, 'В работе'),
-(2, 'В ожидании'),
-(3, 'На согласовании'),
-(4, 'Готов');
+(1, 'Принят'),
+(2, 'Готов'),
+(3, 'Выдан/Выполнен');
 
 --
 --	Роль сотрудника в системе -> role

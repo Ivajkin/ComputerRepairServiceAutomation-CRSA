@@ -1,5 +1,6 @@
 package pro.tmedia.controller;
 
+import com.google.gson.Gson;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,6 +21,9 @@ import java.util.List;
 @Controller
 @RequestMapping("/requests")
 public class RequestsController {
+
+    static Gson gson = new Gson();
+
     @Autowired
     RequestsService requestsService;
 
@@ -33,7 +37,7 @@ public class RequestsController {
         jTableResponse<Request> response;
         try
         {
-            response = new jTableResponse<Request>(requestsService.list());
+            response = new jTableResponse<Request>(requestsService.list(), false);
         }
         catch (Exception ex)
         {
@@ -70,6 +74,8 @@ public class RequestsController {
             response = new jTableResponse<Request>("Form invalid while create: " + getBindingErrorMessages(result));
         } else {
             try {
+
+                logger.info("Creating: ".concat(gson.toJson(request)));
                 requestsService.create(request);
                 response = new jTableResponse<Request>(request);
             } catch (Exception e) {

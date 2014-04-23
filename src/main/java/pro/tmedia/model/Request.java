@@ -1,7 +1,7 @@
 package pro.tmedia.model;
 
 import javax.persistence.*;
-import javax.validation.constraints.NotNull;
+
 
 /**
  * User: Ivaykin Timofey
@@ -20,8 +20,9 @@ public class Request {
     private Manufacturer manufacturer;
     private String model;
     private String serial_number;
-    @ManyToOne
-    private Fault fault;
+    //@ManyToOne
+    //private Fault fault;
+    Integer fault_id;
     @ManyToOne
     private Appearance appearance;
     @ManyToOne
@@ -42,15 +43,15 @@ public class Request {
     Employee responsible;
 
 
-    @NotNull
     private String date_of_receipt;
 
     private String date_of_issue;
 
     Integer amount;
     private String method_of_payment;
-    @ManyToOne
-    private RequestStatus request_status;
+    //@ManyToOne
+    //private RequestStatus request_status;
+    private Integer request_status_id;
     @ManyToOne
     private Task completed_works;
 
@@ -94,12 +95,24 @@ public class Request {
         this.serial_number = serial_number;
     }
 
-    public Fault getFault() {
+    /*public Fault getFault() {
         return fault;
     }
 
     public void setFault(Fault fault) {
         this.fault = fault;
+    }
+
+    public Integer getFault_id() {
+        return fault.getId();
+    }                    */
+
+    public Integer getFault_id() {
+        return fault_id;
+    }
+
+    public void setFault_id(Integer fault_id) {
+        this.fault_id = fault_id;
     }
 
     public Appearance getAppearance() {
@@ -230,12 +243,21 @@ public class Request {
         this.method_of_payment = method_of_payment;
     }
 
-    public RequestStatus getRequest_status() {
+    /*public RequestStatus getRequest_status() {
         return request_status;
     }
 
     public void setRequest_status(RequestStatus request_status) {
         this.request_status = request_status;
+    }
+             */
+
+    public Integer getRequest_status_id() {
+        return request_status_id;
+    }
+
+    public void setRequest_status_id(Integer request_status_id) {
+        this.request_status_id = request_status_id;
     }
 
     public Task getCompleted_works() {

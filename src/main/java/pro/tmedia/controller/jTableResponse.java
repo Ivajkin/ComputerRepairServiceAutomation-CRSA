@@ -1,8 +1,10 @@
 package pro.tmedia.controller;
 
 import com.google.gson.Gson;
+import pro.tmedia.model.DictionaryItem;
 import pro.tmedia.model.Request;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -10,6 +12,29 @@ import java.util.List;
  * Date: 09.04.14
  */
 public class jTableResponse<T> {
+    public static class OptionsBean {
+        private String DisplayText;
+        private Integer Value;
+
+        public OptionsBean(String DisplayText, Integer Value) {
+            this.DisplayText = DisplayText;
+            this.Value = Value;
+        }
+
+        public String getDisplayText() {
+            return DisplayText;
+        }
+        public void setDisplayText(String DisplayText) {
+            this.DisplayText = DisplayText;
+        }
+        public Integer getValue() {
+            return Value;
+        }
+        public void setValue(Integer Value) {
+            this.Value = Value;
+        }
+    }
+
     static Gson gson = new Gson();
 
     private static final String OK = "OK";
@@ -19,6 +44,7 @@ public class jTableResponse<T> {
     private final String Message;
     final List<T> Records;
     final Request Record;
+    final List<OptionsBean> Options;
 
     public jTableResponse(String ErrorMessage) {
         Result = ERROR;
@@ -26,13 +52,26 @@ public class jTableResponse<T> {
 
         Records = null;
         Record = null;
+        Options = null;
     }
-    public jTableResponse(List<T> Records) {
+    public jTableResponse(List<T> Records, boolean convertToOptions) {
         Result = OK;
-        this.Records = Records;
+        if(convertToOptions) {
+            List<OptionsBean> Options = new ArrayList<>();
+            for(T item : Records) {
+                DictionaryItem dictionaryItem = (DictionaryItem)item;
+                Options.add(new OptionsBean(dictionaryItem.getName(), dictionaryItem.getId()));
+            }
+            this.Options = Options;
 
-        Message = null;
-        Record = null;
+            this.Records = null;
+        } else {
+            this.Records = Records;
+
+            this.Options = null;
+        }
+        this.Record = null;
+        this.Message = null;
     }
     public jTableResponse(Request Record) {
         Result = OK;
@@ -40,6 +79,7 @@ public class jTableResponse<T> {
 
         Message = null;
         Records = null;
+        Options = null;
     }
 
     public String getJSON() {
