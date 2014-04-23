@@ -278,4 +278,85 @@ public class Request {
 
     @ManyToOne
     Hardware parts_installed;
+
+    public void setDummyValues() {
+
+        assert hardware == null;
+        hardware = new Hardware();
+        hardware.setId(1);
+        hardware.setName("NVIDIA GTX 550");
+        hardware.setDescription("Жизнь стремительна, таким должен быть и твой ПК. Мощь позволит тебе ускорить редактирование фотографий и HD видео.");
+
+
+        assert phone == null;
+        setPhone("+7-924-123-45-67");
+
+
+        assert manufacturer == null;
+        manufacturer = new Manufacturer();
+        manufacturer.setName("ASUS");
+        manufacturer.setId(1);
+
+        assert model == null;
+        model = "Ноутбук";
+
+        assert serial_number == null;
+        serial_number = "123";
+
+        assert appearance == null;
+        appearance = new Appearance();
+        appearance.setName("Не очень");
+        appearance.setId(1);
+
+        assert completeness == null;
+        completeness = new Completeness();
+        completeness.setName("Не очень");
+        completeness.setId(1);
+
+        assert address == null;
+        address = "123";
+
+        assert customer_name == null;
+        customer_name = "123";
+
+        assert source == null;
+        source = new Source();
+        source.setName("Не очень");
+        source.setId(1);
+
+        assert date_of_call == null;
+        date_of_call = "1991-01-01";
+
+        assert note == null;
+        note = "123";
+
+        assert approximate_cost == null;
+        approximate_cost = 0;
+
+        assert prepayment == null;
+        prepayment = 0;
+
+        assert acceptor == null;
+        acceptor = new Employee();
+        acceptor.setName("Не очень");
+        acceptor.setId(1);
+
+        assert responsible == null;
+        responsible = new Employee();
+        responsible.setName("Не очень");
+        responsible.setId(1);
+
+        assert method_of_payment == null;
+        method_of_payment = "123";
+
+        assert completed_works == null;
+        completed_works = new Task();
+        completed_works.setName("Не очень");
+        completed_works.setId(1);
+
+        assert parts_installed == null;
+        parts_installed = new Hardware();
+        parts_installed.setName("Не очень");
+        parts_installed.setId(1);
+    }
 }

@@ -7,27 +7,15 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="281f6575-6afb-495a-9579-c980b0ff741a" name="Default" comment="Restored missed files">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/pro/tmedia/dao/RequestStatusDAO.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/pro/tmedia/dao/RequestStatusDAOImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/rebel_project.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pro/tmedia/controller/DictionaryItemController.java" afterPath="$PROJECT_DIR$/src/main/java/pro/tmedia/controller/DictionaryItemController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pro/tmedia/service/DictionaryItemService.java" afterPath="$PROJECT_DIR$/src/main/java/pro/tmedia/service/DictionaryItemService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pro/tmedia/service/DictionaryItemServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/pro/tmedia/service/DictionaryItemServiceImpl.java" />
+    <list default="true" id="281f6575-6afb-495a-9579-c980b0ff741a" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pro/tmedia/model/Request.java" afterPath="$PROJECT_DIR$/src/main/java/pro/tmedia/model/Request.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pro/tmedia/controller/RequestsController.java" afterPath="$PROJECT_DIR$/src/main/java/pro/tmedia/controller/RequestsController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TomcatReportsV9.0.iml" afterPath="$PROJECT_DIR$/TomcatReportsV9.0.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/createDB.sql" afterPath="$PROJECT_DIR$/createDB.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/js/home.js" afterPath="$PROJECT_DIR$/src/main/webapp/js/home.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pro/tmedia/controller/jTableResponse.java" afterPath="$PROJECT_DIR$/src/main/java/pro/tmedia/controller/jTableResponse.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/pro/tmedia/dao/RequestDAOImpl.java" afterPath="$PROJECT_DIR$/src/main/java/pro/tmedia/dao/RequestDAOImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="TomcatReportsV9.0.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Discipline.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1393288565194" ignored="false" />
-    <file path="/fragment.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1398230564961" ignored="false" />
+    <file path="/fragment.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1398254812082" ignored="false" />
     <file path="/application.properties" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1392206891317" ignored="false" />
     <file path="/DisciplineDAO.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1392514090704" ignored="false" />
     <file path="/DisciplineDAOImpl.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1392792569548" ignored="false" />
@@ -91,7 +79,7 @@
     <file path="/SemesterValidator.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1394501422646" ignored="false" />
     <file path="/DepartmentController.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1392892134445" ignored="false" />
     <file path="/list.jsp" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1393291288482" ignored="false" />
-    <file path="/Dummy.txt" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1398244452951" ignored="false" />
+    <file path="/Dummy.txt" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1398244524769" ignored="false" />
     <file path="/core5429_tomcat.sql" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1393288062387" ignored="false" />
     <file path="/ReportEntryServiceImpl.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1393205656125" ignored="false" />
     <file path="/ReportEntryDAOImpl.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1393236602128" ignored="false" />
@@ -104,7 +92,7 @@
     <file path="/RequestsSearchTest.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1396437622592" ignored="false" />
     <file path="/RequestsController.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1398243457055" ignored="false" />
     <file path="/Hardware.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1397021751661" ignored="false" />
-    <file path="/Request.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1398242795034" ignored="false" />
+    <file path="/Request.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1398256448881" ignored="false" />
     <file path="/a.dummy" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1394511504806" ignored="false" />
     <file path="/IConfigConstants.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1396404500238" ignored="false" />
     <file path="/RequestsServiceTest.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1394528105816" ignored="false" />
@@ -137,7 +125,7 @@
     <file path="/ErrorResponse.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1397012819094" ignored="false" />
     <file path="/GsonHttpMessageConverter.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1397014561505" ignored="false" />
     <file path="/RequestDAO.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1397017078603" ignored="false" />
-    <file path="/RequestDAOImpl.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1397119351612" ignored="false" />
+    <file path="/RequestDAOImpl.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1398255180489" ignored="false" />
     <file path="/HardwareDAO.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1397019033893" ignored="false" />
     <file path="/WithSessionFactory.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1397019956241" ignored="false" />
     <file path="/IDictionaryDAO.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1397018666713" ignored="false" />
@@ -235,6 +223,20 @@
         <option name="CONDITION" value="" />
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/main/java/pro/tmedia/dao/DictionaryItemDAOImpl.java" line="36" class="pro.tmedia.dao.DictionaryItemDAOImpl" package="pro.tmedia.dao">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
     </line_breakpoints>
     <breakpoint_rules default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
@@ -248,40 +250,55 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="home.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/js/home.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="210" column="46" selection-start="7432" selection-end="7432" vertical-scroll-proportion="0.0">
-              <folding>
-                <marker date="1398244218440" expanded="true" signature="5525:5536" placeholder="..." />
-                <marker date="1398244218440" expanded="true" signature="5695:5706" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RequestStatus.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pro/tmedia/model/RequestStatus.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="13" selection-start="195" selection-end="195" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Request.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pro/tmedia/model/Request.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="252" column="42" selection-start="5369" selection-end="5369" vertical-scroll-proportion="-17.24">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DictionaryItemController.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="DictionaryItemController.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/pro/tmedia/controller/DictionaryItemController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="52" column="55" selection-start="1802" selection-end="1802" vertical-scroll-proportion="0.5090253">
+            <state line="52" column="55" selection-start="1802" selection-end="1802" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DictionaryItemDAOImpl.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pro/tmedia/dao/DictionaryItemDAOImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="30" column="61" selection-start="848" selection-end="848" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DictionaryItemServiceImpl.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pro/tmedia/service/DictionaryItemServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="24" column="16" selection-start="658" selection-end="658" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DictionaryItemService.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pro/tmedia/service/DictionaryItemService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="15" column="31" selection-start="318" selection-end="318" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="jTableResponse.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pro/tmedia/controller/jTableResponse.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="36" column="34" selection-start="888" selection-end="923" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RequestsController.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pro/tmedia/controller/RequestsController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="78" column="28" selection-start="2838" selection-end="2838" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -305,28 +322,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="jTableResponse.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pro/tmedia/controller/jTableResponse.java">
+      <file leaf-file-name="RequestDAOImpl.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pro/tmedia/dao/RequestDAOImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="34" selection-start="888" selection-end="923" vertical-scroll-proportion="0.0">
+            <state line="37" column="0" selection-start="915" selection-end="915" vertical-scroll-proportion="0.3327032">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RequestsController.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pro/tmedia/controller/RequestsController.java">
+      <file leaf-file-name="Request.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pro/tmedia/model/Request.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="77" column="68" selection-start="2806" selection-end="2806" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DictionaryItemService.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pro/tmedia/service/DictionaryItemService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="31" selection-start="318" selection-end="318" vertical-scroll-proportion="0.0">
+            <state line="299" column="20" selection-start="6587" selection-end="6587" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -357,7 +365,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/pro/tmedia/init/WebAppConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/pro/tmedia/init/GsonHttpMessageConverter.java" />
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/pom.xml" />
@@ -370,9 +377,10 @@
         <option value="$PROJECT_DIR$/src/main/java/pro/tmedia/service/DictionaryItemServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/pro/tmedia/controller/DictionaryItemController.java" />
         <option value="$PROJECT_DIR$/src/main/java/pro/tmedia/controller/jTableResponse.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pro/tmedia/model/Request.java" />
         <option value="$PROJECT_DIR$/src/main/java/pro/tmedia/controller/RequestsController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/js/home.js" />
+        <option value="$PROJECT_DIR$/src/main/java/pro/tmedia/dao/RequestDAOImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pro/tmedia/model/Request.java" />
       </list>
     </option>
   </component>
@@ -1317,6 +1325,7 @@
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
   <component name="StructuralSearchPlugin">
+    <searchConfiguration name="user defined" text="new Request" recursive="true" caseInsensitive="true" type="JAVA" history="1" />
     <searchConfiguration name="user defined" text="OneToMany" recursive="true" caseInsensitive="true" type="JAVA" history="1" />
     <searchConfiguration name="user defined" text="fetch" recursive="true" caseInsensitive="true" type="JAVA" history="1" />
     <searchConfiguration name="user defined" text="sem" recursive="true" caseInsensitive="true" type="JAVA" history="1" />
@@ -1428,7 +1437,11 @@
       <created>1397864708734</created>
       <updated>1397864708734</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Сформирована работа с дочерними списками словарей для таблицы запросов">
+      <created>1398244535649</created>
+      <updated>1398244535649</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1455,35 +1468,35 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328125" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32959852" sideWeight="0.67045456" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328125" sideWeight="0.49786323" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924107" sideWeight="0.49786323" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31361607" sideWeight="0.6659091" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="JRebel Executor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328125" sideWeight="0.49358973" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="JRebel Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32924107" sideWeight="0.47863248" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.47266516" sideWeight="0.6090909" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27617604" sideWeight="0.3270869" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31361607" sideWeight="0.6659091" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="JRebel Executor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328125" sideWeight="0.48931623" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32924107" sideWeight="0.53899574" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32924107" sideWeight="0.5176282" order="9" side_tool="true" content_ui="tabs" />
-      <window_info id="JRebel" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928678" sideWeight="0.52649575" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32254463" sideWeight="0.4946581" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3125" sideWeight="0.7227564" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27617604" sideWeight="0.3100511" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924107" sideWeight="0.49359658" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27617604" sideWeight="0.318569" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.6717949" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924107" sideWeight="0.49786553" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924107" sideWeight="0.491453" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924107" sideWeight="0.4957265" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.41826922" sideWeight="0.6707589" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.38169643" sideWeight="0.8118361" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.38169643" sideWeight="0.8055556" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32959852" sideWeight="0.67045456" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.48974943" sideWeight="0.4908953" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="JRebel Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32924107" sideWeight="0.45726496" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.47266516" sideWeight="0.6090909" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27617604" sideWeight="0.3270869" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="JRebel" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3125" sideWeight="0.7051282" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27617604" sideWeight="0.3100511" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27617604" sideWeight="0.318569" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.6717949" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27617604" sideWeight="0.4051282" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.6697039" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.48974943" sideWeight="0.4908953" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3982906" sideWeight="0.49359658" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -1525,7 +1538,7 @@
     <option name="MAXIMUM_HISTORY_ROWS" value="1000" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Restored missed files" />
+    <option name="LAST_COMMIT_MESSAGE" value="Сформирована работа с дочерними списками словарей для таблицы запросов" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1538,7 +1551,6 @@
     <option name="UPDATE_GROUP_BY_CHANGELIST" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
-    <MESSAGE value="Dictionary editing and much more" />
     <MESSAGE value="All SQL tables created" />
     <MESSAGE value="Entity models for sql tables created" />
     <MESSAGE value="Tests for RequestsController search" />
@@ -1563,6 +1575,7 @@
     <MESSAGE value="Обмен с базой данных" />
     <MESSAGE value="Практически полная работа с базой - осталось добить проблемы с созданием и обновлением (особенно выбор опций для вложенных объектов), добавить удаление" />
     <MESSAGE value="Restored missed files" />
+    <MESSAGE value="Сформирована работа с дочерними списками словарей для таблицы запросов" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1572,16 +1585,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="dbDummy://dbtable:/88a3e682/ae41414a-7af4-4aa0-8419-94951ba34d55/core5429_repair..request_status">
-      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pro/tmedia/dao/FaultDAO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="12" column="17" selection-start="229" selection-end="229" vertical-scroll-proportion="0.0">
@@ -1596,16 +1599,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pro/tmedia/dao/RequestDAOImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/pro/tmedia/dao/RequestStatusDAO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="13" selection-start="419" selection-end="419" vertical-scroll-proportion="0.0">
+        <state line="14" column="22" selection-start="309" selection-end="309" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pro/tmedia/dao/RequestStatusDAO.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/pro/tmedia/model/RequestStatus.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="22" selection-start="309" selection-end="309" vertical-scroll-proportion="0.0">
+        <state line="12" column="13" selection-start="195" selection-end="195" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/createDB.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="175" column="19" selection-start="6153" selection-end="6167" vertical-scroll-proportion="-2.1367838">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/home.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="210" column="46" selection-start="7432" selection-end="7432" vertical-scroll-proportion="0.0">
+          <folding>
+            <marker date="1398244218440" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1398244218440" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pro/tmedia/dao/DictionaryItemDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="61" selection-start="848" selection-end="848" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -1624,6 +1651,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pro/tmedia/controller/RequestsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="78" column="28" selection-start="2838" selection-end="2838" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pro/tmedia/controller/LoginController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="14" column="13" selection-start="431" selection-end="431" vertical-scroll-proportion="0.0">
@@ -1638,20 +1672,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pro/tmedia/model/RequestStatus.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="13" selection-start="195" selection-end="195" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pro/tmedia/model/Request.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="252" column="42" selection-start="5369" selection-end="5369" vertical-scroll-proportion="-17.24">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pro/tmedia/controller/jTableResponse.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="36" column="34" selection-start="888" selection-end="923" vertical-scroll-proportion="0.0">
@@ -1659,33 +1679,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pro/tmedia/controller/RequestsController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="77" column="68" selection-start="2806" selection-end="2806" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/createDB.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="175" column="19" selection-start="6153" selection-end="6167" vertical-scroll-proportion="-2.1367838">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/home.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="210" column="46" selection-start="7432" selection-end="7432" vertical-scroll-proportion="0.0">
-          <folding>
-            <marker date="1398244218440" expanded="true" signature="5525:5536" placeholder="..." />
-            <marker date="1398244218440" expanded="true" signature="5695:5706" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pro/tmedia/controller/DictionaryItemController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="55" selection-start="1802" selection-end="1802" vertical-scroll-proportion="0.5090253">
+        <state line="52" column="55" selection-start="1802" selection-end="1802" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pro/tmedia/model/Request.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="299" column="20" selection-start="6587" selection-end="6587" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pro/tmedia/dao/RequestDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="0" selection-start="915" selection-end="915" vertical-scroll-proportion="0.3327032">
           <folding />
         </state>
       </provider>
