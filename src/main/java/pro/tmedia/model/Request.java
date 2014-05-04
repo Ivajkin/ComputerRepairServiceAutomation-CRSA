@@ -288,8 +288,8 @@ public class Request {
         hardware.setDescription("Жизнь стремительна, таким должен быть и твой ПК. Мощь позволит тебе ускорить редактирование фотографий и HD видео.");
 
 
-        assert phone == null;
-        setPhone("+7-924-123-45-67");
+        //assert phone == null;
+        //setPhone("+7-924-123-45-67");
 
 
         assert manufacturer == null;

@@ -207,6 +207,10 @@ function documentLoaded() {
                  title: 'Сумма в рублях',
                  width: '5%'
              },
+             phone: {
+                 title: 'Номер телефона клиента',
+                 width: '7%'
+             },
              acceptor_id: {
                  title: 'Приёмщик',
                  list: false
@@ -218,6 +222,7 @@ function documentLoaded() {
              data.form.find('input[name="fault"]').addClass('validate[required]');
              data.form.find('input[name="amount"]').addClass('validate[required],custom[integer],min[10],max[500000]');
              data.form.find('input[name="date_of_receipt"]').addClass('validate[required,custom[date],past[NOW]]');   // var dateMMDDYYYRegex = '^(0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])[- /.](19|20)\d\d$';
+             data.form.find('input[name="phone"]').addClass('validate[required,custom[phone],minSize[6],maxSize[18]] text-input');
              data.form.validationEngine();
          },
          //Validate form when it is being submitted
