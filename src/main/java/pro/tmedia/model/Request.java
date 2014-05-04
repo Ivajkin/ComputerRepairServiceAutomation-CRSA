@@ -291,7 +291,6 @@ public class Request {
         //assert phone == null;
         //setPhone("+7-924-123-45-67");
 
-
         assert manufacturer == null;
         manufacturer = new Manufacturer();
         manufacturer.setName("ASUS");
@@ -333,8 +332,8 @@ public class Request {
         assert approximate_cost == null;
         approximate_cost = 0;
 
-        assert prepayment == null;
-        prepayment = 0;
+        //assert prepayment == null;
+        //prepayment = 0;
 
         assert acceptor == null;
         acceptor = new Employee();

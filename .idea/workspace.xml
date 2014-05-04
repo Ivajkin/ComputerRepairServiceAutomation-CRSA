@@ -46,7 +46,7 @@
     <file path="/TeacherService.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1392551833545" ignored="false" />
     <file path="/TeacherServiceImpl.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1393209086100" ignored="false" />
     <file path="/DictionaryItemController.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1398239455207" ignored="false" />
-    <file path="/home.js" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1399200532526" ignored="false" />
+    <file path="/home.js" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1399202996052" ignored="false" />
     <file path="/FlowController.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1393208869126" ignored="false" />
     <file path="/SemesterController.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1393208906469" ignored="false" />
     <file path="/Report.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1393287493862" ignored="false" />
@@ -79,7 +79,7 @@
     <file path="/SemesterValidator.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1394501422646" ignored="false" />
     <file path="/DepartmentController.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1392892134445" ignored="false" />
     <file path="/list.jsp" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1393291288482" ignored="false" />
-    <file path="/Dummy.txt" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1399198703137" ignored="false" />
+    <file path="/Dummy.txt" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1399201556927" ignored="false" />
     <file path="/core5429_tomcat.sql" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1393288062387" ignored="false" />
     <file path="/ReportEntryServiceImpl.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1393205656125" ignored="false" />
     <file path="/ReportEntryDAOImpl.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1393236602128" ignored="false" />
@@ -92,7 +92,7 @@
     <file path="/RequestsSearchTest.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1396437622592" ignored="false" />
     <file path="/RequestsController.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1398243457055" ignored="false" />
     <file path="/Hardware.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1397021751661" ignored="false" />
-    <file path="/Request.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1398256448881" ignored="false" />
+    <file path="/Request.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1399202838911" ignored="false" />
     <file path="/a.dummy" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1394511504806" ignored="false" />
     <file path="/IConfigConstants.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1396404500238" ignored="false" />
     <file path="/RequestsServiceTest.java" changelist="281f6575-6afb-495a-9579-c980b0ff741a" time="1394528105816" ignored="false" />
@@ -298,7 +298,7 @@
       <file leaf-file-name="createDB.sql" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/createDB.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="252" column="4" selection-start="9169" selection-end="9174" vertical-scroll-proportion="-6.88">
+            <state line="259" column="31" selection-start="9473" selection-end="9477" vertical-scroll-proportion="-9.6">
               <folding />
             </state>
           </provider>
@@ -313,10 +313,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="home.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="home.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/js/home.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="237" column="56" selection-start="8817" selection-end="8817" vertical-scroll-proportion="0.0">
+            <state line="203" column="28" selection-start="7242" selection-end="7242" vertical-scroll-proportion="0.27859777">
               <folding />
             </state>
           </provider>
@@ -331,10 +331,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Request.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Request.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/pro/tmedia/model/Request.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="291" column="53" selection-start="6418" selection-end="6418" vertical-scroll-proportion="0.3321033">
+            <state line="291" column="39" selection-start="6418" selection-end="6418" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -368,7 +368,6 @@
         <option value="$PROJECT_DIR$/src/main/java/pro/tmedia/init/GsonHttpMessageConverter.java" />
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/createDB.sql" />
         <option value="db-console:/88a3e682/ae41414a-7af4-4aa0-8419-94951ba34d55/" />
         <option value="dbtable:/88a3e682/ae41414a-7af4-4aa0-8419-94951ba34d55/core5429_repair..request_status" />
         <option value="$PROJECT_DIR$/src/main/java/pro/tmedia/service/DictionaryItemService.java" />
@@ -379,8 +378,9 @@
         <option value="$PROJECT_DIR$/src/main/java/pro/tmedia/controller/jTableResponse.java" />
         <option value="$PROJECT_DIR$/src/main/java/pro/tmedia/controller/RequestsController.java" />
         <option value="$PROJECT_DIR$/src/main/java/pro/tmedia/dao/RequestDAOImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/js/home.js" />
+        <option value="$PROJECT_DIR$/createDB.sql" />
         <option value="$PROJECT_DIR$/src/main/java/pro/tmedia/model/Request.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/js/home.js" />
       </list>
     </option>
   </component>
@@ -452,7 +452,7 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1932" />
+    <option name="width" value="1936" />
     <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -1441,7 +1441,11 @@
       <created>1398244535649</created>
       <updated>1398244535649</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary=" Создать заявку: При нажатии на кнопку, открывается форма для заполнения. Поля формы: Номер телефона клиента (символьное поле, которое заполняется самостоятельно)">
+      <created>1399201570703</created>
+      <updated>1399201570703</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -1465,7 +1469,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1932" height="1056" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328125" sideWeight="0.49786323" order="7" side_tool="false" content_ui="tabs" />
@@ -1474,12 +1478,12 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31361607" sideWeight="0.6659091" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="JRebel Executor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.328125" sideWeight="0.7617773" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="JRebel Executor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.328125" sideWeight="0.7617521" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JRebel Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328125" sideWeight="0.4550321" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.47266516" sideWeight="0.6090909" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27617604" sideWeight="0.3270869" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.328125" sideWeight="0.23447537" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.328125" sideWeight="0.23450854" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="JRebel" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32928678" sideWeight="0.52649575" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32254463" sideWeight="0.4946581" order="10" side_tool="false" content_ui="tabs" />
@@ -1490,7 +1494,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.6717949" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924107" sideWeight="0.4957265" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.41862956" sideWeight="0.671875" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.41773504" sideWeight="0.671875" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.38169643" sideWeight="0.8055556" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27617604" sideWeight="0.4051282" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.6697039" order="1" side_tool="false" content_ui="combo" />
@@ -1538,7 +1542,7 @@
     <option name="MAXIMUM_HISTORY_ROWS" value="1000" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Сформирована работа с дочерними списками словарей для таблицы запросов" />
+    <option name="LAST_COMMIT_MESSAGE" value=" Создать заявку: При нажатии на кнопку, открывается форма для заполнения. Поля формы: Номер телефона клиента (символьное поле, которое заполняется самостоятельно)" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1551,7 +1555,6 @@
     <option name="UPDATE_GROUP_BY_CHANGELIST" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
-    <MESSAGE value="All SQL tables created" />
     <MESSAGE value="Entity models for sql tables created" />
     <MESSAGE value="Tests for RequestsController search" />
     <MESSAGE value="Tests for RequestsService (findByKeyword)" />
@@ -1576,6 +1579,7 @@
     <MESSAGE value="Практически полная работа с базой - осталось добить проблемы с созданием и обновлением (особенно выбор опций для вложенных объектов), добавить удаление" />
     <MESSAGE value="Restored missed files" />
     <MESSAGE value="Сформирована работа с дочерними списками словарей для таблицы запросов" />
+    <MESSAGE value=" Создать заявку: При нажатии на кнопку, открывается форма для заполнения. Поля формы: Номер телефона клиента (символьное поле, которое заполняется самостоятельно)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1627,13 +1631,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/createDB.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="252" column="4" selection-start="9169" selection-end="9174" vertical-scroll-proportion="-6.88">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pro/tmedia/controller/LoginController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="14" column="13" selection-start="431" selection-end="431" vertical-scroll-proportion="0.0">
@@ -1641,37 +1638,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pro/tmedia/controller/DictionaryItemController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="55" selection-start="1802" selection-end="1802" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pro/tmedia/service/DictionaryItemService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="15" column="31" selection-start="318" selection-end="318" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/home.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="237" column="56" selection-start="8817" selection-end="8817" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pro/tmedia/controller/RequestsController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="78" column="36" selection-start="2846" selection-end="2846" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pro/tmedia/service/RequestsService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="16" selection-start="221" selection-end="221" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -1690,9 +1659,44 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pro/tmedia/service/RequestsService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="16" selection-start="221" selection-end="221" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pro/tmedia/controller/DictionaryItemController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="52" column="55" selection-start="1802" selection-end="1802" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pro/tmedia/model/Request.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="291" column="53" selection-start="6418" selection-end="6418" vertical-scroll-proportion="0.3321033">
+        <state line="291" column="39" selection-start="6418" selection-end="6418" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/createDB.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="259" column="31" selection-start="9473" selection-end="9477" vertical-scroll-proportion="-9.6">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pro/tmedia/controller/RequestsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="78" column="36" selection-start="2846" selection-end="2846" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/js/home.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="203" column="28" selection-start="7242" selection-end="7242" vertical-scroll-proportion="0.27859777">
           <folding />
         </state>
       </provider>

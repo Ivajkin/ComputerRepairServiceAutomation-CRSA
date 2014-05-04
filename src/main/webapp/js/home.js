@@ -214,6 +214,12 @@ function documentLoaded() {
              acceptor_id: {
                  title: 'Приёмщик',
                  list: false
+             },
+             prepayment: {
+                 title: 'Предоплата',
+                 width: '3%',
+                 defaultValue: 0,
+                 edit: false
              }
          },
          //Initialize validation logic when a form is created
@@ -221,6 +227,7 @@ function documentLoaded() {
              // TODO: Добавить валидайию для всех полей
              data.form.find('input[name="fault"]').addClass('validate[required]');
              data.form.find('input[name="amount"]').addClass('validate[required],custom[integer],min[10],max[500000]');
+             data.form.find('input[name="prepayment"]').addClass('validate[required],custom[integer],min[0],max[500000]');
              data.form.find('input[name="date_of_receipt"]').addClass('validate[required,custom[date],past[NOW]]');   // var dateMMDDYYYRegex = '^(0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])[- /.](19|20)\d\d$';
              data.form.find('input[name="phone"]').addClass('validate[required,custom[phone],minSize[6],maxSize[18]] text-input');
              data.form.validationEngine();
