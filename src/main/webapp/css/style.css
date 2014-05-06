@@ -1,4 +1,14 @@
+@font-face {
+    font-family: 'russian-olympics';
+    src: url('fonts/russian-olympics.eot');
+    src: url('fonts/russian-olympics.eot?#iefix') format('embedded-opentype'),
+    url('fonts/russian-olympics.woff') format('woff'),
+    url('fonts/russian-olympics.ttf') format('truetype'),
+    url('fonts/russian-olympics.svg#sochi2014medium') format('svg');
+    font-weight: normal;
+    font-style: normal;
 
+}
 
 html {
     overflow-x: hidden;
@@ -17,12 +27,16 @@ body {
     background: linear-gradient(to bottom,  #D68B2B 0%,#e5fcc2 100%); /* W3C */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#D68B2B', endColorstr='#e5fcc2',GradientType=0 ); /* IE6-8 */
 
-    font-family: Tahoma, Geneva, sans-serif;
+    font-family: 'russian-olympics', Tahoma, Geneva, sans-serif;
     font-size: 1.2em;
 
 
     color: #594f4f;
     margin: 0;
+}
+
+.toast {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif
 }
 
 body header.mainheader {

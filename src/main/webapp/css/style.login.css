@@ -1,8 +1,8 @@
 @import url('http://fonts.googleapis.com/css?family=Open+Sans');
 @font-face{
-    src:url("pictos-regular-webfont.ttf") format("truetype"),
-    url("pictos-regular-webfont.otf") format("opentype"),
-    url("pictos-regular-webfont.svg") format("svg");
+    src:url("fonts/pictos-regular-webfont.ttf") format("truetype"),
+    url("fonts/pictos-regular-webfont.otf") format("opentype"),
+    url("fonts/pictos-regular-webfont.svg") format("svg");
     font-family:icon;
 }
 

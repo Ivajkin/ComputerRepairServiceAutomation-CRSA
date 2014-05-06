@@ -13,15 +13,15 @@
 <%--    <link rel="icon" href="" type="">
     <link rel="shortcut icon" href="" type="">
 --%>
-    <script type="text/javascript" src="/module/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="webjars/jquery/2.1.0/jquery.js"></script>
     <script type="text/javascript">
         $(document).ready(function() {
             if("${message}".length == 0) {
                 $('#img').hide();
                 $('#block').hide();
-                setTimeout(function(){$("#img").fadeIn(3000);}, 1000);
-                setTimeout(function(){$("#img").animate({'margin-top':'100px'},2000);},4000);
-                setTimeout(function(){$("#block").fadeIn(1000);}, 7000);
+                setTimeout(function(){$("#img").fadeIn(1500);}, 500);
+                setTimeout(function(){$("#img").animate({'margin-top':'100px'},1000);},2000);
+                setTimeout(function(){$("#block").fadeIn(500);}, 3500);
             } else {
                 $('#img').show().animate({'margin-top':'100px'},0);
                 $('#block').show();

@@ -736,4 +736,74 @@
       <column name="COLLATION_CONNECTION" sqlType="VARCHAR" length="32" precision="0" nullable="false" jdbcType="12" def="Jyc=" />
     </table>
   </data-source>
+  <data-source source="LOCAL" name="Remote:Webhostingpad Repair" product="MySQL" version="5.6.12-log" jdbc-version="4.0" driver-name="MySQL-AB JDBC Driver" driver-version="mysql-connector-java-5.1.21 ( Revision: ${bzr.revision-id} )" uuid="bff809a8-940b-4044-93c9-313671851edb">
+    <extra-name-characters>#@</extra-name-characters>
+    <identifier-quote-string>`</identifier-quote-string>
+    <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+    <jdbc-url>jdbc:mysql://69.39.232.66:3306/core5429_repair?characterEncoding=UTF-8</jdbc-url>
+    <user-name>core5429_repair</user-name>
+    <user-password>dfc4dfe4dffedffedfd9dfdbdf92dffcdff0dfc4dffedfc4dfe6dfc2df93dfdb</user-password>
+    <schema-pattern>core5429_tomcat.*</schema-pattern>
+    <default-schemas>core5429_tomcat.*</default-schemas>
+    <libraries>
+      <library>
+        <url>jar://$MAVEN_REPOSITORY$/mysql/mysql-connector-java/5.1.21/mysql-connector-java-5.1.21.jar!/</url>
+      </library>
+    </libraries>
+    <schema name="" catalog="core5429_tomcat" />
+    <table name="dept" schema="" catalog="core5429_tomcat" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
+      <column name="head" sqlType="VARCHAR" length="100" precision="0" nullable="true" jdbcType="12" />
+      <column name="name" sqlType="VARCHAR" length="100" precision="0" nullable="true" jdbcType="12" />
+      <primary-key name="PRIMARY" columns="id" />
+      <exported-key name="rept_ibfk_4" table="rept" schema="" catalog="core5429_tomcat" columns="dept_id" />
+      <index name="UQ__dept__000000000000000C" unique="true" columns="id" />
+      <index name="UQ__dept__0000000000000011" unique="true" columns="name" />
+    </table>
+    <table name="disc" schema="" catalog="core5429_tomcat" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
+      <column name="name" sqlType="VARCHAR" length="100" precision="0" nullable="true" jdbcType="12" />
+      <primary-key name="PRIMARY" columns="id" />
+      <exported-key name="rept_ibfk_2" table="rept" schema="" catalog="core5429_tomcat" columns="disc_id" />
+      <index name="UQ__disc__000000000000004E" unique="true" columns="id" />
+    </table>
+    <table name="flow" schema="" catalog="core5429_tomcat" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
+      <column name="name" sqlType="VARCHAR" length="128" precision="0" nullable="true" jdbcType="12" />
+      <primary-key name="PRIMARY" columns="id" />
+      <exported-key name="rept_ibfk_1" table="rept" schema="" catalog="core5429_tomcat" columns="flow_id" />
+      <index name="UQ__flow__000000000000001F" unique="true" columns="id" />
+      <index name="UQ__flow__0000000000000024" unique="true" columns="name" />
+    </table>
+    <table name="rept" schema="" catalog="core5429_tomcat" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
+      <column name="flow_id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" />
+      <column name="disc_id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" />
+      <column name="sem_id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" />
+      <column name="data__test" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" />
+      <column name="dept_id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" />
+      <column name="teacher_id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" />
+      <primary-key name="PRIMARY" columns="id" />
+      <foreign-key name="rept_ibfk_1" columns="flow_id" ref-table="flow" ref-schema="" ref-catalog="core5429_tomcat" ref-columns="id" update-rule="3" delete-rule="0" deferrability="2" />
+      <foreign-key name="rept_ibfk_2" columns="disc_id" ref-table="disc" ref-schema="" ref-catalog="core5429_tomcat" ref-columns="id" update-rule="3" delete-rule="0" deferrability="2" />
+      <foreign-key name="rept_ibfk_3" columns="sem_id" ref-table="sem" ref-schema="" ref-catalog="core5429_tomcat" ref-columns="id" update-rule="3" delete-rule="0" deferrability="2" />
+      <foreign-key name="rept_ibfk_4" columns="dept_id" ref-table="dept" ref-schema="" ref-catalog="core5429_tomcat" ref-columns="id" update-rule="3" delete-rule="0" deferrability="2" />
+      <foreign-key name="rept_ibfk_5" columns="teacher_id" ref-table="teacher" ref-schema="" ref-catalog="core5429_tomcat" ref-columns="id" update-rule="3" delete-rule="0" deferrability="2" />
+      <index name="UQ__rept__0000000000001040" unique="true" columns="id" />
+    </table>
+    <table name="sem" schema="" catalog="core5429_tomcat" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
+      <column name="name" sqlType="VARCHAR" length="100" precision="0" nullable="true" jdbcType="12" />
+      <primary-key name="PRIMARY" columns="id" />
+      <exported-key name="rept_ibfk_3" table="rept" schema="" catalog="core5429_tomcat" columns="sem_id" />
+      <index name="UQ__sem__0000000000000032" unique="true" columns="id" />
+    </table>
+    <table name="teacher" schema="" catalog="core5429_tomcat" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
+      <column name="name" sqlType="VARCHAR" length="100" precision="0" nullable="true" jdbcType="12" />
+      <primary-key name="PRIMARY" columns="id" />
+      <exported-key name="rept_ibfk_5" table="rept" schema="" catalog="core5429_tomcat" columns="teacher_id" />
+      <index name="UQ__teacher__0000000000000040" unique="true" columns="id" />
+    </table>
+  </data-source>
 </component>
