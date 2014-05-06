@@ -27,60 +27,33 @@ function openWarehouse() {
                 deleteAction: '/warehouse/delete'
             },
             fields: {
-                req_num_id: {
-                    title: 'Номер заявки',
-                    key: true,
-                    create: false,
-                    edit: false,
-                    list: false
-                },
-                fault_id: {
-                    title: 'Неисправность',
+                provider_id: {
+                    title: 'Поставщик',
                     width: '5%',
-                    options: '/fault/list'
+                    options: '/provider/list'
                 },
-                date_of_receipt: {
-                    title: 'Дата получения',
+                invoice_number: {
+                    title: 'Номер накладной',
                     width: '10%',
-                    type: 'date'
-                },
-                date_of_issue: {
-                    title: 'Дата выдачи',
-                    width: '10%',
-                    type: 'date'
-                },
-                request_status_id: {
-                    title: 'Статус заявки',
-                    options: '/request_status/list',
-                    list: false
-                },
-                amount: {
-                    title: 'Сумма в рублях',
-                    width: '5%'
-                },
-                phone: {
-                    title: 'Номер телефона клиента',
-                    width: '7%'
-                },
-                acceptor_id: {
-                    title: 'Приёмщик',
-                    list: false
-                },
-                prepayment: {
-                    title: 'Предоплата',
-                    width: '3%',
-                    defaultValue: 0,
+                    key: true,
                     edit: false
+                },
+                item_count: {
+                    title: 'Кол-во штук',
+                    width: '10%'
+                },
+                repair_price: {
+                    title: 'Цена ремонтная',
+                    width: '5%'
                 }
             },
             //Initialize validation logic when a form is created
             formCreated: function (event, data) {
                 // TODO: Добавить валидайию для всех полей
-                data.form.find('input[name="fault"]').addClass('validate[required]');
-                data.form.find('input[name="amount"]').addClass('validate[required],custom[integer],min[10],max[500000]');
-                data.form.find('input[name="prepayment"]').addClass('validate[required],custom[integer],min[0],max[500000]');
-                data.form.find('input[name="date_of_receipt"]').addClass('validate[required,custom[date],past[NOW]]');   // var dateMMDDYYYRegex = '^(0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])[- /.](19|20)\d\d$';
-                data.form.find('input[name="phone"]').addClass('validate[required,custom[phone],minSize[6],maxSize[18]] text-input');
+                data.form.find('input[name="provider_id"]').addClass('validate[required]');
+                data.form.find('input[name="invoice_number"]').addClass('validate[required,minSize[3],maxSize[18]] text-input');
+                data.form.find('input[name="repair_price"]').addClass('validate[required],custom[integer],min[0],max[500000]');
+                data.form.find('input[name="item_count"]').addClass('validate[required],custom[integer],min[1],max[500]');
                 data.form.validationEngine();
             },
             //Validate form when it is being submitted

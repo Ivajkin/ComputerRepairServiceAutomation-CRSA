@@ -78,7 +78,10 @@ create table if not exists `warehouse_item` (
   `hardware_id` integer not null references hardware(id) ON UPDATE CASCADE ON DELETE RESTRICT,
   `posting_date` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
   `item_count` integer not null, CONSTRAINT item_count_value CHECK (item_count >= 0),
-  `warranty` varchar(200) CHARACTER SET utf8 not null
+  `warranty` varchar(200) CHARACTER SET utf8 not null,
+  `repair_price` integer default 0 not null,
+  `provider_id` integer not null references provider(id) ON UPDATE CASCADE ON DELETE RESTRICT
+
 
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=3;
 
@@ -274,6 +277,20 @@ create table if not exists `request` (
 
 INSERT INTO `request` (`hardware_id`, `manufacturer_id`, `model`, `serial_number`, `fault_id`, `appearance_id`, `completeness_id`, `phone`, `address`, `customer_name`, `source_id`, `date_of_call`, `note`, `approximate_cost`, `prepayment`, `acceptor_id`, `responsible_id`, `date_of_receipt`, `date_of_issue`, `amount`, `method_of_payment`, `request_status_id`, `completed_works_id`, `parts_installed_id`) VALUES
 (1, 1, 'model', 'serial_number', 1, 1, 1, '+7-924-123-45-67', 'address', 'customer_name', 1, '2011-01-01', 'note', 123, 55, 1, 1, '2011-01-01', '2011-01-01', 12, 'method_of_payment', 1, 1, 1);
+
+
+--	Поставщик -> provider
+--		Код поставщика -> id
+--		Наименование поставщика -> name
+create table if not exists `provider` (
+  `id` int not null AUTO_INCREMENT unique primary key,
+  `name` varchar(256) CHARACTER SET utf8 not null unique
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=3;
+
+INSERT INTO `provider` (`id`, `name`) VALUES
+(1, 'ООО "Технопоинт"'),
+(2, 'ЗАО "Бизнес-Фабрика"');
+
 
 -- ------------------------------------------------------------------
 

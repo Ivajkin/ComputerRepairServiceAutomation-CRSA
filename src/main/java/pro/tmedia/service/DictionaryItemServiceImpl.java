@@ -5,9 +5,11 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import pro.tmedia.dao.FaultDAO;
 import pro.tmedia.dao.HardwareDAO;
+import pro.tmedia.dao.ProviderDAO;
 import pro.tmedia.dao.RequestStatusDAO;
 import pro.tmedia.model.Fault;
 import pro.tmedia.model.Hardware;
+import pro.tmedia.model.Provider;
 import pro.tmedia.model.RequestStatus;
 
 import java.util.List;
@@ -25,6 +27,8 @@ public class DictionaryItemServiceImpl implements DictionaryItemService {
     RequestStatusDAO requestStatusDAO;
     @Autowired
     HardwareDAO hardwareDAO;
+    @Autowired
+    ProviderDAO providerDAO;
 
     public List<Fault> listFaults() {
         return faultDAO.list();
@@ -33,6 +37,11 @@ public class DictionaryItemServiceImpl implements DictionaryItemService {
     @Override
     public List<RequestStatus> requestStatusList() {
         return requestStatusDAO.list();
+    }
+
+    @Override
+    public List<Provider> providerList() {
+        return providerDAO.list();
     }
 
     @Override
