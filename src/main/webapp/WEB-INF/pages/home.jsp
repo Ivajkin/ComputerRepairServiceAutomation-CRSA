@@ -30,6 +30,8 @@
     <script type="text/javascript" src="${pageContext.request.contextPath}/js/jtable.2.4.0/localization/jquery.jtable.ru.js"></script>
     <script type="text/javascript" src="${pageContext.request.contextPath}/js/validationEngine/languages/jquery.validationEngine-ru.js"></script>
     <script type="text/javascript" src="${pageContext.request.contextPath}/js/validationEngine/jquery.validationEngine.js"></script>
+    <script type="text/javascript" src="${pageContext.request.contextPath}/js/requests.js"></script>
+    <script type="text/javascript" src="${pageContext.request.contextPath}/js/warehouse.js"></script>
     <script type="text/javascript" src="${pageContext.request.contextPath}/js/home.js"></script>
 </head>
 <body>
@@ -54,6 +56,7 @@
 
 <main id="listPanel" class="main">
     <div id="requestsTableContainer"></div>
+    <div id="warehouseTableContainer"></div>
 </main>
 
 <footer class="panel">
