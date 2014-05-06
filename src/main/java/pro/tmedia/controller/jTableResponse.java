@@ -2,7 +2,6 @@ package pro.tmedia.controller;
 
 import com.google.gson.Gson;
 import pro.tmedia.model.DictionaryItem;
-import pro.tmedia.model.Request;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -43,7 +42,7 @@ public class jTableResponse<T> {
     private final String Result;
     private final String Message;
     final List<T> Records;
-    final Request Record;
+    final T Record;
     final List<OptionsBean> Options;
 
     public jTableResponse(String ErrorMessage) {
@@ -73,7 +72,7 @@ public class jTableResponse<T> {
         this.Record = null;
         this.Message = null;
     }
-    public jTableResponse(Request Record) {
+    public jTableResponse(T Record) {
         Result = OK;
         this.Record = Record;
 

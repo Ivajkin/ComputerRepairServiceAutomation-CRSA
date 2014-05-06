@@ -18,8 +18,7 @@ function openWarehouse() {
             paging: true,
             pageSize: 150,
             sorting: true,
-            defaultSorting: 'date_of_issue ASC',
-            //defaultDateFormat: 'dd.mm.yy',
+            defaultSorting: 'invoice_number ASC',
             actions: {
                 listAction: '/warehouse/list',
                 createAction: '/warehouse/create',
@@ -36,7 +35,8 @@ function openWarehouse() {
                     title: 'Номер накладной',
                     width: '10%',
                     key: true,
-                    edit: false
+                    edit: false,
+                    create: true
                 },
                 item_count: {
                     title: 'Кол-во штук',
