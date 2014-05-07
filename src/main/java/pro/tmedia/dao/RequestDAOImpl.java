@@ -38,10 +38,11 @@ public class RequestDAOImpl implements RequestDAO {
     }
 
     @Override
-    public void delete(int id) {
+    public void delete(int id) throws Exception {
         Request request = (Request) getCurrentSession().get(Request.class, id);
         if(request != null)
             getCurrentSession().delete(request);
+        else throw new Exception("Не удалось удалить заявку под номером " + id);
     }
 
     @Override

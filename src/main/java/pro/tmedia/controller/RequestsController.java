@@ -108,6 +108,20 @@ public class RequestsController {
     }
 
 
+    @RequestMapping(value = "/delete", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
+    @ResponseBody
+    public jTableResponse<Request> deleteWarehouseItem(@RequestParam Integer req_num_id) {
+        jTableResponse<Request> response;
+        try {
+            requestsService.delete(req_num_id);
+            response = new jTableResponse<>();
+        } catch (Exception e) {
+            response = new jTableResponse<>(e.getMessage());
+            logger.error(e.getMessage());
+        }
+        return response;
+    }
+
     private String getBindingErrorMessages(BindingResult bindingResult) {
         String errorMessage = "";
         List<FieldError> errors = bindingResult.getFieldErrors();

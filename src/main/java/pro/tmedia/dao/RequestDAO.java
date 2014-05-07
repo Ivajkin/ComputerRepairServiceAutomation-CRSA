@@ -13,6 +13,6 @@ import java.util.List;
 public interface RequestDAO {
     List<Request> list();
     public void create(Request request);
-    public void delete(int id);
+    public void delete(int id) throws Exception;
     public void update(Request request);
 }

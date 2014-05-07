@@ -57,7 +57,7 @@ public class RequestsServiceImpl implements RequestsService {
     }
 
     @Override
-    public void delete(int id) {
+    public void delete(int id) throws Exception {
         requestDAO.delete(id);
     }
 
