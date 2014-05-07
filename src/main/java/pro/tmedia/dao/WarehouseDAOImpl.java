@@ -38,10 +38,11 @@ public class WarehouseDAOImpl implements WarehouseDAO {
     }
 
     @Override
-    public void delete(int id) {
-        WarehouseItem warehouseItem = (WarehouseItem) getCurrentSession().get(WarehouseItem.class, id);
+    public void delete(String invoice_number) throws Exception {
+        WarehouseItem warehouseItem = (WarehouseItem) getCurrentSession().get(WarehouseItem.class, invoice_number);
         if(warehouseItem != null)
             getCurrentSession().delete(warehouseItem);
+        else throw new Exception("Элемента склада с номером накладной: \"" + invoice_number + "\" не существует");
     }
 
     @Override

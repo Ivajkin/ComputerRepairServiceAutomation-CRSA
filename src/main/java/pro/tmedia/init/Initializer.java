@@ -1,5 +1,6 @@
 package pro.tmedia.init;
 
+import org.apache.log4j.*;
 import org.springframework.web.WebApplicationInitializer;
 import org.springframework.web.context.ContextLoaderListener;
 import org.springframework.web.context.support.AnnotationConfigWebApplicationContext;
@@ -10,6 +11,7 @@ import javax.servlet.FilterRegistration;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.ServletRegistration.Dynamic;
+import java.io.OutputStreamWriter;
 
 /**
  * User: Ivaykin Timofey
@@ -49,7 +51,21 @@ public class Initializer implements WebApplicationInitializer {
         servlet.setLoadOnStartup(1);
 
         //servletContext.getServletRegistration ("default").addMapping (".js", ".css", ".jpg", ".gif", "*.png");
+        initLogger();
     }
 
+
+    private void initLogger() {
+        ConsoleAppender appender = new ConsoleAppender();
+        appender.setWriter(new OutputStreamWriter(System.out));
+        appender.setLayout(new PatternLayout("%d{ABSOLUTE} %5p %c{1}:%L - %m%n"));
+        appender.setName("consoleLog");
+        appender.activateOptions();
+        Logger.getRootLogger().addAppender(appender);
+        LogManager.getRootLogger().setLevel(Level.TRACE);
+        // log4j.rootLogger=INFO, file, stdout
+        // log4j.logger.org.hibernate=INFO
+        // log4j.logger.org.hibernate.type=ALL
+    }
 }
 

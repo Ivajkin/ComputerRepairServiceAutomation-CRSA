@@ -90,6 +90,19 @@ public class WarehouseController {
         return response;
     }
 
+    @RequestMapping(value = "/delete", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
+    @ResponseBody
+    public jTableResponse<WarehouseItem> deleteWarehouseItem(@RequestParam String invoice_number) {
+        jTableResponse<WarehouseItem> response;
+            try {
+                warehouseService.delete(invoice_number);
+                response = new jTableResponse<>();
+            } catch (Exception e) {
+                response = new jTableResponse<>(e.getMessage());
+                logger.error(e.getMessage());
+            }
+        return response;
+    }
 
     private String getBindingErrorMessages(BindingResult bindingResult) {
         String errorMessage = "";

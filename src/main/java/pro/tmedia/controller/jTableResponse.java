@@ -80,6 +80,14 @@ public class jTableResponse<T> {
         Records = null;
         Options = null;
     }
+    public jTableResponse() {
+        Result = OK;
+
+        Record = null;
+        Message = null;
+        Records = null;
+        Options = null;
+    }
 
     public String getJSON() {
         return gson.toJson(this);

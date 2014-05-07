@@ -11,6 +11,6 @@ import java.util.List;
 public interface WarehouseService {
     public List<WarehouseItem> list();
     public void create(WarehouseItem warehouseItem);
-    public void delete(int id);
+    public void delete(String invoice_number) throws Exception;
     public void update(WarehouseItem warehouseItem);
 }
