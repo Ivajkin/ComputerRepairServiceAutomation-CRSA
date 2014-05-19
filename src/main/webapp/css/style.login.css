@@ -148,3 +148,9 @@ input{padding-left:40px;}
     color: red;
     text-align: center;
 }
+.logout {
+    font-size: 12px;
+    margin: auto;
+    color: #5295A2;
+    text-align: center;
+}
