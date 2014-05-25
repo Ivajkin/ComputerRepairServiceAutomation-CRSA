@@ -32,6 +32,7 @@
     <script type="text/javascript" src="${pageContext.request.contextPath}/js/validationEngine/jquery.validationEngine.js"></script>
     <script type="text/javascript" src="${pageContext.request.contextPath}/js/requests.js"></script>
     <script type="text/javascript" src="${pageContext.request.contextPath}/js/warehouse.js"></script>
+    <script type="text/javascript" src="${pageContext.request.contextPath}/js/settings.js"></script>
     <script type="text/javascript" src="${pageContext.request.contextPath}/js/home.js"></script>
 </head>
 <body>
@@ -57,6 +58,11 @@
 <main id="listPanel" class="main">
     <div id="requestsTableContainer"></div>
     <div id="warehouseTableContainer"></div>
+    <div id="settingsContainer">
+        <div id="manufacturersTableContainer"></div>
+        <div id="hardwareModelsTableContainer"></div>
+        <div id="hardwareNamesTableContainer"></div>
+    </div>
     <a href="<c:url value="logout" />" >Выйти</a></h2>
 </main>
 

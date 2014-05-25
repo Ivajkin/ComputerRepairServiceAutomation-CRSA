@@ -118,6 +118,7 @@ function documentLoaded() {
 
 
      $('#settingsButton').click(function() {
+         openSettings();
          messagebox.info("Раздел настроек", "В этом разделе администратор может добавлять, удалять, изменять категории и прочие вспомогательные словари.");
      });
 

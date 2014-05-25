@@ -7,6 +7,7 @@ var isRequestsTableLoaded = false;
 
 function openRequests() {
     $('#warehouseTableContainer').hide();
+    $('#settingsContainer').hide();
 
     $('#requestsTableContainer').show();
 
