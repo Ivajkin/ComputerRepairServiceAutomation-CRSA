@@ -15,6 +15,13 @@ html {
     height: 100%;
 }
 
+input {
+    border-bottom-style: groove;
+    border-top-style: none;
+    border-right-style: none;
+    border-left-style: ridge;
+}
+
 body {
     background: #f3fcff;
     /* IE9 SVG, needs conditional override of 'filter' to 'none' */
@@ -349,8 +356,22 @@ nav.main {
 
 
 
-
-
+.ui-dialog, .ui-widget, .ui-widget-content, .ui-corner-all, .ui-front, .ui-dialog-buttons, .ui-draggable, .ui-resizable {
+    border-radius: 0 !important;
+}
+.ui-dialog-titlebar, .ui-widget-header, .ui-corner-all {
+    border-radius: 0;
+    background: #d0daea;
+    border: none;
+}
+.ui-dialog-content, .ui-widget-content {
+    background: white;
+}
+button {
+    background: #4369a2;
+    color: white;
+    border: none;
+}
 
 
 @media print {
