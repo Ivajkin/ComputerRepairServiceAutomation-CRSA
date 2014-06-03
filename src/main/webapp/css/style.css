@@ -35,6 +35,27 @@ body {
     margin: 0;
 }
 
+.shadowCSS {
+    box-shadow: 12px 12px 7px rgba(0,0,0,0.5);
+}
+#lightBulb {
+    opacity: 0.5;
+    cursor: pointer;
+    position: fixed;
+    right: 25px;
+    top: 100px;
+    width: 30px;
+    height: 43px;
+    background: 30px 43px url('../img/lamp.png');
+}
+#lightBulb:hover {
+    opacity: 1;
+
+    -webkit-filter: drop-shadow(12px 12px 7px rgba(0,0,0,0.5));
+    filter: url(shadow.svg#drop-shadow);
+}
+
+
 .toast {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif
 }

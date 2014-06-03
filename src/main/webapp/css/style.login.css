@@ -7,9 +7,13 @@
 }
 
 body{
-    background: #E5FCC2;
+    background: #EEF0F2;
     font-family: 'Open Sans', sans-serif;
 }
+body.darktheme {
+    background: #23272A;
+}
+
 label{
     font-family: icon, sans-serif;
     text-shadow:0 -1px 0 #666;

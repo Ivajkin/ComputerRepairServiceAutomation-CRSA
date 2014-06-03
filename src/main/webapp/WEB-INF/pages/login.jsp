@@ -7,6 +7,7 @@
 <html>
 <head>
     <title>Авторизация</title>
+    <link type="text/css" rel="stylesheet" href="/css/style.css"/>
     <link type="text/css" rel="stylesheet" href="/css/style.login.css"/>
 <%--    <link rel="icon" href="" type="">
     <link rel="shortcut icon" href="" type="">
@@ -24,6 +25,8 @@
                 $('#img').show().animate({'margin-top':'100px'},0);
                 $('#block').show();
             }
+
+            $('#lightBulb').click(function() {$('body').toggleClass('darkTheme')});
         });
     </script>
 </head>
@@ -43,5 +46,19 @@
     </form>
     <p class="error">${error}</p>
     <p class="logout">${logout}</p>
+
+    <div id="lightBulb"></div>
+    <svg height="0" xmlns="http://www.w3.org/2000/svg">
+        <filter id="drop-shadow">
+            <feGaussianBlur in="SourceAlpha" stdDeviation="4"/>
+            <feOffset dx="12" dy="12" result="offsetblur"/>
+            <feFlood flood-color="rgba(0,0,0,0.5)"/>
+            <feComposite in2="offsetblur" operator="in"/>
+            <feMerge>
+                <feMergeNode/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+    </svg>
 </body>
 </html>
