@@ -44,6 +44,9 @@ function documentLoaded() {
 
  $(document).ready(function() {
 
+     /* Настройка темной темы интерфейса */
+     $('#lightBulb').click(function() {$('body').toggleClass('darkTheme')});
+
      documentLoaded();
 
      $('#loading-bar').hide();
