@@ -11,7 +11,7 @@ function loadDictionary(id, name, path) {
         paging: true,
         pageSize: 150,
         sorting: true,
-        defaultSorting: 'date_of_issue ASC',
+        defaultSorting: 'name ASC',
         //defaultDateFormat: 'dd.mm.yy',
         actions: {
             listAction: path + '/list',
@@ -32,14 +32,13 @@ function loadDictionary(id, name, path) {
 
             name: {
                 title: 'Наименование',
-                width: '5%',
-                options: path + '/list'
+                width: '5%'
             }
         },
         //Initialize validation logic when a form is created
         formCreated: function (event, data) {
             // TODO: Добавить валидайию для всех полей
-            data.form.find('input[name="fault"]').addClass('validate[required]');
+            data.form.find('input[name="manufacturer"]').addClass('validate[required]');
             data.form.validationEngine();
         },
         //Validate form when it is being submitted

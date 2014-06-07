@@ -49,4 +49,9 @@ public class DictionaryItemServiceImpl implements DictionaryItemService {
     public List<Hardware> listHardware() {
         return hardwareDAO.list();
     }
+
+    @Override
+    public void create(Manufacturer manufacturer) {
+        manufacturerDAO.create(manufacturer);
+    }
 }

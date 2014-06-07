@@ -71,7 +71,7 @@ public class RequestsController {
     public jTableResponse<Request> createRequest(@ModelAttribute Request  request, BindingResult result) {
         jTableResponse<Request> response;
         if (result.hasErrors()) {
-            response = new jTableResponse<Request>("Form invalid while create: " + getBindingErrorMessages(result));
+            response = new jTableResponse<Request>("Form invalid while create: " + jTableResponse.getBindingErrorMessages(result));
         } else {
             try {
 
@@ -94,7 +94,7 @@ public class RequestsController {
     public jTableResponse<Request> updateRequest(@ModelAttribute Request  request, BindingResult result) {
         jTableResponse<Request> response;
         if (result.hasErrors()) {
-            response = new jTableResponse<Request>("Form invalid while update: " + getBindingErrorMessages(result));
+            response = new jTableResponse<Request>("Form invalid while update: " + jTableResponse.getBindingErrorMessages(result));
         } else {
             try {
                 requestsService.update(request);
@@ -122,12 +122,5 @@ public class RequestsController {
         return response;
     }
 
-    private String getBindingErrorMessages(BindingResult bindingResult) {
-        String errorMessage = "";
-        List<FieldError> errors = bindingResult.getFieldErrors();
-        for (FieldError error : errors ) {
-            errorMessage += error.getObjectName() + " - " + error.getDefaultMessage() + "\n<br/>";
-        }
-        return errorMessage;
-    }
+
 }

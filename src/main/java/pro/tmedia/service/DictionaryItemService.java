@@ -15,4 +15,5 @@ public interface DictionaryItemService {
     public List<Provider> providerList();
     public List<Hardware> listHardware();
     public List<Manufacturer> listManufacturers();
+    public void create(Manufacturer manufacturer);
 }

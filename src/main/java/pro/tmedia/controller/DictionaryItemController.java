@@ -5,9 +5,8 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.*;
 import pro.tmedia.model.Fault;
 import pro.tmedia.model.Manufacturer;
 import pro.tmedia.model.Provider;
@@ -34,10 +33,45 @@ public class DictionaryItemController {
         return dictionaryItemList(dictionaryItemService.listFaults());
     }
 
+
     @RequestMapping(value = "/manufacturer/list", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
-    public jTableResponse<Manufacturer> listManufacturers() {
-        return dictionaryItemList(dictionaryItemService.listManufacturers());
+    public jTableResponse<Manufacturer> listManufacturers(@RequestParam("jtStartIndex") int startIndex,
+                                                @RequestParam("jtPageSize") int pageSize,
+                                                @RequestParam("jtSorting") String sorting) {
+        jTableResponse<Manufacturer> response;
+        try
+        {
+            response = new jTableResponse<Manufacturer>(dictionaryItemService.listManufacturers(), false);
+        }
+        catch (Exception ex)
+        {
+            response = new jTableResponse<Manufacturer>(ex.getMessage());
+            logger.error(ex.getMessage());
+        }
+
+        logger.info(response.getJSON());
+        return response;
+    }
+
+    @RequestMapping(value = "/manufacturer/create", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
+    @ResponseBody
+    public jTableResponse<Manufacturer> createRequest(@ModelAttribute Manufacturer  manufacturer, BindingResult result) {
+        jTableResponse<Manufacturer> response;
+        if (result.hasErrors()) {
+            response = new jTableResponse<Manufacturer>("Form invalid while create: " + jTableResponse.getBindingErrorMessages(result));
+        } else {
+            try {
+
+                logger.info("Creating: ".concat(RequestsController.gson.toJson(manufacturer)));
+                dictionaryItemService.create(manufacturer);
+                response = new jTableResponse<Manufacturer>(manufacturer);
+            } catch (Exception e) {
+                response = new jTableResponse<Manufacturer>(e.getMessage());
+                logger.error(e.getMessage());
+            }
+        }
+        return response;
     }
 
     @RequestMapping(value = "/request_status/list", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)

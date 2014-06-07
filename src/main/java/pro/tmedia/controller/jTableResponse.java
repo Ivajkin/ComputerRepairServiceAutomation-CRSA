@@ -1,6 +1,8 @@
 package pro.tmedia.controller;
 
 import com.google.gson.Gson;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.FieldError;
 import pro.tmedia.model.DictionaryItem;
 
 import java.util.ArrayList;
@@ -91,5 +93,14 @@ public class jTableResponse<T> {
 
     public String getJSON() {
         return gson.toJson(this);
+    }
+
+    public static String getBindingErrorMessages(BindingResult bindingResult) {
+        String errorMessage = "";
+        List<FieldError> errors = bindingResult.getFieldErrors();
+        for (FieldError error : errors ) {
+            errorMessage += error.getObjectName() + " - " + error.getDefaultMessage() + "\n<br/>";
+        }
+        return errorMessage;
     }
 }

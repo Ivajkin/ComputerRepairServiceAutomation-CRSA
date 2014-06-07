@@ -19,4 +19,9 @@ public class ManufacturerDAOImpl extends WithSessionFactory implements Manufactu
     public List<Manufacturer> list() {
         return getCurrentSession().createQuery("from Manufacturer").list();
     }
+
+    @Override
+    public void create(Manufacturer manufacturer) {
+        getCurrentSession().save(manufacturer);
+    }
 }

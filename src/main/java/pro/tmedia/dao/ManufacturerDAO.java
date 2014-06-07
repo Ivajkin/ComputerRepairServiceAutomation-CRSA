@@ -12,4 +12,5 @@ import java.util.List;
 @Transactional
 public interface ManufacturerDAO {
     List<Manufacturer> list();
+    void create(Manufacturer manufacturer);
 }
