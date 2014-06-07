@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import pro.tmedia.model.Fault;
+import pro.tmedia.model.Manufacturer;
 import pro.tmedia.model.Provider;
 import pro.tmedia.model.RequestStatus;
 import pro.tmedia.service.DictionaryItemService;
@@ -31,6 +32,12 @@ public class DictionaryItemController {
     @ResponseBody
     public jTableResponse<Fault> listFaults() {
         return dictionaryItemList(dictionaryItemService.listFaults());
+    }
+
+    @RequestMapping(value = "/manufacturer/list", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
+    @ResponseBody
+    public jTableResponse<Manufacturer> listManufacturers() {
+        return dictionaryItemList(dictionaryItemService.listManufacturers());
     }
 
     @RequestMapping(value = "/request_status/list", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)

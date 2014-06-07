@@ -3,14 +3,8 @@ package pro.tmedia.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import pro.tmedia.dao.FaultDAO;
-import pro.tmedia.dao.HardwareDAO;
-import pro.tmedia.dao.ProviderDAO;
-import pro.tmedia.dao.RequestStatusDAO;
-import pro.tmedia.model.Fault;
-import pro.tmedia.model.Hardware;
-import pro.tmedia.model.Provider;
-import pro.tmedia.model.RequestStatus;
+import pro.tmedia.dao.*;
+import pro.tmedia.model.*;
 
 import java.util.List;
 
@@ -29,9 +23,16 @@ public class DictionaryItemServiceImpl implements DictionaryItemService {
     HardwareDAO hardwareDAO;
     @Autowired
     ProviderDAO providerDAO;
+    @Autowired
+    ManufacturerDAO manufacturerDAO;
 
     public List<Fault> listFaults() {
         return faultDAO.list();
+    }
+
+    @Override
+    public List<Manufacturer> listManufacturers() {
+        return manufacturerDAO.list();
     }
 
     @Override

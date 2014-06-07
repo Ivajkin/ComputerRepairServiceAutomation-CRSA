@@ -1,9 +1,6 @@
 package pro.tmedia.service;
 
-import pro.tmedia.model.Fault;
-import pro.tmedia.model.Hardware;
-import pro.tmedia.model.Provider;
-import pro.tmedia.model.RequestStatus;
+import pro.tmedia.model.*;
 
 import java.util.List;
 
@@ -17,4 +14,5 @@ public interface DictionaryItemService {
     public List<RequestStatus> requestStatusList();
     public List<Provider> providerList();
     public List<Hardware> listHardware();
+    public List<Manufacturer> listManufacturers();
 }
