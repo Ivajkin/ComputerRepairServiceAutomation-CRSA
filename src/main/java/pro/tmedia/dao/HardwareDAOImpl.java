@@ -23,4 +23,17 @@ public class HardwareDAOImpl extends WithSessionFactory implements HardwareDAO {
     public void create(Hardware hardware) {
         getCurrentSession().save(hardware);
     }
+
+    @Override
+    public void delete(int id) throws Exception {
+        Hardware hardware = (Hardware) getCurrentSession().get(Hardware.class, id);
+        if(hardware != null)
+            getCurrentSession().delete(hardware);
+        else throw new Exception("Не удалось удалить оборудование под номером " + id);
+    }
+
+    @Override
+    public void update(Hardware hardware) {
+        getCurrentSession().update(hardware);
+    }
 }

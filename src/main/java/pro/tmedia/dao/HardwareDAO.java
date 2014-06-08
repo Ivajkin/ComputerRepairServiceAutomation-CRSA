@@ -13,4 +13,6 @@ import java.util.List;
 public interface HardwareDAO {
     List<Hardware> list();
     void create(Hardware hardware);
+    public void delete(int id) throws Exception;
+    public void update(Hardware hardware);
 }
