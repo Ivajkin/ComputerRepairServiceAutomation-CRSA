@@ -7,10 +7,7 @@ import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
-import pro.tmedia.model.Fault;
-import pro.tmedia.model.Manufacturer;
-import pro.tmedia.model.Provider;
-import pro.tmedia.model.RequestStatus;
+import pro.tmedia.model.*;
 import pro.tmedia.service.DictionaryItemService;
 
 import java.util.List;
@@ -65,6 +62,38 @@ public class DictionaryItemController {
 
                 logger.info("Creating: ".concat(RequestsController.gson.toJson(manufacturer)));
                 dictionaryItemService.create(manufacturer);
+                response = new jTableResponse<Manufacturer>(manufacturer);
+            } catch (Exception e) {
+                response = new jTableResponse<Manufacturer>(e.getMessage());
+                logger.error(e.getMessage());
+            }
+        }
+        return response;
+    }
+
+    @RequestMapping(value = "/manufacturer/delete", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
+    @ResponseBody
+    public jTableResponse<Manufacturer> deleteWarehouseItem(@RequestParam Integer id) {
+        jTableResponse<Manufacturer> response;
+        try {
+            dictionaryItemService.delete(id);
+            response = new jTableResponse<>();
+        } catch (Exception e) {
+            response = new jTableResponse<>(e.getMessage());
+            logger.error(e.getMessage());
+        }
+        return response;
+    }
+
+    @RequestMapping(value = "/manufacturer/update", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
+    @ResponseBody
+    public jTableResponse<Manufacturer> updateRequest(@ModelAttribute Manufacturer  manufacturer, BindingResult result) {
+        jTableResponse<Manufacturer> response;
+        if (result.hasErrors()) {
+            response = new jTableResponse<Manufacturer>("Form invalid while update: " + jTableResponse.getBindingErrorMessages(result));
+        } else {
+            try {
+                dictionaryItemService.update(manufacturer);
                 response = new jTableResponse<Manufacturer>(manufacturer);
             } catch (Exception e) {
                 response = new jTableResponse<Manufacturer>(e.getMessage());

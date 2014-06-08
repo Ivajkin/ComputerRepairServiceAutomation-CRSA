@@ -13,4 +13,6 @@ import java.util.List;
 public interface ManufacturerDAO {
     List<Manufacturer> list();
     void create(Manufacturer manufacturer);
+    void delete(int id) throws Exception;
+    public void update(Manufacturer manufacturer);
 }

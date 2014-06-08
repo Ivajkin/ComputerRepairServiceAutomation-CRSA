@@ -1,7 +1,6 @@
 package pro.tmedia.model;
 
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 /**
  * User: Ivaykin Timofey
@@ -11,5 +10,6 @@ import javax.persistence.Table;
 @Entity
 @Table(name="manufacturer")
 public class Manufacturer extends DictionaryItem {
+
 }
 

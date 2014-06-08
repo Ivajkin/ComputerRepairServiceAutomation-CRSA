@@ -54,4 +54,14 @@ public class DictionaryItemServiceImpl implements DictionaryItemService {
     public void create(Manufacturer manufacturer) {
         manufacturerDAO.create(manufacturer);
     }
+
+    @Override
+    public void delete(int id) throws Exception {
+        manufacturerDAO.delete(id);
+    }
+
+    @Override
+    public void update(Manufacturer manufacturer) {
+        manufacturerDAO.update(manufacturer);
+    }
 }

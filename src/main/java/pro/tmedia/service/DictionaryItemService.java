@@ -16,4 +16,6 @@ public interface DictionaryItemService {
     public List<Hardware> listHardware();
     public List<Manufacturer> listManufacturers();
     public void create(Manufacturer manufacturer);
+    public void delete(int id) throws Exception;
+    public void update(Manufacturer manufacturer);
 }
