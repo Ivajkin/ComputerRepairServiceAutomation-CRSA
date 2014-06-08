@@ -18,6 +18,8 @@ public class DictionaryItemServiceImpl implements DictionaryItemService {
     @Autowired
     FaultDAO faultDAO;
     @Autowired
+    CategoryDAO categoryDAO;
+    @Autowired
     RequestStatusDAO requestStatusDAO;
     @Autowired
     HardwareDAO hardwareDAO;
@@ -26,8 +28,14 @@ public class DictionaryItemServiceImpl implements DictionaryItemService {
     @Autowired
     ManufacturerDAO manufacturerDAO;
 
+    @Override
     public List<Fault> listFaults() {
         return faultDAO.list();
+    }
+
+    @Override
+    public List<Category> listCategories() {
+        return categoryDAO.list();
     }
 
     @Override
@@ -53,6 +61,11 @@ public class DictionaryItemServiceImpl implements DictionaryItemService {
     @Override
     public void create(Manufacturer manufacturer) {
         manufacturerDAO.create(manufacturer);
+    }
+
+    @Override
+    public void create(Hardware hardware) {
+        hardwareDAO.create(hardware);
     }
 
     @Override

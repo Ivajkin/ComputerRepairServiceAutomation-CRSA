@@ -11,11 +11,11 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name="category")
-public class Category {
-    @Id
+public class Category extends DictionaryItem {
+    /*@Id
     @GeneratedValue
     private Integer id;
-    private String name;
+    private String name;  */
 
 
     /*@OneToMany(fetch = FetchType.EAGER)
@@ -29,7 +29,7 @@ public class Category {
         this.hardware = hardware;
     }      */
 
-    public Integer getId() {
+    /*public Integer getId() {
         return id;
     }
 
@@ -43,5 +43,5 @@ public class Category {
 
     public void setName(String name) {
         this.name = name;
-    }
+    }   */
 }

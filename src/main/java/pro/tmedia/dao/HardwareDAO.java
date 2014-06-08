@@ -12,4 +12,5 @@ import java.util.List;
 @Transactional
 public interface HardwareDAO {
     List<Hardware> list();
+    void create(Hardware hardware);
 }

@@ -18,4 +18,9 @@ public class HardwareDAOImpl extends WithSessionFactory implements HardwareDAO {
     public List<Hardware> list() {
         return getCurrentSession().createQuery("from Hardware").list();
     }
+
+    @Override
+    public void create(Hardware hardware) {
+        getCurrentSession().save(hardware);
+    }
 }

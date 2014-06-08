@@ -30,6 +30,12 @@ public class DictionaryItemController {
         return dictionaryItemList(dictionaryItemService.listFaults());
     }
 
+    @RequestMapping(value = "/category/list", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
+    @ResponseBody
+    public jTableResponse<Category> listCategories() {
+        return dictionaryItemList(dictionaryItemService.listCategories());
+    }
+
 
     @RequestMapping(value = "/manufacturer/list", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
@@ -97,6 +103,46 @@ public class DictionaryItemController {
                 response = new jTableResponse<Manufacturer>(manufacturer);
             } catch (Exception e) {
                 response = new jTableResponse<Manufacturer>(e.getMessage());
+                logger.error(e.getMessage());
+            }
+        }
+        return response;
+    }
+
+    @RequestMapping(value = "/hardware/list", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
+    @ResponseBody
+    public jTableResponse<Hardware> listHardware(@RequestParam("jtStartIndex") int startIndex,
+                                                          @RequestParam("jtPageSize") int pageSize,
+                                                          @RequestParam("jtSorting") String sorting) {
+        jTableResponse<Hardware> response;
+        try
+        {
+            response = new jTableResponse<Hardware>(dictionaryItemService.listHardware(), false);
+        }
+        catch (Exception ex)
+        {
+            response = new jTableResponse<Hardware>(ex.getMessage());
+            logger.error(ex.getMessage());
+        }
+
+        logger.info(response.getJSON());
+        return response;
+    }
+
+    @RequestMapping(value = "/hardware/create", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
+    @ResponseBody
+    public jTableResponse<Hardware> createRequest(@ModelAttribute Hardware  hardware, BindingResult result) {
+        jTableResponse<Hardware> response;
+        if (result.hasErrors()) {
+            response = new jTableResponse<Hardware>("Form invalid while create: " + jTableResponse.getBindingErrorMessages(result));
+        } else {
+            try {
+
+                logger.info("Creating: ".concat(RequestsController.gson.toJson(hardware)));
+                dictionaryItemService.create(hardware);
+                response = new jTableResponse<Hardware>(hardware);
+            } catch (Exception e) {
+                response = new jTableResponse<Hardware>(e.getMessage());
                 logger.error(e.getMessage());
             }
         }

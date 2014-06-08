@@ -11,36 +11,12 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name="hardware")
-/*@SecondaryTable(name="category",
-        pkJoinColumns={
-                @PrimaryKeyJoinColumn(name="category_id")})       */
 public class Hardware extends DictionaryItem {
-    /*@Id
-    @GeneratedValue
-    private Integer id;
-    private String name;*/
+
     private String description;
 
-    @ManyToOne
-    @JoinColumn(name="category_id")
-    //@JoinColumn(/*name = "category_id", */referencedColumnName = "category_id", table = "category", insertable = false, updatable = false)
-    private Category category;
 
-    /*public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    } */
+    private Integer category_id;
 
     public String getDescription() {
         return description;
@@ -50,12 +26,11 @@ public class Hardware extends DictionaryItem {
         this.description = description;
     }
 
-    public Category getCategory() {
-        return category;
+    public Integer getCategory_id() {
+        return category_id;
     }
 
-    public void setCategory(Category category) {
-        this.category = category;
+    public void setCategory_id(Integer category_id) {
+        this.category_id = category_id;
     }
-
 }

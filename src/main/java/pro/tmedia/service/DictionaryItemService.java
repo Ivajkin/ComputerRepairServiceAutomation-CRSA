@@ -11,6 +11,7 @@ import java.util.List;
 public interface DictionaryItemService {
 
     public List<Fault> listFaults();
+    public List<Category> listCategories();
     public List<RequestStatus> requestStatusList();
     public List<Provider> providerList();
     public List<Hardware> listHardware();
@@ -18,4 +19,6 @@ public interface DictionaryItemService {
     public void create(Manufacturer manufacturer);
     public void delete(int id) throws Exception;
     public void update(Manufacturer manufacturer);
+    public void create(Hardware hardware);
+
 }
