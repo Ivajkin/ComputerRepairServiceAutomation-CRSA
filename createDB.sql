@@ -319,15 +319,75 @@ INSERT INTO `provider` (`id`, `name`) VALUES
 --		Вид работы	
 --		Цена работы	
 --		
---	Касса
---		Код кассы	
---		Сумма	
---		Сотрудник	
---		Пояснение	
---		Код статуса	
---		Дата 	
---		Наименование товара	
---		Остаток	
+
+
+
+-- Тип кассы - cash_type
+-- 		id
+--		name
+create table if not exists `cash_type` (
+  `id` int not null AUTO_INCREMENT unique primary key,
+  `name` varchar(100) CHARACTER SET utf8 not null unique,
+  `saldo` int not null
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=3;
+
+INSERT INTO `cash_type` (`id`, `name`) VALUES
+(1, 'Безналичные', 1000),
+(2, 'Наличные', 0),
+(3, 'Карта', 0);
+
+
+-- Код статуса кассовой операции - cash_operation_status
+-- 		id
+--		name
+create table if not exists `cash_operation_status` (
+  `id` int not null AUTO_INCREMENT unique primary key,
+  `name` varchar(100) CHARACTER SET utf8 not null unique
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=3;
+
+INSERT INTO `cash_operation_status` (`id`, `name`) VALUES
+(1, 'Приход'),
+(2, 'Расход');
+
+
+--	Кассовая операция - cash_operation
+--		Код кассы	- id
+--		Сумма		- amount
+--		Сотрудник	- employee_id
+--		Пояснение	- description
+--		Код статуса кассовой операции	- cash_operation_status_id (приход, расход)
+--		Дата 		- operation_date
+--		Наименование товара	- product_id (connected to hardware_id)
+--		Остаток		- saldo
+--		Тип кассы	- cash_type_id (безналичные, наличные, карта)
+create table if not exists `cash_operation` (
+  `id` int not null AUTO_INCREMENT unique primary key,
+  `amount` int,
+  `product_id` integer not null references hardware(id),
+  `employee_id` integer not null references employee(id),
+  `description` varchar(400) CHARACTER SET utf8 default null,
+  `cash_operation_status_id` integer not null references cash_operation_status(id),
+  `operation_date` date not null,
+  `saldo` int not null,
+  `cash_type_id` integer not null references cash_type(id),
+  check (saldo >= 0),
+  check (amount >= 1),
+  check (amount <= 500000)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=3;
+
+INSERT INTO `cash_operation` (
+					`id`,
+					`amount`,
+					`product_id`,
+					`employee_id`,
+					`description`,
+					`cash_operation_status_id`,
+					`operation_date`,
+					`saldo`,
+					`cash_type_id`
+) VALUES
+(1, 1000, 1, 1, 1, 'Приход в кассу по безналичному', 1, '2011-01-01', 1000, 1);
+
 --		
 --	Справочники юридических лиц
 --		Код юр.лица	
