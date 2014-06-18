@@ -71,6 +71,24 @@
 </nav>
 
 <main id="listPanel" class="main">
+    <div id="cashModuleContainer">
+        <div class="cash-button cash">
+            <div class="cash-plus"></div>
+            <div class="cash-minus"></div>
+            <div class="cash-saldo"></div>
+        </div>
+        <div class="cash-button credit">
+            <div class="cash-plus"></div>
+            <div class="cash-minus"></div>
+            <div class="cash-saldo"></div>
+        </div>
+        <div class="cash-button wire">
+            <div class="cash-plus"></div>
+            <div class="cash-minus"></div>
+            <div class="cash-saldo"></div>
+        </div>
+    </div>
+
     <div id="requestsTableContainer"></div>
     <div id="warehouseTableContainer"></div>
     <div id="settingsContainer">

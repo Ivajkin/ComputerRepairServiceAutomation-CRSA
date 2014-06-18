@@ -156,6 +156,53 @@ main.main {
     margin-top: 3%;
 }
 
+/* Касса */
+#cashModuleContainer {
+    width: 100%;
+    height: 400px;
+}
+
+.cash-button {
+    width: 170px;
+    height: 111px;
+    margin: 20px;
+    box-shadow: -3px 3px 3px #ccc;
+}
+.cash {
+    background-image: url('../img/cash/cash.png');
+}
+.credit {
+    background-image: url('../img/cash/credit.png');
+}
+.wire {
+    background-image: url('../img/cash/wire.png');
+}
+.cash-plus, .cash-minus {
+    width: 64px;
+    height: 64px;
+    margin-left: 175px;
+
+    cursor: pointer;
+
+    opacity: 0.3;
+    /*Transition*/
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+.cash-plus:hover, .cash-minus:hover {
+    opacity: 1;
+}
+.cash-plus {
+    background-image: url('../img/cash/plus.png');
+}
+.cash-minus {
+    background-image: url('../img/cash/minus.png');
+}
+
+
 section.main {
     float: right;
     width: 25%;
