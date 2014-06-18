@@ -205,6 +205,20 @@ main.main {
     text-align: center;
     margin-top: -10px;
 }
+.cash-operation-window {
+    width: 380px;
+    height: 200px;
+    position: absolute;
+    top: 300px;
+    left:  500px;
+    font-size: 1.3em;
+}
+.cash-operation-name {
+    margin-bottom: 10px;
+}
+#commit-cash-operation-button {
+    margin-top: 10px;
+}
 
 
 section.main {

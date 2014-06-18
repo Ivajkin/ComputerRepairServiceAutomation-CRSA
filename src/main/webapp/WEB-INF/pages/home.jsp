@@ -88,6 +88,13 @@
             <div class="cash-minus"></div>
             <div class="cash-saldo">0 руб.</div>
         </div>
+
+        <div class="cash-operation-window">
+            <h1 class="cash-operation-name">Расход</h1>
+            <label style="margin-right: 8px;">Введите сумму:</label>
+            <input type="text" style="width: 50%;">
+            <button id="commit-cash-operation-button">Произвести операцию</button>
+        </div>
     </div>
 
     <div id="requestsTableContainer"></div>
