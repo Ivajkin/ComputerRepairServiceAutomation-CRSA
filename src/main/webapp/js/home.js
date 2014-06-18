@@ -76,7 +76,8 @@ function documentLoaded() {
              label: 'Касса',
              icon: 'cashIcon.png',
              path: '/cash.html',
-             message: {header: "Управление кассой", text: "Раздел управления кассами - приход, расход по типам."}
+             message: {header: "Управление кассой", text: "Раздел управления кассами - приход, расход по типам."},
+             callback: openCashModule
          } ,
          'reports': {
              label: 'Отчеты',

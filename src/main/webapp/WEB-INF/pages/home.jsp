@@ -32,6 +32,7 @@
     <script type="text/javascript" src="${pageContext.request.contextPath}/js/validationEngine/jquery.validationEngine.js"></script>
     <script type="text/javascript" src="${pageContext.request.contextPath}/js/requests.js"></script>
     <script type="text/javascript" src="${pageContext.request.contextPath}/js/warehouse.js"></script>
+    <script type="text/javascript" src="${pageContext.request.contextPath}/js/cash.js"></script>
     <script type="text/javascript" src="${pageContext.request.contextPath}/js/settings.js"></script>
     <script type="text/javascript" src="${pageContext.request.contextPath}/js/home.js"></script>
 </head>
@@ -75,17 +76,17 @@
         <div class="cash-button cash">
             <div class="cash-plus"></div>
             <div class="cash-minus"></div>
-            <div class="cash-saldo"></div>
+            <div class="cash-saldo">0 руб.</div>
         </div>
         <div class="cash-button credit">
             <div class="cash-plus"></div>
             <div class="cash-minus"></div>
-            <div class="cash-saldo"></div>
+            <div class="cash-saldo">0 руб.</div>
         </div>
         <div class="cash-button wire">
             <div class="cash-plus"></div>
             <div class="cash-minus"></div>
-            <div class="cash-saldo"></div>
+            <div class="cash-saldo">0 руб.</div>
         </div>
     </div>
 

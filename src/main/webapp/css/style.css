@@ -165,7 +165,7 @@ main.main {
 .cash-button {
     width: 170px;
     height: 111px;
-    margin: 20px;
+    margin: 40px;
     box-shadow: -3px 3px 3px #ccc;
 }
 .cash {
@@ -200,6 +200,10 @@ main.main {
 }
 .cash-minus {
     background-image: url('../img/cash/minus.png');
+}
+.cash-saldo {
+    text-align: center;
+    margin-top: -10px;
 }
 
 

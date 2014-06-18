@@ -117,6 +117,7 @@ function loadExtendedDictionary(id, name, path) {
 function openSettings() {
     $('#warehouseTableContainer').hide();
     $('#requestsTableContainer').hide();
+    $('#cashModuleContainer').hide();
 
     $('#settingsContainer').show();
 

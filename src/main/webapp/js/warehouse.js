@@ -8,6 +8,7 @@ var isWarehouseTableLoaded = false;
 function openWarehouse() {
     $('#requestsTableContainer').hide();
     $('#settingsContainer').hide();
+    $('#cashModuleContainer').hide();
 
     $('#warehouseTableContainer').show();
 
