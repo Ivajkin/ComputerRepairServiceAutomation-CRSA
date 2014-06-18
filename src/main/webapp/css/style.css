@@ -42,7 +42,7 @@ body {
     margin: 0;
 }
 body.darkTheme {
-    background: #2D4E99;
+    background: rgba(214, 223, 226, 0.95);
 }
 
 .shadowCSS {
