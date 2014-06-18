@@ -331,7 +331,7 @@ create table if not exists `cash_type` (
   `saldo` int not null
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=3;
 
-INSERT INTO `cash_type` (`id`, `name`) VALUES
+INSERT INTO `cash_type` (`id`, `name`, `saldo`) VALUES
 (1, 'Безналичные', 1000),
 (2, 'Наличные', 0),
 (3, 'Карта', 0);
@@ -386,7 +386,7 @@ INSERT INTO `cash_operation` (
 					`saldo`,
 					`cash_type_id`
 ) VALUES
-(1, 1000, 1, 1, 1, 'Приход в кассу по безналичному', 1, '2011-01-01', 1000, 1);
+(1, 1000, 1, 1, 'Приход в кассу по безналичному', 1, '2011-01-01', 1000, 1);
 
 --		
 --	Справочники юридических лиц
