@@ -8,6 +8,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import pro.tmedia.model.Hardware;
+import pro.tmedia.model.cash.CashType;
 import pro.tmedia.service.HardwareService;
 
 /**
@@ -25,28 +26,43 @@ import pro.tmedia.service.HardwareService;
 
  */
 @Controller
+@RequestMapping(value = "/cash")
 public class CashController {
+    CashController() {
+        if(cash == null) {
+            cash = new CashType[3];
+            for(int i = 0; i < 3; ++i) {
+                cash[i] = new CashType();
+            }
+        }
+    }
+    static CashType[] cash = null;
 
     // TODO: реализовать CashService
-    @Autowired
+    // @Autowired
     // CashService cashService;
 
     final Logger logger = LoggerFactory.getLogger(CashController.class);
 
 
-    @RequestMapping(value = "/cash/income/", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
+    @RequestMapping(value = "/income", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
     public String registerIncome(@RequestParam Integer cash_type_id, @RequestParam Integer amount) {
-        // TODO: доделать тело функции
+        cash[cash_type_id].setAmount(cash[cash_type_id].getAmount() + amount);
         return "OK";
     }
-    @RequestMapping(value = "/cash/outcome/", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
+    @RequestMapping(value = "/outcome", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
     public String registerOutcome(@RequestParam Integer cash_type_id, @RequestParam Integer amount) {
-        // TODO: доделать тело функции
+        cash[cash_type_id].setAmount(cash[cash_type_id].getAmount() - amount);
         return "OK";
     }
 
+    @RequestMapping(value = "", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+    @ResponseBody
+    public CashType get(@RequestParam Integer cash_type_id) {
+        return cash[cash_type_id];
+    }
 
 
 }
