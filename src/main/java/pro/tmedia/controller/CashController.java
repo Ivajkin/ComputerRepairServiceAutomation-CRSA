@@ -33,6 +33,7 @@ public class CashController {
             cash = new CashType[3];
             for(int i = 0; i < 3; ++i) {
                 cash[i] = new CashType();
+                cash[i].setName("Test");
             }
         }
     }

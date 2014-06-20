@@ -44,7 +44,7 @@ function openCashModule() {
     };
     function showOperationsPanel(operation_name, cash_type_id) {
         getCashByType(cash_type_id, function(cash) {
-            var cash_operation_name = operation_names[operation_name] + cash.name;
+            var cash_operation_name = operation_names[operation_name] + cash.name.toLowerCase();
             $('.cash-operation-name').text(cash_operation_name);
             $('.cash-operation-window').fadeIn();
             $('#commit-cash-operation-button').click(commitOperation);
