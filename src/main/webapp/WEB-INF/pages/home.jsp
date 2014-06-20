@@ -76,17 +76,17 @@
         <div class="cash-button cash">
             <div class="cash-plus"></div>
             <div class="cash-minus"></div>
-            <div class="cash-saldo">0 руб.</div>
+            <div class="cash-saldo">- руб.</div>
         </div>
         <div class="cash-button credit">
             <div class="cash-plus"></div>
             <div class="cash-minus"></div>
-            <div class="cash-saldo">0 руб.</div>
+            <div class="cash-saldo">- руб.</div>
         </div>
         <div class="cash-button wire">
             <div class="cash-plus"></div>
             <div class="cash-minus"></div>
-            <div class="cash-saldo">0 руб.</div>
+            <div class="cash-saldo">- руб.</div>
         </div>
 
         <div class="cash-operation-window">
