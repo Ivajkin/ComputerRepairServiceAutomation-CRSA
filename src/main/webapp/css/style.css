@@ -219,6 +219,9 @@ main.main {
 #commit-cash-operation-button {
     margin-top: 10px;
 }
+#cash-operation-amount {
+    width: 50%;
+}
 
 
 section.main {

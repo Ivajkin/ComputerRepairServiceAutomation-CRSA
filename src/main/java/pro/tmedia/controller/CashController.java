@@ -41,14 +41,28 @@ public class CashController {
     @RequestMapping(value = "/income", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
     public String registerIncome(@RequestParam Integer cash_type_id, @RequestParam Integer amount) {
-        //cash[cash_type_id].setAmount(cash[cash_type_id].getAmount() + amount);
-        return "OK";
+        String message;
+        try {
+            service.income(cash_type_id, amount);
+            message = "OK";
+        } catch (Exception e) {
+            e.printStackTrace();
+            message = e.getMessage();
+        }
+        return message;
     }
     @RequestMapping(value = "/outcome", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
     public String registerOutcome(@RequestParam Integer cash_type_id, @RequestParam Integer amount) {
-        //cash[cash_type_id].setAmount(cash[cash_type_id].getAmount() - amount);
-        return "OK";
+        String message;
+        try {
+            service.outcome(cash_type_id, amount);
+            message = "OK";
+        } catch (Exception e) {
+            e.printStackTrace();
+            message = e.getMessage();
+        }
+        return message;
     }
 
     @RequestMapping(value = "", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)

@@ -11,5 +11,6 @@ import java.util.List;
  */
 public interface CashTypeService {
     public CashType get(Integer id) throws Exception;
-    public void update(CashType item);
+    public void income(Integer id, Integer amount) throws Exception;
+    public void outcome(Integer id, Integer amount) throws Exception;
 }

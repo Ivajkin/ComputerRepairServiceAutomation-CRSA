@@ -20,13 +20,13 @@ import javax.persistence.Table;
 @Entity
 @Table(name="cash_type")
 public class CashType extends DictionaryItem {
-    int amount;
+    int saldo;
 
-    public int getAmount() {
-        return amount;
+    public int getSaldo() {
+        return saldo;
     }
 
-    public void setAmount(int amount) {
-        this.amount = amount;
+    public void setSaldo(int saldo) {
+        this.saldo = saldo;
     }
 }

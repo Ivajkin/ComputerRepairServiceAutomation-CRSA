@@ -13,7 +13,6 @@
     <link type="text/css" rel="stylesheet" href="webjars/bootstrap/3.1.1/css/bootstrap.css"/>
     <link type="text/css" rel="stylesheet" href="webjars/toastr/2.0.1/toastr.min.css"/>
     <link type="text/css" rel="stylesheet" href="webjars/jquery-ui/1.10.4/themes/base/jquery-ui.css"/>
-    <link type="text/css" rel="stylesheet" href="webjars/ng-grid/2.0.8/ng-grid.css"/>
     <link type="text/css" rel="stylesheet" href="<c:url value='/css/style.css'/>"/>
     <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/css/validationEngine/validationEngine.jquery.css"/>
     <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/css/jtable.2.4.0/themes/metro/blue/jtable.css"/>
@@ -92,7 +91,7 @@
         <div class="cash-operation-window">
             <h1 class="cash-operation-name"><!--Расход--></h1>
             <label style="margin-right: 8px;">Введите сумму:</label>
-            <input type="text" style="width: 50%;">
+            <input id="cash-operation-amount" type="text"/>
             <button id="commit-cash-operation-button">Произвести операцию</button>
         </div>
     </div>
