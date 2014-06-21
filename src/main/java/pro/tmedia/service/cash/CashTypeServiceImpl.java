@@ -18,6 +18,8 @@ public class CashTypeServiceImpl implements CashTypeService {
 
     @Autowired
     CashTypeDAO DAO;
+    // @Autowired
+    // TODO: CashOperationDAO operationsDAO;
 
     public CashType get(Integer id) throws Exception {
         return DAO.get(id);
@@ -30,6 +32,7 @@ public class CashTypeServiceImpl implements CashTypeService {
         Integer saldo = item.getSaldo() + amount;
         item.setSaldo(saldo);
         DAO.update(item);
+        // TODO: добавить сохранение cash_operation
     }
 
     @Override
@@ -39,5 +42,6 @@ public class CashTypeServiceImpl implements CashTypeService {
         item.setSaldo(item.getSaldo() - amount);
         if(item.getSaldo() < 0) throw new Exception("Нельзя провести операцию - отрицательное сальдо");
         else DAO.update(item);
+        // TODO: добавить сохранение cash_operation
     }
 }
