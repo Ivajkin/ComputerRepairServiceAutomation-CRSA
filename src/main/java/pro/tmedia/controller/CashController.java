@@ -10,6 +10,9 @@ import org.springframework.web.bind.annotation.*;
 import pro.tmedia.model.Hardware;
 import pro.tmedia.model.cash.CashType;
 import pro.tmedia.service.HardwareService;
+import pro.tmedia.service.cash.CashTypeService;
+
+import java.util.List;
 
 /**
  * User: Ivaykin Timofey
@@ -28,20 +31,9 @@ import pro.tmedia.service.HardwareService;
 @Controller
 @RequestMapping(value = "/cash")
 public class CashController {
-    CashController() {
-        if(cash == null) {
-            cash = new CashType[3];
-            for(int i = 0; i < 3; ++i) {
-                cash[i] = new CashType();
-                cash[i].setName("Test");
-            }
-        }
-    }
-    static CashType[] cash = null;
 
-    // TODO: реализовать CashService
-    // @Autowired
-    // CashService cashService;
+    @Autowired
+    CashTypeService service;
 
     final Logger logger = LoggerFactory.getLogger(CashController.class);
 
@@ -49,20 +41,26 @@ public class CashController {
     @RequestMapping(value = "/income", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
     public String registerIncome(@RequestParam Integer cash_type_id, @RequestParam Integer amount) {
-        cash[cash_type_id].setAmount(cash[cash_type_id].getAmount() + amount);
+        //cash[cash_type_id].setAmount(cash[cash_type_id].getAmount() + amount);
         return "OK";
     }
     @RequestMapping(value = "/outcome", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
     public String registerOutcome(@RequestParam Integer cash_type_id, @RequestParam Integer amount) {
-        cash[cash_type_id].setAmount(cash[cash_type_id].getAmount() - amount);
+        //cash[cash_type_id].setAmount(cash[cash_type_id].getAmount() - amount);
         return "OK";
     }
 
     @RequestMapping(value = "", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
     public CashType get(@RequestParam Integer cash_type_id) {
-        return cash[cash_type_id];
+        CashType item = null;
+        try {
+            item = service.get(cash_type_id);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return item;
     }
 
 
