@@ -39,9 +39,14 @@ public class CashTypeServiceImpl implements CashTypeService {
     public void outcome(Integer id, Integer amount) throws Exception {
 
         CashType item = DAO.get(id);
-        item.setSaldo(item.getSaldo() - amount);
-        if(item.getSaldo() < 0) throw new Exception("Нельзя провести операцию - отрицательное сальдо");
-        else DAO.update(item);
+        Integer saldo = item.getSaldo() + amount;
+        if(saldo < 0) {
+            throw new Exception("Нельзя провести операцию - сальдо должно быть положительным");
+        }
+        else {
+            item.setSaldo(saldo);
+            DAO.update(item);
+        }
         // TODO: добавить сохранение cash_operation
     }
 }

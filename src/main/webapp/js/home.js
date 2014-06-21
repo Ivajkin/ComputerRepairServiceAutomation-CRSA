@@ -31,9 +31,9 @@ var messagebox = {
 /* Assertions */
 function assert(expression, expectedMessage) {
     if(!expression) {
-        if(!expectedMessage) messagebox.error("Сообщение для assert не должно быть пустым", "Ошибка при проверке выражения (assert)");
+        if(!expectedMessage) messagebox.error("Сообщение для assert не должно быть пустым", "Ошибка проверки (assert)");
         if(!messagebox) console.log("Объект для вывода сообщений (messagebox) не существует!");
-        messagebox.error(expectedMessage, "Ошибка при проверке выражения (assert)");
+        messagebox.error(expectedMessage, "Ошибка проверки (assert)");
     }
 }
 /* Assertions ends */
