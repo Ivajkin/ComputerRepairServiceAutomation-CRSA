@@ -332,9 +332,9 @@ create table if not exists `cash_type` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=3;
 
 INSERT INTO `cash_type` (`id`, `name`, `saldo`) VALUES
-(1, 'Безналичные', 1000),
-(2, 'Наличные', 0),
-(3, 'Карта', 0);
+(1, 'Наличные', 1000),
+(2, 'Карта', 0),
+(3, 'Безналичные', 0);
 
 
 -- Код статуса кассовой операции - cash_operation_status

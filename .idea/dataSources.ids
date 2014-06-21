@@ -163,6 +163,34 @@
       <index name="id" unique="true" columns="id" />
       <index name="name" unique="true" columns="name" />
     </table>
+    <table name="cash_operation" schema="" catalog="core5429_repair" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
+      <column name="amount" sqlType="INT" length="10" precision="0" nullable="true" jdbcType="4" />
+      <column name="product_id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" />
+      <column name="employee_id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" />
+      <column name="description" sqlType="VARCHAR" length="400" precision="0" nullable="true" jdbcType="12" />
+      <column name="cash_operation_status_id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" />
+      <column name="operation_date" sqlType="DATE" length="10" precision="0" nullable="false" jdbcType="91" />
+      <column name="saldo" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" />
+      <column name="cash_type_id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" />
+      <primary-key name="PRIMARY" columns="id" />
+      <index name="id" unique="true" columns="id" />
+    </table>
+    <table name="cash_operation_status" schema="" catalog="core5429_repair" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
+      <column name="name" sqlType="VARCHAR" length="100" precision="0" nullable="false" jdbcType="12" />
+      <primary-key name="PRIMARY" columns="id" />
+      <index name="id" unique="true" columns="id" />
+      <index name="name" unique="true" columns="name" />
+    </table>
+    <table name="cash_type" schema="" catalog="core5429_repair" type="TABLE">
+      <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
+      <column name="name" sqlType="VARCHAR" length="100" precision="0" nullable="false" jdbcType="12" />
+      <column name="saldo" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" />
+      <primary-key name="PRIMARY" columns="id" />
+      <index name="id" unique="true" columns="id" />
+      <index name="name" unique="true" columns="name" />
+    </table>
     <table name="category" schema="" catalog="core5429_repair" type="TABLE">
       <column name="id" sqlType="INT" length="10" precision="0" nullable="false" jdbcType="4" autoIncrement="true" />
       <column name="name" sqlType="VARCHAR" length="100" precision="0" nullable="false" jdbcType="12" />

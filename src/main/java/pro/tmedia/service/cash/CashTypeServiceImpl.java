@@ -27,7 +27,8 @@ public class CashTypeServiceImpl implements CashTypeService {
     public void income(Integer id, Integer amount) throws Exception {
 
         CashType item = DAO.get(id);
-        item.setSaldo(item.getSaldo() + amount);
+        Integer saldo = item.getSaldo() + amount;
+        item.setSaldo(saldo);
         DAO.update(item);
     }
 

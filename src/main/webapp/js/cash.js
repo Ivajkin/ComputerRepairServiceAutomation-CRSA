@@ -28,15 +28,22 @@ function openCashModule() {
 
     var current_cash_type;
 
-    function commitOperation(operation_type, amount) {
+    function commitOperation(operation_type, cash_type_id, amount) {
+
         $('.cash-operation-window').hide();
         $.post("/cash/" + operation_type, {cash_type_id: cash_type_id, amount: amount}, function(result) {
             assert(result === "OK", result);
+            if(result === "OK") {
+                assert(operation_names[operation_type], "Название типа операции не определено");
+                assert(current_cash_type, "Данные о последнем виде платежа не сохранены");
+                assert(current_cash_type, "Данные о последнем виде платежа не сохранены");
+                messagebox.success(operation_names[operation_type] + current_cash_type.name, "Операция проведена успешно");
+            }
             updateAmounts();
         });
     }
     function getCashByType(cash_type_id, callback) {
-        assert(cash_type_id === 1 || cash_type_id === 2 || cash_type_id === 3);
+        assert(cash_type_id === 1 || cash_type_id === 2 || cash_type_id === 3, "Выбран несуществующий тип кассы под номером " + cash_type_id);
 
         $.get("/cash", {cash_type_id: cash_type_id}, function(data) {
             current_cash_type = data;//JSON.parse(data);
@@ -54,7 +61,11 @@ function openCashModule() {
             var cash_operation_name = operation_names[operation_type] + cash.name.toLowerCase();
             $('.cash-operation-name').text(cash_operation_name);
             $('.cash-operation-window').fadeIn();
-            $('#commit-cash-operation-button').click(commitOperation(operation_type, $('#cash-operation-amount').val()));
+            $('#commit-cash-operation-button').click(function() {
+                var amount = $('#cash-operation-amount').val();
+                assert(amount && amount >= 0 && amount <= 9999999, "Сумма должна быть целым числом: " + amount);
+                commitOperation(operation_type, cash.id, amount);
+            });
         });
     }
 
