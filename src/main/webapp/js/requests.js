@@ -11,11 +11,11 @@ datef('YYYY-MM-dd', d);
 function openRequests() {
     $('#warehouseTableContainer').hide();
     $('#settingsContainer').hide();
+    $('#cashModuleContainer').hide();
 
     $('#requestsTableContainer').show();
 
-    if (isRequestsTableLoaded) {
-    } else {
+    if (!isRequestsTableLoaded) {
         isRequestsTableLoaded = true;
         $('#requestsTableContainer').jtable({
             title: 'Заявки',
@@ -30,8 +30,7 @@ function openRequests() {
                 updateAction: '/requests/update',
                 deleteAction: '/requests/delete'
             },
-
-                fields: {
+			fields: {
                 // TODO: Добавить все поля и настроить для каждого свойства (в первую очередь для тех, что выбираем из списка)
                 // TODO: Применить дочерние таблицы (CHILD TABLE), http://www.jtable.org/demo/masterchild
                 req_num_id: {
@@ -41,52 +40,16 @@ function openRequests() {
                     edit: false,
                     list: false
                 },
-                /*hardware_name: {
-                 title: 'Наименование оборудования',
-                 width: '10%',
-                 display: function (data) {
-                 return data.record.hardware.name;
-                 },
-                 input: function (data) {
-                 if (data.record) {
-                 return '<input type="text" name="hardware.name" style="width:200px" value="' + data.record.hardware.name + '" />';
-                 } else {
-                 return '<input type="text" name="hardware.name" style="width:200px" value="впишите наименование оборудования" />';
-                 }
-                 }
-                 },
-                 manufacturer: {
-                 title: 'Производитель',
-                 width: '5%',
-                 display: function (data) {
-                 return data.record.manufacturer.name;
-                 }
-                 },
-                 model: {
-                 title: 'Модель',
-                 width: '5%'
-                 },*/
                  serial_number: {
                     title: 'Серийный номер',
                     width: '10%',
                     list: true
-
                  },
                 fault_id: {
                     title: 'Неисправность',
                     width: '5%',
-                    options: '/fault/list'/*,
-                     display: function (data) {
-                     return data.record.fault.name;
-                     }       */
+                    options: '/fault/list'
                 },
-                /*responsible: {
-                 title: 'Инженер',
-                 width: '5%',
-                 display: function (data) {
-                 return data.record.responsible.name;
-                 }
-                 },    */
                 date_of_receipt: {
                     title: 'Дата получения',
                     defaultValue: datef('YYYY-MM-dd'),
@@ -126,24 +89,21 @@ function openRequests() {
                     title: 'Примечание',
                     list: false
                 }
-              /*  method_of_payment: {
+				method_of_payment: {
                      title: 'Метод оплаты',
-                   //  options: '/payment/list',
+					 options: '/payment/list',
                      list: false
-
-                }*/
+                }
             },
-
-         /*   toolbar: {
+			toolbar: {
                 items:{
-
                     icon: '/images/pdf.png',
-                    text: 'Export to Pdf',
+                    text: 'Экспортировать в PDF',
                     click: function () {
                         //perform your custom job...
                     }
                 }
-            },*/
+            },
 
 
             //Initialize validation logic when a form is created
