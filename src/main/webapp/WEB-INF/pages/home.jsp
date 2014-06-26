@@ -24,6 +24,7 @@
     <script type="text/javascript" src="webjars/bootstrap/3.1.1/js/bootstrap.js"></script>
     <script type="text/javascript" src="webjars/toastr/2.0.1/toastr.js"></script>
 
+    <script type="text/javascript" src="${pageContext.request.contextPath}/js/datef.js"></script>
     <script type="text/javascript" src="${pageContext.request.contextPath}/js/jtable.2.4.0/external/json2.js"></script>
     <script type="text/javascript" src="${pageContext.request.contextPath}/js/jtable.2.4.0/jquery.jtable.js"></script>
     <script type="text/javascript" src="${pageContext.request.contextPath}/js/jtable.2.4.0/localization/jquery.jtable.ru.js"></script>

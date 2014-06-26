@@ -5,14 +5,17 @@
 
 var isRequestsTableLoaded = false;
 
+d = new Date();
+datef('YYYY-MM-dd', d);
+
 function openRequests() {
     $('#warehouseTableContainer').hide();
     $('#settingsContainer').hide();
-    $('#cashModuleContainer').hide();
 
     $('#requestsTableContainer').show();
 
-    if(!isRequestsTableLoaded) {
+    if (isRequestsTableLoaded) {
+    } else {
         isRequestsTableLoaded = true;
         $('#requestsTableContainer').jtable({
             title: 'Заявки',
@@ -27,7 +30,8 @@ function openRequests() {
                 updateAction: '/requests/update',
                 deleteAction: '/requests/delete'
             },
-            fields: {
+
+                fields: {
                 // TODO: Добавить все поля и настроить для каждого свойства (в первую очередь для тех, что выбираем из списка)
                 // TODO: Применить дочерние таблицы (CHILD TABLE), http://www.jtable.org/demo/masterchild
                 req_num_id: {
@@ -61,11 +65,13 @@ function openRequests() {
                  model: {
                  title: 'Модель',
                  width: '5%'
-                 },
+                 },*/
                  serial_number: {
-                 title: 'Серийный номер',
-                 width: '10%'
-                 },   */
+                    title: 'Серийный номер',
+                    width: '10%',
+                    list: true
+
+                 },
                 fault_id: {
                     title: 'Неисправность',
                     width: '5%',
@@ -83,6 +89,7 @@ function openRequests() {
                  },    */
                 date_of_receipt: {
                     title: 'Дата получения',
+                    defaultValue: datef('YYYY-MM-dd'),
                     width: '10%',
                     type: 'date'
                 },
@@ -103,6 +110,7 @@ function openRequests() {
                 phone: {
                     title: 'Номер телефона клиента',
                     width: '7%'
+
                 },
                 acceptor_id: {
                     title: 'Приёмщик',
@@ -113,8 +121,31 @@ function openRequests() {
                     width: '3%',
                     defaultValue: 0,
                     edit: false
+                },
+                note: {
+                    title: 'Примечание',
+                    list: false
                 }
+              /*  method_of_payment: {
+                     title: 'Метод оплаты',
+                   //  options: '/payment/list',
+                     list: false
+
+                }*/
             },
+
+         /*   toolbar: {
+                items:{
+
+                    icon: '/images/pdf.png',
+                    text: 'Export to Pdf',
+                    click: function () {
+                        //perform your custom job...
+                    }
+                }
+            },*/
+
+
             //Initialize validation logic when a form is created
             formCreated: function (event, data) {
                 // TODO: Добавить валидайию для всех полей
@@ -135,6 +166,10 @@ function openRequests() {
                 data.form.validationEngine('detach');
             }
         });
+
+
+
+
         $('#requestsTableContainer').jtable('load');
     }
 }
