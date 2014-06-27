@@ -88,7 +88,7 @@ function openRequests() {
                 note: {
                     title: 'Примечание',
                     list: false
-                }
+                },
 				method_of_payment: {
                      title: 'Метод оплаты',
 					 options: '/payment/list',

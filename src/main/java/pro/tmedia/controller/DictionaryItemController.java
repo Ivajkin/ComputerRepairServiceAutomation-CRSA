@@ -8,7 +8,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import pro.tmedia.model.*;
+import pro.tmedia.model.cash.CashType;
 import pro.tmedia.service.DictionaryItemService;
+import pro.tmedia.service.cash.CashTypeService;
 
 import java.util.List;
 
@@ -21,6 +23,8 @@ public class DictionaryItemController {
 
     @Autowired
     DictionaryItemService dictionaryItemService;
+    @Autowired
+    CashTypeService cashTypeService;
 
     final Logger logger = LoggerFactory.getLogger(DictionaryItemController.class);
 
@@ -110,6 +114,16 @@ public class DictionaryItemController {
     }
 
 
+    @RequestMapping(value = "/payment/list", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
+    @ResponseBody
+    public jTableResponse<CashType> listPayment() {
+        try {
+            return dictionaryItemList(cashTypeService.list());
+        } catch (Exception e) {
+            e.printStackTrace();
+            return new jTableResponse<>("Нет возможности предоставить список касс и способов оплаты");
+        }
+    }
 
     @RequestMapping(value = "/request_status/list", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
