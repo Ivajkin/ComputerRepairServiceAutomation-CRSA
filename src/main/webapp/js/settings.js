@@ -118,6 +118,7 @@ function openSettings() {
     $('#warehouseTableContainer').hide();
     $('#requestsTableContainer').hide();
     $('#cashModuleContainer').hide();
+    $('#reportsModuleContainer').hide();
 
     $('#settingsContainer').show();
 

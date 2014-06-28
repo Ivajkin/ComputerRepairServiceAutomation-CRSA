@@ -21,6 +21,7 @@ function openCashModule() {
     $('#requestsTableContainer').hide();
     $('#settingsContainer').hide();
     $('#warehouseTableContainer').hide();
+    $('#reportsModuleContainer').hide();
 
     $('#cashModuleContainer').show();
 

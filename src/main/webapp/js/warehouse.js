@@ -9,6 +9,7 @@ function openWarehouse() {
     $('#requestsTableContainer').hide();
     $('#settingsContainer').hide();
     $('#cashModuleContainer').hide();
+    $('#reportsModuleContainer').hide();
 
     $('#warehouseTableContainer').show();
 

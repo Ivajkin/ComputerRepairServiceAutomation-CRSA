@@ -12,6 +12,7 @@ function openRequests() {
     $('#warehouseTableContainer').hide();
     $('#settingsContainer').hide();
     $('#cashModuleContainer').hide();
+    $('#reportsModuleContainer').hide();
 
     $('#requestsTableContainer').show();
 

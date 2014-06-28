@@ -34,6 +34,7 @@
     <script type="text/javascript" src="${pageContext.request.contextPath}/js/warehouse.js"></script>
     <script type="text/javascript" src="${pageContext.request.contextPath}/js/cash.js"></script>
     <script type="text/javascript" src="${pageContext.request.contextPath}/js/settings.js"></script>
+    <script type="text/javascript" src="${pageContext.request.contextPath}/js/reports.js"></script>
     <script type="text/javascript" src="${pageContext.request.contextPath}/js/home.js"></script>
 </head>
 <body>
@@ -104,6 +105,8 @@
         <div id="hardwareModelsTableContainer"></div>
         <div id="hardwareNamesTableContainer"></div>
     </div>
+    <div id="reportsModuleContainer"></div>
+
     <a href="<c:url value="logout" />" >Выйти</a></h2>
 </main>
 
