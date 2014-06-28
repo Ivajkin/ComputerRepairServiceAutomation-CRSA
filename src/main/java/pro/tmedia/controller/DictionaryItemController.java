@@ -12,6 +12,7 @@ import pro.tmedia.model.cash.CashType;
 import pro.tmedia.service.DictionaryItemService;
 import pro.tmedia.service.cash.CashTypeService;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -118,7 +119,11 @@ public class DictionaryItemController {
     @ResponseBody
     public jTableResponse<CashType> listPayment() {
         try {
-            return dictionaryItemList(cashTypeService.list());
+            List<CashType> list = new ArrayList<>();
+            list.add(cashTypeService.get(1));
+            list.add(cashTypeService.get(2));
+            list.add(cashTypeService.get(3));
+            return dictionaryItemList(list);
         } catch (Exception e) {
             e.printStackTrace();
             return new jTableResponse<>("Нет возможности предоставить список касс и способов оплаты");

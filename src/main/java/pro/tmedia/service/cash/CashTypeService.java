@@ -1,6 +1,7 @@
 package pro.tmedia.service.cash;
 
 
+import pro.tmedia.model.cash.CashOperation;
 import pro.tmedia.model.cash.CashType;
 
 import java.util.List;
@@ -13,5 +14,5 @@ public interface CashTypeService {
     public CashType get(Integer id) throws Exception;
     public void income(Integer id, Integer amount) throws Exception;
     public void outcome(Integer id, Integer amount) throws Exception;
-    public List<CashType> list() throws Exception;
+    public List<CashOperation> listOperations();
 }
