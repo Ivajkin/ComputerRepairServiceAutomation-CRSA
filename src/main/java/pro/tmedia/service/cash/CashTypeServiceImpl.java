@@ -40,7 +40,7 @@ public class CashTypeServiceImpl implements CashTypeService {
     public void outcome(Integer id, Integer amount) throws Exception {
 
         CashType item = DAO.get(id);
-        Integer saldo = item.getSaldo() + amount;
+        Integer saldo = item.getSaldo() - amount;
         if(saldo < 0) {
             throw new Exception("Нельзя провести операцию - сальдо должно быть положительным");
         }
