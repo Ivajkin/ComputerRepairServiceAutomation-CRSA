@@ -23,7 +23,7 @@ function openReportsModule() {
                     '<tr class="jtable-data-row ' + (i%2 === 0 ? 'jtable-row-even':'') + '">' +
                         '<td>' + operation.operation_date + '</td>' +
                         '<td>-</td>' +
-                        '<td>-</td>' +
+                        '<td>' + operation.employee.name + '</td>' +
                         '<td>' + operation.description + '</td>' +
                         '<td>' + operation.amount + '</td>' +
                         '<td>' + operation.saldo + '</td>' +

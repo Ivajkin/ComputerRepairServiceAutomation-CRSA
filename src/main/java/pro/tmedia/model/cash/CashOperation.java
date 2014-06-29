@@ -31,7 +31,6 @@ public class CashOperation {
     private Integer id;
 
     private Integer product_id = 1;
-    //private Integer employee_id = 1;
     private Integer cash_operation_status_id = 1000;
 
     @ManyToOne
@@ -69,14 +68,6 @@ public class CashOperation {
 
     public void setProduct_id(Integer product_id) {
         this.product_id = product_id;
-    }
-
-    public Integer getEmployee_id() {
-        return employee_id;
-    }
-
-    public void setEmployee_id(Integer employee_id) {
-        this.employee_id = employee_id;
     }
 
     public CashType getCashType() {
