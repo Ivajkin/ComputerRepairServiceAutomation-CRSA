@@ -23,6 +23,9 @@ public class CashOperation {
         this.cashType = cashType;
         this.saldo = cashType.getSaldo();
     }
+
+    public CashOperation() {}
+
     @Id
     @GeneratedValue
     private Integer id;
