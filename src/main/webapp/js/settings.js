@@ -114,6 +114,79 @@ function loadExtendedDictionary(id, name, path) {
     $(id).jtable('load');
 }
 
+function loadEmployeeTable() {
+
+    $('#employeeTableContainer').jtable({
+        title: 'Сотрудники',
+        paging: true,
+        pageSize: 150,
+        sorting: true,
+        defaultSorting: 'name ASC',
+        //defaultDateFormat: 'dd.mm.yy',
+        actions: {
+            listAction: '/user/list',
+            createAction: '/user/create',
+            updateAction: '/user/update'
+        },
+        fields: {
+            // TODO: Добавить все поля и настроить для каждого свойства (в первую очередь для тех, что выбираем из списка)
+            // TODO: Применить дочерние таблицы (CHILD TABLE), http://www.jtable.org/demo/masterchild
+            id: {
+                title: 'id',
+                key: true,
+                create: false,
+                edit: false,
+                list: false
+            },
+            name: {
+                title: 'ФИО',
+                width: '5%'
+            },
+            email: {
+                title: 'email',
+                width: '5%'
+            },
+            login: {
+                title: 'Логин',
+                width: '5%'
+            },
+            password_hash: {
+                title: 'Пароль',
+                width: '5%'
+            },
+            fee: {
+                title: 'Процент',
+                width: '5%'
+            },
+            role_id: {
+                title: 'Роль',
+                width: '15%',
+                options: '/user/list-roles'
+            }
+        },
+        //Initialize validation logic when a form is created
+        formCreated: function (event, data) {
+            // TODO: Добавить валидайию для всех полей
+            data.form.find('input[name="name"]').addClass('validate[required]');
+            data.form.find('input[name="fee"]').addClass('validate[required],custom[integer],min[0],max[100]');
+            data.form.find('input[name="email"]').addClass('validate[required]');
+            data.form.find('input[name="password_hash"]').addClass('validate[required]');
+            data.form.find('input[name="login"]').addClass('validate[required]');
+            data.form.validationEngine();
+        },
+        //Validate form when it is being submitted
+        formSubmitting: function (event, data) {
+            return data.form.validationEngine('validate');
+        },
+        //Dispose validation logic when form is closed
+        formClosed: function (event, data) {
+            data.form.validationEngine('hide');
+            data.form.validationEngine('detach');
+        }
+    });
+    $('#employeeTableContainer').jtable('load');
+}
+
 function openSettings() {
     $('#warehouseTableContainer').hide();
     $('#requestsTableContainer').hide();
@@ -127,6 +200,7 @@ function openSettings() {
         loadDictionary('#manufacturersTableContainer', 'Производители', '/manufacturer');
         loadDictionary('#hardwareModelsTableContainer', 'Модели', '/hardware_model');
         loadExtendedDictionary('#hardwareNamesTableContainer', 'Виды оборудования', '/hardware');
+        loadEmployeeTable();
 
     }
 }

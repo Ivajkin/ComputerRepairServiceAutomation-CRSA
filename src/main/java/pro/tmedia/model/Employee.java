@@ -20,6 +20,26 @@ public class Employee {
     @GeneratedValue
     private Integer id;
 
+    private Integer role_id;
+
+    private Integer fee;
+
+    public Integer getFee() {
+        return fee;
+    }
+
+    public void setFee(Integer fee) {
+        this.fee = fee;
+    }
+
+    public Integer getRole_id() {
+        return role_id;
+    }
+
+    public void setRole_id(Integer role_id) {
+        this.role_id = role_id;
+    }
+
     public Integer getId() {
         return id;
     }

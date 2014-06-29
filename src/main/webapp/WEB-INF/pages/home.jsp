@@ -104,6 +104,7 @@
         <div id="manufacturersTableContainer"></div>
         <div id="hardwareModelsTableContainer"></div>
         <div id="hardwareNamesTableContainer"></div>
+        <div id="employeeTableContainer"></div>
     </div>
     <div id="reportsModuleContainer"></div>
 

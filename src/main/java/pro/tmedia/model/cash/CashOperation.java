@@ -31,12 +31,25 @@ public class CashOperation {
     private Integer id;
 
     private Integer product_id = 1;
-    private Integer employee_id = 1;
+    //private Integer employee_id = 1;
     private Integer cash_operation_status_id = 1000;
 
     @ManyToOne
     @JoinColumn(name="cash_type_id")
     private CashType cashType;
+
+    public Employee getEmployee() {
+        return employee;
+    }
+
+    public void setEmployee(Employee employee) {
+        this.employee = employee;
+    }
+
+    @ManyToOne
+    @JoinColumn(name="employee_id")
+    private Employee employee;
+
     private Integer amount;
     private String description;
     private Integer saldo;
