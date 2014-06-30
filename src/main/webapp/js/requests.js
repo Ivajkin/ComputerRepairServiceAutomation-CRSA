@@ -128,8 +128,13 @@ function openRequests() {
             }
         });
 
-
-
+        $('.jtable-toolbar-item-add-record').click(function() {
+            setTimeout(function() {
+                $('.ui-dialog-buttonpane.ui-widget-content').append('<button onclick="window.print();">Печать</button>');
+                $('.ui-dialog.ui-widget.ui-widget-content.ui-corner-all.ui-front.ui-dialog-buttons.ui-draggable.ui-resizable')
+                    .css('width', '500px');
+            }, 100);
+        });
 
         $('#requestsTableContainer').jtable('load');
     }

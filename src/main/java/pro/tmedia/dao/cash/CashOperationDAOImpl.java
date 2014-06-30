@@ -5,8 +5,6 @@ import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
-import pro.tmedia.dao.RequestDAO;
-import pro.tmedia.model.Request;
 import pro.tmedia.model.cash.CashOperation;
 
 import java.util.List;
