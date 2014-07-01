@@ -5,8 +5,6 @@
 
 var isRequestsTableLoaded = false;
 
-d = new Date();
-datef('YYYY-MM-dd', d);
 
 function openRequests() {
     $('#warehouseTableContainer').hide();
@@ -78,6 +76,7 @@ function openRequests() {
                 },
                 acceptor_id: {
                     title: 'Приёмщик',
+                    options:'/employee/options',
                     list: false
                 },
                 prepayment: {
@@ -96,16 +95,6 @@ function openRequests() {
                      list: false
                 }
             },
-			toolbar: {
-                items:{
-                    icon: '/images/pdf.png',
-                    text: 'Экспортировать в PDF',
-                    click: function () {
-                        //perform your custom job...
-                    }
-                }
-            },
-
 
             //Initialize validation logic when a form is created
             formCreated: function (event, data) {
@@ -128,12 +117,12 @@ function openRequests() {
             }
         });
 
+        $('.ui-dialog-buttonpane.ui-widget-content').append('<button style="position:absolute; right:185px;" onclick="window.print();">Печать</button>');
+
         $('.jtable-toolbar-item-add-record').click(function() {
-            setTimeout(function() {
-                $('.ui-dialog-buttonpane.ui-widget-content').append('<button onclick="window.print();">Печать</button>');
                 $('.ui-dialog.ui-widget.ui-widget-content.ui-corner-all.ui-front.ui-dialog-buttons.ui-draggable.ui-resizable')
-                    .css('width', '500px');
-            }, 100);
+                    .css('width', '300px');
+
         });
 
         $('#requestsTableContainer').jtable('load');

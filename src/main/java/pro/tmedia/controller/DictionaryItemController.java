@@ -153,6 +153,13 @@ public class DictionaryItemController {
         return dictionaryItemList(userService.listRoles());
     }
 
+    @RequestMapping(value = "/employee/options", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
+    @ResponseBody
+    public jTableResponse<Employee> listEmployee() {
+        return dictionaryItemList(userService.list());
+    }
+
+
     private <T> jTableResponse<T> dictionaryItemList(List<T> itemsList) {
         jTableResponse<T> request_status;
         try

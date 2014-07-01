@@ -1,8 +1,6 @@
 package pro.tmedia.model;
 
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
@@ -15,10 +13,7 @@ import javax.validation.constraints.Size;
 
 @Entity
 @Table(name="employee")
-public class Employee {
-    @Id
-    @GeneratedValue
-    private Integer id;
+public class Employee extends DictionaryItem  {
 
     private Integer role_id;
 
@@ -40,17 +35,6 @@ public class Employee {
         this.role_id = role_id;
     }
 
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    @NotNull
-    @Size(min = 5)
-    private String name;
 
     @NotNull
     @Pattern(regexp="[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\."
@@ -66,14 +50,6 @@ public class Employee {
     @NotNull
     @Size(min = 5)
     private String password_hash;
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
 
     public String getEmail() {
         return email;
