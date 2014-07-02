@@ -14,7 +14,7 @@ import java.util.Date;
 @Entity
 @Table(name="cash_operation")
 public class CashOperation {
-    public CashOperation(Integer amount, String description, CashType cashType) {
+    public CashOperation(Integer amount, String description, CashType cashType, Employee employee) {
         this.amount = amount;
         this.description = description;
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
@@ -22,6 +22,7 @@ public class CashOperation {
         this.operation_date = operation_date;
         this.cashType = cashType;
         this.saldo = cashType.getSaldo();
+        this.employee = employee;
     }
 
     public CashOperation() {}

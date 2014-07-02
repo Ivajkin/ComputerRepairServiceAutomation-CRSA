@@ -5,6 +5,8 @@ import org.springframework.transaction.annotation.Transactional;
 import pro.tmedia.model.Employee;
 import pro.tmedia.model.Hardware;
 
+import java.lang.reflect.ParameterizedType;
+import java.lang.reflect.Type;
 import java.util.List;
 
 /**
@@ -29,5 +31,11 @@ public class UserDAOImpl extends WithSessionFactory implements UserDAO {
     @Override
     public void update(Employee employee) {
         getCurrentSession().update(employee);
+    }
+
+
+    @Override
+    public Employee get(final Integer employee_id) {
+        return (Employee) getCurrentSession().get(Employee.class, employee_id);
     }
 }

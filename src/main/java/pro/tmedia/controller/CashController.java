@@ -43,7 +43,7 @@ public class CashController {
     public String registerIncome(@RequestParam Integer cash_type_id, @RequestParam Integer amount) {
         String message;
         try {
-            service.income(cash_type_id, amount);
+            service.income(cash_type_id, amount, 1);
             message = "OK";
         } catch (Exception e) {
             e.printStackTrace();
@@ -56,7 +56,7 @@ public class CashController {
     public String registerOutcome(@RequestParam Integer cash_type_id, @RequestParam Integer amount) {
         String message;
         try {
-            service.outcome(cash_type_id, amount);
+            service.outcome(cash_type_id, amount, 1);
             message = "OK";
         } catch (Exception e) {
             e.printStackTrace();

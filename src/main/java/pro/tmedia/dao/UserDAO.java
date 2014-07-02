@@ -15,4 +15,5 @@ public interface UserDAO {
     List<Employee> list();
     void create(Employee employee);
     public void update(Employee employee);
+    public Employee get(Integer employee_id);
 }
