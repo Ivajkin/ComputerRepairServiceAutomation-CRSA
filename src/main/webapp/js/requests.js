@@ -116,14 +116,14 @@ function openRequests() {
                 data.form.validationEngine('detach');
             }
         });
-
+       // window.print()
         $('.ui-dialog-buttonpane.ui-widget-content').append('<button style="position:absolute; right:185px;" onclick="window.print();">Печать</button>');
 
         $('.jtable-toolbar-item-add-record').click(function() {
                 $('.ui-dialog.ui-widget.ui-widget-content.ui-corner-all.ui-front.ui-dialog-buttons.ui-draggable.ui-resizable')
                     .css('width', '300px');
             setInterval(function(){
-            if($('#Edit-request_status_id').val() == 3)
+            if($('#Edit-request_status_id').val() == 1)
             {
                 $('#Edit-date_of_issue').attr('disabled', 'disabled');
                 $('#Edit-amount').attr('disabled', 'disabled');
