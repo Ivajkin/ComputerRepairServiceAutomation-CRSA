@@ -122,8 +122,21 @@ function openRequests() {
         $('.jtable-toolbar-item-add-record').click(function() {
                 $('.ui-dialog.ui-widget.ui-widget-content.ui-corner-all.ui-front.ui-dialog-buttons.ui-draggable.ui-resizable')
                     .css('width', '300px');
+            setInterval(function(){
+            //if($('#Edit-amount').val().length == 0) { $('#Edit-phone').attr('disabled', 'disabled'); }
+            //else {$('#Edit-phone').removeAttr('disabled');}
 
-        });
+            if($('#Edit-request_status_id').val() == 3)
+            {
+                $('#Edit-date_of_issue').attr('disabled', 'disabled');
+                $('#Edit-amount').attr('disabled', 'disabled');
+            }
+            else
+            {
+                $('#Edit-date_of_issue').removeAttr('disabled');
+                $('#Edit-amount').removeAttr('disabled');
+            }
+            },2000);});
 
         $('#requestsTableContainer').jtable('load');
     }
