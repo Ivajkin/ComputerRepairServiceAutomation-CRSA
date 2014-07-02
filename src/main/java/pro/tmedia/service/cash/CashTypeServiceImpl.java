@@ -3,6 +3,7 @@ package pro.tmedia.service.cash;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import pro.tmedia.dao.UserDAO;
 import pro.tmedia.dao.cash.CashOperationDAO;
 import pro.tmedia.dao.cash.CashTypeDAO;
 import pro.tmedia.model.Employee;
@@ -28,6 +29,8 @@ public class CashTypeServiceImpl implements CashTypeService {
     CashTypeDAO DAO;
     @Autowired
     CashOperationDAO operationsDAO;
+    @Autowired
+    UserDAO userDAO;
 
     public CashType get(Integer id) throws Exception {
         return DAO.get(id);
@@ -36,20 +39,22 @@ public class CashTypeServiceImpl implements CashTypeService {
 
 
     @Override
-    public void income(Integer id, Integer amount) throws Exception {
+    public void income(Integer id, Integer amount, Integer employee_id) throws Exception {
 
         CashType item = DAO.get(id);
         Integer saldo = item.getSaldo() + amount;
         item.setSaldo(saldo);
         DAO.update(item);
-        operationsDAO.create(new CashOperation(amount, "Приход по кассе " + item.getName(), item));
+        Employee employee = userDAO.get(employee_id);
+        operationsDAO.create(new CashOperation(amount, "Приход по кассе " + item.getName(), item, employee));
     }
 
     @Override
-    public void outcome(Integer id, Integer amount) throws Exception {
+    public void outcome(Integer id, Integer amount, Integer employee_id) throws Exception {
 
         CashType item = DAO.get(id);
         Integer saldo = item.getSaldo() - amount;
+        Employee employee = userDAO.get(employee_id);
         if(saldo < 0) {
             throw new Exception("Нельзя провести операцию - сальдо должно быть положительным");
         }
@@ -57,7 +62,7 @@ public class CashTypeServiceImpl implements CashTypeService {
             item.setSaldo(saldo);
             DAO.update(item);
         }
-        operationsDAO.create(new CashOperation(amount, "Расход по кассе " + item.getName(),  item));
+        operationsDAO.create(new CashOperation(amount, "Расход по кассе " + item.getName(),  item, employee));
 
     }
 
