@@ -27,6 +27,8 @@ public class DictionaryItemServiceImpl implements DictionaryItemService {
     ProviderDAO providerDAO;
     @Autowired
     ManufacturerDAO manufacturerDAO;
+    @Autowired
+    TaskDAO taskDAO;
 
     @Override
     public List<Fault> listFaults() {
@@ -53,6 +55,10 @@ public class DictionaryItemServiceImpl implements DictionaryItemService {
         return providerDAO.list();
     }
 
+    @Override
+    public List<Task> listTask() {
+        return taskDAO.list();
+    }
 
     @Override
     public void create(Manufacturer manufacturer) {

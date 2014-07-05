@@ -11,5 +11,6 @@ import javax.persistence.Table;
 @Entity
 @Table(name="task")
 public class Task extends DictionaryItem {
+
 }
 

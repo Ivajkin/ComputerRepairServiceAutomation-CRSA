@@ -309,9 +309,6 @@ public class Request {
         assert model == null;
         model = "Ноутбук";
 
-        assert serial_number == null;
-        serial_number = "123";
-
         assert appearance == null;
         appearance = new Appearance();
         appearance.setName("Не очень");

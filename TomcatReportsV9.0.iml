@@ -80,6 +80,7 @@
     <orderEntry type="library" name="Maven: org.springframework.security:spring-security-web:3.2.3.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.security:spring-security-core:3.2.3.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.security:spring-security-config:3.2.3.RELEASE" level="project" />
+    <orderEntry type="library" name="jquery.printElement" level="application" />
   </component>
 </module>
 
