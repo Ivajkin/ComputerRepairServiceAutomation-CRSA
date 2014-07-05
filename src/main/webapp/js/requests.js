@@ -145,7 +145,6 @@ function openRequests() {
                     //var row_id = $(this).attr('data-record-key');
                     //alert('clicked row with id '+row_id);
                     $(this.children[this.children.length-1].children[0]).click();
-                    this.children[this.children.length-1].children[0].hide();
                 });
             }
         });
