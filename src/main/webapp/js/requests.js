@@ -3,8 +3,24 @@
  * Date: 06.05.14
  */
 
+
 var isRequestsTableLoaded = false;
 
+function onPrint() {
+    var divContents = $("#Edit-request_status_id").val();
+    var printWindow = window.open('', '', 'height=400,width=800');
+    printWindow.document.write('<html><head><title>DIV Contents</title></head><body>');
+    printWindow.document.write(divContents);
+    printWindow.document.write('</body></html>');
+    printWindow.document.close();
+    printWindow.print();
+    };
+
+function deleteButton() {
+
+    $('.jtable-command-button.jtable-delete-command-button').remove();
+
+}
 
 function openRequests() {
     $('#warehouseTableContainer').hide();
@@ -27,7 +43,7 @@ function openRequests() {
                 listAction: '/requests/list',
                 createAction: '/requests/create',
                 updateAction: '/requests/update',
-                deleteAction: '/requests/delete'
+             //   deleteAction: '/requests/delete'
             },
 			fields: {
                 // TODO: Добавить все поля и настроить для каждого свойства (в первую очередь для тех, что выбираем из списка)
@@ -93,6 +109,11 @@ function openRequests() {
                      title: 'Метод оплаты',
 					 options: '/payment/list',
                      list: false
+                },
+                task: {
+                    title: 'Выполненные работы',
+                    options: '/task/list',
+                    list:false
                 }
             },
 
@@ -116,24 +137,29 @@ function openRequests() {
                 data.form.validationEngine('detach');
             }
         });
-       // window.print()
-        $('.ui-dialog-buttonpane.ui-widget-content').append('<button style="position:absolute; right:185px;" onclick="window.print();">Печать</button>');
+
+        $(deleteButton);
+
+        $('.ui-dialog-buttonpane.ui-widget-content').append('<button id="btnPrint" style="position:absolute; right:185px;" onclick="onPrint();">Печать</button>');
 
         $('.jtable-toolbar-item-add-record').click(function() {
                 $('.ui-dialog.ui-widget.ui-widget-content.ui-corner-all.ui-front.ui-dialog-buttons.ui-draggable.ui-resizable')
                     .css('width', '300px');
-            setInterval(function(){
-            if($('#Edit-request_status_id').val() == 1)
-            {
-                $('#Edit-date_of_issue').attr('disabled', 'disabled');
-                $('#Edit-amount').attr('disabled', 'disabled');
-            }
-            else
-            {
-                $('#Edit-date_of_issue').removeAttr('disabled');
-                $('#Edit-amount').removeAttr('disabled');
-            }
-            },2000);});
+            $('#Edit-request_status_id').change(function(){
+                if($('#Edit-request_status_id').val() == 1)
+                {
+                    $('#Edit-date_of_issue').attr('disabled', 'disabled');
+                    $('#Edit-amount').attr('disabled', 'disabled');
+                    $('#Edit-task').attr('disabled', 'disabled');
+                }
+                else
+                {
+                    $('#Edit-date_of_issue').removeAttr('disabled');
+                    $('#Edit-amount').removeAttr('disabled');
+                    $('#Edit-task').removeAttr('disabled');
+                }
+            });
+        });
 
         $('#requestsTableContainer').jtable('load');
     }

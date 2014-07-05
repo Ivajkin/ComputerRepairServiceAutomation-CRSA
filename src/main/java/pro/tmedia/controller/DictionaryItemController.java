@@ -159,6 +159,11 @@ public class DictionaryItemController {
         return dictionaryItemList(userService.list());
     }
 
+    @RequestMapping(value = "/task/list", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
+    @ResponseBody
+    public jTableResponse<Task> listTask() {
+        return dictionaryItemList(dictionaryItemService.listTask());
+    }
 
     private <T> jTableResponse<T> dictionaryItemList(List<T> itemsList) {
         jTableResponse<T> request_status;
