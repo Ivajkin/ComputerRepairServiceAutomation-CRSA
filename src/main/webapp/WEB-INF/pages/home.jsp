@@ -39,6 +39,7 @@
 </head>
 <body>
 
+
 <header class="mainheader">
     <img id="logo" src="${pageContext.request.contextPath}/img/logo.png" alt="Служба компьютерного ремонта (логотип)" />
     <h1>Служба компьютерного ремонта</h1>
@@ -47,7 +48,21 @@
 </header>
 
 
-<div id="lightBulb"></div>
+<div id="lightBulb" class="util-button"></div>
+<svg height="0" xmlns="http://www.w3.org/2000/svg">
+    <filter id="drop-shadow">
+        <feGaussianBlur in="SourceAlpha" stdDeviation="4"/>
+        <feOffset dx="12" dy="12" result="offsetblur"/>
+        <feFlood flood-color="rgba(0,0,0,0.5)"/>
+        <feComposite in2="offsetblur" operator="in"/>
+        <feMerge>
+            <feMergeNode/>
+            <feMergeNode in="SourceGraphic"/>
+        </feMerge>
+    </filter>
+</svg>
+
+<div id="lock" class="util-button"></div>
 <svg height="0" xmlns="http://www.w3.org/2000/svg">
     <filter id="drop-shadow">
         <feGaussianBlur in="SourceAlpha" stdDeviation="4"/>
@@ -110,6 +125,8 @@
 
     <a href="<c:url value="logout" />" >Выйти</a></h2>
 </main>
+
+<div class="blur-lock"></div>
 
 </body>
 </html>

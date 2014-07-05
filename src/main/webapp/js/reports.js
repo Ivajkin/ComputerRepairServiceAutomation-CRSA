@@ -58,14 +58,17 @@ function openReportsModule() {
 
     function showMenu() {
         var reportList =
-            "<ul>" +
-                "<li>Зарплата мастерам</li>" +
-                "<li id=\"cashReport\">Движение денежных средств</li>" +
-                "<li>Остатки на складе</li>" +
-                "<li>Списание со склада</li>" +
-                "<li>Принятие на склад</li>" +
-                "<li>Валовая прибыль</li>" +
-            "</ul>";
+                "<button class=\"report-button\">Зарплата мастерам</button>" +
+                "<br />" +
+                "<button class=\"report-button\" id=\"cashReport\">Движение денежных средств</button>" +
+                "<br />" +
+                "<button class=\"report-button\">Остатки на складе</button>" +
+                "<br />" +
+                "<button class=\"report-button\">Списание со склада</button>" +
+                "<br />" +
+                "<button class=\"report-button\">Принятие на склад</button>" +
+                "<br />" +
+                "<button class=\"report-button\">Валовая прибыль</button>";
         $('#reportsModuleContainer').html(reportList);
         $('#cashReport').click(showCashReport);
     }

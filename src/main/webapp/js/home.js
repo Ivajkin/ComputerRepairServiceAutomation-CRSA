@@ -43,6 +43,9 @@ function documentLoaded() {
 }
 
  $(document).ready(function() {
+     $('.blur-lock').hide();
+     $('#lock').click(function() {$('body').toggleClass('blurred-locked-body')});
+
 
      /* Настройка темной темы интерфейса */
      $('#lightBulb').click(function() {$('body').toggleClass('darkTheme')});
