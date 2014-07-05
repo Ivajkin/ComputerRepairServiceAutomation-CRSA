@@ -15,4 +15,5 @@ public interface UserService {
     public void create(Employee employee);
     public void update(Employee employee);
     public List <Role>  listRoles();
+    public Employee getCurrentSessionUser() throws Exception;
 }

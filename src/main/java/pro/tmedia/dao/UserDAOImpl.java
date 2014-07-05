@@ -38,4 +38,12 @@ public class UserDAOImpl extends WithSessionFactory implements UserDAO {
     public Employee get(final Integer employee_id) {
         return (Employee) getCurrentSession().get(Employee.class, employee_id);
     }
+
+    @Override
+    public Employee get(String login, String password) throws Exception {
+        for(Employee employee : list())
+            if(employee.getLogin().equals(login))
+                return employee;
+        throw new Exception("Не существует пользователя с данными логином и паролем!");
+    }
 }

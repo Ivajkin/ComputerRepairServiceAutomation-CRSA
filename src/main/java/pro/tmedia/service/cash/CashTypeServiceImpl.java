@@ -39,22 +39,20 @@ public class CashTypeServiceImpl implements CashTypeService {
 
 
     @Override
-    public void income(Integer id, Integer amount, Integer employee_id) throws Exception {
+    public void income(Integer id, Integer amount, Employee employee) throws Exception {
 
         CashType item = DAO.get(id);
         Integer saldo = item.getSaldo() + amount;
         item.setSaldo(saldo);
         DAO.update(item);
-        Employee employee = userDAO.get(employee_id);
         operationsDAO.create(new CashOperation(amount, "Приход по кассе " + item.getName(), item, employee));
     }
 
     @Override
-    public void outcome(Integer id, Integer amount, Integer employee_id) throws Exception {
+    public void outcome(Integer id, Integer amount, Employee employee) throws Exception {
 
         CashType item = DAO.get(id);
         Integer saldo = item.getSaldo() - amount;
-        Employee employee = userDAO.get(employee_id);
         if(saldo < 0) {
             throw new Exception("Нельзя провести операцию - сальдо должно быть положительным");
         }

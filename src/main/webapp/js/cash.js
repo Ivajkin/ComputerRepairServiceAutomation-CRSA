@@ -62,6 +62,7 @@ function openCashModule() {
             var cash_operation_name = operation_names[operation_type] + cash.name.toLowerCase();
             $('.cash-operation-name').text(cash_operation_name);
             $('.cash-operation-window').fadeIn();
+            $('#commit-cash-operation-button').unbind("click");
             $('#commit-cash-operation-button').click(function() {
                 var amount = $('#cash-operation-amount').val();
                 assert(amount && amount >= 0 && amount <= 9999999, "Сумма должна быть целым числом: " + amount);
