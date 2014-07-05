@@ -31,9 +31,9 @@ public class RequestsController {
 
     @RequestMapping(value = "/list", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
-    public jTableResponse<Request> listRequests(@RequestParam("jtStartIndex") int startIndex,
+    public jTableResponse<Request> listRequests(/*@RequestParam("jtStartIndex") int startIndex,
                                                 @RequestParam("jtPageSize") int pageSize,
-                                                @RequestParam("jtSorting") String sorting) {
+                                                @RequestParam("jtSorting") String sorting*/) {
         jTableResponse<Request> response;
         try
         {

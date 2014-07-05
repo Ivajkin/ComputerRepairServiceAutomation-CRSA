@@ -14,7 +14,7 @@ function onPrint() {
     printWindow.document.write('</body></html>');
     printWindow.document.close();
     printWindow.print();
-    };
+}
 
 function deleteButton() {
 
@@ -34,9 +34,9 @@ function openRequests() {
         isRequestsTableLoaded = true;
         $('#requestsTableContainer').jtable({
             title: 'Заявки',
-            paging: true,
-            pageSize: 150,
-            sorting: true,
+            paging: false,
+            pageSize: 15000,
+            sorting: false,
             defaultSorting: 'date_of_issue ASC',
             //defaultDateFormat: 'dd.mm.yy',
             actions: {
@@ -64,6 +64,10 @@ function openRequests() {
                     width: '7%'
 
                 },
+                request_status_id: {
+                    title: 'Статус заявки',
+                    options: '/request_status/list'
+                },
                  serial_number: {
                     title: 'Серийный номер',
                     width: '10%',
@@ -84,11 +88,6 @@ function openRequests() {
                     title: 'Дата выдачи',
                     width: '10%',
                     type: 'date'
-                },
-                request_status_id: {
-                    title: 'Статус заявки',
-                    options: '/request_status/list',
-                    list: false
                 },
                 amount: {
                     title: 'Сумма в рублях',
@@ -140,6 +139,14 @@ function openRequests() {
             formClosed: function (event, data) {
                 data.form.validationEngine('hide');
                 data.form.validationEngine('detach');
+            },
+            recordsLoaded: function(event, data) {
+                $('.jtable-data-row').dblclick(function() {
+                    //var row_id = $(this).attr('data-record-key');
+                    //alert('clicked row with id '+row_id);
+                    $(this.children[this.children.length-1].children[0]).click();
+                    this.children[this.children.length-1].children[0].hide();
+                });
             }
         });
 
@@ -167,5 +174,6 @@ function openRequests() {
         });
 
         $('#requestsTableContainer').jtable('load');
+
     }
 }
