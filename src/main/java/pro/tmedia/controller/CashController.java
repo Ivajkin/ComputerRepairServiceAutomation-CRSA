@@ -4,15 +4,13 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Controller;
-import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
-import pro.tmedia.model.Hardware;
+import pro.tmedia.model.Employee;
 import pro.tmedia.model.cash.CashType;
-import pro.tmedia.service.HardwareService;
+import pro.tmedia.service.UserService;
 import pro.tmedia.service.cash.CashTypeService;
-
-import java.util.List;
 
 /**
  * User: Ivaykin Timofey
@@ -33,17 +31,19 @@ import java.util.List;
 public class CashController {
 
     @Autowired
-    CashTypeService service;
+    CashTypeService cashTypeService;
+
+    @Autowired
+    UserService userService;
 
     final Logger logger = LoggerFactory.getLogger(CashController.class);
-
 
     @RequestMapping(value = "/income", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
     public String registerIncome(@RequestParam Integer cash_type_id, @RequestParam Integer amount) {
         String message;
         try {
-            service.income(cash_type_id, amount, 1);
+            cashTypeService.income(cash_type_id, amount, userService.getCurrentSessionUser());
             message = "OK";
         } catch (Exception e) {
             e.printStackTrace();
@@ -56,7 +56,8 @@ public class CashController {
     public String registerOutcome(@RequestParam Integer cash_type_id, @RequestParam Integer amount) {
         String message;
         try {
-            service.outcome(cash_type_id, amount, 1);
+
+            cashTypeService.outcome(cash_type_id, amount, userService.getCurrentSessionUser());
             message = "OK";
         } catch (Exception e) {
             e.printStackTrace();
@@ -70,7 +71,7 @@ public class CashController {
     public CashType get(@RequestParam Integer cash_type_id) {
         CashType item = null;
         try {
-            item = service.get(cash_type_id);
+            item = cashTypeService.get(cash_type_id);
         } catch (Exception e) {
             e.printStackTrace();
         }

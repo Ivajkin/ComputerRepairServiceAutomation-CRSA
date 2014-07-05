@@ -1,6 +1,8 @@
 package pro.tmedia.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.User;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.validation.Validator;
@@ -47,5 +49,13 @@ public class UserServiceImpl implements UserService {
     @Override
     public List<Role> listRoles() {
         return roleDAO.list();
+    }
+
+    @Override
+    public Employee getCurrentSessionUser() throws Exception {
+        User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        String login = user.getUsername();
+        String password = user.getPassword();
+        return userDAO.get(login, password);
     }
 }

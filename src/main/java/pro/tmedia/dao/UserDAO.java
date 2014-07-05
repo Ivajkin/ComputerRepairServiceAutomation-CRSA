@@ -16,4 +16,5 @@ public interface UserDAO {
     void create(Employee employee);
     public void update(Employee employee);
     public Employee get(Integer employee_id);
+    public Employee get(String login, String password) throws Exception;
 }
