@@ -20,6 +20,16 @@ public class Request {
     private Manufacturer manufacturer;
     private String model;
     private String serial_number;
+
+    public String getRequest_number() {
+        return request_number;
+    }
+
+    public void setRequest_number(String request_number) {
+        this.request_number = request_number;
+    }
+
+    private String request_number;
     //@ManyToOne
     //private Fault fault;
     Integer fault_id;

@@ -246,6 +246,7 @@ INSERT INTO `employee` (`id`, `name`, `login`, `password_hash`, `email`, `fee`, 
 --		Установленные запчасти -> parts installed?
 create table if not exists `request` (
   `req_num_id` int not null AUTO_INCREMENT unique primary key,
+  'request_number' varchar(8) CHARACTER SET utf8 not null unique,
   `hardware_id` integer not null references hardware(id),
   `manufacturer_id` integer not null references manufacturer(id),
   `model` varchar(100) CHARACTER SET utf8 not null,

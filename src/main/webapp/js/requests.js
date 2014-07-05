@@ -39,6 +39,15 @@ function openRequests() {
                     edit: false,
                     list: false
                 },
+                request_number: {
+                    title: 'Номер заявки',
+                    width: '5%'
+                },
+                phone: {
+                    title: 'Номер телефона клиента',
+                    width: '7%'
+
+                },
                  serial_number: {
                     title: 'Серийный номер',
                     width: '10%',
@@ -68,11 +77,6 @@ function openRequests() {
                 amount: {
                     title: 'Сумма в рублях',
                     width: '5%'
-                },
-                phone: {
-                    title: 'Номер телефона клиента',
-                    width: '7%'
-
                 },
                 acceptor_id: {
                     title: 'Приёмщик',
@@ -104,6 +108,7 @@ function openRequests() {
                 data.form.find('input[name="prepayment"]').addClass('validate[required],custom[integer],min[0],max[500000]');
                 data.form.find('input[name="date_of_receipt"]').addClass('validate[required,custom[date],past[NOW]]');   // var dateMMDDYYYRegex = '^(0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])[- /.](19|20)\d\d$';
                 data.form.find('input[name="phone"]').addClass('validate[required,custom[phone],minSize[6],maxSize[18]] text-input');
+                data.form.find('input[name="request_number"]').addClass('validate[required,custom[request_number],minSize[7],maxSize[8]] text-input');
                 data.form.validationEngine();
             },
             //Validate form when it is being submitted
