@@ -44,7 +44,7 @@ function documentLoaded() {
 
  $(document).ready(function() {
      $('.blur-lock').hide();
-     $('#lock').click(function() {$('body').toggleClass('blurred-locked-body')});
+     $('#lock').click(function() {$('body').toggleClass('blurred-locked-body'); $('.blur-lock').fadeIn();});
 
 
      /* Настройка темной темы интерфейса */
