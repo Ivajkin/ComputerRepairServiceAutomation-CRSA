@@ -47,7 +47,7 @@
     <p class="error">${error}</p>
     <p class="logout">${logout}</p>
 
-    <div id="lightBulb"></div>
+    <div id="lightBulb" class="util-button"></div>
     <svg height="0" xmlns="http://www.w3.org/2000/svg">
         <filter id="drop-shadow">
             <feGaussianBlur in="SourceAlpha" stdDeviation="4"/>
