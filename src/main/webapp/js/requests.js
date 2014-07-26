@@ -57,7 +57,20 @@ function openRequests() {
                 },
                 request_number: {
                     title: 'Номер заявки',
-                    width: '5%'
+                    width: '5%',
+                    create: false,
+                    edit: false,
+                    list: true
+                },
+                hardware_id: {
+                    title: 'Оборудование',
+                    width: '5%',
+                    options: '/hardware/options'
+                },
+                manufacturer_id: {
+                    title: 'Производитель',
+                    width: '5%',
+                    options: '/manufacturer/options'
                 },
                 phone: {
                     title: 'Номер телефона клиента',

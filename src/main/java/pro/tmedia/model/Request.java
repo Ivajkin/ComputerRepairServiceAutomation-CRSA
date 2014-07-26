@@ -13,11 +13,28 @@ public class Request {
     @Id
     @GeneratedValue
     private Integer req_num_id;
-    @ManyToOne
-    @JoinColumn(name="hardware_id")
-    private Hardware hardware;
-    @ManyToOne
-    private Manufacturer manufacturer;
+
+
+    private Integer hardware_id;
+
+    public Integer getHardware_id() {
+        return hardware_id;
+    }
+
+    public void setHardware_id(Integer hardware_id) {
+        this.hardware_id = hardware_id;
+    }
+
+    private Integer manufacturer_id;
+
+    public Integer getManufacturer_id() {
+        return manufacturer_id;
+    }
+
+    public void setManufacturer_id(Integer manufacturer_id) {
+        this.manufacturer_id = manufacturer_id;
+    }
+
     private String model;
     private String serial_number;
 
@@ -30,8 +47,7 @@ public class Request {
     }
 
     private String request_number;
-    //@ManyToOne
-    //private Fault fault;
+
     Integer fault_id;
     @ManyToOne
     private Appearance appearance;
@@ -59,8 +75,7 @@ public class Request {
 
     Integer amount;
     private String method_of_payment;
-    //@ManyToOne
-    //private RequestStatus request_status;
+
     private Integer request_status_id;
     @ManyToOne
     private Task completed_works;
@@ -71,22 +86,6 @@ public class Request {
 
     public void setReq_num_id(Integer req_num_id) {
         this.req_num_id = req_num_id;
-    }
-
-    public Hardware getHardware() {
-        return hardware;
-    }
-
-    public void setHardware(Hardware hardware) {
-        this.hardware = hardware;
-    }
-
-    public Manufacturer getManufacturer() {
-        return manufacturer;
-    }
-
-    public void setManufacturer(Manufacturer manufacturer) {
-        this.manufacturer = manufacturer;
     }
 
     public String getModel() {
@@ -104,18 +103,6 @@ public class Request {
     public void setSerial_number(String serial_number) {
         this.serial_number = serial_number;
     }
-
-    /*public Fault getFault() {
-        return fault;
-    }
-
-    public void setFault(Fault fault) {
-        this.fault = fault;
-    }
-
-    public Integer getFault_id() {
-        return fault.getId();
-    }                    */
 
     public Integer getFault_id() {
         return fault_id;
@@ -290,21 +277,6 @@ public class Request {
     Hardware parts_installed;
 
     public void setDummyValues() {
-
-        assert hardware == null;
-        hardware = new Hardware();
-        hardware.setId(1);
-        hardware.setName("NVIDIA GTX 550");
-        hardware.setDescription("Жизнь стремительна, таким должен быть и твой ПК. Мощь позволит тебе ускорить редактирование фотографий и HD видео.");
-
-
-        //assert phone == null;
-        //setPhone("+7-924-123-45-67");
-
-        assert manufacturer == null;
-        manufacturer = new Manufacturer();
-        manufacturer.setName("ASUS");
-        manufacturer.setId(1);
 
         assert model == null;
         model = "Ноутбук";

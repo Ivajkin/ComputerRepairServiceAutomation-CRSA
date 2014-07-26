@@ -24,35 +24,16 @@ public class RequestsServiceImpl implements RequestsService {
     RequestDAO requestDAO;
 
     public List<Request> list() {
-
-        /*List<Request> requests = new ArrayList<>();
-
-        Request request = new Request();
-        Hardware hardware = new Hardware();
-        hardware.setName("NVIDIA GTX 520");
-        hardware.setDescription("Жизнь стремительна, таким должен быть и твой ПК. Мощь позволит тебе ускорить редактирование фотографий и HD видео.");
-        request.setHardware(hardware);
-        request.setPhone("+7-924-123-45-67");
-        request.setAmount(5);
-        requests.add(request);
-
-
-        request = new Request();
-        hardware = new Hardware();
-        hardware.setName("NVIDIA GTX 550");
-        hardware.setDescription("Жизнь стремительна, таким должен быть и твой ПК. Мощь позволит тебе ускорить редактирование фотографий и HD видео.");
-        request.setHardware(hardware);
-        request.setPhone("+7-924-123-45-67");
-        request.setAmount(12);
-        requests.add(request);
-
-
-        return requests;*/
         return requestDAO.list();
     }
 
     @Override
-    public void create(Request request) {
+    public void create(Request request) throws Exception {
+        if(request.getRequest_number() == null) {
+            request.setRequest_number("123-321");
+        } else {
+            throw new Exception("При создании серийного номера кто-то заранее заполнил его до слоя сервисов.");
+        }
         requestDAO.create(request);
     }
 

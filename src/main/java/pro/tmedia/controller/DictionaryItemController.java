@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import pro.tmedia.model.*;
 import pro.tmedia.model.cash.CashType;
 import pro.tmedia.service.DictionaryItemService;
+import pro.tmedia.service.HardwareService;
 import pro.tmedia.service.UserService;
 import pro.tmedia.service.cash.CashTypeService;
 
@@ -29,6 +30,9 @@ public class DictionaryItemController {
     CashTypeService cashTypeService;
     @Autowired
     UserService userService;
+    @Autowired
+    HardwareService hardwareService;
+
 
     final Logger logger = LoggerFactory.getLogger(DictionaryItemController.class);
 
@@ -163,6 +167,17 @@ public class DictionaryItemController {
     @ResponseBody
     public jTableResponse<Task> listTask() {
         return dictionaryItemList(dictionaryItemService.listTask());
+    }
+
+    @RequestMapping(value = "/hardware/options", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
+    @ResponseBody
+    public jTableResponse<Hardware> listHardware() {
+        return dictionaryItemList(hardwareService.list());
+    }
+    @RequestMapping(value = "/manufacturer/options", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
+    @ResponseBody
+    public jTableResponse<Manufacturer> listManufacturers() {
+        return dictionaryItemList(dictionaryItemService.listManufacturers());
     }
 
     private <T> jTableResponse<T> dictionaryItemList(List<T> itemsList) {

@@ -78,10 +78,10 @@ public class RequestsSearchTest extends WebAppConfig {
     @Test
     public void testCreateRequest() throws Exception {
 
-        Request request = new Request();
+        /*Request request = new Request();
         Hardware hardware = new Hardware();
         hardware.setName("iPad Screen");
-        request.setHardware(hardware);
+        request.setHardware(hardware);                 */
         /*Gson gson = new Gson();
 
         this.mockMvc.perform(post("/requests")

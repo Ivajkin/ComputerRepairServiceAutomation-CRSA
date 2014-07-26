@@ -182,6 +182,21 @@ main.main {
     margin-top: 3%;
 }
 
+/* Форма создания jTable в две колонки */
+#jtable-create-form {
+    display: block;
+    width: 500px;
+    -moz-column-gap:40px;
+    -webkit-column-gap:40px;
+    column-gap:40px;
+    -moz-column-count:2;
+    -webkit-column-count:2;
+    column-count:2;
+}
+.ui-dialog.ui-widget.ui-widget-content.ui-corner-all.ui-front.ui-dialog-buttons.ui-draggable.ui-resizable {
+    min-width: 600px;
+}
+
 /* Касса */
 #cashModuleContainer {
     width: 100%;
