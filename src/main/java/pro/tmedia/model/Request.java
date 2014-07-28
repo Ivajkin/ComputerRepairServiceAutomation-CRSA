@@ -277,10 +277,6 @@ public class Request {
     Hardware parts_installed;
 
     public void setDummyValues() {
-
-        assert model == null;
-        model = "Ноутбук";
-
         assert appearance == null;
         appearance = new Appearance();
         appearance.setName("Не очень");
