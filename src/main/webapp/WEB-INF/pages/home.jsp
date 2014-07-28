@@ -117,9 +117,12 @@
     <div id="warehouseTableContainer"></div>
     <div id="settingsContainer">
         <div id="manufacturersTableContainer"></div>
-        <div id="hardwareModelsTableContainer"></div>
+        <!--<div id="hardwareModelsTableContainer"></div>-->
         <div id="hardwareNamesTableContainer"></div>
         <div id="employeeTableContainer"></div>
+        <div id="sourcesTableContainer"></div>
+        <div id="appearancesTableContainer"></div>
+        <div id="completenessTableContainer"></div>
     </div>
     <div id="reportsModuleContainer"></div>
 

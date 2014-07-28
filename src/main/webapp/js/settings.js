@@ -198,8 +198,12 @@ function openSettings() {
     if(!isSettingsTableLoaded) {
         isSettingsTableLoaded = true;
         loadDictionary('#manufacturersTableContainer', 'Производители', '/manufacturer');
-        loadDictionary('#hardwareModelsTableContainer', 'Модели', '/hardware_model');
+        //loadDictionary('#hardwareModelsTableContainer', 'Модели', '/hardware_model');
         loadExtendedDictionary('#hardwareNamesTableContainer', 'Виды оборудования', '/hardware');
+
+        loadDictionary('#sourcesTableContainer', 'Источники', '/source');
+        loadDictionary('#appearancesTableContainer', 'Внешний вид', '/appearance');
+        loadDictionary('#completenessTableContainer', 'Комплектность', '/completeness');
         loadEmployeeTable();
 
     }

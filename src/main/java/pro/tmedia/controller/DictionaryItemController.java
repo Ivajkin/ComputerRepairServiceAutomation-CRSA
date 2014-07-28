@@ -183,7 +183,7 @@ public class DictionaryItemController {
     @RequestMapping(value = "/appearance/options", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
     public jTableResponse<Appearance> listAppearance() {
-        return dictionaryItemList(dictionaryItemService.listAppearance());
+        return dictionaryItemList(dictionaryItemService.listAppearances());
     }
     @RequestMapping(value = "/completeness/options", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
@@ -193,7 +193,7 @@ public class DictionaryItemController {
     @RequestMapping(value = "/source/options", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
     public jTableResponse<Source> listSource() {
-        return dictionaryItemList(dictionaryItemService.listSource());
+        return dictionaryItemList(dictionaryItemService.listSources());
     }
 
     private <T> jTableResponse<T> dictionaryItemList(List<T> itemsList) {

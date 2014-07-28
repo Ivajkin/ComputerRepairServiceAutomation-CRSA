@@ -183,9 +183,10 @@ main.main {
 }
 
 /* Форма создания jTable в две колонки */
-#jtable-create-form {
+#jtable-create-form, #jtable-edit-form {
     display: block;
     width: 500px;
+    min-height: 580px;
     -moz-column-gap:40px;
     -webkit-column-gap:40px;
     column-gap:40px;

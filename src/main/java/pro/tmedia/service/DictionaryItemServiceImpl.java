@@ -88,7 +88,7 @@ public class DictionaryItemServiceImpl implements DictionaryItemService {
 
 
     @Override
-    public List<Appearance> listAppearance() {
+    public List<Appearance> listAppearances() {
         return appearanceDAO.list();
     }
 
@@ -98,7 +98,7 @@ public class DictionaryItemServiceImpl implements DictionaryItemService {
     }
 
     @Override
-    public List<Source> listSource() {
+    public List<Source> listSources() {
         return sourceDAO.list();
     }
 }

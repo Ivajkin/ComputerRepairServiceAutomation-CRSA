@@ -21,7 +21,7 @@ public interface DictionaryItemService {
     public void create(Hardware hardware);
 
     public List<Manufacturer> listManufacturers();
-    public List<Appearance> listAppearance();
+    public List<Appearance> listAppearances();
     public List<Completeness> listCompleteness();
-    public List<Source> listSource();
+    public List<Source> listSources();
 }
