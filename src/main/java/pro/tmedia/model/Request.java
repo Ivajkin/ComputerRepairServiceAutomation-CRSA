@@ -48,37 +48,37 @@ public class Request {
 
     private String request_number;
 
-    Integer fault_id;
-    @ManyToOne
-    private Appearance appearance;
-    @ManyToOne
-    private Completeness completeness;
+    private Integer fault_id;
+
+    private Integer appearance_id;
+
+    private Integer completeness_id;
     private String phone;
     private String address;
     private String customer_name;
-    @ManyToOne
-    private Source source;
+
+    private Integer source_id;
     private String date_of_call;
     private String note;
     private Integer approximate_cost;
     private Integer prepayment;
 
-    @ManyToOne
-    Employee acceptor;
-    @ManyToOne
-    Employee responsible;
+
+    private Integer acceptor_id;
+
+    private Integer responsible_id;
 
 
     private String date_of_receipt;
 
     private String date_of_issue;
 
-    Integer amount;
+    private Integer amount;
     private String method_of_payment;
 
     private Integer request_status_id;
-    @ManyToOne
-    private Task completed_works;
+
+    private Integer completed_works_id;
 
     public Integer getReq_num_id() {
         return req_num_id;
@@ -112,22 +112,6 @@ public class Request {
         this.fault_id = fault_id;
     }
 
-    public Appearance getAppearance() {
-        return appearance;
-    }
-
-    public void setAppearance(Appearance appearance) {
-        this.appearance = appearance;
-    }
-
-    public Completeness getCompleteness() {
-        return completeness;
-    }
-
-    public void setCompleteness(Completeness completeness) {
-        this.completeness = completeness;
-    }
-
     public String getPhone() {
         return phone;
     }
@@ -150,14 +134,6 @@ public class Request {
 
     public void setCustomer_name(String customer_name) {
         this.customer_name = customer_name;
-    }
-
-    public Source getSource() {
-        return source;
-    }
-
-    public void setSource(Source source) {
-        this.source = source;
     }
 
     public String getDate_of_call() {
@@ -190,22 +166,6 @@ public class Request {
 
     public void setPrepayment(Integer prepayment) {
         this.prepayment = prepayment;
-    }
-
-    public Employee getAcceptor() {
-        return acceptor;
-    }
-
-    public void setAcceptor(Employee acceptor) {
-        this.acceptor = acceptor;
-    }
-
-    public Employee getResponsible() {
-        return responsible;
-    }
-
-    public void setResponsible(Employee responsible) {
-        this.responsible = responsible;
     }
 
     public String getDate_of_receipt() {
@@ -257,46 +217,71 @@ public class Request {
         this.request_status_id = request_status_id;
     }
 
-    public Task getCompleted_works() {
-        return completed_works;
+    public Integer getAppearance_id() {
+        return appearance_id;
     }
 
-    public void setCompleted_works(Task completed_works) {
-        this.completed_works = completed_works;
+    public void setAppearance_id(Integer appearance_id) {
+        this.appearance_id = appearance_id;
     }
 
-    public Hardware getParts_installed() {
-        return parts_installed;
+    public Integer getCompleteness_id() {
+        return completeness_id;
     }
 
-    public void setParts_installed(Hardware parts_installed) {
-        this.parts_installed = parts_installed;
+    public void setCompleteness_id(Integer completeness_id) {
+        this.completeness_id = completeness_id;
     }
 
-    @ManyToOne
-    Hardware parts_installed;
+    public Integer getSource_id() {
+        return source_id;
+    }
+
+    public void setSource_id(Integer source_id) {
+        this.source_id = source_id;
+    }
+
+    public Integer getAcceptor_id() {
+        return acceptor_id;
+    }
+
+    public void setAcceptor_id(Integer acceptor_id) {
+        this.acceptor_id = acceptor_id;
+    }
+
+    public Integer getResponsible_id() {
+        return responsible_id;
+    }
+
+    public void setResponsible_id(Integer responsible_id) {
+        this.responsible_id = responsible_id;
+    }
+
+    public Integer getParts_installed_id() {
+        return parts_installed_id;
+    }
+
+    public void setParts_installed_id(Integer parts_installed_id) {
+        this.parts_installed_id = parts_installed_id;
+    }
+
+    public Integer getCompleted_works_id() {
+        return completed_works_id;
+    }
+
+    public void setCompleted_works_id(Integer completed_works_id) {
+        this.completed_works_id = completed_works_id;
+    }
+
+    private Integer parts_installed_id;
 
     public void setDummyValues() {
-        assert appearance == null;
-        appearance = new Appearance();
-        appearance.setName("Не очень");
-        appearance.setId(1);
-
-        assert completeness == null;
-        completeness = new Completeness();
-        completeness.setName("Не очень");
-        completeness.setId(1);
 
         assert address == null;
         address = "123";
 
         assert customer_name == null;
         customer_name = "123";
-
-        assert source == null;
-        source = new Source();
-        source.setName("Не очень");
-        source.setId(1);
 
         assert date_of_call == null;
         date_of_call = "1991-01-01";
@@ -307,30 +292,11 @@ public class Request {
         assert approximate_cost == null;
         approximate_cost = 0;
 
-        //assert prepayment == null;
-        //prepayment = 0;
-
-        assert acceptor == null;
-        acceptor = new Employee();
-        acceptor.setName("Не очень");
-        acceptor.setId(1);
-
-        assert responsible == null;
-        responsible = new Employee();
-        responsible.setName("Не очень");
-        responsible.setId(1);
-
         assert method_of_payment == null;
         method_of_payment = "123";
 
-        assert completed_works == null;
-        completed_works = new Task();
-        completed_works.setName("Не очень");
-        completed_works.setId(1);
+        completed_works_id = 1;
 
-        assert parts_installed == null;
-        parts_installed = new Hardware();
-        parts_installed.setName("Не очень");
-        parts_installed.setId(1);
+       parts_installed_id = 1;
     }
 }

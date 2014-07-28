@@ -115,6 +115,26 @@ function openRequests() {
                     options:'/employee/options',
                     list: false
                 },
+                appearance_id: {
+                    title: 'Внешний вид',
+                    options:'/appearance/options',
+                    list: false
+                },
+                completeness_id: {
+                    title: 'Комплектность',
+                    options:'/completeness/options',
+                    list: false
+                },
+                source_id: {
+                    title: 'Источник',
+                    options:'/source/options',
+                    list: false
+                },
+                responsible_id: {
+                    title: 'Ответственный',
+                    options:'/employee/options',
+                    list: false
+                },
                 prepayment: {
                     title: 'Предоплата',
                     width: '3%',

@@ -14,11 +14,14 @@ public interface DictionaryItemService {
     public List<Category> listCategories();
     public List<RequestStatus> requestStatusList();
     public List<Provider> providerList();
-    public List<Manufacturer> listManufacturers();
     public List<Task> listTask();
     public void create(Manufacturer manufacturer);
     public void delete(int id) throws Exception;
     public void update(Manufacturer manufacturer);
     public void create(Hardware hardware);
 
+    public List<Manufacturer> listManufacturers();
+    public List<Appearance> listAppearance();
+    public List<Completeness> listCompleteness();
+    public List<Source> listSource();
 }

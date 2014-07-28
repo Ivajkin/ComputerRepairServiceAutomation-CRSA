@@ -180,6 +180,22 @@ public class DictionaryItemController {
         return dictionaryItemList(dictionaryItemService.listManufacturers());
     }
 
+    @RequestMapping(value = "/appearance/options", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
+    @ResponseBody
+    public jTableResponse<Appearance> listAppearance() {
+        return dictionaryItemList(dictionaryItemService.listAppearance());
+    }
+    @RequestMapping(value = "/completeness/options", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
+    @ResponseBody
+    public jTableResponse<Completeness> listCompleteness() {
+        return dictionaryItemList(dictionaryItemService.listCompleteness());
+    }
+    @RequestMapping(value = "/source/options", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
+    @ResponseBody
+    public jTableResponse<Source> listSource() {
+        return dictionaryItemList(dictionaryItemService.listSource());
+    }
+
     private <T> jTableResponse<T> dictionaryItemList(List<T> itemsList) {
         jTableResponse<T> request_status;
         try

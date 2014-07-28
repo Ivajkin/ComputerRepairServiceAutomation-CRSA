@@ -29,6 +29,12 @@ public class DictionaryItemServiceImpl implements DictionaryItemService {
     ManufacturerDAO manufacturerDAO;
     @Autowired
     TaskDAO taskDAO;
+    @Autowired
+    AppearanceDAO appearanceDAO;
+    @Autowired
+    CompletenessDAO completenessDAO;
+    @Autowired
+    SourceDAO sourceDAO;
 
     @Override
     public List<Fault> listFaults() {
@@ -78,5 +84,21 @@ public class DictionaryItemServiceImpl implements DictionaryItemService {
     @Override
     public void update(Manufacturer manufacturer) {
         manufacturerDAO.update(manufacturer);
+    }
+
+
+    @Override
+    public List<Appearance> listAppearance() {
+        return appearanceDAO.list();
+    }
+
+    @Override
+    public List<Completeness> listCompleteness() {
+        return completenessDAO.list();
+    }
+
+    @Override
+    public List<Source> listSource() {
+        return sourceDAO.list();
     }
 }
