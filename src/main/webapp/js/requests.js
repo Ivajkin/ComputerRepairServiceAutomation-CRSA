@@ -59,7 +59,7 @@ function openRequests() {
                     title: 'Номер заявки',
                     width: '5%',
                     create: false,
-                    edit: false,
+                    edit: true,
                     list: true
                 },
                 hardware_id: {
@@ -150,10 +150,23 @@ function openRequests() {
 					 options: '/payment/list',
                      list: false
                 },
-                task: {
+                completed_works_id: {
                     title: 'Выполненные работы',
                     options: '/task/list',
-                    list:false
+                    list: false
+                },
+                customer_name: {
+                    title: 'ФИО клиента',
+                    list: false
+                },
+                parts_installed_id: {
+                    title: 'Установленные запчасти',
+                    options: '/hardware/options',
+                    list: false
+                },
+                address: {
+                    title: 'Адрес клиента',
+                    list: false
                 }
             },
 

@@ -31,9 +31,6 @@ public class RequestDAOImpl implements RequestDAO {
 
     @Override
     public void create(Request request) {
-
-        request.setDummyValues();
-        // TODO: убрать значения по умолчанию
         getCurrentSession().save(request);
     }
 

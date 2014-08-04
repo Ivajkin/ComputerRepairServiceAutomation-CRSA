@@ -274,29 +274,4 @@ public class Request {
     }
 
     private Integer parts_installed_id;
-
-    public void setDummyValues() {
-
-        assert address == null;
-        address = "123";
-
-        assert customer_name == null;
-        customer_name = "123";
-
-        assert date_of_call == null;
-        date_of_call = "1991-01-01";
-
-        assert note == null;
-        note = "123";
-
-        assert approximate_cost == null;
-        approximate_cost = 0;
-
-        assert method_of_payment == null;
-        method_of_payment = "123";
-
-        completed_works_id = 1;
-
-       parts_installed_id = 1;
-    }
 }
