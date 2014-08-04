@@ -106,6 +106,11 @@ function openRequests() {
                     width: '10%',
                     type: 'date'
                 },
+                date_of_call: {
+                    title: 'Дата звонка',
+                    width: '10%',
+                    type: 'date'
+                },
                 amount: {
                     title: 'Сумма в рублях',
                     width: '5%'
@@ -138,8 +143,11 @@ function openRequests() {
                 prepayment: {
                     title: 'Предоплата',
                     width: '3%',
-                    defaultValue: 0,
-                    edit: false
+                    defaultValue: 0
+                },
+                approximate_cost: {
+                    title: 'Примерная стоимость',
+                    list: false
                 },
                 note: {
                     title: 'Примечание',
