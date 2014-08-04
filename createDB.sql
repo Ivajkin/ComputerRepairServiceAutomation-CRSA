@@ -165,23 +165,6 @@ INSERT INTO `task_type` (`id`, `name`) VALUES
 
 
 --
---	Выполненные работы -> task
---		Код выполненной работы
---		Инженер -> engineer_id
---		Цена -> price
---		Наименование выполненной работы -> task_type_id
---		Заявка для которой выполнена работа -> request_id
-create table if not exists `task` (
-  `id` int not null AUTO_INCREMENT unique primary key,
-  `engineer_id` integer not null references employee(id),
-  `price` integer not null,
-  `task_type_id` integer not null references task_type(id),
-  `request_id` integer not null references request(req_num_id)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=3;
-
-
-
---
 --	Статус заявки -> request_status
 --		Идентификатор
 --		Наименование статуса
@@ -294,6 +277,26 @@ create table if not exists `request` (
 
 INSERT INTO `request` (`hardware_id`, `manufacturer_id`, `model`, `serial_number`, `fault_id`, `appearance_id`, `completeness_id`, `phone`, `address`, `customer_name`, `source_id`, `date_of_call`, `note`, `approximate_cost`, `prepayment`, `acceptor_id`, `responsible_id`, `date_of_receipt`, `date_of_issue`, `amount`, `method_of_payment`, `request_status_id`, `completed_works_id`, `parts_installed_id`) VALUES
 (1, 1, 'model', 'serial_number', 1, 1, 1, '+7-924-123-45-67', 'address', 'customer_name', 1, '2011-01-01', 'note', 123, 55, 1, 1, '2011-01-01', '2011-01-01', 12, 'method_of_payment', 1, 1, 1);
+
+
+--
+--	Выполненные работы -> task
+--		Код выполненной работы
+--		Инженер -> engineer_id
+--		Цена -> price
+--		Наименование выполненной работы -> task_type_id
+--		Заявка для которой выполнена работа -> request_id
+create table if not exists `task` (
+  `id` int not null AUTO_INCREMENT unique primary key,
+  `engineer_id` integer not null references employee(id),
+  `price` integer not null,
+  `task_type_id` integer not null references task_type(id),
+  `request_id` integer not null references request(req_num_id)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=3;
+
+INSERT INTO `task` (`engineer_id`, `price`, `task_type_id`, `request_id`) VALUES
+(1, 100, 1, 1);
+
 
 
 --	Поставщик -> provider
