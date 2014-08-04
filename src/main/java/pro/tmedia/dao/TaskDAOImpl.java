@@ -26,8 +26,8 @@ public class TaskDAOImpl implements TaskDAO {
 
 
     @Override
-    public List<Task> list() {
-        return getCurrentSession().createQuery("from Task").list();
+    public List<Task> list(Integer req_num_id) {
+        return getCurrentSession().createQuery(String.format("from Task where request_id = %d", req_num_id)).list();
     }
 
     @Override

@@ -95,6 +95,55 @@ function openRequests() {
                     width: '5%',
                     options: '/fault/list'
                 },
+                completed_works: {
+                    title: '',
+                    width: '2%',
+                    sorting: false,
+                    edit: false,
+                    create: false,
+                    display: function (requestData) {
+                        var $img = $('<button title="Изменить" class="jtable-command-button tasks-command-button"><img src="/img/repair.png" title="Выполненные работы" /></button>');
+                        $img.click(function () {
+                            $('#requestsTableContainer').jtable('openChildTable',
+                                $img.closest('tr'),
+                                {
+                                    title: requestData.record.request_number + ' - выполненные работы',
+                                    actions: {
+                                        listAction: '/task/list?req_num_id=' + requestData.record.req_num_id,
+                                        deleteAction: '/task/delete',
+                                        updateAction: '/task/update',
+                                        createAction: '/task/create'
+                                    },
+                                    fields: {
+                                        id: {
+                                            key: true,
+                                            create: false,
+                                            edit: false,
+                                            list: false
+                                        },
+                                        engineer_id: {
+                                            title: 'инженер',
+                                            options:'/employee/options'
+                                        },
+                                        task_type_id: {
+                                            title: 'наименование выполненной работы',
+                                            options:'/task_type/options'
+                                        },
+                                        price: {
+                                            title: 'цена'
+                                        },
+                                        request_id: {
+                                            type: 'hidden',
+                                            defaultValue: requestData.record.req_num_id
+                                        }
+                                    }
+                                }, function (data) {
+                                    data.childTable.jtable('load');
+                                });
+                        });
+                        return $img;
+                    }
+                },
                 date_of_receipt: {
                     title: 'Дата получения',
                     defaultValue: datef('YYYY-MM-dd'),
@@ -157,11 +206,6 @@ function openRequests() {
                      title: 'Метод оплаты',
 					 options: '/payment/list',
                      list: false
-                },
-                completed_works_id: {
-                    title: 'Выполненные работы',
-                    options: '/task/list',
-                    list: false
                 },
                 customer_name: {
                     title: 'ФИО клиента',

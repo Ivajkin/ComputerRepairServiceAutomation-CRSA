@@ -28,11 +28,11 @@ public class TaskController {
 
     @RequestMapping(value = "/list", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
-    public jTableResponse<Task> listTasks() {
+    public jTableResponse<Task> listTasks(@RequestParam Integer req_num_id) {
         jTableResponse<Task> response;
         try
         {
-            response = new jTableResponse<>(taskService.list(), false);
+            response = new jTableResponse<>(taskService.list(req_num_id), false);
         }
         catch (Exception ex)
         {

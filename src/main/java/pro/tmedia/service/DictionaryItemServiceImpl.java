@@ -62,7 +62,7 @@ public class DictionaryItemServiceImpl implements DictionaryItemService {
     }
 
     @Override
-    public List<TaskType> listTask() {
+    public List<TaskType> listTaskTypes() {
         return taskTypeDAO.list();
     }
 

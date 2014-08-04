@@ -12,7 +12,7 @@ import java.util.List;
  */
 @Transactional
 public interface TaskDAO {
-    List<Task> list();
+    List<Task> list(Integer req_num_id);
     public void create(Task task);
     public void delete(int id) throws Exception;
     public void update(Task task);

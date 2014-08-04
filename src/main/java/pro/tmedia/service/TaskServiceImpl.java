@@ -21,8 +21,8 @@ public class TaskServiceImpl implements TaskService {
     @Autowired
     TaskDAO taskDAO;
 
-    public List<Task> list() {
-        return taskDAO.list();
+    public List<Task> list(Integer req_num_id) {
+        return taskDAO.list(req_num_id);
     }
 
     @Override

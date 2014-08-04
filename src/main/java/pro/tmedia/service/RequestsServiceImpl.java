@@ -7,6 +7,10 @@ import org.springframework.validation.Validator;
 import pro.tmedia.dao.RequestDAO;
 import pro.tmedia.model.Request;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -30,7 +34,16 @@ public class RequestsServiceImpl implements RequestsService {
     @Override
     public void create(Request request) throws Exception {
         if(request.getRequest_number() == null) {
-            request.setRequest_number("123-321");
+            /*  Номер заявки
+                    Формат номера (YMM-#), где
+                        Y-последняя цифра года,
+                        MM – текущий месяц,
+                        # - трехзначный номер заявки)
+            */
+            DateFormat df = new SimpleDateFormat("yMM");
+            Date today = Calendar.getInstance().getTime();
+            String YMM = df.format(today);
+            request.setRequest_number(String.format("%s-321", YMM));
         } else {
             throw new Exception("При создании серийного номера кто-то заранее заполнил его до слоя сервисов.");
         }

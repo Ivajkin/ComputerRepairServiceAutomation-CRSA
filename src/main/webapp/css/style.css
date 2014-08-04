@@ -123,6 +123,10 @@ h2 {
     margin-left: 15px;
 }
 
+.tasks-command-button {
+    background: none;
+}
+
 .panel {
     border: 1px solid #594f4f;
     margin: 10px 10px 10px 10px;

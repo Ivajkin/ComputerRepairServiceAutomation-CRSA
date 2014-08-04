@@ -163,10 +163,10 @@ public class DictionaryItemController {
         return dictionaryItemList(userService.list());
     }
 
-    @RequestMapping(value = "/task/list", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
+    @RequestMapping(value = "/task_type/options", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
-    public jTableResponse<TaskType> listTask() {
-        return dictionaryItemList(dictionaryItemService.listTask());
+    public jTableResponse<TaskType> listTaskType() {
+        return dictionaryItemList(dictionaryItemService.listTaskTypes());
     }
 
     @RequestMapping(value = "/hardware/options", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
