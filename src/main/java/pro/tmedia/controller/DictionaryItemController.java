@@ -57,11 +57,11 @@ public class DictionaryItemController {
         jTableResponse<Manufacturer> response;
         try
         {
-            response = new jTableResponse<Manufacturer>(dictionaryItemService.listManufacturers(), false);
+            response = new jTableResponse<>(dictionaryItemService.listManufacturers(), false);
         }
         catch (Exception ex)
         {
-            response = new jTableResponse<Manufacturer>(ex.getMessage());
+            response = new jTableResponse<>(ex.getMessage());
             logger.error(ex.getMessage());
         }
 
@@ -74,15 +74,15 @@ public class DictionaryItemController {
     public jTableResponse<Manufacturer> createRequest(@ModelAttribute Manufacturer  manufacturer, BindingResult result) {
         jTableResponse<Manufacturer> response;
         if (result.hasErrors()) {
-            response = new jTableResponse<Manufacturer>("Form invalid while create: " + jTableResponse.getBindingErrorMessages(result));
+            response = new jTableResponse<>("Form invalid while create: " + jTableResponse.getBindingErrorMessages(result));
         } else {
             try {
 
                 logger.info("Creating: ".concat(RequestsController.gson.toJson(manufacturer)));
                 dictionaryItemService.create(manufacturer);
-                response = new jTableResponse<Manufacturer>(manufacturer);
+                response = new jTableResponse<>(manufacturer);
             } catch (Exception e) {
-                response = new jTableResponse<Manufacturer>(e.getMessage());
+                response = new jTableResponse<>(e.getMessage());
                 logger.error(e.getMessage());
             }
         }
@@ -108,13 +108,13 @@ public class DictionaryItemController {
     public jTableResponse<Manufacturer> updateRequest(@ModelAttribute Manufacturer  manufacturer, BindingResult result) {
         jTableResponse<Manufacturer> response;
         if (result.hasErrors()) {
-            response = new jTableResponse<Manufacturer>("Form invalid while update: " + jTableResponse.getBindingErrorMessages(result));
+            response = new jTableResponse<>("Form invalid while update: " + jTableResponse.getBindingErrorMessages(result));
         } else {
             try {
                 dictionaryItemService.update(manufacturer);
-                response = new jTableResponse<Manufacturer>(manufacturer);
+                response = new jTableResponse<>(manufacturer);
             } catch (Exception e) {
-                response = new jTableResponse<Manufacturer>(e.getMessage());
+                response = new jTableResponse<>(e.getMessage());
                 logger.error(e.getMessage());
             }
         }
@@ -200,11 +200,11 @@ public class DictionaryItemController {
         jTableResponse<T> request_status;
         try
         {
-            request_status = new jTableResponse<T>(itemsList, true);
+            request_status = new jTableResponse<>(itemsList, true);
         }
         catch (Exception ex)
         {
-            request_status = new jTableResponse<T>(ex.getMessage());
+            request_status = new jTableResponse<>(ex.getMessage());
             logger.error(ex.getMessage());
         }
 

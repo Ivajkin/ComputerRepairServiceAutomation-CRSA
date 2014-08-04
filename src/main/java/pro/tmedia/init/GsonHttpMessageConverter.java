@@ -123,10 +123,6 @@ public class GsonHttpMessageConverter extends AbstractHttpMessageConverter<Objec
             } else {
                 return this.gson.fromJson(json, clazz);
             }
-        } catch (JsonSyntaxException ex) {
-            throw new HttpMessageNotReadableException("Could not read JSON: " + ex.getMessage(), ex);
-        } catch (JsonIOException ex) {
-            throw new HttpMessageNotReadableException("Could not read JSON: " + ex.getMessage(), ex);
         } catch (JsonParseException ex) {
             throw new HttpMessageNotReadableException("Could not read JSON: " + ex.getMessage(), ex);
         }

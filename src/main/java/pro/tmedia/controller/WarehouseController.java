@@ -37,11 +37,11 @@ public class WarehouseController {
         jTableResponse<WarehouseItem> response;
         try
         {
-            response = new jTableResponse<WarehouseItem>(warehouseService.list(), false);
+            response = new jTableResponse<>(warehouseService.list(), false);
         }
         catch (Exception ex)
         {
-            response = new jTableResponse<WarehouseItem>(ex.getMessage());
+            response = new jTableResponse<>(ex.getMessage());
             logger.error(ex.getMessage());
         }
 
@@ -54,15 +54,15 @@ public class WarehouseController {
     public jTableResponse<WarehouseItem> createWarehouseItem(@ModelAttribute WarehouseItem  warehouseItem, BindingResult result) {
         jTableResponse<WarehouseItem> response;
         if (result.hasErrors()) {
-            response = new jTableResponse<WarehouseItem>("Form invalid while create: " + getBindingErrorMessages(result));
+            response = new jTableResponse<>("Form invalid while create: " + getBindingErrorMessages(result));
         } else {
             try {
 
                 logger.info("Creating: ".concat(gson.toJson(warehouseItem)));
                 warehouseService.create(warehouseItem);
-                response = new jTableResponse<WarehouseItem>(warehouseItem);
+                response = new jTableResponse<>(warehouseItem);
             } catch (Exception e) {
-                response = new jTableResponse<WarehouseItem>(e.getMessage());
+                response = new jTableResponse<>(e.getMessage());
                 logger.error(e.getMessage());
             }
         }
@@ -77,13 +77,13 @@ public class WarehouseController {
     public jTableResponse<WarehouseItem> updateWarehouseItem(@ModelAttribute WarehouseItem  warehouseItem, BindingResult result) {
         jTableResponse<WarehouseItem> response;
         if (result.hasErrors()) {
-            response = new jTableResponse<WarehouseItem>("Form invalid while update: " + getBindingErrorMessages(result));
+            response = new jTableResponse<>("Form invalid while update: " + getBindingErrorMessages(result));
         } else {
             try {
                 warehouseService.update(warehouseItem);
-                response = new jTableResponse<WarehouseItem>(warehouseItem);
+                response = new jTableResponse<>(warehouseItem);
             } catch (Exception e) {
-                response = new jTableResponse<WarehouseItem>(e.getMessage());
+                response = new jTableResponse<>(e.getMessage());
                 logger.error(e.getMessage());
             }
         }

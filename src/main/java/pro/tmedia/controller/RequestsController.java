@@ -7,17 +7,16 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
-import org.springframework.validation.FieldError;
 import org.springframework.web.bind.annotation.*;
 import pro.tmedia.model.Request;
 import pro.tmedia.service.RequestsService;
-
-import java.util.List;
 
 /**
  * User: Ivaykin Timofey
  * Date: 3/11/14
  */
+
+/* TODO: прописать комментарии на API и сделать по нему автоматически генерируемую документацию */
 @Controller
 @RequestMapping("/requests")
 public class RequestsController {
@@ -37,11 +36,11 @@ public class RequestsController {
         jTableResponse<Request> response;
         try
         {
-            response = new jTableResponse<Request>(requestsService.list(), false);
+            response = new jTableResponse<>(requestsService.list(), false);
         }
         catch (Exception ex)
         {
-            response = new jTableResponse<Request>(ex.getMessage());
+            response = new jTableResponse<>(ex.getMessage());
             logger.error(ex.getMessage());
         }
 
@@ -71,15 +70,15 @@ public class RequestsController {
     public jTableResponse<Request> createRequest(@ModelAttribute Request  request, BindingResult result) {
         jTableResponse<Request> response;
         if (result.hasErrors()) {
-            response = new jTableResponse<Request>("Form invalid while create: " + jTableResponse.getBindingErrorMessages(result));
+            response = new jTableResponse<>("Form invalid while create: " + jTableResponse.getBindingErrorMessages(result));
         } else {
             try {
 
                 logger.info("Creating: ".concat(gson.toJson(request)));
                 requestsService.create(request);
-                response = new jTableResponse<Request>(request);
+                response = new jTableResponse<>(request);
             } catch (Exception e) {
-                response = new jTableResponse<Request>(e.getMessage());
+                response = new jTableResponse<>(e.getMessage());
                 logger.error(e.getMessage());
             }
         }
@@ -94,13 +93,13 @@ public class RequestsController {
     public jTableResponse<Request> updateRequest(@ModelAttribute Request  request, BindingResult result) {
         jTableResponse<Request> response;
         if (result.hasErrors()) {
-            response = new jTableResponse<Request>("Form invalid while update: " + jTableResponse.getBindingErrorMessages(result));
+            response = new jTableResponse<>("Form invalid while update: " + jTableResponse.getBindingErrorMessages(result));
         } else {
             try {
                 requestsService.update(request);
-                response = new jTableResponse<Request>(request);
+                response = new jTableResponse<>(request);
             } catch (Exception e) {
-                response = new jTableResponse<Request>(e.getMessage());
+                response = new jTableResponse<>(e.getMessage());
                 logger.error(e.getMessage());
             }
         }

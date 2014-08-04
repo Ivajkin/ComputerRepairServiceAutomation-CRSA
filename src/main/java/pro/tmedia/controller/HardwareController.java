@@ -7,11 +7,8 @@ import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
-import pro.tmedia.model.*;
-import pro.tmedia.service.DictionaryItemService;
+import pro.tmedia.model.Hardware;
 import pro.tmedia.service.HardwareService;
-
-import java.util.List;
 
 /**
  * User: Ivaykina Galina
@@ -35,11 +32,11 @@ public class HardwareController {
         jTableResponse<Hardware> response;
         try
         {
-            response = new jTableResponse<Hardware>(hardwareService.list(), false);
+            response = new jTableResponse<>(hardwareService.list(), false);
         }
         catch (Exception ex)
         {
-            response = new jTableResponse<Hardware>(ex.getMessage());
+            response = new jTableResponse<>(ex.getMessage());
             logger.error(ex.getMessage());
         }
 
@@ -52,15 +49,15 @@ public class HardwareController {
     public jTableResponse<Hardware> createRequest(@ModelAttribute Hardware  hardware, BindingResult result) {
         jTableResponse<Hardware> response;
         if (result.hasErrors()) {
-            response = new jTableResponse<Hardware>("Form invalid while create: " + jTableResponse.getBindingErrorMessages(result));
+            response = new jTableResponse<>("Form invalid while create: " + jTableResponse.getBindingErrorMessages(result));
         } else {
             try {
 
                 logger.info("Creating: ".concat(RequestsController.gson.toJson(hardware)));
                 hardwareService.create(hardware);
-                response = new jTableResponse<Hardware>(hardware);
+                response = new jTableResponse<>(hardware);
             } catch (Exception e) {
-                response = new jTableResponse<Hardware>(e.getMessage());
+                response = new jTableResponse<>(e.getMessage());
                 logger.error(e.getMessage());
             }
         }
@@ -86,13 +83,13 @@ public class HardwareController {
     public jTableResponse<Hardware> updateRequest(@ModelAttribute Hardware  hardware, BindingResult result) {
         jTableResponse<Hardware> response;
         if (result.hasErrors()) {
-            response = new jTableResponse<Hardware>("Form invalid while update: " + jTableResponse.getBindingErrorMessages(result));
+            response = new jTableResponse<>("Form invalid while update: " + jTableResponse.getBindingErrorMessages(result));
         } else {
             try {
                 hardwareService.update(hardware);
-                response = new jTableResponse<Hardware>(hardware);
+                response = new jTableResponse<>(hardware);
             } catch (Exception e) {
-                response = new jTableResponse<Hardware>(e.getMessage());
+                response = new jTableResponse<>(e.getMessage());
                 logger.error(e.getMessage());
             }
         }
