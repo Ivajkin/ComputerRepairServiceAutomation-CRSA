@@ -152,16 +152,33 @@ INSERT INTO `source` (`id`, `name`) VALUES
 (1, 'Заявка клиента');
 
 --
---	Выполненные работы -> task
---		Код выполненной работы
---		Наименование выполненной работы
-create table if not exists `task` (
+--	Тип выполненной работы -> task_type
+--		Код типа выполненной работы
+--		Наименование типа выполненной работы
+create table if not exists `task_type` (
   `id` int not null AUTO_INCREMENT unique primary key,
   `name` varchar(100) CHARACTER SET utf8 not null unique
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=3;
 
-INSERT INTO `task` (`id`, `name`) VALUES
+INSERT INTO `task_type` (`id`, `name`) VALUES
 (1, 'Замена шлейфа');
+
+
+--
+--	Выполненные работы -> task
+--		Код выполненной работы
+--		Инженер -> engineer_id
+--		Цена -> price
+--		Наименование выполненной работы -> task_type_id
+--		Заявка для которой выполнена работа -> request_id
+create table if not exists `task` (
+  `id` int not null AUTO_INCREMENT unique primary key,
+  `engineer_id` integer not null references employee(id),
+  `price` integer not null,
+  `task_type_id` integer not null references task_type(id),
+  `request_id` integer not null references request(req_num_id)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=3;
+
 
 
 --
@@ -269,7 +286,6 @@ create table if not exists `request` (
   `amount` int,
   `method_of_payment` varchar(100),
   `request_status_id` integer not null references request_status(id),
-  `completed_works_id` integer not null references task(id),
   `parts_installed_id` integer not null references hardware(id),
   check (date_of_call <= date_of_receipt),
   check (date_of_receipt <= date_of_issue)
