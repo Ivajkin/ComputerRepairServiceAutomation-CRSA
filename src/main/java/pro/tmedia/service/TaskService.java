@@ -1,6 +1,5 @@
-package pro.tmedia.dao;
+package pro.tmedia.service;
 
-import org.springframework.transaction.annotation.Transactional;
 import pro.tmedia.model.Request;
 import pro.tmedia.model.Task;
 
@@ -10,10 +9,9 @@ import java.util.List;
  * User: Ivaykin Timofey
  * Date: 04.08.14
  */
-@Transactional
-public interface TaskDAO {
-    List<Task> list();
-    public void create(Task task);
+public interface TaskService {
+    public List<Task> list();
+    public void create(Task task) throws Exception;
     public void delete(int id) throws Exception;
     public void update(Task task);
 }

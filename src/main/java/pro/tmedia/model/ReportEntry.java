@@ -16,22 +16,6 @@ public class ReportEntry implements Serializable {
     @GeneratedValue
     @Id
     private Integer id;
-
-    /*@OneToMany(mappedBy = "project")
-    @JoinTable(
-            name = "Project_Tasks",
-            joinColumns = @JoinColumn(name = "project_id"),
-            inverseJoinColumns = @JoinColumn(name = "task_id")
-    )
-    private Set<Task> tasks;*/
-
-
-    /*
-    @JoinTable(
-            name = "report_entry",
-            joinColumns = @JoinColumn(name = "id", table = "report"),
-            inverseJoinColumns = @JoinColumn(name = "report_id", table = "report_entry")
-    )         */
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name="report_id")
     //@ForeignKey(name = "report_id")

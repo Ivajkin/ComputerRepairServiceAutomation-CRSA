@@ -54,7 +54,7 @@ public class RequestsController {
         String json;
         try
         {
-            requestsService.create(request);
+            taskService.create(request);
             json = new jTableResponse<Request>(request).getJSON();
         }
         catch (Exception ex)

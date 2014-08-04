@@ -28,7 +28,7 @@ public class DictionaryItemServiceImpl implements DictionaryItemService {
     @Autowired
     ManufacturerDAO manufacturerDAO;
     @Autowired
-    TaskDAO taskDAO;
+    TaskTypeDAO taskTypeDAO;
     @Autowired
     AppearanceDAO appearanceDAO;
     @Autowired
@@ -62,8 +62,8 @@ public class DictionaryItemServiceImpl implements DictionaryItemService {
     }
 
     @Override
-    public List<Task> listTask() {
-        return taskDAO.list();
+    public List<TaskType> listTask() {
+        return taskTypeDAO.list();
     }
 
     @Override

@@ -165,7 +165,7 @@ public class DictionaryItemController {
 
     @RequestMapping(value = "/task/list", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
-    public jTableResponse<Task> listTask() {
+    public jTableResponse<TaskType> listTask() {
         return dictionaryItemList(dictionaryItemService.listTask());
     }
 
