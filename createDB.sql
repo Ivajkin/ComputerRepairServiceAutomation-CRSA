@@ -269,7 +269,6 @@ create table if not exists `request` (
   `amount` int,
   `method_of_payment` varchar(100),
   `request_status_id` integer not null references request_status(id),
-  `parts_installed_id` integer not null references hardware(id),
   check (date_of_call <= date_of_receipt),
   check (date_of_receipt <= date_of_issue)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=3;
@@ -297,6 +296,41 @@ create table if not exists `task` (
 INSERT INTO `task` (`engineer_id`, `price`, `task_type_id`, `request_id`) VALUES
 (1, 100, 1, 1);
 
+
+--
+--	Выполненные работы -> task
+--		Код выполненной работы
+--		Инженер -> engineer_id
+--		Цена -> price
+--		Наименование выполненной работы -> task_type_id
+--		Заявка для которой выполнена работа -> request_id
+create table if not exists `task` (
+  `id` int not null AUTO_INCREMENT unique primary key,
+  `engineer_id` integer not null references employee(id),
+  `price` integer not null,
+  `task_type_id` integer not null references task_type(id),
+  `request_id` integer not null references request(req_num_id)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=3;
+
+INSERT INTO `task` (`engineer_id`, `price`, `task_type_id`, `request_id`) VALUES
+(1, 100, 1, 1);
+
+-- Установленные запчасти -> parts_installed
+--		Код установленной запчасти
+--		наименование -> hardware_id
+--		Цена -> price
+--		количество -> count
+--		Заявка для которой выполнена работа -> request_id
+create table if not exists `parts_installed` (
+  `id` int not null AUTO_INCREMENT unique primary key,
+  `hardware_id` integer not null references employee(id),
+  `price` integer not null,
+  `count` integer not null,
+  `request_id` integer not null references request(req_num_id)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=3;
+
+INSERT INTO `parts_installed` (`hardware_id`, `price`, `count`, `request_id`) VALUES
+(1, 100, 2, 1);
 
 
 --	Поставщик -> provider

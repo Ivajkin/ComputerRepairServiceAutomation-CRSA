@@ -14,7 +14,6 @@ public class Request {
     @GeneratedValue
     private Integer req_num_id;
 
-
     private Integer hardware_id;
 
     public Integer getHardware_id() {
@@ -77,8 +76,6 @@ public class Request {
     private String method_of_payment;
 
     private Integer request_status_id;
-
-    private Integer completed_works_id;
 
     public Integer getReq_num_id() {
         return req_num_id;
@@ -200,15 +197,6 @@ public class Request {
         this.method_of_payment = method_of_payment;
     }
 
-    /*public RequestStatus getRequest_status() {
-        return request_status;
-    }
-
-    public void setRequest_status(RequestStatus request_status) {
-        this.request_status = request_status;
-    }
-             */
-
     public Integer getRequest_status_id() {
         return request_status_id;
     }
@@ -257,21 +245,4 @@ public class Request {
         this.responsible_id = responsible_id;
     }
 
-    public Integer getParts_installed_id() {
-        return parts_installed_id;
-    }
-
-    public void setParts_installed_id(Integer parts_installed_id) {
-        this.parts_installed_id = parts_installed_id;
-    }
-
-    public Integer getCompleted_works_id() {
-        return completed_works_id;
-    }
-
-    public void setCompleted_works_id(Integer completed_works_id) {
-        this.completed_works_id = completed_works_id;
-    }
-
-    private Integer parts_installed_id;
 }

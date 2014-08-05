@@ -102,7 +102,7 @@ function openRequests() {
                     edit: false,
                     create: false,
                     display: function (requestData) {
-                        var $img = $('<button title="Изменить" class="jtable-command-button tasks-command-button"><img src="/img/repair.png" title="Выполненные работы" /></button>');
+                        var $img = $('<button class="jtable-command-button tasks-command-button"><img src="/img/repair.png" title="Выполненные работы" /></button>');
                         $img.click(function () {
                             $('#requestsTableContainer').jtable('openChildTable',
                                 $img.closest('tr'),
@@ -128,6 +128,54 @@ function openRequests() {
                                         task_type_id: {
                                             title: 'наименование выполненной работы',
                                             options:'/task_type/options'
+                                        },
+                                        price: {
+                                            title: 'цена'
+                                        },
+                                        request_id: {
+                                            type: 'hidden',
+                                            defaultValue: requestData.record.req_num_id
+                                        }
+                                    }
+                                }, function (data) {
+                                    data.childTable.jtable('load');
+                                });
+                        });
+                        return $img;
+                    }
+                },
+                parts_installed: {
+                    title: '',
+                    width: '2%',
+                    sorting: false,
+                    edit: false,
+                    create: false,
+                    display: function (requestData) {
+                        var $img = $('<button class="jtable-command-button parts-installed-command-button"><img src="/img/parts_installed.png" title="Установленные запчасти" /></button>');
+                        $img.click(function () {
+                            $('#requestsTableContainer').jtable('openChildTable',
+                                $img.closest('tr'),
+                                {
+                                    title: requestData.record.request_number + ' - установленные запчасти',
+                                    actions: {
+                                        listAction: '/parts_installed/list?req_num_id=' + requestData.record.req_num_id,
+                                        deleteAction: '/parts_installed/delete',
+                                        updateAction: '/parts_installed/update',
+                                        createAction: '/parts_installed/create'
+                                    },
+                                    fields: {
+                                        id: {
+                                            key: true,
+                                            create: false,
+                                            edit: false,
+                                            list: false
+                                        },
+                                        hardware_id: {
+                                            title: 'наименование',
+                                            options:'/hardware/options'
+                                        },
+                                        count: {
+                                            title: 'количество'
                                         },
                                         price: {
                                             title: 'цена'
