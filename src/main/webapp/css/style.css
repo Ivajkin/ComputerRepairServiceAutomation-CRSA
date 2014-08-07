@@ -70,6 +70,15 @@ body.darkTheme {
     top: 400px;
 }
 
+#open-reformal-widget-button {
+    width: 43px;
+    height: 43px;
+    background-image: url('../img/open-reformal.png');
+    background-size: 43px 43px;
+    right: 15.5px;
+    top: 519px;
+}
+
 #lock {
     width: 43px;
     height: 43px;

@@ -76,6 +76,21 @@
     </filter>
 </svg>
 
+
+<div id="open-reformal-widget-button" class="util-button"></div>
+<svg height="0" xmlns="http://www.w3.org/2000/svg">
+    <filter id="drop-shadow">
+        <feGaussianBlur in="SourceAlpha" stdDeviation="4"/>
+        <feOffset dx="12" dy="12" result="offsetblur"/>
+        <feFlood flood-color="rgba(0,0,0,0.5)"/>
+        <feComposite in2="offsetblur" operator="in"/>
+        <feMerge>
+            <feMergeNode/>
+            <feMergeNode in="SourceGraphic"/>
+        </feMerge>
+    </filter>
+</svg>
+
 <!-- Категории - Добавлять, удалять, изменять категории может администратор в разделе Настройка. -->
 <a id="settingsButton" class="tableButton" href="#">
     <img class="tableIcon" alt="Настройки" src="${pageContext.request.contextPath}/img/settings.png" />

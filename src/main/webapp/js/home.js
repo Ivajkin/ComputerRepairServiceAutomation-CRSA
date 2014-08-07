@@ -42,6 +42,21 @@ function documentLoaded() {
     messagebox.info('Начните работу с добавления заявок', 'Приложение готово к работе.');
 }
 
+var reformalOptions;
+function setupReformalWidget() {
+    reformalOptions = {
+        project_id: 750291,
+        show_tab: false,
+        project_host: "crsa.reformal.ru"
+    };
+    (function() {
+        var script = document.createElement('script');
+        script.type = 'text/javascript'; script.async = true;
+        script.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'media.reformal.ru/widgets/v3/reformal.js';
+        document.getElementsByTagName('head')[0].appendChild(script);
+    })();
+}
+
  $(document).ready(function() {
      $('.blur-lock').hide();
      $('#lock').click(function() {$('body').toggleClass('blurred-locked-body'); $('.blur-lock').fadeIn();});
@@ -49,6 +64,12 @@ function documentLoaded() {
 
      /* Настройка темной темы интерфейса */
      $('#lightBulb').click(function() {$('body').toggleClass('darkTheme')});
+
+     setupReformalWidget();
+     $('#open-reformal-widget-button')
+         .click(function() { Reformal.widgetOpen(); return false; })
+         .hover(function() { Reformal.widgetPreload(); });
+
 
      documentLoaded();
 
