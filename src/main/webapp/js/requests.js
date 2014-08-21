@@ -306,11 +306,12 @@ function openRequests() {
         function toggleDoneState() {
             var status_id = $('#Edit-request_status_id').find('option:selected').val();
             var status_name = $('#Edit-request_status_id').find('option:selected').text();
+            alert(status_id);
             var disable_status = true;
-            if(status_id === 3) {
+            if(status_id == 3) {
                 assert(status_name === 'Выдан/Выполнен', 'Значение поля статуса заявки (' + status_id + ') указывает на статус "Выдан/Выполнен" но имеет значение "' + status_name + '". Возможно порядок статусов перепутан.');
                 disable_status = false;
-            } else if(status_id === 2) {
+            } else if(status_id == 2) {
                 assert(status_name === 'Готов', 'Значение поля статуса заявки (' + status_id + ') указывает на статус "Готов" но имеет значение "' + status_name + '". Возможно порядок статусов перепутан.');
                 disable_status = false;
             }
