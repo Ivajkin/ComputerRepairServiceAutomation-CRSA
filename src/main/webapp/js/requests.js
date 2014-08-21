@@ -22,6 +22,34 @@ function deleteButton() {
 
 }
 
+
+
+function toggleDoneState() {
+    var status_id = $('#Edit-request_status_id').find('option:selected').val();
+    var status_name = $('#Edit-request_status_id').find('option:selected').text();
+    var disable_status = true;
+    if(status_id == 3) {
+        assert(status_name === 'Выдан/Выполнен', 'Значение поля статуса заявки (' + status_id + ') указывает на статус "Выдан/Выполнен" но имеет значение "' + status_name + '". Возможно порядок статусов перепутан.');
+        disable_status = false;
+    } else if(status_id == 2) {
+        assert(status_name === 'Готов', 'Значение поля статуса заявки (' + status_id + ') указывает на статус "Готов" но имеет значение "' + status_name + '". Возможно порядок статусов перепутан.');
+        disable_status = false;
+    }
+
+    $('#Edit-date_of_issue').prop( "disabled", disable_status);
+    $('#Edit-amount').prop( "disabled", disable_status);
+}
+
+function onOpenEditDialog() {
+    $('.ui-dialog.ui-widget.ui-widget-content.ui-corner-all.ui-front.ui-dialog-buttons.ui-draggable.ui-resizable')
+        .css('width', '400px');
+    toggleDoneState();
+    $('#Edit-request_status_id').change(toggleDoneState);
+}
+/*$('.jtable-toolbar-item-add-record').click(onOpenEditDialog);
+ $('.jtable-data-row').click(onOpenEditDialog);*/
+
+
 function openRequests() {
     $('#warehouseTableContainer').hide();
     $('#settingsContainer').hide();
@@ -279,6 +307,8 @@ function openRequests() {
                 data.form.find('input[name="request_number"]').addClass('validate[required,minSize[7],maxSize[8]] text-input');
                 data.form.find('input[name="model"]').addClass('validate[required,minSize[1],maxSize[100]] text-input');
                 data.form.validationEngine();
+
+                onOpenEditDialog();
             },
             //Validate form when it is being submitted
             formSubmitting: function (event, data) {
@@ -303,30 +333,6 @@ function openRequests() {
         $('.ui-dialog-buttonpane.ui-widget-content').append('<button id="btnPrint" style="position:absolute; right:185px;" onclick="onPrint();">Печать</button>');
 
 
-        function toggleDoneState() {
-            var status_id = $('#Edit-request_status_id').find('option:selected').val();
-            var status_name = $('#Edit-request_status_id').find('option:selected').text();
-            alert(status_id);
-            var disable_status = true;
-            if(status_id == 3) {
-                assert(status_name === 'Выдан/Выполнен', 'Значение поля статуса заявки (' + status_id + ') указывает на статус "Выдан/Выполнен" но имеет значение "' + status_name + '". Возможно порядок статусов перепутан.');
-                disable_status = false;
-            } else if(status_id == 2) {
-                assert(status_name === 'Готов', 'Значение поля статуса заявки (' + status_id + ') указывает на статус "Готов" но имеет значение "' + status_name + '". Возможно порядок статусов перепутан.');
-                disable_status = false;
-            }
-
-            $('#Edit-date_of_issue').prop( "disabled", disable_status);
-            $('#Edit-amount').prop( "disabled", disable_status);
-        }
-
-
-        $('.jtable-toolbar-item-add-record').click(function() {
-            $('.ui-dialog.ui-widget.ui-widget-content.ui-corner-all.ui-front.ui-dialog-buttons.ui-draggable.ui-resizable')
-                .css('width', '400px');
-            toggleDoneState();
-            $('#Edit-request_status_id').change(toggleDoneState);
-        });
 
         $('#requestsTableContainer').jtable('load');
 
