@@ -64,14 +64,15 @@ current_user = {
     email: undefined,
     login: undefined,
     password_hash: undefined,
-    load: function() {
+    load: function(callback) {
         $.getJSON("user/current", function(user) {
             current_user = user;
             current_user.is_admin = 1 === user.role_id;
-        })
-            .fail(function() {
-                messagebox.error("Профиль текущего пользователя не удалось загрузить", "Ошибка загрузки пользователя");
-            });
+
+            callback();
+        }).fail(function() {
+            messagebox.error("Профиль текущего пользователя не удалось загрузить", "Ошибка загрузки пользователя");
+        });
     },
     set: function(changed_user_fields) {
         messagebox.warning("This feature is not implemented yet", "Not Implemented");
@@ -174,9 +175,9 @@ current_user = {
          messagebox.info("Раздел настроек", "В этом разделе администратор может добавлять, удалять, изменять категории и прочие вспомогательные словари.");
      });
 
-     openRequests();
 
-
-     current_user.load();
+     current_user.load(function() {
+         openRequests();
+     });
 
  });

@@ -240,8 +240,13 @@ function openRequests() {
                 },
                 acceptor_id: {
                     title: 'Приёмщик',
-                    options:'/employee/options',
-                    list: false
+                    create: true,
+                    edit: true,
+                    list: false,
+                    options: '/employee/options',
+                    defaultValue: current_user.id,
+                    visibility: 'hidden',
+                    type: 'hidden'
                 },
                 appearance_id: {
                     title: 'Внешний вид',

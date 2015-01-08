@@ -43,7 +43,17 @@ public class RequestsServiceImpl implements RequestsService {
             DateFormat df = new SimpleDateFormat("yMM");
             Date today = Calendar.getInstance().getTime();
             String YMM = df.format(today);
-            request.setRequest_number(String.format("%s-321", YMM));
+            YMM = YMM.substring(3);
+            int id = request.getRequest_status_id()%999;
+            YMM += "-";
+            if(id < 100) {
+                YMM += "0";
+                if(id < 10) {
+                    YMM += "0";
+                }
+            }
+            YMM += id;
+            request.setRequest_number(YMM);
         } else {
             throw new Exception("При создании серийного номера кто-то заранее заполнил его до слоя сервисов.");
         }
