@@ -1,5 +1,5 @@
 <component name="ArtifactManager">
-  <artifact type="exploded-war" name="TomcatReportsV9.0:war exploded">
+  <artifact type="exploded-war" name="CRSA:war exploded">
     <output-path>$PROJECT_DIR$/target/TomcatReportsV9.0</output-path>
     <root id="root">
       <element id="directory" name="WEB-INF">

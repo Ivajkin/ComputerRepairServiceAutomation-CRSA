@@ -69,6 +69,10 @@ current_user = {
             current_user = user;
             current_user.is_admin = 1 === user.role_id;
 
+            var is_morning = (new Date()).getHours() < 12 && (new Date()).getHours() > 3;
+            var is_evening = (new Date()).getHours() > 16;
+            messagebox.success((is_morning ? "Доброе утро, " : (is_evening ? "Добрый вечер, " : "Добрый день, ")) + current_user.name + "!", "Профиль пользователя успешно загружен");
+
             callback();
         }).fail(function() {
             messagebox.error("Профиль текущего пользователя не удалось загрузить", "Ошибка загрузки пользователя");
