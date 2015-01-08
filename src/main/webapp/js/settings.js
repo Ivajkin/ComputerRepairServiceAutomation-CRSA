@@ -187,24 +187,40 @@ function loadEmployeeTable() {
     $('#employeeTableContainer').jtable('load');
 }
 
+
+
+function loadProfileSettings() {
+    $('#currentUserProfile #current-user-profile-name').val(current_user.name);
+    $('#currentUserProfile #current-user-profile-email').val(current_user.email);
+    $('#currentUserProfile #current-user-profile-login').val(current_user.login);
+    $('#current-user-profile-save-button').click(function() {
+        current_user.set({});
+        $('#currentUserProfile .status').fadeOut();
+    });
+}
+
 function openSettings() {
-    $('#warehouseTableContainer').hide();
-    $('#requestsTableContainer').hide();
-    $('#cashModuleContainer').hide();
-    $('#reportsModuleContainer').hide();
 
-    $('#settingsContainer').show();
+        $('#warehouseTableContainer').hide();
+        $('#requestsTableContainer').hide();
+        $('#cashModuleContainer').hide();
+        $('#reportsModuleContainer').hide();
 
-    if(!isSettingsTableLoaded) {
-        isSettingsTableLoaded = true;
-        loadDictionary('#manufacturersTableContainer', 'Производители', '/manufacturer');
-        //loadDictionary('#hardwareModelsTableContainer', 'Модели', '/hardware_model');
-        loadExtendedDictionary('#hardwareNamesTableContainer', 'Виды оборудования', '/hardware');
+        $('#settingsContainer').show();
 
-        loadDictionary('#sourcesTableContainer', 'Источники', '/source');
-        loadDictionary('#appearancesTableContainer', 'Внешний вид', '/appearance');
-        loadDictionary('#completenessTableContainer', 'Комплектность', '/completeness');
-        loadEmployeeTable();
+        if (!isSettingsTableLoaded) {
+            isSettingsTableLoaded = true;
 
-    }
+            if (current_user.is_admin) {
+                loadDictionary('#manufacturersTableContainer', 'Производители', '/manufacturer');
+                //loadDictionary('#hardwareModelsTableContainer', 'Модели', '/hardware_model');
+                loadExtendedDictionary('#hardwareNamesTableContainer', 'Виды оборудования', '/hardware');
+
+                loadDictionary('#sourcesTableContainer', 'Источники', '/source');
+                loadDictionary('#appearancesTableContainer', 'Внешний вид', '/appearance');
+                loadDictionary('#completenessTableContainer', 'Комплектность', '/completeness');
+                loadEmployeeTable();
+            }
+            loadProfileSettings();
+        }
 }

@@ -138,6 +138,29 @@
         <div id="sourcesTableContainer"></div>
         <div id="appearancesTableContainer"></div>
         <div id="completenessTableContainer"></div>
+
+        <div id="currentUserProfile">
+            <form>
+                <label for="current-user-profile-name">
+                    ФИО:
+                </label>
+                <input id="current-user-profile-name" type="text" value="{{name}}" name="name"/>
+
+                <label for="current-user-profile-email">
+                    email:
+                </label>
+                <input id="current-user-profile-email" type="email" value="{{email}}" name="email"/>
+
+                <label for="current-user-profile-login">
+                    Логин:
+                </label>
+                <input id="current-user-profile-login" type="text" value="{{login}}" name="login"/>
+
+                <input id="current-user-profile-save-button" value="Сохранить" title="Сохранить данные текущего пользователя" type="button"/>
+
+                <p class="status">Изменения успешно сохранены</p>
+            </form>
+        </div>
     </div>
     <div id="reportsModuleContainer"></div>
 

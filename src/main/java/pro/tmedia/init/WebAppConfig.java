@@ -18,6 +18,11 @@ import org.springframework.web.servlet.view.UrlBasedViewResolver;
 
 import javax.annotation.Resource;
 import javax.sql.DataSource;
+import org.apache.commons.dbcp.BasicDataSource;
+
+//import org.apache.tomcat.jdbc.pool.DataSource;
+//import org.apache.tomcat.jdbc.pool.PoolProperties;
+
 import java.util.List;
 import java.util.Properties;
 
@@ -47,14 +52,17 @@ public class WebAppConfig extends WebMvcConfigurerAdapter {
     @Resource
     private Environment env;
 
+
     @Bean
     public DataSource dataSource() {
-        DriverManagerDataSource dataSource = new DriverManagerDataSource();
+
+        BasicDataSource dataSource = new BasicDataSource();
 
         dataSource.setDriverClassName(env.getRequiredProperty(PROPERTY_NAME_DATABASE_DRIVER));
         dataSource.setUrl(env.getRequiredProperty(PROPERTY_NAME_DATABASE_URL));
         dataSource.setUsername(env.getRequiredProperty(PROPERTY_NAME_DATABASE_USERNAME));
         dataSource.setPassword(env.getRequiredProperty(PROPERTY_NAME_DATABASE_PASSWORD));
+        dataSource.setInitialSize(3);
 
         return dataSource;
     }

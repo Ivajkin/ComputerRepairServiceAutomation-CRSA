@@ -4,7 +4,6 @@
  */
 
 
-
 /* Message system */
 var messagebox = {
     info: toastr.info,
@@ -56,6 +55,30 @@ function setupReformalWidget() {
         document.getElementsByTagName('head')[0].appendChild(script);
     })();
 }
+
+var current_user;
+current_user = {
+    is_admin: undefined,
+    id: undefined,
+    name: undefined,
+    email: undefined,
+    login: undefined,
+    password_hash: undefined,
+    load: function() {
+        $.getJSON("user/current", function(user) {
+            current_user = user;
+            current_user.is_admin = 1 === user.role_id;
+        })
+            .fail(function() {
+                messagebox.error("Профиль текущего пользователя не удалось загрузить", "Ошибка загрузки пользователя");
+            });
+    },
+    set: function(changed_user_fields) {
+        messagebox.warning("This feature is not implemented yet", "Not Implemented");
+        $.post("user/current", function() {
+        });
+    }
+};
 
  $(document).ready(function() {
      $('.blur-lock').hide();
@@ -152,5 +175,8 @@ function setupReformalWidget() {
      });
 
      openRequests();
+
+
+     current_user.load();
 
  });

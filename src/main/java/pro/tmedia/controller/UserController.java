@@ -87,4 +87,9 @@ public class UserController {
 
 
 
+    @RequestMapping(value = "/current", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+    @ResponseBody
+    public Employee currentUser() throws Exception {
+        return userService.getCurrentSessionUser();
+    }
 }

@@ -370,6 +370,10 @@ nav.main {
     margin-right: 20px;
 }
 
+#currentUserProfile .status {
+    display: none;
+}
+
 .iDemandPancakeTableStyle {
     padding: 0;
     margin-left: 10px;
