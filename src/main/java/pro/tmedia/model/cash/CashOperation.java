@@ -1,10 +1,8 @@
 package pro.tmedia.model.cash;
 
 import pro.tmedia.model.Employee;
-import pro.tmedia.model.Hardware;
 
 import javax.persistence.*;
-import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
@@ -17,22 +15,26 @@ public class CashOperation {
     public CashOperation(Integer amount, String description, CashType cashType, Employee employee) {
         this.amount = amount;
         this.description = description;
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-        String operation_date = sdf.format(new Date());
-        this.operation_date = operation_date;
+        this.operation_date = new java.sql.Date(new Date().getTime());
         this.cashType = cashType;
         this.saldo = cashType.getSaldo();
         this.employee = employee;
+        if(amount > 0) {
+            cash_operation_status_id = 1; /* Приход */
+        } else {
+            cash_operation_status_id = 2; /* Расход */
+        }
     }
 
     public CashOperation() {}
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator="cash_operation_id_seq")
+    @SequenceGenerator(name="cash_operation_id_seq", sequenceName="cash_operation_id_seq", allocationSize=1)
     private Integer id;
 
     private Integer product_id = 1;
-    private Integer cash_operation_status_id = 1000;
+    private Integer cash_operation_status_id;
 
     @ManyToOne
     @JoinColumn(name="cash_type_id")
@@ -53,7 +55,7 @@ public class CashOperation {
     private Integer amount;
     private String description;
     private Integer saldo;
-    private String operation_date;
+    private java.sql.Date operation_date;
 
     public Integer getId() {
         return id;
@@ -103,11 +105,11 @@ public class CashOperation {
         this.saldo = saldo;
     }
 
-    public String getOperation_date() {
+    public java.sql.Date getOperation_date() {
         return operation_date;
     }
 
-    public void setOperation_date(String operation_date) {
+    public void setOperation_date(java.sql.Date operation_date) {
         this.operation_date = operation_date;
     }
 }

@@ -1,6 +1,7 @@
 package pro.tmedia.model;
 
 import javax.persistence.*;
+import java.io.Serializable;
 
 
 /**
@@ -9,9 +10,10 @@ import javax.persistence.*;
  */
 @Entity
 @Table(name="request")
-public class Request {
+public class Request implements Serializable, Cloneable {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator="request_req_num_id_seq")
+    @SequenceGenerator(name="request_req_num_id_seq", sequenceName="request_req_num_id_seq", allocationSize=1)
     private Integer req_num_id;
 
     private Integer hardware_id;
@@ -57,7 +59,7 @@ public class Request {
     private String customer_name;
 
     private Integer source_id;
-    private String date_of_call;
+    private java.sql.Date date_of_call;
     private String note;
     private Integer approximate_cost;
     private Integer prepayment;
@@ -68,9 +70,9 @@ public class Request {
     private Integer responsible_id;
 
 
-    private String date_of_receipt;
+    private java.sql.Date date_of_receipt;
 
-    private String date_of_issue;
+    private java.sql.Date date_of_issue;
 
     private Integer amount;
     private String method_of_payment;
@@ -133,11 +135,11 @@ public class Request {
         this.customer_name = customer_name;
     }
 
-    public String getDate_of_call() {
+    public java.sql.Date getDate_of_call() {
         return date_of_call;
     }
 
-    public void setDate_of_call(String date_of_call) {
+    public void setDate_of_call(java.sql.Date date_of_call) {
         this.date_of_call = date_of_call;
     }
 
@@ -165,19 +167,19 @@ public class Request {
         this.prepayment = prepayment;
     }
 
-    public String getDate_of_receipt() {
+    public java.sql.Date getDate_of_receipt() {
         return date_of_receipt;
     }
 
-    public void setDate_of_receipt(String date_of_receipt) {
+    public void setDate_of_receipt(java.sql.Date date_of_receipt) {
         this.date_of_receipt = date_of_receipt;
     }
 
-    public String getDate_of_issue() {
+    public java.sql.Date getDate_of_issue() {
         return date_of_issue;
     }
 
-    public void setDate_of_issue(String date_of_issue) {
+    public void setDate_of_issue(java.sql.Date date_of_issue) {
         this.date_of_issue = date_of_issue;
     }
 

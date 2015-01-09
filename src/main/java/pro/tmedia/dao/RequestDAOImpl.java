@@ -13,7 +13,7 @@ import java.util.List;
  * User: Ivaykin Timofey
  * Date: 09.04.14
  */
-@Transactional
+/*@Transactional*/
 @Repository
 public class RequestDAOImpl implements RequestDAO {
 

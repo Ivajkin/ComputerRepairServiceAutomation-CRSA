@@ -481,6 +481,10 @@ nav.main {
 }
 
 
+#requestsTableContainer .jtable-column-header-container, #requestsTableContainer .jtable-column-header {
+    min-height: 65px;
+}
+
 
 
 .ui-dialog, .ui-widget, .ui-widget-content, .ui-corner-all, .ui-front, .ui-dialog-buttons, .ui-draggable, .ui-resizable {
