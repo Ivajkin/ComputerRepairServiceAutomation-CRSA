@@ -1,9 +1,5 @@
 package pro.tmedia.init;
 
-import java.util.Arrays;
-import java.util.EnumSet;
-import java.util.Set;
-
 import org.apache.log4j.*;
 import org.springframework.web.WebApplicationInitializer;
 import org.springframework.web.context.ContextLoaderListener;
@@ -11,21 +7,11 @@ import org.springframework.web.context.support.AnnotationConfigWebApplicationCon
 import org.springframework.web.filter.CharacterEncodingFilter;
 import org.springframework.web.servlet.DispatcherServlet;
 import org.springframework.web.filter.DelegatingFilterProxy;
-import org.springframework.context.ApplicationContext;
-import org.springframework.core.Conventions;
-import org.springframework.security.web.session.HttpSessionEventPublisher;
-import org.springframework.util.Assert;
-import org.springframework.web.context.AbstractContextLoaderInitializer;
-import org.springframework.web.context.WebApplicationContext;
 
-import javax.servlet.DispatcherType;
-import javax.servlet.Filter;
 import javax.servlet.FilterRegistration;
-//import javax.servlet.FilterRegistration.Dynamic;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.ServletRegistration.Dynamic;
-import javax.servlet.SessionTrackingMode;
 import java.io.OutputStreamWriter;
 
 /**
@@ -33,6 +19,11 @@ import java.io.OutputStreamWriter;
  * Date: 2/12/14
  */
 public class Initializer  implements WebApplicationInitializer {
+
+    private static final String CRSA_ENVIRONMENT = System.getenv("CRSA_ENVIRONMENT");
+    public static boolean isProductionCRSAEnvironment() {
+        return CRSA_ENVIRONMENT != null && CRSA_ENVIRONMENT.equals("production");
+    }
 
     public void onStartup(ServletContext servletContext) throws ServletException {
 
@@ -68,8 +59,6 @@ public class Initializer  implements WebApplicationInitializer {
         servlet.addMapping("*.css");
         servlet.setLoadOnStartup(1);
 
-        //servletContext.getServletRegistration ("default").addMapping (".js", ".css", ".jpg", ".gif", "*.png");
-
         initLogger();
     }
 
@@ -80,10 +69,11 @@ public class Initializer  implements WebApplicationInitializer {
         appender.setName("consoleLog");
         appender.activateOptions();
         Logger.getRootLogger().addAppender(appender);
-        LogManager.getRootLogger().setLevel(Level.TRACE);
-        // log4j.rootLogger=INFO, file, stdout
-        // log4j.logger.org.hibernate=INFO
-        // log4j.logger.org.hibernate.type=ALL
+        if(isProductionCRSAEnvironment()) {
+            LogManager.getRootLogger().setLevel(Level.ERROR);
+        } else {
+            LogManager.getRootLogger().setLevel(Level.TRACE);
+        }
     }
 }
 

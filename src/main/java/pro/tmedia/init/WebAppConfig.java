@@ -6,7 +6,6 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.core.env.Environment;
 import org.springframework.http.converter.HttpMessageConverter;
-import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.orm.hibernate4.HibernateTransactionManager;
 import org.springframework.orm.hibernate4.LocalSessionFactoryBean;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
@@ -19,9 +18,6 @@ import org.springframework.web.servlet.view.UrlBasedViewResolver;
 import javax.annotation.Resource;
 import javax.sql.DataSource;
 import org.apache.commons.dbcp.BasicDataSource;
-
-//import org.apache.tomcat.jdbc.pool.DataSource;
-//import org.apache.tomcat.jdbc.pool.PoolProperties;
 
 import java.util.List;
 import java.util.Properties;
@@ -42,7 +38,13 @@ public class WebAppConfig extends WebMvcConfigurerAdapter {
     private static final String PROPERTY_NAME_DATABASE_URL = "db.url";
     private static final String PROPERTY_NAME_DATABASE_USERNAME = "db.username";
 
+    private static final String PROPERTY_NAME_LOCAL_DATABASE_DRIVER = "local.db.driver";
+    private static final String PROPERTY_NAME_LOCAL_DATABASE_PASSWORD = "local.db.password";
+    private static final String PROPERTY_NAME_LOCAL_DATABASE_URL = "local.db.url";
+    private static final String PROPERTY_NAME_LOCAL_DATABASE_USERNAME = "local.db.username";
+
     private static final String PROPERTY_NAME_HIBERNATE_DIALECT = "hibernate.dialect";
+    private static final String PROPERTY_NAME_LOCAL_HIBERNATE_DIALECT = "local.hibernate.dialect";
     private static final String PROPERTY_NAME_HIBERNATE_SHOW_SQL = "hibernate.show_sql";
     private static final String PROPERTY_NAME_HIBERNATE_FORMAT_SQL = "hibernate.format_sql";
     // Hibernate will put comments inside all generated SQL statements to hint what’s the generated SQL trying to do
@@ -58,10 +60,22 @@ public class WebAppConfig extends WebMvcConfigurerAdapter {
 
         BasicDataSource dataSource = new BasicDataSource();
 
-        dataSource.setDriverClassName(env.getRequiredProperty(PROPERTY_NAME_DATABASE_DRIVER));
-        dataSource.setUrl(env.getRequiredProperty(PROPERTY_NAME_DATABASE_URL));
-        dataSource.setUsername(env.getRequiredProperty(PROPERTY_NAME_DATABASE_USERNAME));
-        dataSource.setPassword(env.getRequiredProperty(PROPERTY_NAME_DATABASE_PASSWORD));
+        String DATABASE_DRIVER, DATABASE_URL, DATABASE_USERNAME, DATABASE_PASSWORD;
+        if(Initializer.isProductionCRSAEnvironment()) {
+            DATABASE_DRIVER = env.getRequiredProperty(PROPERTY_NAME_DATABASE_DRIVER);
+            DATABASE_URL = env.getRequiredProperty(PROPERTY_NAME_DATABASE_URL);
+            DATABASE_USERNAME = env.getRequiredProperty(PROPERTY_NAME_DATABASE_USERNAME);
+            DATABASE_PASSWORD = env.getRequiredProperty(PROPERTY_NAME_DATABASE_PASSWORD);
+        } else {
+            DATABASE_DRIVER = env.getRequiredProperty(PROPERTY_NAME_LOCAL_DATABASE_DRIVER);
+            DATABASE_URL = env.getRequiredProperty(PROPERTY_NAME_LOCAL_DATABASE_URL);
+            DATABASE_USERNAME = env.getRequiredProperty(PROPERTY_NAME_LOCAL_DATABASE_USERNAME);
+            DATABASE_PASSWORD = env.getRequiredProperty(PROPERTY_NAME_LOCAL_DATABASE_PASSWORD);
+        }
+        dataSource.setDriverClassName(DATABASE_DRIVER);
+        dataSource.setUrl(DATABASE_URL);
+        dataSource.setUsername(DATABASE_USERNAME);
+        dataSource.setPassword(DATABASE_PASSWORD);
         dataSource.setInitialSize(3);
 
         return dataSource;
@@ -90,7 +104,11 @@ public class WebAppConfig extends WebMvcConfigurerAdapter {
 
     private Properties hibProperties() {
         Properties properties = new Properties();
-        properties.put(PROPERTY_NAME_HIBERNATE_DIALECT, env.getRequiredProperty(PROPERTY_NAME_HIBERNATE_DIALECT));
+        if(Initializer.isProductionCRSAEnvironment()) {
+            properties.put(PROPERTY_NAME_HIBERNATE_DIALECT, env.getRequiredProperty(PROPERTY_NAME_HIBERNATE_DIALECT));
+        } else {
+            properties.put(PROPERTY_NAME_HIBERNATE_DIALECT, env.getRequiredProperty(PROPERTY_NAME_LOCAL_HIBERNATE_DIALECT));
+        }
         properties.put(PROPERTY_NAME_HIBERNATE_SHOW_SQL, env.getRequiredProperty(PROPERTY_NAME_HIBERNATE_SHOW_SQL));
         properties.put(PROPERTY_NAME_HIBERNATE_FORMAT_SQL, env.getRequiredProperty(PROPERTY_NAME_HIBERNATE_FORMAT_SQL));
         properties.put(PROPERTY_NAME_HIBERNATE_USE_SQL_COMMENTS, env.getRequiredProperty(PROPERTY_NAME_HIBERNATE_USE_SQL_COMMENTS));

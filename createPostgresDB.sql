@@ -192,10 +192,10 @@ create table if not exists employee (
 
 -- login: milkshake32 pass: milkshake32
 -- login: avangebit pass: 123456
-INSERT INTO employee (id, name, login, password_hash, email, fee, role_id) VALUES
-(1, 'Иванов Иван Гольцман', 'milkshake32', 'aec6c35c00a0cadc8bf97f4d94e55e9a547bfb8afcf86e2c0602c6d865f84c5d', 'i.golz@mail.ru', 10, 2),
-(2, 'Алексей Верещагин', 'avangebit', '27f5365e3d7609197e381253b6e361e29a53732b53eb2be5884594631378c2cf', 'avangebit@gmail.com', 10, 1);
-
+INSERT INTO employee (id, name, email, login, password_hash, fee, role_id) VALUES (1, 'Иванов Иван Гольцман', 'i.golz@mail.ru', 'milkshake32', 'milk', 10, 2);
+INSERT INTO employee (id, name, email, login, password_hash, fee, role_id) VALUES (2, 'Алексей Верещагин', 'avangebit@gmail.com', 'avangebit', '12345678', 10, 1);
+INSERT INTO employee (id, name, email, login, password_hash, fee, role_id) VALUES (3, 'Доримова Екатерина Олеговна', 'dorimova@mail.ru', 'dorimova123', 'dorimova', 35, 2);
+INSERT INTO employee (id, name, email, login, password_hash, fee, role_id) VALUES (4, 'Techno Media Ltd', 'info@tmedia.pro', 'admin', '12345678', 0, 1);
 
 
 
@@ -239,7 +239,7 @@ create table if not exists request (
   customer_name varchar(300) not null,
   source_id integer not null references source(id),
   date_of_call date,
- note varchar(200),
+  note varchar(200),
   approximate_cost int default null,
   prepayment int default null,
   acceptor_id integer not null references employee(id),

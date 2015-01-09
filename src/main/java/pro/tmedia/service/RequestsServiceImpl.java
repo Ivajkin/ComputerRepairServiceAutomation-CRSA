@@ -57,6 +57,10 @@ public class RequestsServiceImpl implements RequestsService {
         } else {
             throw new Exception("При создании серийного номера кто-то заранее заполнил его до слоя сервисов.");
         }
+        if(null == request.getRequest_status_id()) {
+            request.setRequest_status_id(1);
+        }
+
         requestDAO.create(request);
     }
 

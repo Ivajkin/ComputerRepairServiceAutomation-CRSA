@@ -23,10 +23,11 @@ function deleteButton() {
 }
 
 
-
+var is_amount_field_disabled;
 function toggleDoneState() {
-    var status_id = $('#Edit-request_status_id').find('option:selected').val();
-    var status_name = $('#Edit-request_status_id').find('option:selected').text();
+    var request_status_id_edit = $('#Edit-request_status_id');
+    var status_id = request_status_id_edit.find('option:selected').val();
+    var status_name = request_status_id_edit.find('option:selected').text();
     var disable_status = true;
     if(status_id == 3) {
         assert(status_name === 'Выдан/Выполнен', 'Значение поля статуса заявки (' + status_id + ') указывает на статус "Выдан/Выполнен" но имеет значение "' + status_name + '". Возможно порядок статусов перепутан.');
@@ -38,6 +39,7 @@ function toggleDoneState() {
 
     $('#Edit-date_of_issue').prop( "disabled", disable_status);
     $('#Edit-amount').prop( "disabled", disable_status);
+    is_amount_field_disabled = !disable_status;
 }
 
 function onOpenEditDialog() {
@@ -96,7 +98,8 @@ function openRequests() {
                     title: 'Статус заявки',
                     options: '/request_status/list',
                     defaultValue: 1, /* Принят */
-                    create: false
+                    create: false,
+                    edit: false
                 },
                 hardware_id: {
                     title: 'Оборудование',
@@ -163,7 +166,8 @@ function openRequests() {
                 },
                 customer_name: {
                     title: 'ФИО клиента',
-                    list: false
+                    list: false,
+                    defaultValue: 'Частное лицо'
                 },
                 source_id: {
                     title: 'Источник',
@@ -322,12 +326,16 @@ function openRequests() {
             formCreated: function (event, data) {
                 // TODO: Добавить валидайию для всех полей
                 data.form.find('input[name="fault"]').addClass('validate[required]');
-                data.form.find('input[name="amount"]').addClass('validate[required],custom[integer],min[10],max[500000]');
+                if(!is_amount_field_disabled) {
+                    data.form.find('input[name="amount"]').addClass('validate[required],custom[integer],min[10],max[500000]');
+                }
                 data.form.find('input[name="prepayment"]').addClass('validate[required],custom[integer],min[0],max[500000]');
                 data.form.find('input[name="date_of_receipt"]').addClass('validate[required,custom[date],past[NOW]]');   // var dateMMDDYYYRegex = '^(0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])[- /.](19|20)\d\d$';
                 data.form.find('input[name="phone"]').addClass('validate[required,custom[phone],minSize[6],maxSize[18]] text-input');
                 data.form.find('input[name="request_number"]').addClass('validate[required,minSize[7],maxSize[8]] text-input');
                 data.form.find('input[name="model"]').addClass('validate[required,minSize[1],maxSize[100]] text-input');
+                data.form.find('input[name="serial_number"]').addClass('validate[required,minSize[1],maxSize[100]] text-input');
+                data.form.find('input[name="customer_name"]').addClass('validate[required,minSize[1],maxSize[500]] text-input');
                 data.form.validationEngine();
 
                 onOpenEditDialog();

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DataSourceManagerImpl" format="xml" hash="1146220391">
+  <component name="DataSourceManagerImpl" format="xml" hash="722991038">
     <data-source source="LOCAL" name="MySQL - core5429_repair@69.39.232.66" uuid="f5672bb1-65eb-4919-a872-bd138c768dc0">
       <driver-ref>mysql</driver-ref>
       <synchronize>true</synchronize>
@@ -20,6 +20,13 @@
       <synchronize>true</synchronize>
       <jdbc-driver>org.postgresql.Driver</jdbc-driver>
       <jdbc-url>jdbc:postgresql://ec2-54-247-174-241.eu-west-1.compute.amazonaws.com:5432/d4eq8ngbl6o7v?ssl=true&amp;sslfactory=org.postgresql.ssl.NonValidatingFactory</jdbc-url>
+      <libraries />
+    </data-source>
+    <data-source source="LOCAL" name="PostgreSQL - postgres@localhost" uuid="798a0a99-f3d6-46eb-8322-e6a650dc770f">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://localhost:5432/postgres</jdbc-url>
       <libraries />
     </data-source>
   </component>
