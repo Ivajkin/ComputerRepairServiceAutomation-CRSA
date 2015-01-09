@@ -67,6 +67,14 @@ public class RequestsServiceImpl implements RequestsService {
 
     @Override
     public void update(Request request) {
-        requestDAO.update(request);
+        if(request.getRequest_status_id() == 3 /* статус Выдан/выполнен */) {
+
+            DateFormat df = new SimpleDateFormat("Y-MM-DD");
+            Date today = Calendar.getInstance().getTime();
+            String todayFormatted = df.format(today);
+
+            request.setDate_of_issue(todayFormatted);
+            requestDAO.update(request);
+        }
     }
 }

@@ -95,7 +95,7 @@ function openRequests() {
                 request_status_id: {
                     title: 'Статус заявки',
                     options: '/request_status/list',
-                    defaultValue: 3,
+                    defaultValue: 1, /* Принят */
                     create: false
                 },
                 hardware_id: {
@@ -139,7 +139,9 @@ function openRequests() {
                 date_of_issue: {
                     title: 'Дата выдачи',
                     width: '10%',
-                    type: 'date'
+                    type: 'date',
+                    create: false,
+                    edit: false
                 },
                 amount: {
                     title: 'Сумма в рублях',
@@ -172,6 +174,7 @@ function openRequests() {
                     title: 'Дата звонка',
                     width: '10%',
                     type: 'date',
+                    defaultValue: datef('YYYY-MM-dd'),
                     list: false
                 },
                 note: {
