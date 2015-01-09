@@ -70,7 +70,7 @@ function openRequests() {
             actions: {
                 listAction: '/requests/list',
                 createAction: '/requests/create',
-                updateAction: '/requests/update',
+                updateAction: '/requests/update'
              //   deleteAction: '/requests/delete'
             },
 			fields: {
@@ -88,6 +88,16 @@ function openRequests() {
                     edit: true,
                     list: true
                 },
+                phone: {
+                    title: 'Номер телефона клиента',
+                    width: '7%'
+                },
+                request_status_id: {
+                    title: 'Статус заявки',
+                    options: '/request_status/list',
+                    defaultValue: 3,
+                    create: false
+                },
                 hardware_id: {
                     title: 'Оборудование',
                     width: '5%',
@@ -102,24 +112,99 @@ function openRequests() {
                     title: 'Модель',
                     width: '5%'
                 },
-                phone: {
-                    title: 'Номер телефона клиента',
-                    width: '7%'
-
+                slot_id: {
+                    title: 'Номер ячейки'
                 },
-                request_status_id: {
-                    title: 'Статус заявки',
-                    options: '/request_status/list'
-                },
-                 serial_number: {
+                serial_number: {
                     title: 'Серийный номер',
                     width: '10%',
                     list: true
-                 },
+                },
                 fault_id: {
                     title: 'Неисправность',
                     width: '5%',
                     options: '/fault/list'
+                },
+                responsible_id: {
+                    title: 'Ответственный',
+                    options:'/employee/options',
+                    list: false
+                },
+                date_of_receipt: {
+                    title: 'Дата получения',
+                    defaultValue: datef('YYYY-MM-dd'),
+                    width: '10%',
+                    type: 'date'
+                },
+                date_of_issue: {
+                    title: 'Дата выдачи',
+                    width: '10%',
+                    type: 'date'
+                },
+                amount: {
+                    title: 'Сумма в рублях',
+                    width: '5%'
+                },
+                appearance_id: {
+                    title: 'Внешний вид',
+                    options:'/appearance/options',
+                    list: false
+                },
+                completeness_id: {
+                    title: 'Комплектность',
+                    options:'/completeness/options',
+                    list: false
+                },
+                address: {
+                    title: 'Адрес клиента',
+                    list: false
+                },
+                customer_name: {
+                    title: 'ФИО клиента',
+                    list: false
+                },
+                source_id: {
+                    title: 'Источник',
+                    options:'/source/options',
+                    list: false
+                },
+                date_of_call: {
+                    title: 'Дата звонка',
+                    width: '10%',
+                    type: 'date',
+                    list: false
+                },
+                note: {
+                    title: 'Примечание',
+                    list: false
+                },
+                approximate_cost: {
+                    title: 'Примерная стоимость',
+                    list: false
+                },
+                prepayment: {
+                    title: 'Предоплата',
+                    width: '3%',
+                    defaultValue: 0,
+                    list: false
+                },
+                acceptor_id: {
+                    title: 'Приёмщик',
+                    create: true,
+                    edit: true,
+                    list: false,
+                    options: '/employee/options',
+                    defaultValue: current_user.id,
+                    visibility: 'hidden',
+                    type: 'hidden'
+                },
+                delivery: {
+                    title: 'Доставка' /* checkbox */,
+                    list: false
+                },
+                print_accept_talon: {
+                    title: 'Печать талона приёма' /* checkbox */,
+                    list: false
                 },
                 completed_works: {
                     title: '',
@@ -218,85 +303,14 @@ function openRequests() {
                         return $img;
                     }
                 },
-                date_of_receipt: {
-                    title: 'Дата получения',
-                    defaultValue: datef('YYYY-MM-dd'),
-                    width: '10%',
-                    type: 'date'
-                },
-                date_of_issue: {
-                    title: 'Дата выдачи',
-                    width: '10%',
-                    type: 'date'
-                },
-                date_of_call: {
-                    title: 'Дата звонка',
-                    width: '10%',
-                    type: 'date'
-                },
-                amount: {
-                    title: 'Сумма в рублях',
-                    width: '5%'
-                },
-                acceptor_id: {
-                    title: 'Приёмщик',
-                    create: true,
-                    edit: true,
-                    list: false,
-                    options: '/employee/options',
-                    defaultValue: current_user.id,
-                    visibility: 'hidden',
-                    type: 'hidden'
-                },
-                appearance_id: {
-                    title: 'Внешний вид',
-                    options:'/appearance/options',
-                    list: false
-                },
-                completeness_id: {
-                    title: 'Комплектность',
-                    options:'/completeness/options',
-                    list: false
-                },
-                source_id: {
-                    title: 'Источник',
-                    options:'/source/options',
-                    list: false
-                },
-                responsible_id: {
-                    title: 'Ответственный',
-                    options:'/employee/options',
-                    list: false
-                },
-                prepayment: {
-                    title: 'Предоплата',
-                    width: '3%',
-                    defaultValue: 0
-                },
-                approximate_cost: {
-                    title: 'Примерная стоимость',
-                    list: false
-                },
-                note: {
-                    title: 'Примечание',
-                    list: false
-                },
 				method_of_payment: {
                      title: 'Метод оплаты',
 					 options: '/payment/list',
                      list: false
                 },
-                customer_name: {
-                    title: 'ФИО клиента',
-                    list: false
-                },
                 parts_installed_id: {
                     title: 'Установленные запчасти',
                     options: '/hardware/options',
-                    list: false
-                },
-                address: {
-                    title: 'Адрес клиента',
                     list: false
                 }
             },

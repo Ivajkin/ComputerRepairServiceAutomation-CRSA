@@ -12,6 +12,7 @@
         <hibernate.version>4.2.0.Final</hibernate.version>
         <spring.version>3.2.4.RELEASE</spring.version>
         <spring-security.version>3.2.3.RELEASE</spring-security.version>
+        <mysql.connector.version>5.1.21</mysql.connector.version>
     </properties>
 
     <dependencies>
@@ -50,6 +51,11 @@
             <groupId>postgresql</groupId>
             <artifactId>postgresql</artifactId>
             <version>9.1-901-1.jdbc4</version>
+        </dependency>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>${mysql.connector.version}</version>
         </dependency>
         <dependency>
             <groupId>commons-dbcp</groupId>

@@ -22,10 +22,6 @@ import java.io.Reader;
 import java.lang.reflect.Type;
 import java.nio.charset.Charset;
 
-/**
- * @author Roy Clarkson
- * @since 1.0
- */
 public class GsonHttpMessageConverter extends AbstractHttpMessageConverter<Object> {
 
     public static final Charset DEFAULT_CHARSET = Charset.forName("UTF-8");
@@ -85,7 +81,7 @@ public class GsonHttpMessageConverter extends AbstractHttpMessageConverter<Objec
     }
 
     /**
-     * Indicates whether the JSON output by this view should be prefixed with "{} &&". Default is false.
+     * Indicates whether the JSON output by this view should be prefixed with &quot;{} &amp;&amp;&quot;. Default is false.
      * <p> Prefixing the JSON string in this manner is used to help prevent JSON Hijacking. The prefix renders the string
      * syntactically invalid as a script so that it cannot be hijacked. This prefix does not affect the evaluation of JSON,
      * but if JSON validation is performed on the string, the prefix would need to be ignored.
