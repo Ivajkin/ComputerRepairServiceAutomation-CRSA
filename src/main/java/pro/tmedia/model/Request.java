@@ -64,6 +64,28 @@ public class Request implements Serializable, Cloneable {
     private Integer approximate_cost;
     private Integer prepayment;
 
+    private Boolean delivery;
+    private Integer slot_id;
+
+    public Boolean getDelivery() {
+        return delivery;
+    }
+
+    public Integer getSlot_id() {
+        return slot_id;
+    }
+
+    public void setSlot_id(Integer slot_id) {
+        this.slot_id = slot_id;
+    }
+
+    public Boolean isDelivery() {
+        return delivery;
+    }
+
+    public void setDelivery(Boolean delivery) {
+        this.delivery = delivery;
+    }
 
     private Integer acceptor_id;
 
