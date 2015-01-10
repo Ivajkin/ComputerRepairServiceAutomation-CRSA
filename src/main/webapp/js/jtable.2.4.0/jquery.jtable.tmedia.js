@@ -955,13 +955,14 @@ THE SOFTWARE.
         *  /Date(1320259705710)/
         *  2011-01-01 20:32:42 (YYYY-MM-DD HH:MM:SS)
         *  2011-01-01 (YYYY-MM-DD)
+        *  01.01.2015 (DD.MM.YYYY)
         *************************************************************************/
         _parseDate: function (dateString) {
             if (dateString.indexOf('Date') >= 0) { //Format: /Date(1320259705710)/
                 return new Date(
                     parseInt(dateString.substr(6), 10)
                 );
-            } else if (dateString.length == 10) { //Format: 2011-01-01
+            } else if (dateString.length == 10 && dateString.indexOf('-') >= 0) { //Format: 2011-01-01
                 return new Date(
                     parseInt(dateString.substr(0, 4), 10),
                     parseInt(dateString.substr(5, 2), 10) - 1,
@@ -975,6 +976,12 @@ THE SOFTWARE.
                     parseInt(dateString.substr(11, 2), 10),
                     parseInt(dateString.substr(14, 2), 10),
                     parseInt(dateString.substr(17, 2), 10)
+                );
+            } else if (dateString.length == 10) { //Format: 01.01.2015
+                return new Date(
+                    parseInt(dateString.substr(6, 4), 10),
+                    parseInt(dateString.substr(3, 2), 10) - 1,
+                    parseInt(dateString.substr(0, 2), 10)
                 );
             } else {
                 this._logWarn('Given date is not properly formatted: ' + dateString);

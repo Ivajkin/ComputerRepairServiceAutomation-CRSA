@@ -26,7 +26,7 @@
 
     <script type="text/javascript" src="${pageContext.request.contextPath}/js/datef.js"></script>
     <script type="text/javascript" src="${pageContext.request.contextPath}/js/jtable.2.4.0/external/json2.js"></script>
-    <script type="text/javascript" src="${pageContext.request.contextPath}/js/jtable.2.4.0/jquery.jtable.js"></script>
+    <script type="text/javascript" src="${pageContext.request.contextPath}/js/jtable.2.4.0/jquery.jtable.tmedia.js"></script>
     <script type="text/javascript" src="${pageContext.request.contextPath}/js/jtable.2.4.0/localization/jquery.jtable.ru.js"></script>
     <script type="text/javascript" src="${pageContext.request.contextPath}/js/validationEngine/languages/jquery.validationEngine-ru.js"></script>
     <script type="text/javascript" src="${pageContext.request.contextPath}/js/validationEngine/jquery.validationEngine.js"></script>
