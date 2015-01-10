@@ -2,7 +2,6 @@ package pro.tmedia.dao;
 
 import org.springframework.transaction.annotation.Transactional;
 import pro.tmedia.model.Employee;
-import pro.tmedia.model.Hardware;
 
 import java.util.List;
 

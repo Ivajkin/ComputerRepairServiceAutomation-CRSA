@@ -5,7 +5,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import pro.tmedia.dao.AppearanceDAO;
 import pro.tmedia.model.Appearance;
-import pro.tmedia.model.Source;
 
 import java.util.List;
 

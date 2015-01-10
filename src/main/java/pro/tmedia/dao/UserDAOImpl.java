@@ -3,10 +3,7 @@ package pro.tmedia.dao;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 import pro.tmedia.model.Employee;
-import pro.tmedia.model.Hardware;
 
-import java.lang.reflect.ParameterizedType;
-import java.lang.reflect.Type;
 import java.util.List;
 
 /**

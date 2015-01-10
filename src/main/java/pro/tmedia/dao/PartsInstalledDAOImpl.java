@@ -6,7 +6,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 import pro.tmedia.model.PartsInstalled;
-import pro.tmedia.model.Task;
 
 import java.util.List;
 

@@ -1,7 +1,6 @@
 package pro.tmedia.service;
 
 import pro.tmedia.model.PartsInstalled;
-import pro.tmedia.model.Task;
 
 import java.util.List;
 

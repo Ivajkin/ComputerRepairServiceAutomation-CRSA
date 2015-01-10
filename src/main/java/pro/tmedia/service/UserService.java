@@ -1,7 +1,6 @@
 package pro.tmedia.service;
 
 import pro.tmedia.model.Employee;
-import pro.tmedia.model.Hardware;
 import pro.tmedia.model.Role;
 
 import java.util.List;

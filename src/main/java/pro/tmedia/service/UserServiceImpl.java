@@ -5,12 +5,9 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.validation.Validator;
-import pro.tmedia.dao.HardwareDAO;
 import pro.tmedia.dao.RoleDAO;
 import pro.tmedia.dao.UserDAO;
 import pro.tmedia.model.Employee;
-import pro.tmedia.model.Hardware;
 import pro.tmedia.model.Role;
 
 import java.util.List;

@@ -112,14 +112,12 @@
      */
     function datef (format, date) {
         var dt = (arguments.length === 2 && date) ? date instanceof Date ? date : new Date(date) : new Date(),
-            result = new String(format);
+            result = String(format);
 
         return result.replace(regexp, function (match) {
             return tokens[match](dt);
         });
-    };
-
-
+    }
     /**
      * Creates formatting function. Basically just curry over datef.
      * @return {Function} readied formatting function with one argument — date.

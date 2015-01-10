@@ -1,7 +1,5 @@
 package pro.tmedia.init;
 
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -12,7 +10,6 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import pro.tmedia.model.Employee;
 import pro.tmedia.service.UserService;
 
-import javax.sql.DataSource;
 import java.util.List;
 
 /**

@@ -2,7 +2,6 @@ package pro.tmedia.dao;
 
 import org.springframework.transaction.annotation.Transactional;
 import pro.tmedia.model.PartsInstalled;
-import pro.tmedia.model.Task;
 
 import java.util.List;
 

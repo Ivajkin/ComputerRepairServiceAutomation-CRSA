@@ -134,8 +134,8 @@
 				var dateArray = date[0].split("-");
 				var dateObj = new Date(dateArray[0],(dateArray[1]-1),dateArray[2]);
 
-				var weekday=new Array("Sunday","Monday","Tuesday","Wednesday","Thursday", "Friday","Saturday");
-    				var monthname=new Array("January","February","March","April","May","June","July","August", "September","October","November","December");
+				var weekday=["Sunday","Monday","Tuesday","Wednesday","Thursday", "Friday","Saturday"];
+    				var monthname=["January","February","March","April","May","June","July","August", "September","October","November","December"];
     				dateFormat += weekday[dateObj.getDay()] + ", ";
    		  		dateFormat += monthname[dateObj.getMonth()] + " ";
    		  		dateFormat += dateObj.getDate()  + ", ";
@@ -187,14 +187,14 @@
 						return $url = this.domainName+ "/repos/"+settings.username +"/"+ settings.repo +"/milestones";
 					}else{
 						return apiPath;
-					};
+					}
 				},
 				issues : function(){
 					if(!settings.phpApi){
 						return $url = this.domainName+"/repos/"+ settings.username +"/"+ settings.repo +"/issues";
 					}else{
 						return apiPath;
-					};
+					}
 				},
 				comments : function(options){
 					if(!settings.phpApi){

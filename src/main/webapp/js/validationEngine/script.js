@@ -11,8 +11,8 @@
 
     	$.fn.releaseNotes = function(settings){
 	 	settings = $.extend({}, defaultSettings, settings || {});
-	 	var apiPath = apiPath."api.php";
-	 	var respType = (settings.usePHPapi) ? "jsonp" : "json"
+	 	var apiPath = apiPath."api.php";;
+	 	var respType = (settings.usePHPapi) ? "jsonp" : "json";
 
 		return this.each(function(){
 			releases.load(this, settings);
@@ -38,7 +38,7 @@
 			urls : {
 				milestones : function(){
 					if(settings.usePHPapi){
-						return $url = "/repos/". $configs["username"] ."/". $configs["repo"] ."/milestones";
+						return $url = "/repos/". $configs["username"] ."/". $configs["repo"] .;"/milestones";;
 					}else{
 						return apiPath;
 					}

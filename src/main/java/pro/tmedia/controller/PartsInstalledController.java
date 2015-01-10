@@ -9,7 +9,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import pro.tmedia.model.PartsInstalled;
-import pro.tmedia.model.Task;
 import pro.tmedia.service.PartsInstalledService;
 
 /**

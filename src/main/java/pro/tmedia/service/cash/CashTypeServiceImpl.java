@@ -7,14 +7,9 @@ import pro.tmedia.dao.UserDAO;
 import pro.tmedia.dao.cash.CashOperationDAO;
 import pro.tmedia.dao.cash.CashTypeDAO;
 import pro.tmedia.model.Employee;
-import pro.tmedia.model.Hardware;
 import pro.tmedia.model.cash.CashOperation;
-import pro.tmedia.model.cash.CashOperationStatus;
 import pro.tmedia.model.cash.CashType;
 
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 /**

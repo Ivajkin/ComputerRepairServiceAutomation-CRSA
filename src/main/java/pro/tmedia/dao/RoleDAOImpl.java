@@ -2,7 +2,6 @@ package pro.tmedia.dao;
 
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
-import pro.tmedia.model.Employee;
 import pro.tmedia.model.Role;
 
 import java.util.List;

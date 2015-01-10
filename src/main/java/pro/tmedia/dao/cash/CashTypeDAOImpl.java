@@ -5,8 +5,6 @@ import org.springframework.transaction.annotation.Transactional;
 import pro.tmedia.dao.WithSessionFactory;
 import pro.tmedia.model.cash.CashType;
 
-import java.util.List;
-
 /**
  * User: Ivaykin Timofey
  * Date: 09.04.14

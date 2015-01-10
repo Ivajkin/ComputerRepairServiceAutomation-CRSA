@@ -5,7 +5,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import pro.tmedia.dao.PartsInstalledDAO;
 import pro.tmedia.model.PartsInstalled;
-import pro.tmedia.model.Task;
 
 import java.util.List;
 

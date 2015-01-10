@@ -5,9 +5,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.validation.Validator;
 import pro.tmedia.dao.HardwareDAO;
-import pro.tmedia.dao.RequestDAO;
 import pro.tmedia.model.Hardware;
-import pro.tmedia.model.Request;
 
 import java.util.List;
 

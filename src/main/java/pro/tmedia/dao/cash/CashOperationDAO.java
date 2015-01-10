@@ -1,9 +1,7 @@
 package pro.tmedia.dao.cash;
 
 import org.springframework.transaction.annotation.Transactional;
-import pro.tmedia.model.Request;
 import pro.tmedia.model.cash.CashOperation;
-import pro.tmedia.model.cash.CashType;
 
 import java.util.List;
 

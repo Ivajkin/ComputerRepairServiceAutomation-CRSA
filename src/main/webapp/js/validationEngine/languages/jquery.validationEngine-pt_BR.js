@@ -125,7 +125,7 @@
 
                         var expReg = /^0+$|^1+$|^2+$|^3+$|^4+$|^5+$|^6+$|^7+$|^8+$|^9+$/;
                         var a = cpf.split('');
-                        var b = new Number;
+                        var b = Number;
                         var c = 11;
                         b += (a[9] * --c);
                         if ((x = b % 11) < 2) { a[9] = 0 } else { a[9] = 11-x }

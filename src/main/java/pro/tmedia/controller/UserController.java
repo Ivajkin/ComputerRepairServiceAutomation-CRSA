@@ -8,9 +8,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import pro.tmedia.model.Employee;
-import pro.tmedia.model.Hardware;
-import pro.tmedia.model.Role;
-import pro.tmedia.service.HardwareService;
 import pro.tmedia.service.UserService;
 
 /**

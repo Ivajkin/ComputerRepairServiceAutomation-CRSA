@@ -1,7 +1,6 @@
 package pro.tmedia.service;
 
 import pro.tmedia.model.Appearance;
-import pro.tmedia.model.Source;
 
 import java.util.List;
 

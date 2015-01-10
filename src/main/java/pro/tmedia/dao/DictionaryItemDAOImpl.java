@@ -33,7 +33,7 @@ public abstract class DictionaryItemDAOImpl<T> implements DictionaryItemDAO<T> {
 
     @Override
     public void create(T dictionaryItem) {
-        T discipline = (T) dictionaryItem;
+        T discipline = dictionaryItem;
         getCurrentSession().save(discipline);
     }
 

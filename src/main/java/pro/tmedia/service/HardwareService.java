@@ -1,7 +1,6 @@
 package pro.tmedia.service;
 
 import pro.tmedia.model.Hardware;
-import pro.tmedia.model.Request;
 
 import java.util.List;
 

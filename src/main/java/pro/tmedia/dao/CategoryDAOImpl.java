@@ -3,7 +3,6 @@ package pro.tmedia.dao;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 import pro.tmedia.model.Category;
-import pro.tmedia.model.Fault;
 
 import java.util.List;
 

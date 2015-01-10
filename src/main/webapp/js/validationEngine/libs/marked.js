@@ -287,7 +287,7 @@ block.token = function(src, tokens, top) {
         type: 'text',
         text: cap[0]
       });
-      continue;
+
     }
   }
 
@@ -467,7 +467,7 @@ inline.lexer = function(src) {
     if (cap = inline.text.exec(src)) {
       src = src.substring(cap[0].length);
       out += escape(cap[0]);
-      continue;
+
     }
   }
 
