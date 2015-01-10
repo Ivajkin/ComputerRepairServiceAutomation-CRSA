@@ -339,6 +339,7 @@ function openRequests() {
                 data.form.find('input[name="model"]').addClass('validate[required,minSize[1],maxSize[100]] text-input');
                 data.form.find('input[name="serial_number"]').addClass('validate[required,minSize[1],maxSize[100]] text-input');
                 data.form.find('input[name="customer_name"]').addClass('validate[required,minSize[1],maxSize[500]] text-input');
+                data.form.find('input[name="slot_id"]').addClass('validate[required],custom[integer],min[1],max[60]');
                 data.form.validationEngine();
 
                 onOpenEditDialog();
