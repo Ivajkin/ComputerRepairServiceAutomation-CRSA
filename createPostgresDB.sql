@@ -383,6 +383,21 @@ INSERT INTO cash_operation_status (id, name) VALUES
 (1, 'Приход'),
 (2, 'Расход');
 
+-- Юридические лица - customers
+-- id
+-- name
+-- phone
+-- note
+
+create table if not exists customer (
+  id BIGSERIAL not null unique primary key,
+  name varchar(100) not null unique,
+  note varchar(300)
+);
+
+INSERT INTO customer (id, name, note) VALUES
+(1, 'ООО «Восточный ветер»', 'Сфера строительства и ремонта'),
+(2, 'ИП Корнечук К.Л.', 'Компания в сфере сбыта продуктов питания');
 
 --	Кассовая операция - cash_operation
 --		Код кассы	- id
