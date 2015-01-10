@@ -8,6 +8,7 @@ import pro.tmedia.dao.RequestDAO;
 import pro.tmedia.init.ServiceLayerException;
 import pro.tmedia.model.Request;
 
+import javax.annotation.PostConstruct;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -63,6 +64,8 @@ public class RequestsServiceImpl implements RequestsService {
             request.setRequest_status_id(1);
         }
 
+        fillSlot(request.getSlot_id());
+
         requestDAO.create(request);
     }
 
@@ -81,7 +84,49 @@ public class RequestsServiceImpl implements RequestsService {
             java.sql.Date date = new java.sql.Date(today.getTime());
 
             request.setDate_of_issue(date);
+
+            Request old_request = requestDAO.get(request.getReq_num_id());
+            int old_slot_id = old_request.getSlot_id();
+            if(old_slot_id != request.getSlot_id()) {
+                emptySlot(old_slot_id);
+                fillSlot(request.getSlot_id());
+            }
             requestDAO.update(request);
         }
+    }
+
+    @Override
+    public int getEmptySlotId() throws Exception {
+        int random_slot_id = (int) Math.round(Math.random() * 1000) % 60 + 1;
+        for(int i = 0; i < 60; ++i) {
+            if(isSlotEmpty((random_slot_id+i)%60+1)) {
+                return random_slot_id;
+            }
+        }
+        throw new Exception("Нет свободных слотов");
+    }
+
+    // Пустые и занятые слоты: инициализируем при запуске из базы, затем дозаполняем по мере изменения слотов (добавление, изменение, удаление)
+    private boolean[] is_slot_empty = new boolean[60];
+
+    @PostConstruct
+    private void initSlots() {
+        // Загружаем данные о заявках из базы, заполняем все пустые ячейки true, заполененные false
+        for (int i = 0; i < is_slot_empty.length; i++) {
+            emptySlot(i);
+        }
+        List<Request> requests = requestDAO.list();
+        for (int i = 0; i < requests.size(); i++) {
+            fillSlot(requests.get(i).getSlot_id());
+        }
+    }
+    private void fillSlot(int slot_id) {
+        is_slot_empty[slot_id] = false;
+    }
+    private void emptySlot(int slot_id) {
+        is_slot_empty[slot_id] = true;
+    }
+    private boolean isSlotEmpty(int slot_id) {
+        return is_slot_empty[slot_id];
     }
 }

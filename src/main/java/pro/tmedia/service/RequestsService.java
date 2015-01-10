@@ -13,4 +13,6 @@ public interface RequestsService {
     public void create(Request request) throws Exception;
     public void delete(int id) throws Exception;
     public void update(Request request);
+
+    public int getEmptySlotId() throws Exception;
 }

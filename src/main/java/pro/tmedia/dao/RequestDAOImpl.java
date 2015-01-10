@@ -45,4 +45,9 @@ public class RequestDAOImpl implements RequestDAO {
     public void update(Request request) {
         getCurrentSession().update(request);
     }
+
+    @Override
+    public Request get(Integer req_num_id) {
+        return (Request) getCurrentSession().get(Request.class, req_num_id);
+    }
 }

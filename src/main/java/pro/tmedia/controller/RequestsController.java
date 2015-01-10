@@ -128,8 +128,8 @@ public class RequestsController {
 
     @RequestMapping(value = "/empty_slot_id", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
-    public int emptySlotId() {
-        return (int)Math.round(Math.random()*1000)%60+1;
+    public int emptySlotId() throws Exception {
+        return requestsService.getEmptySlotId();
     }
 
 }

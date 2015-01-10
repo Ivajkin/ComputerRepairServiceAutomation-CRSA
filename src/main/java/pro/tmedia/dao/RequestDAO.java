@@ -15,4 +15,6 @@ public interface RequestDAO {
     public void create(Request request);
     public void delete(int id) throws Exception;
     public void update(Request request);
+
+    Request get(Integer req_num_id);
 }

@@ -78,8 +78,9 @@ create table if not exists manufacturer (
   name varchar(100) not null unique
 );
 
-INSERT INTO manufacturer (id, name) VALUES
-(1, 'ASUS');
+INSERT INTO manufacturer (id, name) VALUES (1, 'Aser');
+INSERT INTO manufacturer (id, name) VALUES (2, 'ASUS');
+INSERT INTO manufacturer (id, name) VALUES (3, 'Intel');
 
 
 --
@@ -104,8 +105,9 @@ create table if not exists appearance (
   name varchar(100) not null unique
 );
 
-INSERT INTO appearance (id, name) VALUES
-(1, 'В отличном состоянии');
+INSERT INTO appearance (id, name) VALUES (1, 'Потертости без ЗУ');
+INSERT INTO appearance (id, name) VALUES (2, 'Царапины');
+INSERT INTO appearance (id, name) VALUES (3, 'Разбит экран');
 
 --
 --	Комплектность -> completeness
@@ -128,8 +130,11 @@ create table if not exists source (
   name varchar(100) not null unique
 );
 
-INSERT INTO source (id, name) VALUES
-(1, 'Заявка клиента');
+INSERT INTO source (id, name) VALUES (1, 'Google');
+INSERT INTO source (id, name) VALUES (2, 'Яндекс');
+INSERT INTO source (id, name) VALUES (3, '2gis');
+INSERT INTO source (id, name) VALUES (4, 'клиент');
+INSERT INTO source (id, name) VALUES (5, 'Деловой Хабаровск');
 
 --
 --	Тип выполненной работы -> task_type
