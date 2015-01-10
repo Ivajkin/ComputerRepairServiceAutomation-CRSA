@@ -47,6 +47,12 @@ function onOpenEditDialog() {
         .css('width', '400px');
     toggleDoneState();
     $('#Edit-request_status_id').change(toggleDoneState);
+
+    $.get('requests/empty_slot_id', function(data) {
+        var empty_slot_id = data;
+        assert(empty_slot_id >= 1 && empty_slot_id <= 60, "Ожидаемое значение номера ячеек должно находиться в диапазоне от 1 до 60");
+        $('#Edit-slot_id').val(empty_slot_id);
+    });
 }
 /*$('.jtable-toolbar-item-add-record').click(onOpenEditDialog);
  $('.jtable-data-row').click(onOpenEditDialog);*/
