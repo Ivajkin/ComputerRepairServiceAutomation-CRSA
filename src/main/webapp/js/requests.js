@@ -148,7 +148,8 @@ function openRequests() {
                 },
                 amount: {
                     title: 'Сумма в рублях',
-                    width: '5%'
+                    width: '5%',
+                    create: false
                 },
                 appearance_id: {
                     title: 'Внешний вид',
@@ -207,11 +208,17 @@ function openRequests() {
                 },
                 delivery: {
                     title: 'Доставка' /* checkbox */,
-                    list: false
+                    list: false,
+                    type: 'checkbox',
+                    values: { 'false': false, 'true': true },
+                    defaultValue: 'false'
                 },
                 print_accept_talon: {
                     title: 'Печать талона приёма' /* checkbox */,
-                    list: false
+                    list: false,
+                    type: 'checkbox',
+                    values: { 'false': false, 'true': true },
+                    defaultValue: 'true'
                 },
                 completed_works: {
                     title: '',
@@ -313,12 +320,8 @@ function openRequests() {
 				method_of_payment: {
                      title: 'Метод оплаты',
 					 options: '/payment/list',
-                     list: false
-                },
-                parts_installed_id: {
-                    title: 'Установленные запчасти',
-                    options: '/hardware/options',
-                    list: false
+                     list: false,
+                    create: false
                 }
             },
 
