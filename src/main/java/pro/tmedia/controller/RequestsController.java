@@ -14,7 +14,9 @@ import org.springframework.web.bind.annotation.*;
 import pro.tmedia.model.Request;
 import pro.tmedia.service.RequestsService;
 
+import java.beans.PropertyEditorSupport;
 import java.sql.Date;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 
 /**
@@ -36,10 +38,17 @@ public class RequestsController {
     final Logger logger = LoggerFactory.getLogger(RequestsController.class);
 
     @InitBinder
-    public void initBinder(WebDataBinder binder) {
-        SimpleDateFormat dateFormat = new SimpleDateFormat("dd.MM.yyyy");
-        dateFormat.setLenient(false);
-        binder.registerCustomEditor(Date.class, new CustomDateEditor(dateFormat, false));
+    public void binder(WebDataBinder binder) {binder.registerCustomEditor(java.sql.Date.class,
+            new PropertyEditorSupport() {
+                public void setAsText(String value) {
+                    try {
+                        java.sql.Date parsedDate = new java.sql.Date(new SimpleDateFormat("dd.MM.yyyy").parse(value).getTime());
+                        setValue(new Date(parsedDate.getTime()));
+                    } catch (ParseException e) {
+                        setValue(null);
+                    }
+                }
+            });
     }
 
     @RequestMapping(value = "/list", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
