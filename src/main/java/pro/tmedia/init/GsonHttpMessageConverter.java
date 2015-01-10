@@ -37,7 +37,7 @@ public class GsonHttpMessageConverter extends AbstractHttpMessageConverter<Objec
      * Construct a new {@code GsonHttpMessageConverter} with a default {@link Gson#Gson() Gson}.
      */
     public GsonHttpMessageConverter() {
-        this(new Gson());
+        this(new GsonBuilder().setDateFormat("dd.MM.yyyy").create());
     }
 
     /**

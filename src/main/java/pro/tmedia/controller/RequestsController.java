@@ -1,15 +1,21 @@
 package pro.tmedia.controller;
 
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.propertyeditors.CustomDateEditor;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.*;
 import pro.tmedia.model.Request;
 import pro.tmedia.service.RequestsService;
+
+import java.sql.Date;
+import java.text.SimpleDateFormat;
 
 /**
  * User: Ivaykin Timofey
@@ -21,12 +27,20 @@ import pro.tmedia.service.RequestsService;
 @RequestMapping("/requests")
 public class RequestsController {
 
-    static Gson gson = new Gson();
+    static Gson gson = new GsonBuilder()
+            .setDateFormat("dd.MM.yyyy").create();
 
     @Autowired
     RequestsService requestsService;
 
     final Logger logger = LoggerFactory.getLogger(RequestsController.class);
+
+    @InitBinder
+    public void initBinder(WebDataBinder binder) {
+        SimpleDateFormat dateFormat = new SimpleDateFormat("dd.MM.yyyy");
+        dateFormat.setLenient(false);
+        binder.registerCustomEditor(Date.class, new CustomDateEditor(dateFormat, false));
+    }
 
     @RequestMapping(value = "/list", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
@@ -56,7 +70,7 @@ public class RequestsController {
         } else {
             try {
 
-                logger.info("Creating: ".concat(gson.toJson(request)));
+                logger.info("Creating: ".concat(request.toString()));
                 requestsService.create(request);
                 response = new jTableResponse<>(request);
             } catch (Exception e) {

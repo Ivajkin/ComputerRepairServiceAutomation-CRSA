@@ -68,7 +68,7 @@ function openRequests() {
             pageSize: 15000,
             sorting: false,
             defaultSorting: 'date_of_issue ASC',
-            //defaultDateFormat: 'dd.mm.yy',
+            defaultDateFormat: 'dd.mm.yy',
             actions: {
                 listAction: '/requests/list',
                 createAction: '/requests/create',
@@ -135,7 +135,7 @@ function openRequests() {
                 },
                 date_of_receipt: {
                     title: 'Дата получения',
-                    defaultValue: datef('YYYY-MM-dd'),
+                    defaultValue: datef('dd.MM.YYYY'),
                     width: '10%',
                     type: 'date'
                 },
@@ -178,7 +178,7 @@ function openRequests() {
                     title: 'Дата звонка',
                     width: '10%',
                     type: 'date',
-                    defaultValue: datef('YYYY-MM-dd'),
+                    defaultValue: datef('dd.MM.YYYY'),
                     list: false
                 },
                 note: {
