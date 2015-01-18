@@ -49,7 +49,7 @@ public class RequestsModuleTests {
     }
 
     /*
-    Заявки доделать:
+    Заявки:
         Поля формы заявки:
             Добавить в базу и в поля на клиенте номер ячейки:
 
@@ -83,6 +83,15 @@ public class RequestsModuleTests {
         int slot_id = Integer.parseInt(slot_id_text);
         Assert.assertTrue("slot_id is out of range: " + slot_id, 21 <= slot_id && slot_id <= 60);
     }
+
+    /*
+    Заявки:
+        Поля формы заявки:
+            Сделать выбор клиента: частное лицо / юр лица:
+                Таблицу заявки расширить полем Клиент (из юр лиц+часное лицо)
+                    Таблица юр лиц для вариантов клиентов (кроме частных лиц)
+
+     */
 
     @Test
     public void shouldEnterRequestsModule() {
