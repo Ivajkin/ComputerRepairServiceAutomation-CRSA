@@ -23,6 +23,7 @@ import java.util.List;
 @Transactional
 public class RequestsServiceImpl implements RequestsService {
 
+    public static final int MAX_SLOT_ID = 60;
     @Autowired
     private Validator validator;
 
@@ -78,9 +79,7 @@ public class RequestsServiceImpl implements RequestsService {
     public void update(Request request) {
         if(request.getRequest_status_id() == 3 /* статус Выдан/выполнен */) {
 
-            DateFormat df = new SimpleDateFormat("Y-MM-DD");
             Date today = Calendar.getInstance().getTime();
-            //String todayFormatted = df.format(today);
             java.sql.Date date = new java.sql.Date(today.getTime());
 
             request.setDate_of_issue(date);
@@ -95,19 +94,27 @@ public class RequestsServiceImpl implements RequestsService {
         }
     }
 
+    // Для ремонтируемого оборудования номера ячеек должны лежать в диапазоне от 21 до 60
     @Override
     public int getEmptySlotId() throws Exception {
-        int random_slot_id = (int) Math.round(Math.random() * 1000) % 60 + 1;
-        for(int i = 0; i < 60; ++i) {
-            if(isSlotEmpty((random_slot_id+i)%60+1)) {
+        int random_slot_id = (int) Math.round(Math.random() * 1000) % MAX_SLOT_ID + 1;
+        random_slot_id = placeInRange(random_slot_id, 21, MAX_SLOT_ID);
+        for(int i = 0; i < MAX_SLOT_ID; ++i) {
+            if(isSlotEmpty( placeInRange((random_slot_id+i)% MAX_SLOT_ID +1, 21, MAX_SLOT_ID))) {
                 return random_slot_id;
             }
         }
         throw new Exception("Нет свободных слотов");
     }
+    // Для преобразования любого неотрицательного целого числа на лежащее в диапазоне от start до end
+    private int placeInRange(int value, int start, int end) {
+        if(start > end)
+            throw new IllegalArgumentException();
+        return value%(end-start+1)+start;
+    }
 
     // Пустые и занятые слоты: инициализируем при запуске из базы, затем дозаполняем по мере изменения слотов (добавление, изменение, удаление)
-    private boolean[] is_slot_empty = new boolean[60];
+    private boolean[] is_slot_empty = new boolean[MAX_SLOT_ID];
 
     @PostConstruct
     private void initSlots() {
@@ -116,8 +123,8 @@ public class RequestsServiceImpl implements RequestsService {
             emptySlot(i);
         }
         List<Request> requests = requestDAO.list();
-        for (int i = 0; i < requests.size(); i++) {
-            fillSlot(requests.get(i).getSlot_id());
+        for (Request request : requests) {
+            fillSlot(request.getSlot_id());
         }
     }
     private void fillSlot(int slot_id) {

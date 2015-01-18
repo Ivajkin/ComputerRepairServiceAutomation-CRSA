@@ -1,4 +1,4 @@
-package pro.tmedia.test;
+package pro.tmedia;
 
 /**
  * User: Ivaykin Timofey
