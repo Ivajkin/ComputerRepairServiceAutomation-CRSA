@@ -6,7 +6,7 @@ Computer Repair Service Automation - CRSA
 
 IDE: IntelliJ IDEA
 
-JavaEE + Spring MVC + Hibernate
+JavaEE + (Spring MVC --> JAX) + Hibernate
 
 jQuery, AngularJS
 
