@@ -65,6 +65,7 @@ public class RequestsModuleTests {
         // Нажимаем кнопку "Добавить"
         waitToShow(By.xpath("//*[contains(text(), 'Добавить')]"));
         driver.findElement(By.xpath("//*[contains(text(), 'Добавить')]")).click();
+
         // Проверяем, открывается ли окошко class="ui-dialog-title" "Добавить"
         //waitToShow(By.cssSelector(".ui-dialog-title[display=\"block\"]"));
         //assert driver.findElement(By.className("ui-dialog-title:visible")).getText().equals("Добавить");
@@ -129,4 +130,73 @@ public class RequestsModuleTests {
         // Элемент так и не появился за отведенное время
         assert false;
     }
+
+
+
+    public void shouldOpenSettings() {
+        // Авторизуемся
+        enterRequestsModule();
+        // Заходим в настройки
+        waitToShow(By.cssSelector("#settingsButton"));
+        driver.findElement(By.cssSelector("#settingsButton")).click();
+    }
+    @Test
+    public void shouldWorkAppearanceTableInSettings() {
+
+        // Заходим в настройки
+        shouldOpenSettings();
+        // Проверяем есть ли табличка "Внешний вид"
+        waitToShow(By.xpath("//*[contains(text(), 'Внешний вид')]"));
+
+        // Нажимаем добавить, вводим случайную последовательность из 8-ти русских букв
+        waitToShow(By.cssSelector("#appearancesTableContainer .jtable-title .jtable-toolbar .jtable-toolbar-item-add-record"));
+        driver.findElement(By.cssSelector("#appearancesTableContainer .jtable-title .jtable-toolbar .jtable-toolbar-item-add-record")).click();
+        String str = "абвгдеёжхцчшя";
+        waitToShow(By.cssSelector("#Edit-name"));
+        driver.findElement(By.cssSelector("#Edit-name")).sendKeys(str);
+
+
+        // Нажимаем кнопку "Сохранить"
+        JavascriptExecutor jse = (JavascriptExecutor)driver;
+        jse.executeScript("window.scrollBy(0,250)", "");
+
+        By by = By.xpath("(//button[@id='AddRecordDialogSaveButton'])[6]");
+        waitToShow(by);
+        driver.findElement(by).click();
+
+
+        // Проверяем, появился ли рядок с новой надписью
+
+
+
+        // Нажимаем кнопку изменить этого рядка
+       /* by =  By.xpath("//div[@id='appearancesTableContainer']/div/table/tbody/tr[4]/td[2]/button");
+        waitToShow(by);
+        driver.findElement(by).click();   */
+
+
+        // Вводим другую случайную последовательность из 8-ти русских букв
+        /*by =  By.cssSelector("#Edit-name");
+        waitToShow(by);
+        driver.findElement(by).clear();
+        driver.findElement(by).sendKeys("яждваввыва"); */
+
+        // Нажимаем опять сохранить
+       /* by = By.xpath("(//button[@id='EditDialogSaveButton'])[6]");
+        waitToShow(by);
+        driver.findElement(by).click();  */
+
+        // Проверяем, изменился ли рядок
+        // Нажимаем удалить этот рядок
+        /*by = By.cssSelector("tr.jtable-data-row.jtable-row-updated > td.jtable-command-column > button.jtable-command-button.jtable-delete-command-button");
+        waitToShow(by);
+        driver.findElement(by).click();
+
+        by = By.xpath("(//button[@id='DeleteDialogButton'])[5]");
+        waitToShow(by);
+        driver.findElement(by).click();    */
+
+        // Проверяем отсутствие колонки
+    }
+
 }

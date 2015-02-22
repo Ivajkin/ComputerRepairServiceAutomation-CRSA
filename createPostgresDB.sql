@@ -1,5 +1,7 @@
 --	Приложение к техническому заданию №2. Таблицы БД.
 
+drop schema public cascade;
+create schema public;
 
 --	Категории -> Category -> category
 --		Код категории	-> category code -> id
@@ -11,9 +13,9 @@ CREATE TABLE if not exists category (
   name varchar(100) not null unique
 );
 
-INSERT INTO category (id, name) VALUES
-  (1, 'Видеокарты'),
-  (2, 'Мониторы');
+INSERT INTO category (name) VALUES
+  ('Видеокарты'),
+  ('Мониторы');
 
 --
 --	Таблица оборудования -> Hardware -> hardware
@@ -38,8 +40,20 @@ create table if not exists hardware (
   foreign key (category_id) references category(id) ON UPDATE CASCADE
 );
 
-INSERT INTO hardware (id, name, description, category_id) VALUES
-(1, 'NVIDIA GTX 520', 'Жизнь стремительна, таким должен быть и твой ПК. Мощь позволит тебе ускорить редактирование фотографий и HD видео.', 1);
+INSERT INTO hardware (name, description, category_id) VALUES
+('NVIDIA GTX 520', 'Жизнь стремительна, таким должен быть и твой ПК. Мощь позволит тебе ускорить редактирование фотографий и HD видео.', 1);
+
+--	Поставщик -> provider
+--		Код поставщика -> id
+--		Наименование поставщика -> name
+create table if not exists provider (
+  id BIGSERIAL not null unique primary key,
+  name varchar(256) not null unique
+);
+
+INSERT INTO provider (name) VALUES
+('ООО "Технопоинт"'),
+('ЗАО "Бизнес-Фабрика"');
 
 --	Склад -> Warehouse item -> warehouse_item
 --		x Номер накладной     -> Invoice number -> invoice_number : string, unique
@@ -65,8 +79,8 @@ create table if not exists warehouse_item (
 
 );
 
-INSERT INTO warehouse_item (invoice_number, hardware_id, item_count, warranty) VALUES
-('es0215', 1, 15, '5 лет, с 30 мая 2012');
+INSERT INTO warehouse_item (invoice_number, hardware_id, item_count, warranty, provider_id) VALUES
+('es0215', 1, 15, '5 лет, с 30 мая 2012', (select id from provider limit 1));
 
 
 --
@@ -78,9 +92,9 @@ create table if not exists manufacturer (
   name varchar(100) not null unique
 );
 
-INSERT INTO manufacturer (id, name) VALUES (1, 'Aser');
-INSERT INTO manufacturer (id, name) VALUES (2, 'ASUS');
-INSERT INTO manufacturer (id, name) VALUES (3, 'Intel');
+INSERT INTO manufacturer (name) VALUES ('Aser');
+INSERT INTO manufacturer (name) VALUES ('ASUS');
+INSERT INTO manufacturer (name) VALUES ('Intel');
 
 
 --
@@ -92,8 +106,8 @@ create table if not exists fault (
   name varchar(200) not null unique
 );
 
-INSERT INTO fault (id, name) VALUES
-(1, 'Разрыв шлейфов');
+INSERT INTO fault (name) VALUES
+('Разрыв шлейфов');
 
 
 --
@@ -105,9 +119,9 @@ create table if not exists appearance (
   name varchar(100) not null unique
 );
 
-INSERT INTO appearance (id, name) VALUES (1, 'Потертости без ЗУ');
-INSERT INTO appearance (id, name) VALUES (2, 'Царапины');
-INSERT INTO appearance (id, name) VALUES (3, 'Разбит экран');
+INSERT INTO appearance (name) VALUES ('Потертости без ЗУ');
+INSERT INTO appearance (name) VALUES ('Царапины');
+INSERT INTO appearance (name) VALUES ('Разбит экран');
 
 --
 --	Комплектность -> completeness
@@ -118,8 +132,8 @@ create table if not exists completeness (
   name varchar(100) not null unique
 );
 
-INSERT INTO completeness (id, name) VALUES
-(1, 'Полная комплектность');
+INSERT INTO completeness (name) VALUES
+('Полная комплектность');
 
 --
 --	Источник -> source
@@ -130,11 +144,11 @@ create table if not exists source (
   name varchar(100) not null unique
 );
 
-INSERT INTO source (id, name) VALUES (1, 'Google');
-INSERT INTO source (id, name) VALUES (2, 'Яндекс');
-INSERT INTO source (id, name) VALUES (3, '2gis');
-INSERT INTO source (id, name) VALUES (4, 'клиент');
-INSERT INTO source (id, name) VALUES (5, 'Деловой Хабаровск');
+INSERT INTO source (name) VALUES ('Google');
+INSERT INTO source (name) VALUES ('Яндекс');
+INSERT INTO source (name) VALUES ('2gis');
+INSERT INTO source (name) VALUES ('клиент');
+INSERT INTO source (name) VALUES ('Деловой Хабаровск');
 
 --
 --	Тип выполненной работы -> task_type
@@ -145,8 +159,8 @@ create table if not exists task_type (
   name varchar(100) not null unique
 );
 
-INSERT INTO task_type (id, name) VALUES
-(1, 'Замена шлейфа');
+INSERT INTO task_type (name) VALUES
+('Замена шлейфа');
 
 
 --
@@ -158,10 +172,10 @@ create table if not exists request_status (
   name varchar(100) not null unique
 );
 
-INSERT INTO request_status (id, name) VALUES
-(1, 'Принят'),
-(2, 'Готов'),
-(3, 'Выдан/Выполнен');
+INSERT INTO request_status (name) VALUES
+('Принят'),
+('Готов'),
+('Выдан/Выполнен');
 
 --
 --	Роль сотрудника в системе -> role
@@ -172,9 +186,9 @@ create table if not exists role (
   name varchar(100) not null unique
 );
 
-INSERT INTO role (id, name) VALUES
-(1, 'Администратор'),
-(2, 'Приемщик');
+INSERT INTO role (name) VALUES
+('Администратор'),
+('Приемщик');
 
 
 --	Сотрудники -> employee
@@ -197,10 +211,10 @@ create table if not exists employee (
 
 -- login: milkshake32 pass: milkshake32
 -- login: avangebit pass: 123456
-INSERT INTO employee (id, name, email, login, password_hash, fee, role_id) VALUES (1, 'Иванов Иван Гольцман', 'i.golz@mail.ru', 'milkshake32', 'milk', 10, 2);
-INSERT INTO employee (id, name, email, login, password_hash, fee, role_id) VALUES (2, 'Алексей Верещагин', 'avangebit@gmail.com', 'avangebit', '12345678', 10, 1);
-INSERT INTO employee (id, name, email, login, password_hash, fee, role_id) VALUES (3, 'Доримова Екатерина Олеговна', 'dorimova@mail.ru', 'dorimova123', 'dorimova', 35, 2);
-INSERT INTO employee (id, name, email, login, password_hash, fee, role_id) VALUES (4, 'Techno Media Ltd', 'info@tmedia.pro', 'admin', '12345678', 0, 1);
+INSERT INTO employee (name, email, login, password_hash, fee, role_id) VALUES ('Иванов Иван Гольцман', 'i.golz@mail.ru', 'milkshake32', 'milk', 10, 2);
+INSERT INTO employee (name, email, login, password_hash, fee, role_id) VALUES ('Алексей Верещагин', 'avangebit@gmail.com', 'avangebit', '12345678', 10, 1);
+INSERT INTO employee (name, email, login, password_hash, fee, role_id) VALUES ('Доримова Екатерина Олеговна', 'dorimova@mail.ru', 'dorimova123', 'dorimova', 35, 2);
+INSERT INTO employee (name, email, login, password_hash, fee, role_id) VALUES ('Techno Media Ltd', 'info@tmedia.pro', 'admin', '12345678', 0, 1);
 
 
 
@@ -286,7 +300,7 @@ create table if not exists task (
 );
 
 INSERT INTO task (engineer_id, price, task_type_id, request_id) VALUES
-(1, 100, 1, 1);
+((select id from employee limit 1), 100, (select id from task_type limit 1), (select req_num_id from request limit 1));
 
 
 --
@@ -305,7 +319,7 @@ create table if not exists task (
 );
 
 INSERT INTO task (engineer_id, price, task_type_id, request_id) VALUES
-(1, 100, 1, 1);
+((select id from employee limit 1), 100, (select id from task_type limit 1), (select req_num_id from request limit 1));
 
 -- Установленные запчасти -> parts_installed
 --		Код установленной запчасти
@@ -322,20 +336,8 @@ create table if not exists parts_installed (
 );
 
 INSERT INTO parts_installed (hardware_id, price, count, request_id) VALUES
-(1, 100, 2, 1);
+((select id from hardware limit 1), 100, 2, (select req_num_id from request limit 1));
 
-
---	Поставщик -> provider
---		Код поставщика -> id
---		Наименование поставщика -> name
-create table if not exists provider (
-  id BIGSERIAL not null unique primary key,
-  name varchar(256) not null unique
-);
-
-INSERT INTO provider (id, name) VALUES
-(1, 'ООО "Технопоинт"'),
-(2, 'ЗАО "Бизнес-Фабрика"');
 
 
 -- ------------------------------------------------------------------
@@ -377,10 +379,10 @@ create table if not exists cash_type (
   saldo int not null
 );
 
-INSERT INTO cash_type (id, name, saldo) VALUES
-(1, 'Наличные', 1000),
-(2, 'Карта', 0),
-(3, 'Безналичные', 0);
+INSERT INTO cash_type (name, saldo) VALUES
+('Наличные', 1000),
+('Карта', 0),
+('Безналичные', 0);
 
 
 -- Код статуса кассовой операции - cash_operation_status
@@ -391,9 +393,9 @@ create table if not exists cash_operation_status (
   name varchar(100) not null unique
 );
 
-INSERT INTO cash_operation_status (id, name) VALUES
-(1, 'Приход'),
-(2, 'Расход');
+INSERT INTO cash_operation_status (name) VALUES
+('Приход'),
+('Расход');
 
 -- Юридические лица - customers
 -- id
@@ -408,12 +410,12 @@ create table if not exists customer (
   note varchar(300)
 );
 
-INSERT INTO customer (id, name, phone, note)
-  VALUES (1, 'Частное лицо', '', '');
-INSERT INTO customer (id, name, phone, note)
-  VALUES (2, 'ООО «Восточный ветер»', '+7-984-123-45-23', 'Сфера строительства и ремонта');
-INSERT INTO customer (id, name, phone, note)
-  VALUES (3, 'ИП Корнечук К.Л.', '43-23-54', 'Компания в сфере сбыта продуктов питания');
+INSERT INTO customer (name, phone, note)
+  VALUES ('Частное лицо', '', '');
+INSERT INTO customer (name, phone, note)
+  VALUES ('ООО «Восточный ветер»', '+7-984-123-45-23', 'Сфера строительства и ремонта');
+INSERT INTO customer (name, phone, note)
+  VALUES ('ИП Корнечук К.Л.', '43-23-54', 'Компания в сфере сбыта продуктов питания');
 
 --	Кассовая операция - cash_operation
 --		Код кассы	- id
@@ -441,17 +443,18 @@ create table if not exists cash_operation (
 );
 
 INSERT INTO cash_operation (
-					id,
-					amount,
-					product_id,
-					employee_id,
-					description,
-					cash_operation_status_id,
-					operation_date,
-					saldo,
-					cash_type_id
+  amount,
+  product_id,
+  employee_id,
+  description,
+  cash_operation_status_id,
+  operation_date,
+  saldo,
+  cash_type_id
 ) VALUES
-(1, 1000, 1, 1, 'Приход в кассу по безналичному', 1, '2011-01-01', 1000, 1);
+(1000, (select id from hardware limit 1), (select id from employee limit 1), 'Приход в кассу по безналичному', (select id from cash_operation_status limit 1), '2011-01-01', 1000, (select id from cash_type limit 1));
+
+
 
 --		
 --	Справочники юридических лиц

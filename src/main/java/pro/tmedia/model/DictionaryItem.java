@@ -1,8 +1,6 @@
 package pro.tmedia.model;
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.MappedSuperclass;
+import javax.persistence.*;
 
 /**
  * User: Ivaykin Timofey
@@ -11,7 +9,8 @@ import javax.persistence.MappedSuperclass;
 @MappedSuperclass
 public class DictionaryItem {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator="appearance_id_seq")
+    @SequenceGenerator(name="appearance_id_seq", sequenceName="appearance_id_seq", allocationSize=1)
     private Integer id;
     private String name;
     public Integer getId() {

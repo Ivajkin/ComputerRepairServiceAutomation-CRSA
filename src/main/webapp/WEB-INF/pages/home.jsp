@@ -138,7 +138,7 @@
         <div id="employeeTableContainer"></div>
         <div id="sourcesTableContainer"></div>
         <div id="appearancesTableContainer"></div>
-        <div id="completenessTableContainer"></div>
+        <!--<div id="completenessTableContainer"></div>    -->
 
         <div id="currentUserProfile">
             <form>
