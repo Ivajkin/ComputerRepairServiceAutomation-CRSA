@@ -85,6 +85,15 @@ current_user = {
     }
 };
 
+function hideAllModuleContainers() {
+
+    $('#requestsTableContainer').hide();
+    $('#settingsContainer').hide();
+    $('#warehouseTableContainer').hide();
+    $('#reportsModuleContainer').hide();
+    $('#cashModuleContainer').hide();
+}
+
  $(document).ready(function() {
      $('.blur-lock').hide();
      $('#lock').click(function() {$('body').toggleClass('blurred-locked-body'); $('.blur-lock').fadeIn();});

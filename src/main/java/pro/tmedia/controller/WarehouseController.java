@@ -54,7 +54,7 @@ public class WarehouseController {
     public jTableResponse<WarehouseItem> createWarehouseItem(@ModelAttribute WarehouseItem  warehouseItem, BindingResult result) {
         jTableResponse<WarehouseItem> response;
         if (result.hasErrors()) {
-            response = new jTableResponse<>("Form invalid while create: " + getBindingErrorMessages(result));
+            response = new jTableResponse<>("Form invalid while create: " + jTableResponse.getBindingErrorMessages(result));
         } else {
             try {
 
@@ -77,7 +77,7 @@ public class WarehouseController {
     public jTableResponse<WarehouseItem> updateWarehouseItem(@ModelAttribute WarehouseItem  warehouseItem, BindingResult result) {
         jTableResponse<WarehouseItem> response;
         if (result.hasErrors()) {
-            response = new jTableResponse<>("Form invalid while update: " + getBindingErrorMessages(result));
+            response = new jTableResponse<>("Form invalid while update: " + jTableResponse.getBindingErrorMessages(result));
         } else {
             try {
                 warehouseService.update(warehouseItem);
@@ -102,14 +102,5 @@ public class WarehouseController {
                 logger.error(e.getMessage());
             }
         return response;
-    }
-
-    private String getBindingErrorMessages(BindingResult bindingResult) {
-        String errorMessage = "";
-        List<FieldError> errors = bindingResult.getFieldErrors();
-        for (FieldError error : errors ) {
-            errorMessage += error.getObjectName() + " - " + error.getDefaultMessage() + "\n<br/>";
-        }
-        return errorMessage;
     }
 }

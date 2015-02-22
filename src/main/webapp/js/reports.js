@@ -5,10 +5,8 @@
 
 
 function openReportsModule() {
-    $('#requestsTableContainer').hide();
-    $('#settingsContainer').hide();
-    $('#warehouseTableContainer').hide();
-    $('#cashModuleContainer').hide();
+
+    hideAllModuleContainers();
 
     $('#reportsModuleContainer').show();
 

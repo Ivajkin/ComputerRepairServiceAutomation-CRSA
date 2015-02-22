@@ -18,10 +18,7 @@ function openCashModule() {
     updateAmounts();
 
 
-    $('#requestsTableContainer').hide();
-    $('#settingsContainer').hide();
-    $('#warehouseTableContainer').hide();
-    $('#reportsModuleContainer').hide();
+    hideAllModuleContainers();
 
     $('#cashModuleContainer').show();
 
