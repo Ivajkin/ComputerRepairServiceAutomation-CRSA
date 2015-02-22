@@ -26,7 +26,7 @@ public class RequestsModuleTests {
 
     private static boolean isSupportedPlatform() {
         Platform current = Platform.getCurrent();
-        return Platform.MAC.is(current) || Platform.WINDOWS.is(current);
+        return Platform.MAC.is(current) || Platform.WINDOWS.is(current) || Platform.VISTA.is(current);
     }
 
     @Before

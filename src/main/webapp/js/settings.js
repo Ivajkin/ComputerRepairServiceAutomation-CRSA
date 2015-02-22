@@ -83,6 +83,56 @@ function loadExtendedDictionary(id, name, path) {
             name: {
                 title: 'Наименование',
                 width: '5%'
+            }
+        },
+        //Initialize validation logic when a form is created
+        formCreated: function (event, data) {
+            // TODO: Добавить валидайию для всех полей
+            data.form.find('input[name="name"]').addClass('validate[required]');
+            data.form.validationEngine();
+        },
+        //Validate form when it is being submitted
+        formSubmitting: function (event, data) {
+            return data.form.validationEngine('validate');
+        },
+        //Dispose validation logic when form is closed
+        formClosed: function (event, data) {
+            data.form.validationEngine('hide');
+            data.form.validationEngine('detach');
+        }
+    });
+    $(id).jtable('load');
+}
+
+function loadExtendedDictionary(id, name, path) {
+
+    $(id).jtable({
+        title: name,
+        paging: true,
+        pageSize: 150,
+        sorting: true,
+        defaultSorting: 'name ASC',
+        //defaultDateFormat: 'dd.mm.yy',
+        actions: {
+            listAction: path + '/list',
+            createAction: path + '/create',
+            updateAction: path + '/update',
+            deleteAction: path + '/delete'
+        },
+        fields: {
+            // TODO: Добавить все поля и настроить для каждого свойства (в первую очередь для тех, что выбираем из списка)
+            // TODO: Применить дочерние таблицы (CHILD TABLE), http://www.jtable.org/demo/masterchild
+            id: {
+                title: 'id',
+                key: true,
+                create: false,
+                edit: false,
+                list: false
+            },
+
+            name: {
+                title: 'Наименование',
+                width: '5%'
             },
             description: {
                 title: 'Описание',
@@ -91,7 +141,7 @@ function loadExtendedDictionary(id, name, path) {
             category_id: {
                 title: 'Категория',
                 width: '5%',
-                options: '/category/list'
+                options: '/category/options'
             }
         },
         //Initialize validation logic when a form is created
@@ -215,7 +265,7 @@ function openSettings() {
                 loadDictionary('#manufacturersTableContainer', 'Производители', '/manufacturer');
                 //loadDictionary('#hardwareModelsTableContainer', 'Модели', '/hardware_model');
                 loadExtendedDictionary('#hardwareNamesTableContainer', 'Виды оборудования', '/hardware');
-
+                loadDictionary('#categoryNamesTableContainer', 'Категории', '/category');
                 loadDictionary('#sourcesTableContainer', 'Источники', '/source');
                 loadDictionary('#appearancesTableContainer', 'Внешний вид', '/appearance');
                 loadDictionary('#completenessTableContainer', 'Комплектность', '/completeness');

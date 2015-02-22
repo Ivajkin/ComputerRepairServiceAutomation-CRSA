@@ -42,11 +42,12 @@ public class DictionaryItemController {
         return dictionaryItemList(dictionaryItemService.listFaults());
     }
 
-    @RequestMapping(value = "/category/list", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
+    @RequestMapping(value = "/category/options", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
-    public jTableResponse<Category> listCategories() {
+    public jTableResponse<Category> listCategory() {
         return dictionaryItemList(dictionaryItemService.listCategories());
     }
+
 
 
     @RequestMapping(value = "/manufacturer/list", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)

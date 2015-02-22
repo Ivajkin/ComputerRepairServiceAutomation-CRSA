@@ -132,6 +132,7 @@
     <div id="warehouseTableContainer"></div>
     <div id="settingsContainer">
         <div id="manufacturersTableContainer"></div>
+        <div id="categoryNamesTableContainer"></div>
         <!--<div id="hardwareModelsTableContainer"></div>-->
         <div id="hardwareNamesTableContainer"></div>
         <div id="employeeTableContainer"></div>

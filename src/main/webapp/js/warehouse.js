@@ -22,6 +22,7 @@ function openWarehouse() {
             pageSize: 150,
             sorting: true,
             defaultSorting: 'invoice_number ASC',
+            defaultDateFormat: 'dd.mm.yy',
             actions: {
                 listAction: '/warehouse/list',
                 createAction: '/warehouse/create',
@@ -41,12 +42,65 @@ function openWarehouse() {
                     edit: false,
                     create: true
                 },
+                date_of_posting: {
+                    title: 'Дата оприходования',
+                    defaultValue: datef('dd.MM.YYYY'),
+                    width: '10%',
+                    type: 'date'
+                },
+                note: {
+                    title: 'Комментарии',
+                    list: false
+                },
+                category_id: {
+                    title: 'Категория',
+                    width: '5%',
+                    options: '/category/options'
+                },
+                hardware_id: {
+                    title: 'Наименование товара',
+                    width: '5%'
+                },
+                manufacturer_id: {
+                    title: 'Производитель',
+                    width: '5%',
+                    options: '/manufacturer/options'
+                },
+                model: {
+                    title: 'Модель',
+                    width: '5%'
+                },
                 item_count: {
                     title: 'Кол-во штук',
                     width: '10%'
                 },
+                serial_number: {
+                    title: 'Серийный номер',
+                    width: '10%',
+                    list: true
+                },
+                purchase_price: {
+                    title: 'Закупочная цена',
+                    width: '5%'
+                },
+                warranty: {
+                    title: 'Гарантия',
+                    width: '5%'
+                },
+                zero_price: {
+                    title: 'Нулевая цена (%)',
+                    width: '5%'
+                },
+                its_price: {
+                    title: 'Своя цена (%)',
+                    width: '5%'
+                },
+                retail_price: {
+                    title: 'Розничная цена (%)',
+                    width: '5%'
+                },
                 repair_price: {
-                    title: 'Цена ремонтная',
+                    title: 'Ремонтная цена (%)',
                     width: '5%'
                 }
             },

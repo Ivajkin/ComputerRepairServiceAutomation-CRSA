@@ -12,4 +12,7 @@ import java.util.List;
 @Transactional
 public interface CategoryDAO {
     List<Category> list();
+    void create(Category category);
+    void delete(int id) throws Exception;
+    public void update(Category category);
 }

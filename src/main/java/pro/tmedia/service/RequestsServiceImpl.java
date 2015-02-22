@@ -114,7 +114,7 @@ public class RequestsServiceImpl implements RequestsService {
     }
 
     // Пустые и занятые слоты: инициализируем при запуске из базы, затем дозаполняем по мере изменения слотов (добавление, изменение, удаление)
-    private boolean[] is_slot_empty = new boolean[MAX_SLOT_ID];
+    private boolean[] is_slot_empty = new boolean[MAX_SLOT_ID+1];
 
     @PostConstruct
     private void initSlots() {
