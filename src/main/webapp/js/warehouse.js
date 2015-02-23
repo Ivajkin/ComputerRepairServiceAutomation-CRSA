@@ -127,8 +127,16 @@ function openWarehouse() {
                     title: 'Ремонтная цена (%)',
                     width: '5%',
                     list: false
+                },
+                not_serial_number: {
+                    title: 'Не серийный товар' /* checkbox */,
+                    list: false,
+                    type: 'checkbox',
+                    values: { 'false': false, 'true': true },
+                    defaultValue: 'false'
                 }
             },
+
             //Initialize validation logic when a form is created
             formCreated: function (event, data) {
                 // TODO: Добавить валидайию для всех полей
@@ -137,6 +145,14 @@ function openWarehouse() {
                 data.form.find('input[name="repair_price"]').addClass('validate[required],custom[integer],min[0],max[500000]');
                 data.form.find('input[name="item_count"]').addClass('validate[required],custom[integer],min[1],max[500]');
                 data.form.validationEngine();
+
+
+                $('#Edit-not_serial_number').click( function(){
+                    if( $(this).is(':checked') )
+                        $('#Edit-serial_number').val('не серийный').prop('disabled', true);
+                    else
+                        $('#Edit-serial_number').val('').prop('disabled', false);
+                });
             },
             //Validate form when it is being submitted
             formSubmitting: function (event, data) {
