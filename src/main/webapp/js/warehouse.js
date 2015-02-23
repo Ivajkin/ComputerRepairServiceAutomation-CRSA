@@ -136,6 +136,6 @@ function openWarehouse() {
                 data.form.validationEngine('detach');
             }
         });
-        $('#requestsTableContainer').jtable('load');
+        $('#warehouseTableContainer').jtable('load');
     }
 }

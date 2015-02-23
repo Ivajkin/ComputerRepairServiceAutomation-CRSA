@@ -201,10 +201,7 @@ function loadProfileSettings() {
 
 function openSettings() {
 
-        $('#warehouseTableContainer').hide();
-        $('#requestsTableContainer').hide();
-        $('#cashModuleContainer').hide();
-        $('#reportsModuleContainer').hide();
+        hideAllModuleContainers();
 
         $('#settingsContainer').show();
 
