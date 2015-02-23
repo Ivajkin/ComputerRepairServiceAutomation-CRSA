@@ -32,8 +32,7 @@ public class WarehouseDAOImpl implements WarehouseDAO {
     @Override
     public void create(WarehouseItem warehouseItem) {
 
-        warehouseItem.setDummyValues();
-        // TODO: убрать значения по умолчанию
+
         getCurrentSession().save(warehouseItem);
     }
 

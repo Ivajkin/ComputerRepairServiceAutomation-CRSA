@@ -27,78 +27,94 @@ function openWarehouse() {
                 deleteAction: '/warehouse/delete'
             },
             fields: {
+                category_id: {
+                title: 'Категория',
+                width: '5%',
+                options: '/category/options'
+                },
+                hardware_id: {
+                title: 'Наименование товара',
+                width: '10%',
+                options: '/hardware/options'
+                },
+                manufacturer_id: {
+                title: 'Производитель',
+                width: '5%',
+                options: '/manufacturer/options'
+                },
+                model: {
+                title: 'Модель',
+                width: '5%'
+                },
+                serial_number: {
+                title: 'Серийный номер',
+                width: '10%',
+                list: true
+                },
+                item_count: {
+                    title: 'Кол-во штук',
+                    width: '10%'
+                },
+                retail_price: {
+                    title: 'Розничная цена',
+                    width: '10%',
+                    create: false,
+                    edit: false
+                },
+                warranty: {
+                    title: 'Гарантия',
+                    width: '5%'
+                },
                 provider_id: {
                     title: 'Поставщик',
                     width: '5%',
-                    options: '/provider/list'
+                    options: '/provider/list',
+                    list: false
                 },
                 invoice_number: {
                     title: 'Номер накладной',
                     width: '10%',
                     key: true,
                     edit: false,
-                    create: true
+                    create: true,
+                    list: false
                 },
-                date_of_posting: {
+                posting_date: {
                     title: 'Дата оприходования',
                     defaultValue: datef('dd.MM.YYYY'),
                     width: '10%',
-                    type: 'date'
+                    type: 'date',
+                    list: false,
+                    edit: false
                 },
                 note: {
                     title: 'Комментарии',
                     list: false
                 },
-                category_id: {
-                    title: 'Категория',
-                    width: '5%',
-                    options: '/category/options'
-                },
-                hardware_id: {
-                    title: 'Наименование товара',
-                    width: '5%'
-                },
-                manufacturer_id: {
-                    title: 'Производитель',
-                    width: '5%',
-                    options: '/manufacturer/options'
-                },
-                model: {
-                    title: 'Модель',
-                    width: '5%'
-                },
-                item_count: {
-                    title: 'Кол-во штук',
-                    width: '10%'
-                },
-                serial_number: {
-                    title: 'Серийный номер',
-                    width: '10%',
-                    list: true
-                },
                 purchase_price: {
                     title: 'Закупочная цена',
-                    width: '5%'
+                    width: '5%',
+                    list: false
                 },
-                warranty: {
-                    title: 'Гарантия',
-                    width: '5%'
-                },
-                zero_price: {
+                zero_price_percent: {
                     title: 'Нулевая цена (%)',
-                    width: '5%'
+                    width: '5%',
+                    list: false
                 },
-                its_price: {
+                its_price_percent: {
                     title: 'Своя цена (%)',
-                    width: '5%'
+                    width: '5%',
+                    list: false
                 },
-                retail_price: {
+                retail_price_percent: {
                     title: 'Розничная цена (%)',
-                    width: '5%'
+                    width: '5%',
+                    list: false
                 },
-                repair_price: {
+                repair_price_percent: {
                     title: 'Ремонтная цена (%)',
-                    width: '5%'
+                    width: '5%',
+                    list: false
                 }
             },
             //Initialize validation logic when a form is created

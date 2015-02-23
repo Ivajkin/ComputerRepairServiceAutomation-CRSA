@@ -55,34 +55,6 @@ INSERT INTO provider (name) VALUES
 ('ООО "Технопоинт"'),
 ('ЗАО "Бизнес-Фабрика"');
 
---	Склад -> Warehouse item -> warehouse_item
---		x Номер накладной     -> Invoice number -> invoice_number : string, unique
---		Код оборудования    -> Hardware code -> hardware_id : integer, not unique
---		Дата оприходования  -> Date of posting -> posting_date : date
---		Количество штук     -> Number of items -> item_count     CONSTRAINT item_count_value CHECK (item_count > 0)
---		Гарантия            -> Warranty -> warranty : string, null, not unique
---		Своя цена           -> its price?
---		Ремонтная цена      -> repair price?
---		Закупочная цена     -> purchase price?
---		Розничная цена      -> retail price?
---		Нулевая цена        -> A zero price?
-
-create table if not exists warehouse_item (
-  invoice_number varchar(100) not null unique primary key,
-  hardware_id integer not null references hardware(id) ON UPDATE CASCADE ON DELETE RESTRICT,
-  posting_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-  item_count integer not null, CONSTRAINT item_count_value CHECK (item_count >= 0),
-  warranty varchar(200) not null,
-  repair_price integer default 0 not null,
-  provider_id integer not null references provider(id) ON UPDATE CASCADE ON DELETE RESTRICT
-
-
-);
-
-INSERT INTO warehouse_item (invoice_number, hardware_id, item_count, warranty, provider_id) VALUES
-('es0215', 1, 15, '5 лет, с 30 мая 2012', (select id from provider limit 1));
-
-
 --
 --	Таблица производителей -> manufacturer
 --		Код производителя	-> id
@@ -95,6 +67,51 @@ create table if not exists manufacturer (
 INSERT INTO manufacturer (name) VALUES ('Aser');
 INSERT INTO manufacturer (name) VALUES ('ASUS');
 INSERT INTO manufacturer (name) VALUES ('Intel');
+
+--	Склад -> Warehouse item -> warehouse_item
+--    Код товара на складе -> id
+--    Код категории        ->  Code category
+--    Код оборудования    -> Hardware code -> hardware_id : integer, not unique
+--    Код производителя   -> Code manufacturer
+--    Модель              -> Model
+--    Серийный номер      -> Serial number
+--		Номер накладной     -> Invoice number -> invoice_number : string, unique
+--    Поставщик           -> Provider
+--    Комментарии         -> Note
+--		Дата оприходования  -> Date of posting -> posting_date : date
+--		Количество штук     -> Number of items -> item_count     CONSTRAINT item_count_value CHECK (item_count > 0)
+--		Гарантия            -> Warranty -> warranty : string, null, not unique
+--		Своя цена процент          -> its price percent?
+--		Ремонтная цена процент      -> repair price percent?
+--		Закупочная цена     -> purchase price?
+--		Розничная цена процент     -> retail price percent?
+--		Нулевая цена процент       -> A zero price percent?
+
+create table if not exists warehouse_item (
+  id BIGSERIAL not null unique primary key,
+  category_id integer not null references category(id) on update cascade on delete restrict,
+  hardware_id integer not null references hardware(id) ON UPDATE CASCADE ON DELETE RESTRICT,
+  manufacturer_id integer not null references manufacturer(id) on update cascade on delete restrict,
+  model varchar(100) not null,
+  invoice_number varchar(100) not null unique,
+  serial_number varchar(100) not null,
+  provider_id integer not null references provider(id) ON UPDATE CASCADE ON DELETE RESTRICT,
+  note varchar(100),
+  posting_date date not null,
+  item_count integer not null, CONSTRAINT item_count_value CHECK (item_count >= 0),
+  warranty varchar(200) not null,
+  purchase_price integer default 0 not null,
+  its_price_percent integer,
+  repair_price_percent integer,
+  retail_price_percent integer,
+  zero_price_percent integer
+);
+
+INSERT INTO warehouse_item (category_id, hardware_id, manufacturer_id, model, invoice_number, serial_number, provider_id, note, posting_date, item_count, warranty, purchase_price, its_price_percent, repair_price_percent, retail_price_percent, zero_price_percent) VALUES
+((select id from category limit 1), (select id from hardware limit 1), (select id from manufacturer limit 1), 'SERYFF', 'es0215', 198, (select id from provider limit 1), 'Новый с японии', '2015-01-10', 15, '5 лет, с 30 мая 2012', 12000, 5, 3, 7, 2);
+
+
+
 
 
 --
