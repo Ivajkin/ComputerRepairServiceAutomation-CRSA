@@ -66,7 +66,16 @@ function openWarehouse() {
                         title: 'Розничная цена',
                         width: '10%',
                         create: false,
-                        edit: false
+                        edit: false,
+                    display: function(requestData) {
+                        var purchase_price = requestData.record.purchase_price;
+                        var zero_price_percent = requestData.record.zero_price_percent;
+                        var its_price_percent = requestData.record.its_price_percent;
+                        var retail_price_percent = requestData.record.retail_price_percent;
+                        var repair_price_percent = requestData.record.repair_price_percent;
+
+                        return purchase_price * (100 + retail_price_percent)/100.0;
+                    }
                 },
                 warranty: {
                         title: 'Гарантия',

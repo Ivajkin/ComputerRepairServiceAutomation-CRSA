@@ -179,4 +179,5 @@ public class WarehouseItem {
     public void setWarranty(String warranty) {
         this.warranty = warranty;
     }
+
 }
