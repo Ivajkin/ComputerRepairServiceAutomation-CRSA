@@ -95,7 +95,7 @@ public class WarehouseController {
 
     @RequestMapping(value = "/update", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
-    public jTableResponse<WarehouseItem> updateWarehouseItem(@ModelAttribute WarehouseItem  warehouseItem, BindingResult result) {
+    public jTableResponse<WarehouseItem> updateWarehouseItem(@ModelAttribute WarehouseItem warehouseItem, BindingResult result) {
         jTableResponse<WarehouseItem> response;
         if (result.hasErrors()) {
             response = new jTableResponse<>("Form invalid while update: " + jTableResponse.getBindingErrorMessages(result));
@@ -113,10 +113,10 @@ public class WarehouseController {
 
     @RequestMapping(value = "/delete", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
-    public jTableResponse<WarehouseItem> deleteWarehouseItem(@RequestParam String invoice_number) {
+    public jTableResponse<WarehouseItem> deleteWarehouseItem(@RequestParam Integer id) {
         jTableResponse<WarehouseItem> response;
             try {
-                warehouseService.delete(invoice_number);
+                warehouseService.delete(id);
                 response = new jTableResponse<>();
             } catch (Exception e) {
                 response = new jTableResponse<>(e.getMessage());

@@ -27,84 +27,87 @@ function openWarehouse() {
                 deleteAction: '/warehouse/delete'
             },
             fields: {
+                id: {
+                    title: 'Идентификатор элемента склада',
+                    key: true,
+                    create: false,
+                    edit: false,
+                    list: false
+                },
                 category_id: {
-                title: 'Категория',
-                width: '5%',
-                options: '/category/options'
+                    title: 'Категория',
+                    width: '5%',
+                    options: '/category/options'
                 },
                 hardware_id: {
-                title: 'Наименование товара',
-                width: '10%',
-                options: '/hardware/options'
+                    title: 'Наименование товара',
+                    width: '10%',
+                    options: '/hardware/options'
                 },
                 manufacturer_id: {
-                title: 'Производитель',
-                width: '5%',
-                options: '/manufacturer/options'
+                    title: 'Производитель',
+                    width: '5%',
+                    options: '/manufacturer/options'
                 },
                 model: {
-                title: 'Модель',
-                width: '5%'
-                },
-                serial_number: {
-                title: 'Серийный номер',
-                width: '10%',
-                list: true
-                },
-                item_count: {
-                    title: 'Кол-во штук',
-                    width: '10%'
-                },
-                retail_price: {
-                    title: 'Розничная цена',
-                    width: '10%',
-                    create: false,
-                    edit: false
-                },
-                warranty: {
-                    title: 'Гарантия',
+                    title: 'Модель',
                     width: '5%'
                 },
-                provider_id: {
-                    title: 'Поставщик',
-                    width: '5%',
-                    options: '/provider/list',
-                    list: false
-                },
-                invoice_number: {
-                    title: 'Номер накладной',
+                serial_number: {
+                    title: 'Серийный номер',
                     width: '10%',
-                    key: true,
-                    edit: false,
-                    create: true,
-                    list: false
+                    list: true
+                },
+                item_count: {
+                        title: 'Кол-во штук',
+                        width: '10%'
+                },
+                retail_price: {
+                        title: 'Розничная цена',
+                        width: '10%',
+                        create: false,
+                        edit: false
+                },
+                warranty: {
+                        title: 'Гарантия',
+                        width: '5%'
                 },
                 posting_date: {
                     title: 'Дата оприходования',
                     defaultValue: datef('dd.MM.YYYY'),
-                    width: '10%',
-                    type: 'date',
-                    list: false,
-                    edit: false
+                    width: '10%'
+                },
+                provider_id: {
+                        title: 'Поставщик',
+                        width: '5%',
+                        options: '/provider/list',
+                        list: false
+                },
+                invoice_number: {
+                        title: 'Номер накладной',
+                        width: '10%',
+                        edit: false,
+                        create: true,
+                        list: false
                 },
                 note: {
-                    title: 'Комментарии',
-                    list: false
+                        title: 'Комментарии',
+                        list: false
                 },
                 purchase_price: {
-                    title: 'Закупочная цена',
-                    width: '5%',
-                    list: false
+                        title: 'Закупочная цена',
+                        width: '5%',
+                        list: false
                 },
                 zero_price_percent: {
-                    title: 'Нулевая цена (%)',
-                    width: '5%',
-                    list: false
+                        title: 'Нулевая цена (%)',
+                        width: '5%',
+                        list: false
                 },
                 its_price_percent: {
-                    title: 'Своя цена (%)',
-                    width: '5%',
-                    list: false
+                        title: 'Своя цена (%)',
+                        width: '5%',
+                        list: false
                 },
                 retail_price_percent: {
                     title: 'Розничная цена (%)',

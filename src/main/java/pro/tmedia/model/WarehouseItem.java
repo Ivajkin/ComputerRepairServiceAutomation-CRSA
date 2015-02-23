@@ -11,6 +11,8 @@ import java.sql.Date;
 @Entity
 @Table(name="warehouse_item")
 public class WarehouseItem {
+
+
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator="warehouse_item_id_seq")
     @SequenceGenerator(name="warehouse_item_id_seq", sequenceName="warehouse_item_id_seq", allocationSize=1)
@@ -36,6 +38,13 @@ public class WarehouseItem {
     Integer retail_price_percent;
     Integer its_price_percent;
 
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
 
     public Integer getRepair_price_percent() {
         return repair_price_percent;

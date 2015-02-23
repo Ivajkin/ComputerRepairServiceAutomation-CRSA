@@ -37,11 +37,11 @@ public class WarehouseDAOImpl implements WarehouseDAO {
     }
 
     @Override
-    public void delete(String invoice_number) throws Exception {
-        WarehouseItem warehouseItem = (WarehouseItem) getCurrentSession().get(WarehouseItem.class, invoice_number);
+    public void delete(Integer id) throws Exception {
+        WarehouseItem warehouseItem = (WarehouseItem) getCurrentSession().get(WarehouseItem.class, id);
         if(warehouseItem != null)
             getCurrentSession().delete(warehouseItem);
-        else throw new Exception("Элемента склада с номером накладной: \"" + invoice_number + "\" не существует");
+        else throw new Exception("Не удалось удалить товар с номером: \"" + id);
     }
 
     @Override

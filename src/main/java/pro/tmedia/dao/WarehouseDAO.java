@@ -13,6 +13,6 @@ import java.util.List;
 public interface WarehouseDAO {
     List<WarehouseItem> list();
     public void create(WarehouseItem warehouseItem);
-    public void delete(String invoice_number) throws Exception;
+    public void delete(Integer id) throws Exception;
     public void update(WarehouseItem warehouseItem);
 }

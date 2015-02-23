@@ -33,8 +33,8 @@ public class WarehouseServiceImpl implements WarehouseService {
     }
 
     @Override
-    public void delete(String invoice_number) throws Exception {
-        warehouseDAO.delete(invoice_number);
+    public void delete(Integer id) throws Exception {
+        warehouseDAO.delete(id);
     }
 
     @Override
