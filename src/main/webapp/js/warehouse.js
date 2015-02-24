@@ -153,6 +153,43 @@ function openWarehouse() {
                     else
                         $('#Edit-serial_number').val('').prop('disabled', false);
                 });
+                // При изменении количества товаров на число больше нуля и меньше ста, создаем input сколько товаров
+                // При нажатии кнопки Сохранить, даные отправляются в таблицу Склад, после этого
+                // все Серийные номера из input посылаются на
+                // id формы копируется в таблицу серийных номеров с разными id серийными номерами и по нажатии кнопки сохранить отправляются в таблицу Серийные номера
+                //данные формы отправляются в таблицу Склад по нажатию кнопки Сохранить
+                //У Таблицы Склад есть Номер Накладной (primary key)
+                //У таблицы Серийных номеров Серийные номера (primary key)
+                //При сохранении мы отправим на сервер запрос о добавлении Серийных номеров по номеру накладной
+
+                $('#Edit-item_count').change(function(){
+                    if($(this).val() > 0 && $(this).val() < 100) {
+                        var snd = new Audio("css/sounds/serial_panel_opens.wav"); // buffers automatically when created
+                        snd.play();
+                        $('.serial.popover').remove();
+                        var serial_popover =
+                            '<div class="serial popover left">' +
+                                '<div class="arrow"></div>' +
+                                    '<h3 class="popover-title">Введите серийные номера:</h3>' +
+                                    '<div class="popover-content">' +
+                                    '<p id="serial-inputs">' +
+                                    '</p>' +
+                                '</div>' +
+                            '</div>';
+                        $(this).parent().parent().parent().parent().parent().before(serial_popover).animate({left: '+=50px'});
+                        var inputs = '';
+                        for(var i = 0; i < $(this).val(); ++i) {
+                            inputs += '<input type="text"/>';
+                        }
+                        $('#serial-inputs').html(inputs);
+
+                        $('.serial.popover').hide();
+                        $('.serial.popover').show('fast');
+                    } else {
+                        messagebox.error('Введено неверное количество!', 'Введите верное количество.');
+                    }
+                 });
+
             },
             //Validate form when it is being submitted
             formSubmitting: function (event, data) {

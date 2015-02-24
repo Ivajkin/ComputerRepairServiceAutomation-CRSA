@@ -22,7 +22,6 @@ public class WarehouseItem {
     Integer hardware_id;
     Integer manufacturer_id;
     String model;
-    String serial_number;
     private String invoice_number;
     Integer provider_id;
     String note;
@@ -112,14 +111,6 @@ public class WarehouseItem {
 
     public void setModel(String model) {
         this.model = model;
-    }
-
-    public String getSerial_number() {
-        return serial_number;
-    }
-
-    public void setSerial_number(String serial_number) {
-        this.serial_number = serial_number;
     }
 
     public String getInvoice_number() {

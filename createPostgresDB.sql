@@ -14,8 +14,8 @@ CREATE TABLE if not exists category (
 );
 
 INSERT INTO category (name) VALUES
-  ('Видеокарты'),
-  ('Мониторы');
+('Видеокарты'),
+('Мониторы');
 
 --
 --	Таблица оборудования -> Hardware -> hardware
@@ -94,7 +94,6 @@ create table if not exists warehouse_item (
   manufacturer_id integer not null references manufacturer(id) on update cascade on delete restrict,
   model varchar(100) not null,
   invoice_number varchar(100) not null unique,
-  serial_number varchar(100) not null,
   provider_id integer not null references provider(id) ON UPDATE CASCADE ON DELETE RESTRICT,
   note varchar(100),
   posting_date date not null,
@@ -107,11 +106,24 @@ create table if not exists warehouse_item (
   zero_price_percent integer
 );
 
-INSERT INTO warehouse_item (category_id, hardware_id, manufacturer_id, model, invoice_number, serial_number, provider_id, note, posting_date, item_count, warranty, purchase_price, its_price_percent, repair_price_percent, retail_price_percent, zero_price_percent) VALUES
-((select id from category limit 1), (select id from hardware limit 1), (select id from manufacturer limit 1), 'SERYFF', 'es0215', 198, (select id from provider limit 1), 'Новый с японии', '2015-01-10', 15, '5 лет, с 30 мая 2012', 12000, 5, 3, 7, 2);
+INSERT INTO warehouse_item (category_id, hardware_id, manufacturer_id, model, invoice_number,  provider_id, note, posting_date, item_count, warranty, purchase_price, its_price_percent, repair_price_percent, retail_price_percent, zero_price_percent) VALUES
+((select id from category limit 1), (select id from hardware limit 1), (select id from manufacturer limit 1), 'SERYFF', 'es0215', (select id from provider limit 1), 'Новый с японии', '2015-01-10', 15, '5 лет, с 30 мая 2012', 12000, 5, 3, 7, 2);
 
+--	Серийный номер -> Serial number
+--    Код серийного номера -> id
+--    Номер       ->  number
+--    Код склада -> warehouse_item_id
 
+CREATE TABLE if not exists serial_number (
+  id BIGSERIAL not null unique primary key,
+  number varchar(100) not null unique,
+  warehouse_item_id integer not null references warehouse_item (id)  ON UPDATE CASCADE ON DELETE RESTRICT,
+  check (length(number) >= 3 and length(number) <= 100)
 
+);
+
+INSERT into serial_number (number, warehouse_item_id) values
+('RE543EWQ',(select id from warehouse_item limit 1));
 
 
 --

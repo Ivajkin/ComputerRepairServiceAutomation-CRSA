@@ -9,7 +9,12 @@ var messagebox = {
     info: toastr.info,
     warning: toastr.warning,
     success: toastr.success,
-    error: toastr.error
+    error: (!Audio ?  toastr.error :
+                            function(a, b) {
+                            var snd = new Audio("css/sounds/error.wav"); // buffers automatically when created
+                            snd.play();
+                            toastr.error(a, b);
+                        })
 };
 (function initialiseMessageSystem() {
     toastr.options = {
