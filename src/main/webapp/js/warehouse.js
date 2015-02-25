@@ -169,14 +169,16 @@ function openWarehouse() {
                         $('.serial.popover').remove();
                         var serial_popover =
                             '<div class="serial popover left">' +
-                                '<div class="arrow"></div>' +
                                     '<h3 class="popover-title">Введите серийные номера:</h3>' +
                                     '<div class="popover-content">' +
                                     '<p id="serial-inputs">' +
                                     '</p>' +
                                 '</div>' +
                             '</div>';
-                        $(this).parent().parent().parent().parent().parent().before(serial_popover).animate({left: '+=50px'});
+                        var form_content = $(this).parent().parent().parent().parent();
+                        form_content.before(serial_popover);
+                        var form = form_content.parent();
+                        form.animate({width: '810px', left: '277px'});
                         var inputs = '';
                         for(var i = 0; i < $(this).val(); ++i) {
                             inputs += '<input type="text"/>';

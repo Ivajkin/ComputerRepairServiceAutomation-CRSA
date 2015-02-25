@@ -566,10 +566,10 @@ button {
     left: 0px;
     line-height: 20px;
     margin-bottom: 20px;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 15px;
+    margin-right: 10px;
     margin-top: 20px;
-    max-width: 276px;
+    max-width: 265px;
     padding-bottom: 1px;
     padding-left: 1px;
     padding-right: 1px;
@@ -583,4 +583,5 @@ button {
 }
 .popover input {
     margin-bottom: 5px;
+    width: 100%;
 }
