@@ -7,7 +7,9 @@ import org.springframework.validation.Validator;
 import pro.tmedia.dao.HardwareDAO;
 import pro.tmedia.model.Hardware;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 /**
  * User: Ivaykina Galina
@@ -22,6 +24,16 @@ public class HardwareServiceImpl implements HardwareService {
 
     @Autowired
     HardwareDAO hardwareDAO;
+
+    public List<Hardware> listByCategory(Integer category_id) {
+        List<Hardware> list = hardwareDAO.list();
+        List<Hardware> listByCategory = new ArrayList<>();
+        for(Hardware e : list) {
+            if(Objects.equals(e.getCategory_id(), category_id))
+                listByCategory.add(e);
+        }
+        return listByCategory;
+    }
 
     public List<Hardware> list() {
         return hardwareDAO.list();

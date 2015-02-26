@@ -40,14 +40,12 @@
 </head>
 <body>
 
-
 <header class="mainheader">
     <img id="logo" src="${pageContext.request.contextPath}/img/logo.png" alt="Служба компьютерного ремонта (логотип)" />
     <h1>Служба компьютерного ремонта</h1>
     <h2>Techno Media Ltd</h2>
 
 </header>
-
 
 <div id="lightBulb" class="util-button"></div>
 <svg height="0" xmlns="http://www.w3.org/2000/svg">
@@ -132,6 +130,10 @@
     <div id="requestsTableContainer"></div>
     <div id="warehouseTableContainer"></div>
     <div id="settingsContainer">
+
+        <%@include file="elements/category-hardware-selector.jsp" %>
+
+
         <div id="manufacturersTableContainer"></div>
         <div id="categoryNamesTableContainer"></div>
         <!--<div id="hardwareModelsTableContainer"></div>-->
@@ -140,6 +142,8 @@
         <div id="sourcesTableContainer"></div>
         <div id="appearancesTableContainer"></div>
         <!--<div id="completenessTableContainer"></div>    -->
+
+
 
         <div id="currentUserProfile">
             <form>

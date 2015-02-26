@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.*;
 import pro.tmedia.model.Hardware;
 import pro.tmedia.service.HardwareService;
 
+import java.util.List;
+
 /**
  * User: Ivaykina Galina
  * Date: 8/06/14
@@ -42,6 +44,16 @@ public class HardwareController {
 
         logger.info(response.getJSON());
         return response;
+    }
+
+
+    @RequestMapping(value = "/hardware/list/json", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+    @ResponseBody
+    public List<Hardware> listByCategory(@RequestParam Integer category_id) {
+        if(null != category_id)
+            return hardwareService.listByCategory(category_id);
+        else
+            return hardwareService.list();
     }
 
     @RequestMapping(value = "/hardware/create", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)

@@ -485,6 +485,35 @@ INSERT INTO cash_operation (
 
 
 
+-- TODO: Написать скрипт создания таблицы для версионирования базы данных на основе диалекта MSQL
+-- на PostgreSQL с нашими стилями (названия маленькими буквами, через технический пробел).
+--
+-- At some point in the future, the schema will have to change. Before you baseline the
+--  database you need to add a table to record these schema changes. The following table is the kind of table I'd use to track every change to a database.
+
+
+CREATE TABLE schema_change_log (
+  id BIGSERIAL not null unique primary key,
+  major_release_number varchar(2) NOT NULL,
+  minor_release_number varchar(2) NOT NULL,
+  point_release_number varchar(4) NOT NULL,
+  script_name varchar(50) NOT NULL,
+  date_applied timestamp NOT NULL
+
+-- CONSTRAINT pk_schema_change_log PRIMARY KEY
+   -- CLUSTERED
+--   (schema_change_id ASC)
+);
+
+-- The first baseline schema script should,
+-- as the last step, officially install version 1.0 of the database:
+
+INSERT INTO schema_change_log
+(major_release_number, minor_release_number, point_release_number, script_name, date_applied)
+VALUES ('01', '00', '0000', 'createPostgresDB', now());
+
+
+
 --		
 --	Справочники юридических лиц
 --		Код юр.лица	

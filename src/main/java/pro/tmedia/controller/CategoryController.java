@@ -7,11 +7,11 @@ import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
-import pro.tmedia.model.Appearance;
 import pro.tmedia.model.Category;
-import pro.tmedia.service.AppearanceService;
 import pro.tmedia.service.CategoryService;
 import pro.tmedia.service.DictionaryItemService;
+
+import java.util.List;
 
 /**
  * User: Ivaykin Timofey
@@ -48,6 +48,13 @@ public class CategoryController {
         return response;
     }
 
+
+    @RequestMapping(value = "/list/json", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+    @ResponseBody
+    public List<Category> list() {
+        return dictionaryItemService.listCategories();
+    }
+
     @RequestMapping(value = "/create", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
     public jTableResponse<Category> create(@ModelAttribute Category category, BindingResult result) {
@@ -66,6 +73,14 @@ public class CategoryController {
             }
         }
         return response;
+    }
+
+    @RequestMapping(value = "/create/json", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
+    @ResponseBody
+    public void create(@RequestParam String name) throws Exception {
+        Category category = new Category();
+        category.setName(name);
+        categoryService.create(category);
     }
 
     @RequestMapping(value = "/delete", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
