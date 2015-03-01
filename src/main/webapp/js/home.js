@@ -90,6 +90,15 @@ current_user = {
     }
 };
 
+// Элементы интерфейса, которые будем использовать для вставки в определенных частях приложения
+var elements;
+$(document).ready(function() {
+   elements = {
+        // Сборный элемент из master-detail набора (категория - товар/оборудование)
+        "category-hardware-selector-element": $('#category-hardware-selector-element').detach()
+    };
+});
+
 function hideAllModuleContainers() {
 
     $('#requestsTableContainer').hide();
