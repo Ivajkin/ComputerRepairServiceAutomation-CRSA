@@ -17,6 +17,9 @@ import java.beans.PropertyEditorSupport;
 import java.sql.Date;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
 
 /**
  * User: Ivaykin Timofey
@@ -56,7 +59,37 @@ public class WarehouseController {
         jTableResponse<WarehouseItem> response;
         try
         {
-            response = new jTableResponse<>(warehouseService.list(), false);
+            List<WarehouseItem> list = warehouseService.list();
+            if (list.size() > 0) {
+                Comparator<WarehouseItem> sort_comparator;
+                switch(sorting) {
+                    case "item_count ASC":
+                        sort_comparator =  new Comparator<WarehouseItem>() {
+                            @Override
+                            public int compare(final WarehouseItem object1, final WarehouseItem object2) {
+                                return object1.getItem_count().compareTo(object2.getItem_count());
+                            }
+                        };
+                        break;
+                    case "item_count DESC":
+                        sort_comparator =  new Comparator<WarehouseItem>() {
+                            @Override
+                            public int compare(final WarehouseItem object1, final WarehouseItem object2) {
+                                return -object1.getItem_count().compareTo(object2.getItem_count());
+                            }
+                        };
+                        break;
+                    default:
+                        sort_comparator =  new Comparator<WarehouseItem>() {
+                            @Override
+                            public int compare(final WarehouseItem object1, final WarehouseItem object2) {
+                                return object1.getInvoice_number().compareTo(object2.getInvoice_number());
+                            }
+                        };
+                }
+                Collections.sort(list, sort_comparator);
+            }
+            response = new jTableResponse<>(list, false);
         }
         catch (Exception ex)
         {
