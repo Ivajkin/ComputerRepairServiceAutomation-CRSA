@@ -744,3 +744,14 @@ form.jtable-dialog-form, .ui-widget input, .ui-widget select, .ui-widget textare
     white-space: nowrap;
     width: 111.8125px;
 }
+
+#searchbox-element {
+    width: 300px;
+    float: right;
+}
+
+#table-toolbar {
+    width: 100%;
+    height: 34px;
+    margin-bottom: -17px;
+}

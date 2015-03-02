@@ -20,7 +20,6 @@
 
     <script type="text/javascript" src="webjars/jquery/2.1.0/jquery.js"></script>
     <script type="text/javascript" src="webjars/jquery-ui/1.10.4/ui/jquery-ui.js"></script>
-
     <script type="text/javascript" src="webjars/bootstrap/3.1.1/js/bootstrap.js"></script>
     <script type="text/javascript" src="webjars/toastr/2.0.1/toastr.js"></script>
 
@@ -128,7 +127,12 @@
     </div>
 
     <div id="requestsTableContainer"></div>
-    <div id="warehouseTableContainer"></div>
+    <div id="warehouseTableContainer">
+        <%@include file="elements/searchbox.jsp" %>
+    </div>
+
+
+
     <div id="settingsContainer">
 
         <%@include file="elements/category-hardware-selector.jsp" %>

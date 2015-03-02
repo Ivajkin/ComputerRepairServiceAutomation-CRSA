@@ -331,25 +331,6 @@ create table if not exists task (
 INSERT INTO task (engineer_id, price, task_type_id, request_id) VALUES
 ((select id from employee limit 1), 100, (select id from task_type limit 1), (select req_num_id from request limit 1));
 
-
---
---	Выполненные работы -> task
---		Код выполненной работы
---		Инженер -> engineer_id
---		Цена -> price
---		Наименование выполненной работы -> task_type_id
---		Заявка для которой выполнена работа -> request_id
-create table if not exists task (
-  id BIGSERIAL not null unique primary key,
-  engineer_id integer not null references employee(id),
-  price integer not null,
-  task_type_id integer not null references task_type(id),
-  request_id integer not null references request(req_num_id)
-);
-
-INSERT INTO task (engineer_id, price, task_type_id, request_id) VALUES
-((select id from employee limit 1), 100, (select id from task_type limit 1), (select req_num_id from request limit 1));
-
 -- Установленные запчасти -> parts_installed
 --		Код установленной запчасти
 --		наименование -> hardware_id
