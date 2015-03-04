@@ -6,6 +6,7 @@
 var isWarehouseTableLoaded = false;
 var is_category_hardware_selector_element_inserted = false;
 
+
 function openWarehouse() {
     hideAllModuleContainers();
 
@@ -130,6 +131,51 @@ function openWarehouse() {
                     type: 'checkbox',
                     values: { 'false': false, 'true': true },
                     defaultValue: 'false'
+                },
+                /* Списать товар*/
+                impairment: {
+                    title: '',
+                    width: '2%',
+                    sorting: false,
+                    edit: false,
+                    create: false,
+                    display: function (requestData) {
+                        $img.click(function () {
+                            $('#warehouseTableContainer').jtable('openChildTable',
+                                $img.closest('tr'),
+                                {
+                                    title: requestData.record.invoice_number + ' - причина списания',
+                                    actions: {
+                                        listAction: '/impairment/list?id=' + requestData.record.id,
+                                        deleteAction: '/impairment/delete',
+                                        updateAction: '/impairment/update',
+                                        createAction: '/impairment/create'
+                                    },
+                                    fields: {
+                                        id: {
+                                            key: true,
+                                            create: false,
+                                            edit: false,
+                                            list: false
+                                        },
+                                        date_impairment: {
+                                            title: 'дата списания'
+                                        },
+                                        impairment_type_id: {
+                                            title: 'наименование выполненной работы',
+                                            options:'/impairment_type/options'
+                                        },
+                                        warehouse_item_id: {
+                                            type: 'hidden',
+                                            defaultValue: requestData.record.id
+                                        }
+                                    }
+                                }, function (data) {
+                                    data.childTable.jtable('load');
+                                });
+                        });
+                        return $img;
+                    }
                 }
             },
 
@@ -265,6 +311,11 @@ function openWarehouse() {
             formClosed: function (event, data) {
                 data.form.validationEngine('hide');
                 data.form.validationEngine('detach');
+            },
+            recordsLoaded: function(event, data) {
+                $('.jtable-data-row').dblclick(function() {
+                    $(this.children[this.children.length-1].children[0]).click();
+                });
             }
         });
         $('#warehouseTableContainer').jtable('load');

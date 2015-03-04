@@ -491,9 +491,27 @@ CREATE TABLE schema_change_log (
 
 INSERT INTO schema_change_log
 (major_release_number, minor_release_number, point_release_number, script_name, date_applied)
-VALUES ('01', '00', '0000', 'createPostgresDB', now());
+  VALUES ('01', '00', '0000', 'createPostgresDB', now());
 
+CREATE TABLE if not exists impairment_type (
+  id BIGSERIAL not null unique primary key,
+  name varchar(100) not null unique
+);
 
+INSERT into impairment_type
+(name)
+  VALUES ('Оборудование устарело');
+
+CREATE TABLE if not exists impairment (
+  id BIGSERIAL not null unique primary key,
+  date_impairment date not null,
+  impairment_type_id integer not null references impairment_type(id),
+  warehouse_item_id integer not null references warehouse_item(id)
+);
+
+INSERT into impairment
+(date_impairment, impairment_type_id, warehouse_item_id)
+  values ('2015-02-15',(select id from impairment_type limit 1), (select id from warehouse_item limit 1));
 
 --		
 --	Справочники юридических лиц
