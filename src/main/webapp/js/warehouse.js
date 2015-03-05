@@ -140,6 +140,7 @@ function openWarehouse() {
                     edit: false,
                     create: false,
                     display: function (requestData) {
+                        var $img = $('<button class="jtable-command-button delete-command-button"><img src="/img/repair.png" title="Списанный товар" /></button>');
                         $img.click(function () {
                             $('#warehouseTableContainer').jtable('openChildTable',
                                 $img.closest('tr'),
@@ -158,12 +159,17 @@ function openWarehouse() {
                                             edit: false,
                                             list: false
                                         },
-                                        date_impairment: {
-                                            title: 'дата списания'
-                                        },
                                         impairment_type_id: {
-                                            title: 'наименование выполненной работы',
+                                            title: 'причина списания',
                                             options:'/impairment_type/options'
+                                        },
+                                        count_hardware_impairment: {
+                                            title: 'Количество'
+                                        },
+                                        date_impairment: {
+                                            title: 'дата списания',
+                                            defaultValue: datef('dd.MM.YYYY'),
+                                            edit: false
                                         },
                                         warehouse_item_id: {
                                             type: 'hidden',
@@ -236,6 +242,53 @@ function openWarehouse() {
                     }
                  });
 
+               /* if(!is_reason_impairment_element_inserted) {
+                    is_reason_impairment_element_inserted = true;
+                    elements["reason_impairment_element"].addClass('jtable-input-field-container');
+                    $('.ui-dialog-content')
+                        .after(elements["reason_impairment_element"]);
+                    (function() {
+                        var reason_impairment_id;
+                        var reason_impairment_dictionary = {};
+
+                        function load_reason_impairment() {
+                            $.get('/impairment_type/list/json', function(impairments_type) {
+                                var elements = '';
+                                for(key in impairments_type) {
+                                    elements += '<li><a >' + impairments_type[key].name + '</a></li>';
+                                    reason_impairment_dictionary[impairments_type[key].name] = impairments_type[key];
+                                }
+                                $('.category-selector .dropdown-menu').html(elements);
+
+                                $('.category-selector ul li').click(function() {
+                                    var category_name = $(this).text();
+                                    $('.category-selector input.form-control').val(category_name);
+                                    selected_category_id = category_by_name_dictionary[category_name].id;
+                                    // Запрашиваем список наименований hardware по category_id
+                                    load_hardware_dropdown(selected_category_id);
+                                });
+
+                                $('.category-selector .form-control').on('input', function() {
+                                    var category_name_inserted = $(this).val();
+                                    // Если категория уже существует или имеет слишком мало символов, то мы не можем её создать
+                                    var can_add_category = category_name_inserted.length > 3;
+                                    for(var key in category_by_name_dictionary) {
+                                        if(category_by_name_dictionary[key].name === category_name_inserted)
+                                            can_add_category = false;
+                                    }
+
+                                    $('.category-selector .btn.btn-default.add').prop("disabled", !can_add_category);
+                                });
+                            });
+                        }
+                        load_categories_to_selector();
+
+                        $('.category-selector .btn.btn-default.add').click(function() {
+                            var category_name_inserted = $('.category-selector .form-control').val();
+                            $.post('/category/create/json', {name: category_name_inserted}, load_categories_to_selector);
+                        });
+                    }) ();
+                }  */
                 if(!is_category_hardware_selector_element_inserted) {
                     is_category_hardware_selector_element_inserted = true;
                     elements["category-hardware-selector-element"].addClass('jtable-input-field-container');

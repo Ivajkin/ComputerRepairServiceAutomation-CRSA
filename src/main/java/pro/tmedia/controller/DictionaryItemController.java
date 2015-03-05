@@ -18,6 +18,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
+/**
  * User: Ivaykin Timofey
  * Date: 2/16/14
  */
@@ -168,6 +169,12 @@ public class DictionaryItemController {
     @ResponseBody
     public jTableResponse<TaskType> listTaskType() {
         return dictionaryItemList(dictionaryItemService.listTaskTypes());
+    }
+
+    @RequestMapping(value = "/impairment_type/options", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
+    @ResponseBody
+    public jTableResponse<ImpairmentType> listImpairmentType() {
+        return dictionaryItemList(dictionaryItemService.listImpairmentTypes());
     }
 
     @RequestMapping(value = "/hardware/options", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)

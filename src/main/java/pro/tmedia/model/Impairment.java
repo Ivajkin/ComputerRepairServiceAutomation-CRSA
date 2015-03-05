@@ -20,6 +20,15 @@ public class Impairment {
     private java.sql.Date date_impairment;
     private Integer impairment_type_id;
     private Integer warehouse_item_id;
+    private Integer count_hardware_impairment;
+
+    public Integer getCount_hardware_impairment() {
+        return count_hardware_impairment;
+    }
+
+    public void setCount_hardware_impairment(Integer count_hardware_impairment) {
+        this.count_hardware_impairment = count_hardware_impairment;
+    }
 
     public Integer getId() {
         return id;

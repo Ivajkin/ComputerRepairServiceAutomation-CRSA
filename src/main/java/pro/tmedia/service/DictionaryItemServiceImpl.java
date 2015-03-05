@@ -30,6 +30,8 @@ public class DictionaryItemServiceImpl implements DictionaryItemService {
     @Autowired
     TaskTypeDAO taskTypeDAO;
     @Autowired
+    ImpairmentTypeDAO impairmentTypeDAO;
+    @Autowired
     AppearanceDAO appearanceDAO;
     @Autowired
     CompletenessDAO completenessDAO;
@@ -64,6 +66,11 @@ public class DictionaryItemServiceImpl implements DictionaryItemService {
     @Override
     public List<TaskType> listTaskTypes() {
         return taskTypeDAO.list();
+    }
+
+    @Override
+    public List<ImpairmentType> listImpairmentTypes() {
+        return impairmentTypeDAO.list();
     }
 
     @Override

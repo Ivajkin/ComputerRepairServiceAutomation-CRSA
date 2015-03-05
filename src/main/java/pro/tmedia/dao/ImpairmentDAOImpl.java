@@ -26,7 +26,7 @@ public class ImpairmentDAOImpl implements ImpairmentDAO {
 
     @Override
     public List<Impairment> list(Integer id) {
-        return getCurrentSession().createQuery(String.format("from Impairment where impairment_id = %d", id)).list();
+        return getCurrentSession().createQuery(String.format("from Impairment where warehouse_item_id = %d", id)).list();
     }
 
     @Override
