@@ -25,7 +25,7 @@ function openWarehouse() {
             actions: {
                 listAction: '/warehouse/list',
                 createAction: '/warehouse/create',
-                updateAction: '/warehouse/update',
+                /*updateAction: '/warehouse/update', */
                 deleteAction: '/warehouse/delete'
             },
             fields: {
@@ -81,7 +81,11 @@ function openWarehouse() {
                 posting_date: {
                     title: 'Дата оприходования',
                     defaultValue: datef('dd.MM.YYYY'),
-                    width: '10%'
+                    width: '10%',
+                    edit: false
+                    //visibility: 'hidden',
+                    //type: 'hidden'
+
                 },
                 provider_id: {
                         title: 'Поставщик',
@@ -199,6 +203,8 @@ function openWarehouse() {
 
                 data.form.validationEngine();
 
+                //$('#Edit-posting_date').prop('edit', false);
+                $('#Edit-posting_date').prop('readonly', true);
 
                 $('#Edit-not_serial_number').click( function(){
                     if( $(this).is(':checked') )

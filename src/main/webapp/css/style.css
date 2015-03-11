@@ -22,6 +22,11 @@ input {
     border-left-style: ridge;
 }
 
+input[readonly="readonly"], input[readonly]
+{
+    background: url('../img/readonly.png') no-repeat scroll 120px 0;
+}
+
 body {
     background: #f3fcff;
     /* IE9 SVG, needs conditional override of 'filter' to 'none' */
