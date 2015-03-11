@@ -134,6 +134,10 @@ public class WarehouseItem {
     }
 
     public void setItem_count(Integer item_count) {
+        if(item_count < 0) {
+            throw new IllegalArgumentException("Количество экземпляров товара не может быть отрицательным числом.");
+        }
+
         this.item_count = item_count;
     }
 

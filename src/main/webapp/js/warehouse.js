@@ -140,12 +140,14 @@ function openWarehouse() {
                     edit: false,
                     create: false,
                     display: function (requestData) {
-                        var $img = $('<button class="jtable-command-button delete-command-button"><img src="/img/repair.png" title="Списанный товар" /></button>');
+                        var $img = $('<button class="jtable-command-button delete-command-button"><img style="background:white;" width="16px" height="16px' +
+                            '" src="/img/impaired.png" title="Списанный товар" /></button>');
                         $img.click(function () {
                             $('#warehouseTableContainer').jtable('openChildTable',
                                 $img.closest('tr'),
                                 {
                                     title: requestData.record.invoice_number + ' - причина списания',
+                                    defaultDateFormat: 'dd.mm.yy',
                                     actions: {
                                         listAction: '/impairment/list?id=' + requestData.record.id,
                                         deleteAction: '/impairment/delete',
@@ -169,6 +171,7 @@ function openWarehouse() {
                                         date_impairment: {
                                             title: 'дата списания',
                                             defaultValue: datef('dd.MM.YYYY'),
+                                            type: 'date',
                                             edit: false
                                         },
                                         warehouse_item_id: {
@@ -192,6 +195,8 @@ function openWarehouse() {
                 data.form.find('input[name="invoice_number"]').addClass('validate[required,minSize[3],maxSize[18]] text-input');
                 data.form.find('input[name="repair_price"]').addClass('validate[required],custom[integer],min[0],max[500000]');
                 data.form.find('input[name="item_count"]').addClass('validate[required],custom[integer],min[1],max[500]');
+                data.form.find('input[name="date_impairment"]').addClass('validate[required,custom[date],past[NOW]]');   // var dateMMDDYYYRegex = '^(0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])[- /.](19|20)\d\d$';
+
                 data.form.validationEngine();
 
 
@@ -242,7 +247,7 @@ function openWarehouse() {
                     }
                  });
 
-               /* if(!is_reason_impairment_element_inserted) {
+                /* if(!is_reason_impairment_element_inserted) {
                     is_reason_impairment_element_inserted = true;
                     elements["reason_impairment_element"].addClass('jtable-input-field-container');
                     $('.ui-dialog-content')

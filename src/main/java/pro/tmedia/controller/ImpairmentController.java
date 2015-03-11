@@ -1,15 +1,22 @@
 package pro.tmedia.controller;
 
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.*;
 import pro.tmedia.model.Impairment;
 import pro.tmedia.service.ImpairmentService;
+
+import java.beans.PropertyEditorSupport;
+import java.sql.Date;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 
 /**
  * User: Ivaykin Timofey
@@ -19,7 +26,22 @@ import pro.tmedia.service.ImpairmentService;
 @RequestMapping("/impairment")
 public class ImpairmentController {
 
-    static final private Gson gson = new Gson();
+    static Gson gson = new GsonBuilder()
+            .setDateFormat("dd.MM.yyyy").create();
+
+    @InitBinder
+    public void binder(WebDataBinder binder) {binder.registerCustomEditor(java.sql.Date.class,
+            new PropertyEditorSupport() {
+                public void setAsText(String value) {
+                    try {
+                        java.sql.Date parsedDate = new java.sql.Date(new SimpleDateFormat("dd.MM.yyyy").parse(value).getTime());
+                        setValue(new Date(parsedDate.getTime()));
+                    } catch (ParseException e) {
+                        setValue(null);
+                    }
+                }
+            });
+    }
 
     @Autowired
     ImpairmentService impairmentService;

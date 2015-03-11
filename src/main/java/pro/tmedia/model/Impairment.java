@@ -27,6 +27,9 @@ public class Impairment {
     }
 
     public void setCount_hardware_impairment(Integer count_hardware_impairment) {
+        if(count_hardware_impairment <= 0) {
+            throw new IllegalArgumentException("Минимальное количество, которое можно списать должно быть 1");
+        }
         this.count_hardware_impairment = count_hardware_impairment;
     }
 
@@ -42,7 +45,7 @@ public class Impairment {
         return date_impairment;
     }
 
-    public void setDate_impairment(Date date_impairment) {
+    public void setDate_impairment(java.sql.Date date_impairment) {
         this.date_impairment = date_impairment;
     }
 

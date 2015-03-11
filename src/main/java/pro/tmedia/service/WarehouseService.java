@@ -13,4 +13,6 @@ public interface WarehouseService {
     public void create(WarehouseItem warehouseItem);
     public void delete(Integer id) throws Exception;
     public void update(WarehouseItem warehouseItem);
+
+    WarehouseItem getById(Integer id);
 }

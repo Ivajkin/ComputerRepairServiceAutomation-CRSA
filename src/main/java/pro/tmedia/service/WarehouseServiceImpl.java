@@ -41,4 +41,13 @@ public class WarehouseServiceImpl implements WarehouseService {
     public void update(WarehouseItem warehouseItem) {
         warehouseDAO.update(warehouseItem);
     }
+
+    @Override
+    public WarehouseItem getById(Integer id) {
+        for(WarehouseItem w : list()) {
+            if(w.getId() == id)
+                return w;
+        }
+        return null;
+    }
 }
