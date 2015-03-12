@@ -8,6 +8,8 @@ import pro.tmedia.model.DictionaryItem;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.bugsnag.Client;
+
 /**
  * User: Ivaykin Timofey
  * Date: 09.04.14
@@ -54,6 +56,9 @@ public class jTableResponse<T> {
         Records = null;
         Record = null;
         Options = null;
+
+        // TODO: Реализовать обработку остальных ошибок общей системой
+        Client bugsnag = new Client("e4a0ec1bc8954ca224f1574b39784d0a");
     }
     public jTableResponse(List<T> Records, boolean convertToOptions) {
         Result = OK;
