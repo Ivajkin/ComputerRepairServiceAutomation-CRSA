@@ -17,6 +17,10 @@ var messagebox = {
                             Bugsnag.notify(messageTitle, message);
                         })
 };
+window.onerror = function myErrorHandler(errorMsg, url, lineNumber) {
+    var errorMessage = "Необработанная ошибка: " + errorMsg + "<br/>Путь: "+url+"<br/>Номер строки: "+lineNumber;
+    messagebox.error(errorMessage, "Необработанная ошибка");
+};
 (function initialiseMessageSystem() {
     toastr.options = {
         "closeButton": true,
