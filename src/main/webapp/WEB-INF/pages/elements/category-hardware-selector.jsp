@@ -19,7 +19,7 @@
                 -->
             </ul>
         </div><!-- /btn-group -->
-        <input type="text" id="c1ategory-search-create-input" class="form-control" placeholder="Поиск категорий...">
+        <input type="text" id="category-search-create-input" class="form-control" placeholder="Поиск категорий...">
                   <span class="input-group-btn">
                     <button class="btn btn-default add" type="button" disabled>
                         <span class="glyphicon glyphicon-plus add" aria-hidden="true"></span> Добавить
@@ -32,7 +32,7 @@
     <div class="input-group hardware-by-category-selector">
         <div class="input-group-btn">
             <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false" disabled>
-                Наименование товара
+                <div id="hardware-selector-button-text">Наименование товара</div>
                 <span class="caret"></span>
             </button>
             <ul class="dropdown-menu" role="menu">
