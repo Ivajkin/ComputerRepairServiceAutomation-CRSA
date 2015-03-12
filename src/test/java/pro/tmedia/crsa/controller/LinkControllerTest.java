@@ -1,5 +1,6 @@
 package pro.tmedia.crsa.controller;
 
+import jdk.nashorn.internal.ir.annotations.Ignore;
 import org.junit.Before;
 import org.junit.Test;
 import org.springframework.http.MediaType;
@@ -14,27 +15,15 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
  * User: Ivaykin Timofey
  * Date: 2/19/14
  */
+@Ignore
 public class LinkControllerTest {
     private MockMvc mockMvc;
-/*
+
     @Before
     public void setup() {
         this.mockMvc = MockMvcBuilders.standaloneSetup(new LinkController()).build();
     }
-*/
-    /*@Test
-    public void testMainPage() throws Exception {
-        LinkController controller = new LinkController();
-        assertNotNull(controller.mainPage());
-    }
 
-    @Test
-    public void testIndexPage() throws Exception {
-        LinkController controller = new LinkController();
-        assertNotNull(controller.indexPage());
-    }    */
-
-/*
     @Test
     public void testIndexGet1() throws Exception {
         this.mockMvc.perform(get("/")
@@ -47,5 +36,4 @@ public class LinkControllerTest {
                 .accept(MediaType.TEXT_HTML))
                 .andExpect(status().isOk());
     }
-*/
 }

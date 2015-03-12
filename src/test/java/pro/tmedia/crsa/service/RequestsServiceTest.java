@@ -1,5 +1,6 @@
 package pro.tmedia.crsa.service;
 
+import jdk.nashorn.internal.ir.annotations.Ignore;
 import junit.framework.TestCase;
 import org.junit.After;
 import org.junit.Before;
@@ -17,6 +18,7 @@ import pro.tmedia.service.RequestsServiceImpl;
  * User: Ivaykin Timofey
  * Date: 3/11/14
  */
+@Ignore
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(loader = AnnotationConfigContextLoader.class)
 public class RequestsServiceTest extends TestCase {
