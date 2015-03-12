@@ -4,7 +4,6 @@
  */
 
 var isWarehouseTableLoaded = false;
-var is_category_hardware_selector_element_inserted = false;
 
 
 function openWarehouse() {
@@ -306,11 +305,16 @@ function openWarehouse() {
                         });
                     }) ();
                 }  */
-                if(!is_category_hardware_selector_element_inserted) {
-                    is_category_hardware_selector_element_inserted = true;
+
+                data.form.parent().parent().addClass('warehouse-ui-dialog');
+
+                    data.form.addClass('warehouseForm');
                     elements["category-hardware-selector-element"].addClass('jtable-input-field-container');
-                    $('.ui-dialog-content')
-                        .after(elements["category-hardware-selector-element"]);
+                    //$('.ui-dialog-content')
+                    //    .first()
+                    data.form
+                        .append(elements["category-hardware-selector-element"]);
+
                     (function() {
                         var selected_category_id;
                         var category_by_name_dictionary = {};
@@ -367,11 +371,10 @@ function openWarehouse() {
                         load_categories_to_selector();
 
                         $('.category-selector .btn.btn-default.add').click(function() {
-                            var category_name_inserted = $('.category-selector .form-control').val();
+                            var category_name_inserted = $('#c1ategory-search-create-input').val();
                             $.post('/category/create/json', {name: category_name_inserted}, load_categories_to_selector);
                         });
                     }) ();
-                }
             },
             //Validate form when it is being submitted
             formSubmitting: function (event, data) {

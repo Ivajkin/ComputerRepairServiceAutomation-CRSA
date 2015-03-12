@@ -19,7 +19,7 @@
                 -->
             </ul>
         </div><!-- /btn-group -->
-        <input type="text" class="form-control" placeholder="Поиск категорий...">
+        <input type="text" id="c1ategory-search-create-input" class="form-control" placeholder="Поиск категорий...">
                   <span class="input-group-btn">
                     <button class="btn btn-default add" type="button" disabled>
                         <span class="glyphicon glyphicon-plus add" aria-hidden="true"></span> Добавить

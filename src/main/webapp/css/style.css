@@ -760,3 +760,11 @@ form.jtable-dialog-form, .ui-widget input, .ui-widget select, .ui-widget textare
     height: 34px;
     margin-bottom: -17px;
 }
+
+.warehouseForm {
+    width: 800px !important;
+}
+
+.warehouse-ui-dialog {
+    left: 222px !important;
+}
