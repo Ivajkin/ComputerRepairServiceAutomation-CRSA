@@ -20,6 +20,8 @@
           <element id="library" level="project" name="Maven: org.hibernate:hibernate-validator:4.2.0.Final" />
           <element id="library" level="project" name="Maven: javax.validation:validation-api:1.0.0.GA" />
           <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:1.6.1" />
+          <element id="library" level="project" name="Maven: com.bugsnag:bugsnag:1.2.8" />
+          <element id="library" level="project" name="Maven: org.json:json:20090211" />
           <element id="library" level="project" name="Maven: postgresql:postgresql:9.1-901-1.jdbc4" />
           <element id="library" level="project" name="Maven: mysql:mysql-connector-java:5.1.21" />
           <element id="library" level="project" name="Maven: commons-dbcp:commons-dbcp:1.4" />

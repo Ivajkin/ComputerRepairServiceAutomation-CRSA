@@ -175,13 +175,15 @@ function openWarehouse() {
                                         date_impairment: {
                                             title: 'дата списания',
                                             defaultValue: datef('dd.MM.YYYY'),
-                                            type: 'date',
                                             edit: false
                                         },
                                         warehouse_item_id: {
                                             type: 'hidden',
                                             defaultValue: requestData.record.id
                                         }
+                                    },
+                                    formCreated: function (event, data) {
+                                        $('#Edit-date_impairment').prop('readonly', true);
                                     }
                                 }, function (data) {
                                     data.childTable.jtable('load');
@@ -200,6 +202,10 @@ function openWarehouse() {
                 data.form.find('input[name="repair_price"]').addClass('validate[required],custom[integer],min[0],max[500000]');
                 data.form.find('input[name="item_count"]').addClass('validate[required],custom[integer],min[1],max[500]');
                 data.form.find('input[name="date_impairment"]').addClass('validate[required,custom[date],past[NOW]]');   // var dateMMDDYYYRegex = '^(0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])[- /.](19|20)\d\d$';
+                data.form.find('input[name="repair_price_percent"]').addClass('validate[required],custom[integer],min[1],max[100]');
+                data.form.find('input[name="retail_price_percent"]').addClass('validate[required],custom[integer],min[1],max[100]');
+                data.form.find('input[name="its_price_percent"]').addClass('validate[required],custom[integer],min[1],max[100]');
+                data.form.find('input[name="zero_price_percent"]').addClass('validate[required],custom[integer],min[1],max[100]');
 
                 data.form.validationEngine();
 
