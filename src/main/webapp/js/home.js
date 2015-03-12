@@ -10,10 +10,11 @@ var messagebox = {
     warning: toastr.warning,
     success: toastr.success,
     error: (!Audio ?  toastr.error :
-                            function(a, b) {
+                            function(message, messageTitle) {
                             var snd = new Audio("css/sounds/error.wav"); // buffers automatically when created
                             snd.play();
-                            toastr.error(a, b);
+                            toastr.error(message, messageTitle);
+                            Bugsnag.notify(messageTitle, message);
                         })
 };
 (function initialiseMessageSystem() {
