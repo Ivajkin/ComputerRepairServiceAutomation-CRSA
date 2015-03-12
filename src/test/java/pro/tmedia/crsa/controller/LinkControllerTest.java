@@ -16,12 +16,12 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
  */
 public class LinkControllerTest {
     private MockMvc mockMvc;
-
+/*
     @Before
     public void setup() {
         this.mockMvc = MockMvcBuilders.standaloneSetup(new LinkController()).build();
     }
-
+*/
     /*@Test
     public void testMainPage() throws Exception {
         LinkController controller = new LinkController();
@@ -34,7 +34,7 @@ public class LinkControllerTest {
         assertNotNull(controller.indexPage());
     }    */
 
-
+/*
     @Test
     public void testIndexGet1() throws Exception {
         this.mockMvc.perform(get("/")
@@ -47,4 +47,5 @@ public class LinkControllerTest {
                 .accept(MediaType.TEXT_HTML))
                 .andExpect(status().isOk());
     }
+*/
 }
