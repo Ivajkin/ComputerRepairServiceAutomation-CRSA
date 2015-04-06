@@ -71,6 +71,12 @@ public class DictionaryItemController {
         return response;
     }
 
+    @RequestMapping(value = "/manufacturer/list/json", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
+    @ResponseBody
+    public List<Manufacturer> listManufacturersJSON() {
+        return dictionaryItemService.listManufacturers();
+    }
+
     @RequestMapping(value = "/manufacturer/create", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)
     @ResponseBody
     public jTableResponse<Manufacturer> createRequest(@ModelAttribute Manufacturer  manufacturer, BindingResult result) {

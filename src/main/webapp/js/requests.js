@@ -62,11 +62,12 @@ function openRequests() {
 
     hideAllModuleContainers();
 
-    $('#requestsTableContainer').show();
+    var requestsTableContainer = $('#requestsTableContainer');
+    requestsTableContainer.show();
 
     if (!isRequestsTableLoaded) {
         isRequestsTableLoaded = true;
-        $('#requestsTableContainer').jtable({
+        requestsTableContainer.jtable({
             title: 'Заявки',
             paging: false,
             pageSize: 15000,
@@ -108,16 +109,51 @@ function openRequests() {
                 hardware_id: {
                     title: 'Оборудование',
                     width: '5%',
-                    options: '/hardware/options'
+                    options: '/hardware/options',
+                    list: false
                 },
                 manufacturer_id: {
                     title: 'Производитель',
                     width: '5%',
-                    options: '/manufacturer/options'
+                    options: '/manufacturer/options',
+                    list: false
                 },
                 model: {
                     title: 'Модель',
-                    width: '5%'
+                    width: '5%',
+                    list: false
+                },
+                // TODO: Объединить Наименование оборудования + Производитель + Модель в единую ячейку для просмотра в таблице заявок
+                hardware_manufacturer_model_to_show: {
+                    title: 'Оборудование / Производитель / Модель',
+                    width: '15%',
+                    edit: false,
+                    create: false,
+                    display: function (requestData) {
+
+                        function ByID(id, type, callback) {
+                            $.get('/' + type + '/list/json', function(list) {
+                                for(var key in list) {
+                                    if(list[key].id == id) {
+                                        callback(list[key]);
+                                        break;
+                                    }
+                                }
+                            });
+                        }
+
+                        ByID(requestData.record.hardware_id, 'hardware', function(hardware) {
+                            ByID(requestData.record.manufacturer_id, 'manufacturer', function(manufacturer) {
+
+                                var $text_to_show = hardware + ' ' +
+                                    manufacturer + ' ' +
+                                    requestData.record.model;
+                            });
+                        });
+                        return "TODO: Сделать return из callback";/*function() {
+                            $text_to_show;
+                        };*/
+                    }
                 },
                 slot_id: {
                     title: 'Номер ячейки'
@@ -372,7 +408,7 @@ function openRequests() {
 
 
 
-        $('#requestsTableContainer').jtable('load');
+        requestsTableContainer.jtable('load');
 
     }
 }
