@@ -7,11 +7,10 @@
 
         <div class="input-group input-word">
             <span class="input-group-btn">
-                <!-- TODO: Сделать подгрузку таблицы в зависимости от текущего статуса -->
             </span>
             <script>
                 $(document).ready(function() {
-                    <!-- Загрузить статусы из базы -->
+                    <!-- Загрузка статусов заявок из базы -->
                     $.get("/request_status/list/json", function(statuses) {
                         for(var key in statuses) {
                             var status = statuses[key];
@@ -24,11 +23,27 @@
                                     '</button>');
                         }
 
-                        <!-- Сделать выделение текущего статуса -->
+                        var filter_requests_table_by_status;
+
+                        <!-- Выделение текущего статуса -->
                         $('.status-btn').click(function() {
                             $('.status-btn').removeClass('active');
                             $(this).addClass('active');
+
+                            var status_name = $(this).text();
+                            filter_requests_table_by_status(status_name);
                         });
+
+                        <!-- Подгрузка таблицы заявок в зависимости от текущего статуса заявки -->
+                        filter_requests_table_by_status = function(status_name) {
+                            $('#requestsTableContainer .jtable-data-row').hide();
+                            $('#requestsTableContainer .jtable-data-row').map(function(i, row) {
+                                row = $(row);
+                                if(row.text().indexOf(status_name) != -1) {
+                                    row.show();
+                                }
+                            });
+                        };
                     });
                 });
             </script>
