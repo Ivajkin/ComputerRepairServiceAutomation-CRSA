@@ -25,13 +25,4 @@ public class DictionaryItem {
     public void setName(String name) {
         this.name = name;
     }
-
-
-    /*@ManyToOne
-    Request requests;
-
-    @Override
-    public String toString() {
-        return getName();
-    }    */
 }

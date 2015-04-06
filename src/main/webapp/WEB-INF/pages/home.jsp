@@ -131,7 +131,13 @@
         </div>
     </div>
 
+    <!--
+        На этой форме отображаются таблицы созданных заявок,
+        которые разделяются по статусам [(!) (Статусы: Принят, Готов, Выдан/Выполнен)].
+    -->
+    <%@include file="elements/request-status-selector.jsp" %>
     <div id="requestsTableContainer"></div>
+
     <div id="warehouseTableContainer">
         <%@include file="elements/searchbox.jsp" %>
     </div>
