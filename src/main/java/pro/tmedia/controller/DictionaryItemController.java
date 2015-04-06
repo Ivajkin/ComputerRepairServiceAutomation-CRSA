@@ -145,6 +145,11 @@ public class DictionaryItemController {
         return dictionaryItemList(dictionaryItemService.requestStatusList());
     }
 
+    @RequestMapping(value = "/request_status/list/json", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+    @ResponseBody
+    public List<RequestStatus> requestStatusListJSON() {
+        return dictionaryItemService.requestStatusList();
+    }
 
 
     @RequestMapping(value = "/provider/list", method = RequestMethod.POST, produces = MediaType.APPLICATION_JSON_VALUE)

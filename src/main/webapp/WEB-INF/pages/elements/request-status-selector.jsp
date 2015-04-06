@@ -7,19 +7,26 @@
 
         <div class="input-group input-word">
             <span class="input-group-btn">
-                <!-- TODO: Загрузить статусы из базы -->
                 <!-- TODO: Сделать выделение текущего статуса -->
                 <!-- TODO: Сделать подгрузку таблицы в зависимости от текущего статуса -->
-                <button id="status-1-button" class="btn btn-default" type="button">
-                    <span class="glyphicon add" aria-hidden="true"></span> Готов
-                </button>
-                <button id="status-2-button" class="btn btn-default" type="button">
-                    <span class="glyphicon add" aria-hidden="true"></span> Принят
-                </button>
-                <button id="status-3-button" class="btn btn-default" type="button">
-                    <span class="glyphicon add" aria-hidden="true"></span> Выполнен/Выдан
-                </button>
             </span>
+            <script>
+                $(document).ready(function() {
+                    <!-- Загрузить статусы из базы -->
+                    $.get("/request_status/list/json", function(statuses) {
+                        for(var key in statuses) {
+                            var status = statuses[key];
+                            $('#request-status-selector .input-group-btn').append(
+                                    '<button id="status-' +
+                                    status.id +
+                                    '-button" class="btn btn-default" type="button">' +
+                                    '<span class="glyphicon add" aria-hidden="true"></span>' +
+                                    status.name +
+                                    '</button>');
+                        }
+                    });
+                });
+            </script>
         </div><!-- /input-group -->
 </div>
 
