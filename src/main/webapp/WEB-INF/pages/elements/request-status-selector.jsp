@@ -7,7 +7,6 @@
 
         <div class="input-group input-word">
             <span class="input-group-btn">
-                <!-- TODO: Сделать выделение текущего статуса -->
                 <!-- TODO: Сделать подгрузку таблицы в зависимости от текущего статуса -->
             </span>
             <script>
@@ -19,11 +18,17 @@
                             $('#request-status-selector .input-group-btn').append(
                                     '<button id="status-' +
                                     status.id +
-                                    '-button" class="btn btn-default" type="button">' +
+                                    '-button" class="status-btn btn btn-default" type="button">' +
                                     '<span class="glyphicon add" aria-hidden="true"></span>' +
                                     status.name +
                                     '</button>');
                         }
+
+                        <!-- Сделать выделение текущего статуса -->
+                        $('.status-btn').click(function() {
+                            $('.status-btn').removeClass('active');
+                            $(this).addClass('active');
+                        });
                     });
                 });
             </script>
