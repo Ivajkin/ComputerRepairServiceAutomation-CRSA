@@ -211,6 +211,9 @@ function openWarehouse() {
                 //$('#Edit-posting_date').prop('edit', false);
                 $('#Edit-posting_date').prop('readonly', true);
 
+                $('#Edit-category_id').parent().parent().hide();
+                $('#Edit-hardware_id').parent().parent().hide();
+
                 $('#Edit-not_serial_number').click( function(){
                     if( $(this).is(':checked') )
                         $('#Edit-serial_number').val('не серийный').prop('disabled', true);
@@ -225,6 +228,7 @@ function openWarehouse() {
                 //У Таблицы Склад есть Номер Накладной (primary key)
                 //У таблицы Серийных номеров Серийные номера (primary key)
                 //При сохранении мы отправим на сервер запрос о добавлении Серийных номеров по номеру накладной
+
 
 
 
@@ -258,53 +262,6 @@ function openWarehouse() {
                     }
                  });
 
-                /* if(!is_reason_impairment_element_inserted) {
-                    is_reason_impairment_element_inserted = true;
-                    elements["reason_impairment_element"].addClass('jtable-input-field-container');
-                    $('.ui-dialog-content')
-                        .after(elements["reason_impairment_element"]);
-                    (function() {
-                        var reason_impairment_id;
-                        var reason_impairment_dictionary = {};
-
-                        function load_reason_impairment() {
-                            $.get('/impairment_type/list/json', function(impairments_type) {
-                                var elements = '';
-                                for(key in impairments_type) {
-                                    elements += '<li><a >' + impairments_type[key].name + '</a></li>';
-                                    reason_impairment_dictionary[impairments_type[key].name] = impairments_type[key];
-                                }
-                                $('.category-selector .dropdown-menu').html(elements);
-
-                                $('.category-selector ul li').click(function() {
-                                    var category_name = $(this).text();
-                                    $('.category-selector input.form-control').val(category_name);
-                                    selected_category_id = category_by_name_dictionary[category_name].id;
-                                    // Запрашиваем список наименований hardware по category_id
-                                    load_hardware_dropdown(selected_category_id);
-                                });
-
-                                $('.category-selector .form-control').on('input', function() {
-                                    var category_name_inserted = $(this).val();
-                                    // Если категория уже существует или имеет слишком мало символов, то мы не можем её создать
-                                    var can_add_category = category_name_inserted.length > 3;
-                                    for(var key in category_by_name_dictionary) {
-                                        if(category_by_name_dictionary[key].name === category_name_inserted)
-                                            can_add_category = false;
-                                    }
-
-                                    $('.category-selector .btn.btn-default.add').prop("disabled", !can_add_category);
-                                });
-                            });
-                        }
-                        load_categories_to_selector();
-
-                        $('.category-selector .btn.btn-default.add').click(function() {
-                            var category_name_inserted = $('.category-selector .form-control').val();
-                            $.post('/category/create/json', {name: category_name_inserted}, load_categories_to_selector);
-                        });
-                    }) ();
-                }  */
 
                 data.form.parent().parent().addClass('warehouse-ui-dialog');
 
@@ -314,6 +271,16 @@ function openWarehouse() {
                     //    .first()
                     data.form
                         .append(elements["category-hardware-selector-element"]);
+                    var category_search_create_input_edit_category_id_relation = function() {
+                        var value = $('#category-search-create-input')
+                            .val();
+                        // Deselect
+                        $('#Edit-category_id').val('');
+
+                        $('#Edit-category_id option').filter(function() {
+                            return ($(this).text() == value);
+                        }).prop('selected', true);
+                    };
 
                     (function() {
                         var selected_category_id;
@@ -330,8 +297,18 @@ function openWarehouse() {
                                     $('.hardware-by-category-selector .dropdown-menu').html(elements);
 
                                     $('.hardware-by-category-selector ul li').click(function () {
-                                        // TODO: Событие, когда выбрано наименование оборудования
-                                        //$('.hardware-by-category-selector input.form-control').val($(this).text());
+
+                                        // Событие, когда выбрано наименование оборудования
+
+                                        var hardware_name = $(this).text();
+                                        var hardware_selector_button_text = $('#hardware-selector-button-text');
+                                        hardware_selector_button_text.text(hardware_name);
+                                        // Deselect
+                                        $('#Edit-hardware_id').val('');
+
+                                        $('#Edit-hardware_id option').filter(function() {
+                                            return ($(this).text() == hardware_name);
+                                        }).prop('selected', true);
                                     });
                                 } else {
                                     $('.hardware-by-category-selector .btn').prop("disabled", true);
@@ -347,12 +324,26 @@ function openWarehouse() {
                                 }
                                 $('.category-selector .dropdown-menu').html(elements);
 
+                                var options = '';
+                                for(key in categories) {
+                                    options += '<option value="' + categories[key].id + '">'
+                                        + categories[key].name + '</option>';
+                                }
+
+                                $('#Edit-category_id').html(options);
+                                category_search_create_input_edit_category_id_relation();
+
                                 $('.category-selector ul li').click(function() {
                                     var category_name = $(this).text();
                                     $('.category-selector input.form-control').val(category_name);
                                     selected_category_id = category_by_name_dictionary[category_name].id;
                                     // Запрашиваем список наименований hardware по category_id
                                     load_hardware_dropdown(selected_category_id);
+
+                                    category_search_create_input_edit_category_id_relation();
+                                    $('#category-search-create-input')
+                                        .on('input',
+                                            category_search_create_input_edit_category_id_relation);
                                 });
 
                                 $('.category-selector .form-control').on('input', function() {
@@ -371,11 +362,13 @@ function openWarehouse() {
                         load_categories_to_selector();
 
                         $('.category-selector .btn.btn-default.add').click(function() {
-                            var category_name_inserted = $('#c1ategory-search-create-input').val();
+                            var category_name_inserted = $('#category-search-create-input').val();
                             $.post('/category/create/json', {name: category_name_inserted}, load_categories_to_selector);
                         });
                     }) ();
             },
+
+
             //Validate form when it is being submitted
             formSubmitting: function (event, data) {
                 return data.form.validationEngine('validate');
