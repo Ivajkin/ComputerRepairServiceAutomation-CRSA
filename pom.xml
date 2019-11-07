@@ -185,7 +185,7 @@
         <dependency>
             <groupId>org.webjars</groupId>
             <artifactId>jquery</artifactId>
-            <version>2.1.0-2</version>
+            <version>3.4.0</version>
         </dependency>
         <dependency>
             <groupId>org.webjars</groupId>
@@ -210,7 +210,7 @@
         <dependency>
             <groupId>org.webjars</groupId>
             <artifactId>bootstrap</artifactId>
-            <version>3.1.1</version>
+            <version>4.0.0</version>
         </dependency>
         <dependency>
             <groupId>org.webjars</groupId>
@@ -225,7 +225,7 @@
         <dependency>
             <groupId>org.webjars</groupId>
             <artifactId>jquery-ui</artifactId>
-            <version>1.10.4</version>
+            <version>1.12.0</version>
         </dependency>
 
         <dependency>
