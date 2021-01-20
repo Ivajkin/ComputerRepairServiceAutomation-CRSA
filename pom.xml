@@ -231,7 +231,7 @@
         <dependency>
             <groupId>net.sf.jasperreports</groupId>
             <artifactId>jasperreports</artifactId>
-            <version>6.0.3</version>
+            <version>6.11.0</version>
         </dependency>
 
         <!-- Spring Security-->
